@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	function hackerMan(): void {
-		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
 
 		let interval = null;
 
