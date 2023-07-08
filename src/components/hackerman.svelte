@@ -6,30 +6,35 @@
 
 		let interval = null;
 
-		document.querySelector('h1').onmouseover = (event) => {
-			let iteration = 0;
+		const h1Elements = document.querySelectorAll('h1');
 
-			clearInterval(interval);
+		h1Elements.forEach((h1) => {
+			h1.onmouseover = (event) => {
+				let iteration = 0;
+				let interval;
 
-			interval = setInterval(() => {
-				event.target.innerText = event.target.innerText
-					.split('')
-					.map((letter, index) => {
-						if (index < iteration) {
-							return event.target.dataset.value[index];
-						}
+				clearInterval(interval);
 
-						return letters[Math.floor(Math.random() * 26)];
-					})
-					.join('');
+				interval = setInterval(() => {
+					event.target.innerText = event.target.innerText
+						.split('')
+						.map((letter, index) => {
+							if (index < iteration) {
+								return event.target.dataset.value[index];
+							}
 
-				if (iteration >= event.target.dataset.value.length) {
-					clearInterval(interval);
-				}
+							return String.fromCharCode(Math.floor(Math.random() * 26) + 65); // Random uppercase letter
+						})
+						.join('');
 
-				iteration += 1 / 3;
-			}, 30);
-		};
+					if (iteration >= event.target.dataset.value.length) {
+						clearInterval(interval);
+					}
+
+					iteration += 1 / 3;
+				}, 30);
+			};
+		});
 	}
 
 	onMount(() => {
