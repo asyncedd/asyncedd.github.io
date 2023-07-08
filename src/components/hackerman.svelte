@@ -36,13 +36,3 @@
 		hackerMan();
 	});
 </script>
-
-<style>
-	h1 {
-		@apply bg-ctp-blue;
-	}
-
-	h1:hover {
-		@apply bg-ctp-base;
-	}
-</style>
