@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	function hackerMan(): void {
-		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
 		let interval = null;
 
@@ -19,19 +19,25 @@
 					event.target.innerText = event.target.innerText
 						.split('')
 						.map((letter, index) => {
-							if (index < iteration) {
+							if (iteration === 0) {
+								return letters[Math.floor(Math.random() * letters.length)];
+							} else if (index < iteration) {
 								return event.target.dataset.value[index];
+							} else if (index === iteration) {
+								if (letter === event.target.dataset.value[index]) {
+									return letter; // Stop generating for this letter
+								}
 							}
 
-							return String.fromCharCode(Math.floor(Math.random() * 26) + 65); // Random uppercase letter
+							return letters[Math.floor(Math.random() * letters.length)];
 						})
 						.join('');
 
 					if (iteration >= event.target.dataset.value.length) {
 						clearInterval(interval);
+					} else if (event.target.innerText[iteration] === event.target.dataset.value[iteration]) {
+						iteration++; // Move to the next letter
 					}
-
-					iteration += 1 / 3;
 				}, 30);
 			};
 		});
