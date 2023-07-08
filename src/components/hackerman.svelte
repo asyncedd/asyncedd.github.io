@@ -1,38 +1,48 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
-  function hackerMan(): void {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	function hackerMan(): void {
+		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    let interval = null;
+		let interval = null;
 
-    document.querySelector("h1").onmouseover = event => {
-      let iteration = 0;
+		document.querySelector('h1').onmouseover = (event) => {
+			let iteration = 0;
 
-      clearInterval(interval);
+			clearInterval(interval);
 
-      interval = setInterval(() => {
-        event.target.innerText = event.target.innerText
-          .split("")
-          .map((letter, index) => {
-            if(index < iteration) {
-              return event.target.dataset.value[index];
-            }
+			interval = setInterval(() => {
+				event.target.innerText = event.target.innerText
+					.split('')
+					.map((letter, index) => {
+						if (index < iteration) {
+							return event.target.dataset.value[index];
+						}
 
-            return letters[Math.floor(Math.random() * 26)]
-          })
-          .join("");
+						return letters[Math.floor(Math.random() * 26)];
+					})
+					.join('');
 
-        if(iteration >= event.target.dataset.value.length) {
-          clearInterval(interval);
-        }
+				if (iteration >= event.target.dataset.value.length) {
+					clearInterval(interval);
+				}
 
-        iteration += 1 / 3;
-      }, 30);
-    }
-  }
+				iteration += 1 / 3;
+			}, 30);
+		};
+	}
 
-  onMount(() => {
-    hackerMan();
-  })
+	onMount(() => {
+		hackerMan();
+	});
 </script>
+
+<style>
+	h1 {
+		@apply bg-ctp-blue;
+	}
+
+	h1:hover {
+		@apply bg-ctp-base;
+	}
+</style>
