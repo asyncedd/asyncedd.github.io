@@ -14,16 +14,13 @@
 
 <style>
 	.wave {
-		width: 100%;
-		overflow: hidden;
+		@apply w-[100%] overflow-hidden;
 		line-height: 0;
 	}
 
 	.wave svg {
-		position: relative;
-		display: block;
+		@apply relative block h-[157px];
 		width: calc(100% + 1.3px);
-		height: 157px;
 		animation: wave-animation 7s linear infinite alternate;
 	}
 
