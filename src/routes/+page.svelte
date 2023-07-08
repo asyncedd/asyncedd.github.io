@@ -6,8 +6,11 @@
 	import Lorem from '../components/lorem.svelte';
 </script>
 
+<Popup />
 
-<slot {Popup} {Font} {Hackerman} />
+<Font />
+
+<Hackerman />
 
 <body class="dark:bg-ctp-base light:bg-ctp-text">
 	<div class="bg-ctp-blue">
