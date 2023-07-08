@@ -24,12 +24,12 @@
 		display: block;
 		width: calc(100% + 1.3px);
 		height: 157px;
-		animation: wave-animation 10s ease-in-out infinite alternate;
+		animation: wave-animation 7s linear infinite alternate;
 	}
 
 	@keyframes wave-animation {
 		0% {
-			width: calc(100% + 1px);
+			width: calc(100%);
 		}
 		100% {
 			width: calc(100% + 100px);
