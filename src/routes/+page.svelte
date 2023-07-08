@@ -76,7 +76,7 @@
 	}
 
 	h1:hover {
-		@apply bg-ctp-base text-ctp-blue;
+		@apply bg-ctp-base text-ctp-green;
 		transform: scale(1.1);
 	}
 </style>
