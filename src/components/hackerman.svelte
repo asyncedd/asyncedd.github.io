@@ -4,8 +4,6 @@
 	function hackerMan(): void {
 		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
 
-		let interval = null;
-
 		const h1Elements = document.querySelectorAll('h1');
 
 		h1Elements.forEach((h1) => {
