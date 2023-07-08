@@ -58,7 +58,7 @@
   onMount(initializePopupCode)
 </script>
 
-<div class="popup" style="opacity: {showPopup}; bottom: {y}px;" on:click={scrollDown}>
+<div class="popup" role="button" style="opacity: {showPopup}; bottom: {y}px;" on:click={scrollDown} on:keydown={scrollDown} tabindex="0">
   <span class="material-symbols-outlined">arrow_circle_down</span>
 </div>
 
