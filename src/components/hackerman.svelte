@@ -3,36 +3,40 @@
 
 	function hackerMan(): void {
 		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
+
+		let interval = null;
+
 		const h1Elements = document.querySelectorAll('h1');
 
 		h1Elements.forEach((h1) => {
-			let interval = null;
-			let iteration = 0;
-			let currentText = h1.innerText;
-			const targetText = h1.dataset.value;
-
 			h1.onmouseover = (event) => {
-				clearInterval(interval);
-				interval = setInterval(() => {
-					let newText = '';
-					for (let i = 0; i < currentText.length; i++) {
-						const letter = currentText[i];
-						if (iteration === 0 || i === iteration) {
-							if (letter === targetText[i]) {
-								newText += letter;
-							} else {
-								newText += letters[Math.floor(Math.random() * letters.length)];
-							}
-						} else {
-							newText += letter;
-						}
-					}
-					h1.innerText = newText;
+				let iteration = 0;
+				let interval;
 
-					if (iteration >= targetText.length || newText === targetText) {
+				clearInterval(interval);
+
+				interval = setInterval(() => {
+					event.target.innerText = event.target.innerText
+						.split('')
+						.map((letter, index) => {
+							if (iteration === 0) {
+								return letters[Math.floor(Math.random() * letters.length)];
+							} else if (index < iteration) {
+								return event.target.dataset.value[index];
+							} else if (index === iteration) {
+								if (letter === event.target.dataset.value[index]) {
+									return letter; // Stop generating for this letter
+								}
+							}
+
+							return letters[Math.floor(Math.random() * letters.length)];
+						})
+						.join('');
+
+					if (iteration >= event.target.dataset.value.length) {
 						clearInterval(interval);
-					} else {
-						iteration++;
+					} else if (event.target.innerText[iteration] === event.target.dataset.value[iteration]) {
+						iteration++; // Move to the next letter
 					}
 				}, 30);
 			};
