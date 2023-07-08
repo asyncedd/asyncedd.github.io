@@ -13,19 +13,28 @@
 <Hackerman />
 
 <body class="dark:bg-ctp-base light:bg-ctp-text">
-  <div class="bg-ctp-blue">
-    <div>
-      <img
-        src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
-        class="w-24 h-24 md:w-48 md:h-48 rounded-full m-8 flex place-content-center mx-auto text-center"
-        style="z-index: 9999;"
-        alt=""
-        width="384"
-        height="384"
-      />
-    </div>
+	<div class="bg-ctp-blue">
+		<div
+			class="place-content-center flex justify-center items-center"
+			style="vertical-align: baseline;"
+		>
+			<img
+				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
+				class="md:w-48 md:h-48 rounded-full text-center"
+				style="z-index: 9999;"
+				alt=""
+				width="384"
+				height="384"
+			/>
+			<h1
+				data-value="async"
+				class="m-8 text-center text-[100px] antialiased text-ctp-base w-[20rem]"
+			>
+				async
+			</h1>
+		</div>
 		<div class="container">
-			<h1 data-value="HI" class="m-8 w-10 text-center text-[100px] antialiased text-ctp-base">
+			<h1 data-value="HI" class="m-8 text-center text-[100px] antialiased text-ctp-base w-[10rem]">
 				HI
 			</h1>
 		</div>
@@ -59,7 +68,7 @@
 	}
 
 	h1 {
-		@apply text-center w-[150px] scroll-smooth bg-ctp-blue;
+		@apply text-center scroll-smooth bg-ctp-blue;
 	}
 
 	h1:hover {
