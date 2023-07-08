@@ -71,12 +71,12 @@
 	}
 
 	h1 {
-		@apply text-center scroll-smooth bg-ctp-blue;
-    transition: transform 500ms ease;
+		@apply text-center scroll-smooth bg-ctp-blue rounded-[10px];
+		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
 	}
 
 	h1:hover {
-		@apply bg-ctp-base text-ctp-blue rounded-[10px];
-    transform: scale(1.1);
+		@apply bg-ctp-base text-ctp-blue;
+		transform: scale(1.1);
 	}
 </style>
