@@ -8,6 +8,12 @@
 
 		h1Elements.forEach((h1) => {
 			h1.onmouseover = (event) => {
+				if (event.target.classList.contains('animating')) {
+					return; // Exit if already animating
+				}
+
+				event.target.classList.add('animating'); // Add class to indicate animation
+
 				let iteration = 0;
 				let interval;
 
@@ -33,6 +39,7 @@
 
 					if (iteration >= event.target.dataset.value.length) {
 						clearInterval(interval);
+						event.target.classList.remove('animating'); // Remove class after animation
 					} else if (event.target.innerText[iteration] === event.target.dataset.value[iteration]) {
 						iteration++; // Move to the next letter
 					}
