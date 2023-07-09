@@ -1,39 +1,72 @@
-<div class="wave">
+<div>
 	<svg
-		data-name="Layer 1"
+		class="waves"
 		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 1200 120"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 24 150 28"
 		preserveAspectRatio="none"
+		shape-rendering="auto"
 	>
-		<path
-			d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-			class="shape-fill"
-		/>
+		<defs>
+			<path
+				id="gentle-wave"
+				d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+			/>
+		</defs>
+		<g class="parallax">
+			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(137, 180, 250, 0.7)" />
+			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(137, 180, 250, 0.5)" />
+			<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(137, 180, 250, 0.3)" />
+			<use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(137, 180, 250)" />
+		</g>
 	</svg>
 </div>
 
 <style>
-	.wave {
-		@apply w-[100%] overflow-hidden;
-		line-height: 0;
+	.waves {
+		position: relative;
+		width: 100%;
+		height: 15vh;
+		margin-bottom: -7px; /*Fix for safari gap*/
+		min-height: 100px;
+		max-height: 150px;
+		transform: rotate(180deg) scaleX(-1);
 	}
 
-	.wave svg {
-		@apply relative block h-[157px];
-		width: calc(100% + 1.3px);
-		animation: wave-animation 7s linear infinite alternate;
-	}
+	/* Animation */
 
-	@keyframes wave-animation {
+	.parallax > use {
+		animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+	}
+	.parallax > use:nth-child(1) {
+		animation-delay: -2s;
+		animation-duration: 7s;
+	}
+	.parallax > use:nth-child(2) {
+		animation-delay: -3s;
+		animation-duration: 10s;
+	}
+	.parallax > use:nth-child(3) {
+		animation-delay: -4s;
+		animation-duration: 13s;
+	}
+	.parallax > use:nth-child(4) {
+		animation-delay: -5s;
+		animation-duration: 20s;
+	}
+	@keyframes move-forever {
 		0% {
-			width: calc(100%);
+			transform: translate3d(-90px, 0, 0);
 		}
 		100% {
-			width: calc(100% + 100px);
+			transform: translate3d(85px, 0, 0);
 		}
 	}
-
-	.wave .shape-fill {
-		fill: #89b4fa;
+	/*Shrinking for mobile*/
+	@media (max-width: 768px) {
+		.waves {
+			height: 40px;
+			min-height: 40px;
+		}
 	}
 </style>
