@@ -4,6 +4,7 @@
 	import Font from '../components/fonts.svelte';
 	import Popup from '../components/popup.svelte';
 	import Lorem from '../components/lorem.svelte';
+  import Footer from '../components/footer.svelte';
 </script>
 
 <Popup />
@@ -45,6 +46,8 @@
 	<Wave />
 	<Lorem />
 </body>
+
+<Footer />
 
 <style>
 	/* jetbrains-mono-regular - latin */
