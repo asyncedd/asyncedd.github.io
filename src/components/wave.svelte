@@ -16,7 +16,6 @@
 		<g class="parallax">
 			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(137, 180, 250, 0.7)" />
 			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(137, 180, 250, 0.5)" />
-			<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(137, 180, 250, 0.3)" />
 			<use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(137, 180, 250)" />
 		</g>
 	</svg>
@@ -36,23 +35,23 @@
 	/* Animation */
 
 	.parallax > use {
-		animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+		animation: move-forever 200s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 	}
 	.parallax > use:nth-child(1) {
 		animation-delay: -2s;
-		animation-duration: 7s;
+		animation-duration: 56s;
 	}
 	.parallax > use:nth-child(2) {
 		animation-delay: -3s;
-		animation-duration: 10s;
+		animation-duration: 80s;
 	}
 	.parallax > use:nth-child(3) {
 		animation-delay: -4s;
-		animation-duration: 13s;
+		animation-duration: 104s;
 	}
 	.parallax > use:nth-child(4) {
 		animation-delay: -5s;
-		animation-duration: 20s;
+		animation-duration: 80s;
 	}
 	@keyframes move-forever {
 		0% {
