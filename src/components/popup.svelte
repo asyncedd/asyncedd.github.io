@@ -7,7 +7,7 @@
 	let showPointer: string = "inherit";
 
 	function updateY(): void {
-		if (y > 20) {
+		$: if (y > 20) {
 			y -= 10;
 		} else {
 			y += 10;
