@@ -23,6 +23,7 @@
 			y = 0;
 			showPopup = 0;
 			showedPopup = true;
+      scrolledPopup = true;
 		}
 	}
 
