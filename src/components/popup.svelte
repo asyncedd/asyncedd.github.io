@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, afterUpdate } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	let showPopup: number = 0;
 	let y: number = 20;
 	let showedPopup: boolean = false;
@@ -47,11 +47,11 @@
 		updateY();
 		const interval = setInterval(updateY, 1000); // Update y every 1 second
 
-		afterUpdate(() => {
-			if (!showedPopup) {
-				clearInterval(interval);
-			}
-		});
+    await tick();
+
+    if (!showedPopup) {
+      clearInterval(interval);
+    }
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
