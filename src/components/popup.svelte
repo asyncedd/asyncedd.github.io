@@ -4,6 +4,7 @@
 	let y: number = 20;
 	let showedPopup: boolean = false;
 	let scrolledPopup: boolean = false;
+	let showPointer: string = "inherit";
 
 	function updateY(): void {
 		if (y > 20) {
@@ -19,11 +20,13 @@
 			y = 20;
 			showPopup = 1;
 			showedPopup = true;
+			showPointer = "inherit"; // Show the pointer when the popup is visible
 		} else {
 			y = 0;
 			showPopup = 0;
 			showedPopup = true;
-      scrolledPopup = true;
+			scrolledPopup = true;
+			showPointer = "none"; // Hide the pointer when the popup is hidden
 		}
 	}
 
@@ -62,7 +65,7 @@
 <div
 	class="popup"
 	role="button"
-	style="opacity: {showPopup}; bottom: {y}px;"
+	style="opacity: {showPopup}; bottom: {y}px; pointer-events: {showPointer};"
 	on:click={scrollDown}
 	on:keydown={scrollDown}
 	tabindex="0"
