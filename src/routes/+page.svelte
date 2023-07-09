@@ -13,6 +13,10 @@
 
 <Hackerman />
 
+<title>
+  A custom portfolio website made with SvelteKit and TailwindCSS. Created by @asyncedd
+</title>
+
 <body class="dark:bg-ctp-base light:bg-ctp-text">
 	<div class="bg-ctp-blue">
 		<div
