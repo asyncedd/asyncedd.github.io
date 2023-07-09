@@ -14,10 +14,7 @@
 <Hackerman />
 
 <title>
-  A custom portfolio website made with SvelteKit, Typescript and TailwindCSS. Created by @asyncedd.
-  As said aboe it is made via SvelteKit, TailwindCSS and Typescript.
-  100% FOSS, hosted on Github.
-  It has a cool hackerman effect, cool upside down wave effects and "scroll down" popup that is animated quite nice, uses JetBrains Mono (btw), has a super fancy image of a moutain, has alot of Lorem ipsum and most importantly - a fancy footer.
+  A custom portfolio website made with SvelteKit and TailwindCSS. Created by @asyncedd
 </title>
 
 <body class="dark:bg-ctp-base light:bg-ctp-text">
