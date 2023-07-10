@@ -1,65 +1,62 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
-	let showPopup: number = 0;
-	let y: number = 20;
-	let showedPopup: boolean = false;
-	let scrolledPopup: boolean = false;
-	let showPointer: string = "inherit";
+import { onMount, tick } from 'svelte';
 
-	function updateY(): void {
-		$: if (y > 20) {
-			y -= 10;
-		} else {
-			y += 10;
-		}
-	}
+let showPopup = 0;
+let y = 20;
+let showedPopup = false;
+let scrolledPopup = false;
+let showPointer = "inherit";
 
-	function handleScroll(): void {
-		const threshold: number = 100; // Adjust this value as needed
-		if (!(window.scrollY > threshold) && !showedPopup) {
-			y = 20;
-			showPopup = 1;
-			showedPopup = true;
-			showPointer = "inherit"; // Show the pointer when the popup is visible
-		} else {
-			y = 0;
-			showPopup = 0;
-			showedPopup = true;
-			scrolledPopup = true;
-			showPointer = "none"; // Hide the pointer when the popup is hidden
-		}
-	}
+function updateY(): void {
+  y = (y > 20) ? y - 10 : y + 10;
+}
 
-	function scrollDown(): void {
-		if (scrolledPopup !== true) {
-			scrolledPopup = true;
-			window.scrollTo({
-				top: 500,
-				behavior: 'smooth'
-			});
-		}
-	}
+function handleScroll(): void {
+  const threshold = 100;
+  if (!(window.scrollY > threshold) && !showedPopup) {
+    y = 20;
+    showPopup = 1;
+    showedPopup = true;
+    showPointer = "inherit";
+  } else {
+    y = 0;
+    showPopup = 0;
+    showedPopup = true;
+    scrolledPopup = true;
+    showPointer = "none";
+  }
+}
 
-	async function initializePopupCode() {
-		handleScroll();
-		window.addEventListener('scroll', handleScroll);
+function scrollDown(): void {
+  if (!scrolledPopup) {
+    scrolledPopup = true;
+    window.scrollTo({
+      top: 500,
+      behavior: 'smooth'
+    });
+  }
+}
 
-		updateY();
-		const interval = setInterval(updateY, 1000); // Update y every 1 second
+async function initializePopupCode() {
+  handleScroll();
+  window.addEventListener('scroll', handleScroll);
 
-    await tick();
+  updateY();
+  const interval = setInterval(updateY, 1000);
 
-    if (!showedPopup) {
-      clearInterval(interval);
-    }
+  await tick();
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-			clearInterval(interval);
-		};
-	}
+  if (!showedPopup) {
+    clearInterval(interval);
+  }
 
-	onMount(initializePopupCode);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+    clearInterval(interval);
+  };
+}
+
+onMount(initializePopupCode);
 </script>
 
 <div
