@@ -26,6 +26,7 @@
 			<img
 				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
 				class="md:w-48 md:h-48 rounded-full text-center"
+        loading="lazy"
 				style="z-index: 9999;"
 				alt=""
 				width="384"
