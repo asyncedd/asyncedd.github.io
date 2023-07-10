@@ -27,10 +27,9 @@
 				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
 				class="w-48 h-48 md:w-48 md:h-48 rounded-full text-center"
         loading="lazy"
-				style="z-index: 9999;"
+				style="z-index: 9999; aspect-ratio: 1;"
 				alt=""
-				width="384"
-				height="384"
+        decoding="async"
 			/>
 			<h1
 				data-value="async"
