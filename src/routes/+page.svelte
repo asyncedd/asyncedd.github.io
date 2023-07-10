@@ -4,7 +4,7 @@
 	import Font from '../components/fonts.svelte';
 	import Popup from '../components/popup.svelte';
 	import Lorem from '../components/lorem.svelte';
-  import Footer from '../components/footer.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <Popup />
@@ -14,7 +14,7 @@
 <Hackerman />
 
 <title>
-  A custom portfolio website made with SvelteKit and TailwindCSS. Created by @asyncedd
+	A custom portfolio website made with SvelteKit and TailwindCSS. Created by @asyncedd
 </title>
 
 <body class="dark:bg-ctp-base light:bg-ctp-text">
