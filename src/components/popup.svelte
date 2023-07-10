@@ -66,8 +66,8 @@ onMount(initializePopupCode);
 	
 .popup {
   transform: translateX(-50%);
-  @apply text-ctp-base bg-ctp-sky text-center fixed bottom-[20px] ml-[50%] w-[45px] p-[10px] rounded-[4px];
-  box-shadow: 0px 4px 4px 0px rgba(137, 220, 235, 0.5);
+  @apply text-ctp-base bg-ctp-blue text-center fixed bottom-[20px] ml-[50%] w-[45px] p-[10px] rounded-[4px];
+  box-shadow: 0px 4px 4px 0px rgba(137, 180, 250, 0.5);
   transition: opacity 0.5s ease-out, bottom 0.5s ease-in, width 0.5s ease-in, padding 0.5s ease-in; /* Added transition property */
   z-index: 9999;
   animation: yAnimation 1s linear infinite alternate;
