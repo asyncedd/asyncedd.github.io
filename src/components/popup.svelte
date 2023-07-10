@@ -2,24 +2,17 @@
 import { onMount, tick } from 'svelte';
 
 let showPopup = 0;
-let y = 20;
 let showedPopup = false;
 let scrolledPopup = false;
 let showPointer = "inherit";
 
-function updateY(): void {
-  y = (y > 20) ? y - 10 : y + 10;
-}
-
 function handleScroll(): void {
   const threshold = 100;
   if (!(window.scrollY > threshold) && !showedPopup) {
-    y = 20;
     showPopup = 1;
     showedPopup = true;
     showPointer = "inherit";
   } else {
-    y = 0;
     showPopup = 0;
     showedPopup = true;
     scrolledPopup = true;
@@ -41,18 +34,17 @@ async function initializePopupCode() {
   handleScroll();
   window.addEventListener('scroll', handleScroll);
 
-  updateY();
-  const interval = setInterval(updateY, 1000);
-
   await tick();
 
   if (!showedPopup) {
-    clearInterval(interval);
+    const popup = document.querySelector('.popup');
+    if (popup) {
+      popup.classList.add('animate');
+    }
   }
 
   return () => {
     window.removeEventListener('scroll', handleScroll);
-    clearInterval(interval);
   };
 }
 
@@ -62,7 +54,7 @@ onMount(initializePopupCode);
 <div
 	class="popup"
 	role="button"
-	style="opacity: {showPopup}; bottom: {y}px; pointer-events: {showPointer};"
+	style="opacity: {showPopup}; pointer-events: {showPointer};"
 	on:click={scrollDown}
 	on:keydown={scrollDown}
 	tabindex="0"
@@ -71,19 +63,32 @@ onMount(initializePopupCode);
 </div>
 
 <style>
-	.popup {
-		transform: translateX(-50%);
-		@apply text-ctp-base bg-ctp-sky text-center fixed bottom-[20px] ml-[50%] w-[45px] p-[10px] rounded-[4px];
-		box-shadow: 0px 4px 4px 0px rgba(137, 220, 235, 0.5);
-		transition: opacity 0.5s ease-out, bottom 0.5s ease-in, width 0.5s ease-in, padding 0.5s ease-in; /* Added transition property */
-		z-index: 9999;
-	}
+	
+.popup {
+  transform: translateX(-50%);
+  @apply text-ctp-base bg-ctp-sky text-center fixed bottom-[20px] ml-[50%] w-[45px] p-[10px] rounded-[4px];
+  box-shadow: 0px 4px 4px 0px rgba(137, 220, 235, 0.5);
+  transition: opacity 0.5s ease-out, bottom 0.5s ease-in, width 0.5s ease-in, padding 0.5s ease-in; /* Added transition property */
+  z-index: 9999;
+  animation: yAnimation 1s linear infinite alternate;
+}
 
-	.popup:hover {
-		@apply w-[100px] p-[30px];
-	}
+@keyframes yAnimation {
+  from {
+    bottom: 20px;
+  }
 
-	.material-symbols-outlined {
-		font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 45;
-	}
+  to {
+    bottom: 0;
+  }
+}
+
+.popup:hover {
+  @apply w-[100px] p-[30px];
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 45;
+}
+
 </style>
