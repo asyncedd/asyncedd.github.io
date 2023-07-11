@@ -15,7 +15,7 @@
 
 <title> async </title>
 
-<body class="dark:bg-ctp-base light:bg-ctp-text">
+<body class="dark:bg-ctp-base light:bg-ctp-text" style="overflow-x: hidden; overflow-y: scroll;">
 	<div class="bg-ctp-blue">
 		<div
 			class="place-content-center flex justify-center items-center"
@@ -36,15 +36,14 @@
 				async
 			</h1>
 		</div>
-    <h1 class="text-ctp-base m-8 text-[25px]">A avid learner</h1>
+		<div class="place-content-center flex justify-center items-center">
+			<h1 class="text-ctp-base m-8 text-[25px] w-[15rem]">A avid learner</h1>
+		</div>
 	</div>
 	<Wave />
 	<div class="p-[5rem]" />
 	<div class="place-content-center flex justify-center items-center">
-		<div
-			class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex"
-			style="overflow-x: hidden; overflow-y: scroll;"
-		>
+		<div class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex">
 			<h1 data-value="Skills" class="text-ctp-base w-[20rem] text-center">Skills</h1>
 		</div>
 	</div>
