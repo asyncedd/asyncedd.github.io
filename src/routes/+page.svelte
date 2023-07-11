@@ -26,10 +26,10 @@
 			<img
 				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
 				class="w-48 h-48 md:w-48 md:h-48 rounded-full text-center"
-        loading="lazy"
+				loading="lazy"
 				style="z-index: 9999; aspect-ratio: 1;"
 				alt=""
-        decoding="async"
+				decoding="async"
 			/>
 			<h1
 				data-value="async"
@@ -40,6 +40,18 @@
 		</div>
 	</div>
 	<Wave />
+	<div class="place-content-center flex justify-center items-center">
+		<div
+			class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex"
+			style="overflow-x: hidden; overflow-y: scroll;"
+		>
+			<h1 data-value="Skills" class="text-ctp-base w-[20rem] text-center">Skills</h1>
+		</div>
+	</div>
+	<div class="p-[3rem] place-content-center flex">
+		<h1 data-value="Langs" class="text-[5rem] w-[17rem] m-8">Langs</h1>
+		<h1 data-value="Tools" class="text-[5rem] w-[17rem] m-8">Tools</h1>
+	</div>
 	<Lorem />
 </body>
 
