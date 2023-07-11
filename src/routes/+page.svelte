@@ -38,14 +38,6 @@
 				async
 			</h1>
 		</div>
-		<div class="container">
-			<h1
-				data-value="HI"
-				class="m-8 text-center text-[100px] antialiased text-ctp-base w-[10rem] HI"
-			>
-				HI
-			</h1>
-		</div>
 	</div>
 	<Wave />
 	<Lorem />
