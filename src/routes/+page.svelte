@@ -75,11 +75,6 @@
 		font-family: 'JetBrains Mono', monospace;
 	}
 
-	.container {
-		@apply flex justify-center items-center text-center ml-[50%];
-		transform: translateX(-50%);
-	}
-
 	h1 {
 		@apply text-center scroll-smooth bg-ctp-blue rounded-[10px];
 		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
