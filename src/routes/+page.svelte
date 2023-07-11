@@ -36,6 +36,7 @@
 				async
 			</h1>
 		</div>
+    <h1 class="text-ctp-base m-8 text-[25px]">A avid learner</h1>
 	</div>
 	<Wave />
 	<div class="p-[5rem]" />
