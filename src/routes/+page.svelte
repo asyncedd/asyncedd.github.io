@@ -13,9 +13,7 @@
 
 <Hackerman />
 
-<title>
-	A custom portfolio website made with SvelteKit and TailwindCSS. Created by @asyncedd
-</title>
+<title> async </title>
 
 <body class="dark:bg-ctp-base light:bg-ctp-text">
 	<div class="bg-ctp-blue">
@@ -40,7 +38,7 @@
 		</div>
 	</div>
 	<Wave />
-  <div class="p-[5rem]"></div>
+	<div class="p-[5rem]" />
 	<div class="place-content-center flex justify-center items-center">
 		<div
 			class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex"
