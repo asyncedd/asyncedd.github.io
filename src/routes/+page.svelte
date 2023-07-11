@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	<Wave />
-	<div class="place-content-center flex justify-center items-center">
+	<div class="place-content-center flex justify-center items-center p-[5rem]">
 		<div
 			class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex"
 			style="overflow-x: hidden; overflow-y: scroll;"
