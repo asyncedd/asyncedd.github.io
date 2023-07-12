@@ -3,8 +3,6 @@
 
 	let i = 0;
 	const speed = 50; /* The speed/duration of the effect in milliseconds */
-	let text = '';
-	let placeholder = '';
 
 	function typeWriter() {
 		let element = document.getElementById('demo');
