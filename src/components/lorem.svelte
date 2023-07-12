@@ -1,4 +1,4 @@
-<p class="dark:text-ctp-text light:text-ctp-base text-center antialiased" style="padding: 20rem">
+<p class="light:text-ctp-base text-center antialiased dark:text-ctp-text" style="padding: 20rem">
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 	labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada fames ac.
 	Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Quam vulputate dignissim
