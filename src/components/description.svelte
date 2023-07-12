@@ -31,6 +31,13 @@
 	});
 </script>
 
+<div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
+	<div class="text-container">
+		<p id="demo" data-value="Ricer" />
+		<span id="cursor" class="cursor" />
+	</div>
+</div>
+
 <style>
 	.text-container {
 		position: relative;
@@ -40,30 +47,27 @@
 	.cursor {
 		position: absolute;
 		left: 100%;
-		top: 0.1em;
+		top: 50%;
+		transform: translateY(-50%);
 		width: 1px;
 		height: 1em;
 		background-color: black;
-		animation: blink 0.7s infinite;
+		animation: blink 1s infinite;
 		visibility: hidden;
 	}
 
 	@keyframes blink {
 		0% {
 			opacity: 1;
+			height: 1em;
 		}
 		50% {
 			opacity: 0;
+			height: 0;
 		}
 		100% {
 			opacity: 1;
+			height: 1em;
 		}
 	}
 </style>
-
-<div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
-	<div class="text-container">
-		<p id="demo" data-value="Ricer"></p>
-		<span id="cursor" class="cursor"></span>
-	</div>
-</div>
