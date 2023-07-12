@@ -78,7 +78,7 @@
 	});
 </script>
 
-<div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
+<div class="text-ctp-base m-8 text-[25px] text-center">
 	<div class="text-container">
 		<p id="demo" class="text-center" />
 		<span id="cursor" class="cursor bg-ctp-base" />
