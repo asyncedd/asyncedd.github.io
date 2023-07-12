@@ -2,7 +2,21 @@
 	import { onMount } from 'svelte';
 
 	let currentIndex = 0;
-	let texts = ['', 'Avid ricer', '', 'The average Linux enjoyer'];
+	let texts = ['Avid ricer', 'The average Linux enjoyer'];
+
+	const result: string[] = [];
+	for (let i = 0; i < texts.length; i++) {
+		result.push(texts[i]);
+		result.push('');
+	}
+
+	// Remove the last empty string if needed
+	if (texts.length > 0) {
+		result.pop();
+	}
+
+	texts = result;
+
 	let i = 0;
 	const speed = 50; /* The speed/duration of the effect in milliseconds */
 	let text = '';
