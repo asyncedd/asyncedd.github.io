@@ -6,7 +6,10 @@
 	import Lorem from '../components/lorem.svelte';
 	import Footer from '../components/footer.svelte';
 	import Description from '../components/description.svelte';
+	import Navbar from '../components/navbar.svelte';
 </script>
+
+<Navbar />
 
 <Popup />
 
@@ -16,41 +19,41 @@
 
 <title> async </title>
 
-<body class="dark:bg-ctp-base light:bg-ctp-text" style="overflow-x: hidden; overflow-y: scroll;">
+<body class="light:bg-ctp-text dark:bg-ctp-base" style="overflow-x: hidden; overflow-y: scroll;">
 	<div class="bg-ctp-blue">
 		<div
-			class="place-content-center flex justify-center items-center"
+			class="flex place-content-center items-center justify-center"
 			style="vertical-align: baseline;"
 		>
 			<img
 				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
-				class="w-48 h-48 md:w-48 md:h-48 rounded-full text-center"
+				class="h-48 w-48 rounded-full text-center md:h-48 md:w-48"
 				loading="lazy"
-				style="z-index: 9999; aspect-ratio: 1;"
+				style="z-index: 999; aspect-ratio: 1;"
 				alt=""
 				decoding="async"
 			/>
 			<h1
 				data-value="async"
-				class="m-8 text-center text-[100px] antialiased text-ctp-base w-[20rem]"
+				class="m-8 w-[20rem] text-center text-[100px] text-ctp-base antialiased"
 			>
 				async
 			</h1>
 		</div>
-		<div class="place-content-center flex justify-center items-center">
+		<div class="flex place-content-center items-center justify-center">
 			<Description />
 		</div>
 	</div>
 	<Wave />
 	<div class="p-[5rem]" />
-	<div class="place-content-center flex justify-center items-center">
-		<div class="p-[5rem] text-[5rem] justify-center items-center place-content-center flex">
-			<h1 data-value="Skills" class="text-ctp-base w-[20rem] text-center">Skills</h1>
+	<div class="flex place-content-center items-center justify-center">
+		<div class="flex place-content-center items-center justify-center p-[5rem] text-[5rem]">
+			<h1 data-value="Skills" class="w-[20rem] text-center text-ctp-base">Skills</h1>
 		</div>
 	</div>
-	<div class="p-[3rem] place-content-center flex">
-		<h1 data-value="Langs" class="text-[5rem] w-[17rem] m-8">Langs</h1>
-		<h1 data-value="Tools" class="text-[5rem] w-[17rem] m-8">Tools</h1>
+	<div class="flex place-content-center p-[3rem]">
+		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem]">Langs</h1>
+		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem]">Tools</h1>
 	</div>
 	<Lorem />
 </body>
@@ -72,12 +75,12 @@
 	@tailwind utilities;
 
 	body {
-		@apply grid m-[0rem];
+		@apply m-[0rem] grid;
 		font-family: 'JetBrains Mono', monospace;
 	}
 
 	h1 {
-		@apply text-center scroll-smooth bg-ctp-blue rounded-[10px];
+		@apply scroll-smooth rounded-[10px] bg-ctp-blue text-center;
 		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
 	}
 
