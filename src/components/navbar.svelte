@@ -1,8 +1,4 @@
-<script>
-	// Navbar.svelte
-</script>
-
-<nav class="transparent sticky bg-ctp-blue" style="opacity: 0.9; z-index: 9999;">
+<nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
 	<ul>
 		<li><a href="#">Home</a></li>
 		<li><a href="#">About</a></li>
