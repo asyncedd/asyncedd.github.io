@@ -4,7 +4,7 @@
 	let i = 0;
 	const speed = 50; /* The speed/duration of the effect in milliseconds */
 	let text = '';
-	let cursorVisible = true;
+	let showCursor = false;
 
 	function typeWriter() {
 		const element = document.getElementById('demo');
@@ -14,12 +14,12 @@
 			text += txt.charAt(i);
 			element.innerHTML = text;
 			i++;
-		} else {
-			cursorVisible = false;
 		}
 
-		cursorVisible = !cursorVisible;
-		cursor.style.visibility = cursorVisible ? 'visible' : 'hidden';
+		if (!showCursor && i > 0) {
+			showCursor = true;
+			cursor.style.visibility = 'visible';
+		}
 
 		if (i < txt.length + 1) {
 			setTimeout(typeWriter, speed);
@@ -30,13 +30,6 @@
 		typeWriter();
 	});
 </script>
-
-<div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
-	<div class="text-container">
-		<p id="demo" data-value="Ricer" />
-		<span id="cursor" class="cursor" />
-	</div>
-</div>
 
 <style>
 	.text-container {
@@ -52,6 +45,7 @@
 		height: 1em;
 		background-color: black;
 		animation: blink 0.7s infinite;
+		visibility: hidden;
 	}
 
 	@keyframes blink {
@@ -66,3 +60,10 @@
 		}
 	}
 </style>
+
+<div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
+	<div class="text-container">
+		<p id="demo" data-value="Ricer"></p>
+		<span id="cursor" class="cursor"></span>
+	</div>
+</div>
