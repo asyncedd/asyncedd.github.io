@@ -5,6 +5,7 @@
 	import Popup from '../components/popup.svelte';
 	import Lorem from '../components/lorem.svelte';
 	import Footer from '../components/footer.svelte';
+	import Description from '../components/description.svelte';
 </script>
 
 <Popup />
@@ -37,7 +38,7 @@
 			</h1>
 		</div>
 		<div class="place-content-center flex justify-center items-center">
-			<h1 class="text-ctp-base m-8 text-[25px] w-[15rem]">A avid learner</h1>
+			<Description />
 		</div>
 	</div>
 	<Wave />
