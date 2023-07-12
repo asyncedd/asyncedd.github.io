@@ -66,8 +66,8 @@
 
 <div class="text-ctp-base m-8 text-[25px] w-[15rem] text-center">
 	<div class="text-container">
-		<p id="demo" />
-		<span id="cursor" class="cursor" />
+		<p id="demo" class="text-center" />
+		<span id="cursor" class="cursor bg-ctp-base" />
 	</div>
 </div>
 
@@ -75,7 +75,7 @@
 	.text-container {
 		position: relative;
 		display: inline-block;
-    white-space: nowrap;
+		white-space: nowrap;
 	}
 
 	.cursor {
@@ -85,7 +85,6 @@
 		transform: translateY(-50%);
 		width: 1px;
 		height: 1em;
-		background-color: black;
 		animation: blink 1s infinite;
 		visibility: hidden;
 	}
