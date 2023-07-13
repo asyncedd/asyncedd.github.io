@@ -4,6 +4,7 @@
 
 <nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
 	<ul class="navbar-list">
+		<li style="flex-grow: 0.1;" />
 		<li><span class="menu-heading">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
@@ -15,6 +16,7 @@
 				href="https://discord.com/users/797422750321999943"
 			/>
 		</li>
+    <li style="flex-grow: 0.1;" />
 	</ul>
 </nav>
 
