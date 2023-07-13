@@ -6,7 +6,9 @@
 	<ul class="navbar-list">
 		<li><span class="menu-heading">async</span></li>
 		<li style="flex-grow: 1;" />
-		<li><a class="fa-brands fa-github text-[3rem]" href="https://github.com/asyncedd" /></li>
+		<li>
+			<a class="fa-brands fa-github github text-[3rem]" href="https://github.com/asyncedd" />
+		</li>
 		<li><a class="menu-link" href="#">About</a></li>
 		<li><a class="menu-link" href="#">Contact</a></li>
 	</ul>
@@ -53,5 +55,14 @@
 		position: sticky;
 		top: 0;
 		z-index: 100;
+	}
+
+	.github {
+		@apply text-ctp-text;
+		transition: color 0.3s ease-in;
+	}
+
+	.github:hover {
+		color: #333;
 	}
 </style>
