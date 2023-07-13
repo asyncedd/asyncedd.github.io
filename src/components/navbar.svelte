@@ -9,7 +9,12 @@
 		<li>
 			<a class="fa-brands fa-github github text-[3rem]" href="https://github.com/asyncedd" />
 		</li>
-		<li><a class="menu-link" href="#">About</a></li>
+		<li>
+			<a
+				class="fa-brands fa-discord discord text-[3rem]"
+				href="https://discord.com/users/797422750321999943"
+			/>
+		</li>
 		<li><a class="menu-link" href="#">Contact</a></li>
 	</ul>
 </nav>
@@ -64,5 +69,14 @@
 
 	.github:hover {
 		color: #333;
+	}
+
+	.discord {
+		@apply text-ctp-text;
+		transition: color 0.3s ease-in;
+	}
+
+	.discord:hover {
+		color: #5865f2;
 	}
 </style>
