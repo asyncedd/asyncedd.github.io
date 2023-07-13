@@ -19,12 +19,9 @@
 
 <title> async </title>
 
-<body class="light:bg-ctp-text dark:bg-ctp-base" style="overflow-x: hidden; overflow-y: scroll;">
+<body class="bg-ctp-text dark:bg-ctp-base" style="overflow: hidden scroll;">
 	<div class="bg-ctp-blue">
-		<div
-			class="flex place-content-center items-center justify-center"
-			style="vertical-align: baseline;"
-		>
+		<div class="flex items-center justify-center" style="vertical-align: baseline;">
 			<img
 				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
 				class="h-48 w-48 rounded-full text-center md:h-48 md:w-48"
@@ -40,18 +37,18 @@
 				async
 			</h1>
 		</div>
-		<div class="flex place-content-center items-center justify-center">
+		<div class="flex items-center justify-center">
 			<Description />
 		</div>
 	</div>
 	<Wave />
 	<div class="p-[5rem]" />
-	<div class="flex place-content-center items-center justify-center">
-		<div class="flex place-content-center items-center justify-center p-[5rem] text-[5rem]">
+	<div class="flex items-center justify-center">
+		<div class="flex items-center justify-center p-[5rem] text-[5rem]">
 			<h1 data-value="Skills" class="w-[20rem] text-center text-ctp-base">Skills</h1>
 		</div>
 	</div>
-	<div class="flex place-content-center p-[3rem]">
+	<div class="flex justify-center p-[3rem]">
 		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem]">Langs</h1>
 		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem]">Tools</h1>
 	</div>
