@@ -15,7 +15,6 @@
 				href="https://discord.com/users/797422750321999943"
 			/>
 		</li>
-		<li><a class="menu-link" href="#">Contact</a></li>
 	</ul>
 </nav>
 
