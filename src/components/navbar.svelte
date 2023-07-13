@@ -4,7 +4,6 @@
 
 <nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
 	<ul class="navbar-list">
-		<li style="flex-grow: 0.1;" />
 		<li><span class="async menu-heading text-[3rem]">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
@@ -16,7 +15,6 @@
 				href="https://discord.com/users/797422750321999943"
 			/>
 		</li>
-		<li style="flex-grow: 0.1;" />
 	</ul>
 </nav>
 
@@ -87,5 +85,6 @@
 
 	.async:hover {
 		@apply text-ctp-teal;
+		transition: color 0.3s ease-in-out;
 	}
 </style>
