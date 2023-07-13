@@ -5,18 +5,18 @@
 <nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
 	<ul class="navbar-list">
 		<li style="flex-grow: 0.1;" />
-		<li><span class="menu-heading">async</span></li>
+		<li><span class="async menu-heading text-[3rem]">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
-			<a class="fa-brands fa-github github text-[3rem]" href="https://github.com/asyncedd" />
+			<a class="fa-brands fa-github github text-[2rem]" href="https://github.com/asyncedd" />
 		</li>
 		<li>
 			<a
-				class="fa-brands fa-discord discord text-[3rem]"
+				class="fa-brands fa-discord discord text-[2rem]"
 				href="https://discord.com/users/797422750321999943"
 			/>
 		</li>
-    <li style="flex-grow: 0.1;" />
+		<li style="flex-grow: 0.1;" />
 	</ul>
 </nav>
 
@@ -65,7 +65,7 @@
 
 	.github {
 		@apply text-ctp-text;
-		transition: color 0.3s ease-in;
+		transition: color 0.3s ease-in-out;
 	}
 
 	.github:hover {
@@ -74,10 +74,18 @@
 
 	.discord {
 		@apply text-ctp-text;
-		transition: color 0.3s ease-in;
+		transition: color 0.3s ease-in-out;
 	}
 
 	.discord:hover {
 		color: #5865f2;
+	}
+
+	.async {
+		@apply text-ctp-base;
+	}
+
+	.async:hover {
+		@apply text-ctp-teal;
 	}
 </style>
