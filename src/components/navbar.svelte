@@ -1,8 +1,14 @@
+<head>
+	<script src="https://kit.fontawesome.com/777ef29ec5.js" crossorigin="anonymous"></script>
+</head>
+
 <nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Contact</a></li>
+	<ul class="navbar-list">
+		<li><span class="menu-heading">async</span></li>
+		<li style="flex-grow: 1;" />
+		<li><a class="fa-brands fa-github text-[3rem]" href="https://github.com/asyncedd" /></li>
+		<li><a class="menu-link" href="#">About</a></li>
+		<li><a class="menu-link" href="#">Contact</a></li>
 	</ul>
 </nav>
 
@@ -15,16 +21,31 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		display: flex;
+		align-items: center; /* Align items vertically */
 	}
 
 	li {
-		display: inline-block;
 		margin-right: 10px;
 	}
 
-	a {
-		text-decoration: none;
+	ul.navbar-list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-start; /* Align items to the left */
+	}
+
+	.menu-heading {
+		font-size: 25px;
 		color: #333;
+	}
+
+	.menu-link {
+		font-size: 25px;
+		color: #333;
+		text-decoration: none;
 	}
 
 	/* Add sticky styles */
