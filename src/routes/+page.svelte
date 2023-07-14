@@ -23,7 +23,7 @@
 	<div class="bg-ctp-blue">
 		<div class="flex items-center justify-center" style="vertical-align: baseline;">
 			<img
-				src="/matej-rieciciar-SdDvoAvu384-unsplash.jpg"
+				src="/moutains.webp"
 				class="h-48 w-48 rounded-full text-center md:h-48 md:w-48"
 				loading="lazy"
 				style="z-index: 999; aspect-ratio: 1;"
