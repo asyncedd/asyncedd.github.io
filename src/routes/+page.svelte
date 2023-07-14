@@ -18,7 +18,9 @@
 
 <Hackerman />
 
-<title> async </title>
+<svelte:head>
+	<title>async</title>
+</svelte:head>
 
 <body class="bg-ctp-text dark:bg-ctp-base" style="overflow: hidden scroll; scroll-smooth">
 	<div class="bg-ctp-blue">
