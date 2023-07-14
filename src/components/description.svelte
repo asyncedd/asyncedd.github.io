@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let currentIndex = 0;
-	let texts = ['Avid ricer', 'The average Linux enjoyer'];
+	let texts = ['Avid ricer', 'The average Linux enjoyer', '🇺🇦 Ukraine foreva'];
 
 	const result: string[] = [];
 	for (let i = 0; i < texts.length; i++) {
