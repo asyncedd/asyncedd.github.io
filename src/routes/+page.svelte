@@ -19,7 +19,7 @@
 
 <title> async </title>
 
-<body class="bg-ctp-text dark:bg-ctp-base" style="overflow: hidden scroll;">
+<body class="bg-ctp-text dark:bg-ctp-base" style="overflow: hidden scroll; scroll-smooth">
 	<div class="bg-ctp-blue">
 		<div class="flex items-center justify-center" style="vertical-align: baseline;">
 			<img
@@ -77,7 +77,7 @@
 	}
 
 	h1 {
-		@apply scroll-smooth rounded-[10px] bg-ctp-blue text-center;
+		@apply rounded-[10px] bg-ctp-blue text-center;
 		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
 	}
 
