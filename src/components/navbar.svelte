@@ -4,7 +4,7 @@
 
 <nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
 	<ul class="navbar-list">
-		<li><span class="async menu-heading text-[3rem]">async</span></li>
+		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
 			<a class="fa-brands fa-github github text-[2rem]" href="https://github.com/asyncedd" />
