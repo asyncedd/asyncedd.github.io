@@ -77,10 +77,10 @@
 
 	.async {
 		@apply text-ctp-base;
+		transition: all 0.3s ease 0.1s;
 	}
 
 	.async:hover {
 		@apply text-ctp-teal;
-		transition: color 0.3s ease-in-out;
 	}
 </style>
