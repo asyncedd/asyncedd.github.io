@@ -33,15 +33,11 @@
 			i++;
 		}
 
-		if (!showCursor && i > 0) {
-			showCursor = true;
-			cursor.style.visibility = 'visible';
-		}
-
 		if (i === txt.length && currentIndex < texts.length - 1) {
 			currentIndex++;
 			if (txt === '') {
 				backspaceEffect();
+				cursor.style.visibility = 'hidden';
 				return;
 			}
 			i = 0;
@@ -52,6 +48,8 @@
 
 		if (i < txt.length + 1) {
 			setTimeout(typeWriter, speed);
+		} else {
+			cursor.style.visibility = 'hidden';
 		}
 	}
 
@@ -63,6 +61,7 @@
 		if (currentText.length > 0) {
 			element.innerHTML = currentText.slice(0, -1);
 			setTimeout(backspaceEffect, speed);
+			cursor.style.visibility = 'visible';
 		} else {
 			showCursor = false;
 			cursor.style.visibility = 'hidden';
@@ -99,7 +98,6 @@
 		width: 1px;
 		height: 1em;
 		animation: blink 1s infinite;
-		visibility: hidden;
 	}
 
 	@keyframes blink {
