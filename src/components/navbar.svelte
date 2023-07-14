@@ -40,7 +40,9 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: flex-start; /* Align items to the left */
+		justify-content: space-between; /* Align items to the left */
+		align-items: center;
+		padding: 0 5%;
 	}
 
 	.menu-heading {
