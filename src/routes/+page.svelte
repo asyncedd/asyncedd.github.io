@@ -7,7 +7,7 @@
 	import Footer from '../components/footer.svelte';
 	import Navbar from '../components/navbar.svelte';
 	import Header from '../components/header.svelte';
-	import Dividers from '../components/dividers.svelte';
+	import DividersPacman from '../components/dividers/pacman.svelte';
 </script>
 
 <Navbar />
@@ -40,7 +40,7 @@
 	<div class="flex items-center justify-center p-[3rem]">
 		<h1 data-value="Lorem" class="m-8 w-[20rem] text-[5rem]" style="white-space: nowrap;">Lorem</h1>
 	</div>
-	<Dividers />
+	<DividersPacman />
 	<Lorem />
 </body>
 
