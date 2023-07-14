@@ -50,12 +50,6 @@
 		color: #333;
 	}
 
-	.menu-link {
-		font-size: 25px;
-		color: #333;
-		text-decoration: none;
-	}
-
 	/* Add sticky styles */
 	.sticky {
 		position: sticky;
