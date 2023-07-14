@@ -80,16 +80,16 @@
 	}
 
 	.github {
-		@apply text-ctp-text;
+		@apply text-ctp-base;
 		transition: color 0.3s ease-in-out;
 	}
 
 	.github:hover {
-		color: #333;
+		color: #f5f5f5;
 	}
 
 	.discord {
-		@apply text-ctp-text;
+		@apply text-ctp-base;
 		transition: color 0.3s ease-in-out;
 	}
 
