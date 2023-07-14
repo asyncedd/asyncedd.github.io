@@ -30,14 +30,17 @@
 		if (i < txt.length) {
 			text += txt.charAt(i);
 			element.innerHTML = text;
+			cursor.style.visibility = 'visible';
 			i++;
+		} else {
+			cursor.style.visibility = 'hidden';
 		}
 
 		if (i === txt.length && currentIndex < texts.length - 1) {
 			currentIndex++;
 			if (txt === '') {
-				backspaceEffect();
 				cursor.style.visibility = 'hidden';
+				backspaceEffect();
 				return;
 			}
 			i = 0;
@@ -48,8 +51,6 @@
 
 		if (i < txt.length + 1) {
 			setTimeout(typeWriter, speed);
-		} else {
-			cursor.style.visibility = 'hidden';
 		}
 	}
 
@@ -58,7 +59,7 @@
 		const cursor = document.getElementById('cursor');
 		const currentText = element.innerHTML;
 
-		if (currentText.length > 0) {
+		if (currentText.length > 0 || !(currentText.length == 0)) {
 			element.innerHTML = currentText.slice(0, -1);
 			setTimeout(backspaceEffect, speed);
 			cursor.style.visibility = 'visible';
