@@ -5,7 +5,7 @@
 <div class="flex items-center justify-center" style="vertical-align: baseline;">
 	<img
 		src="/moutains.webp"
-		class="h-48 w-48 rounded-full text-center md:h-48 md:w-48"
+		class="rotate h-48 w-48 rounded-full text-center md:h-48 md:w-48"
 		loading="lazy"
 		style="z-index: 999; aspect-ratio: 1;"
 		alt=""
@@ -28,5 +28,19 @@
 	h1:hover {
 		@apply bg-ctp-base text-ctp-green;
 		transform: scale(1.1);
+	}
+
+	.rotate {
+		transition: transform 1s ease;
+		transform: scale(1) rotate(360deg);
+	}
+
+	.rotate:hover {
+		transform: scale(1.1) rotate(720deg);
+	}
+
+	.rotate:not(:hover) {
+		transition: transform 1s ease;
+		transform: scale(1) rotate(360deg);
 	}
 </style>
