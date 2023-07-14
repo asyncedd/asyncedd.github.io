@@ -2,7 +2,7 @@
 	<script src="https://kit.fontawesome.com/777ef29ec5.js" crossorigin="anonymous"></script>
 </head>
 
-<nav class="transparent sticky bg-ctp-blue" style="z-index: 9999;">
+<nav class="transparent sticky bg-ctp-yellow" style="z-index: 9999;">
 	<ul class="navbar-list">
 		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
 		<li style="flex-grow: 1;" />
@@ -21,7 +21,15 @@
 <style>
 	.async {
 		--s: 0.1em; /* the thickness of the line */
-		background: linear-gradient(90deg, hsl(41, 86%, 83%) 25%, hsl(23, 92%, 75%) 50%, #1e1e2e 0)
+		background: linear-gradient(
+				90deg,
+				hsl(170, 57%, 73%) 10%,
+				hsl(189, 71%, 73%) 20%,
+				hsl(199, 76%, 69%) 30%,
+				hsl(217, 92%, 76%) 40%,
+				hsl(232, 97%, 85%) 50%,
+				#1e1e2e 0
+			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 		-webkit-background-clip: text;
 		background-clip: text;
