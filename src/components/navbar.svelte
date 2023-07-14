@@ -19,6 +19,21 @@
 </nav>
 
 <style>
+	.async {
+		--s: 0.1em; /* the thickness of the line */
+		background: linear-gradient(90deg, hsl(41, 86%, 83%) 25%, hsl(23, 92%, 75%) 50%, #1e1e2e 0)
+			calc(100% - var(--_p, 0%)) / 200% 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: 0.5s;
+		cursor: pointer;
+	}
+
+	.async:hover {
+		--_p: 100%;
+	}
+
 	nav {
 		padding: 10px;
 	}
@@ -47,7 +62,6 @@
 
 	.menu-heading {
 		font-size: 25px;
-		color: #333;
 	}
 
 	/* Add sticky styles */
@@ -73,14 +87,5 @@
 
 	.discord:hover {
 		color: #5865f2;
-	}
-
-	.async {
-		@apply text-ctp-base;
-		transition: all 0.3s ease 0.1s;
-	}
-
-	.async:hover {
-		@apply text-ctp-teal;
 	}
 </style>
