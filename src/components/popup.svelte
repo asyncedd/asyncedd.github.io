@@ -65,21 +65,22 @@
 
 <style>
 	.popup {
-		transform: translateX(-50%);
-		@apply fixed bottom-[20px] ml-[50%] w-[45px] rounded-[4px] bg-ctp-blue p-[10px] text-center ;
+		@apply fixed bottom-[20px] ml-[50%] w-[45px] rounded-[4px] bg-ctp-blue p-[10px] text-center;
 		box-shadow: 0px 4px 4px 0px rgba(137, 180, 250, 0.5);
 		transition: opacity 0.5s ease-out, bottom 0.5s ease-in, width 0.5s ease-in, padding 0.5s ease-in; /* Added transition property */
 		z-index: 9999;
-		animation: yAnimation 1s linear infinite alternate;
+		animation: bounce 1s infinite;
 	}
 
-	@keyframes yAnimation {
-		from {
-			bottom: 20px;
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(-25%) translateX(-50%);
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
 		}
-
-		to {
-			bottom: 0;
+		50% {
+			transform: translateY(0) translateX(-50%);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
 		}
 	}
 
