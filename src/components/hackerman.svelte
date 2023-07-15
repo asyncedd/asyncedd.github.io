@@ -12,7 +12,9 @@
 					return; // Exit if already animating
 				}
 
-				event.target.classList.add('animating'); // Add class to indicate animation
+				const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
+
+				target.classList.add('animating'); // Add class to indicate animation
 
 				let iteration = 0;
 				let interval: ReturnType<typeof setInterval> | undefined;
@@ -22,13 +24,13 @@
 				}
 
 				interval = setInterval(() => {
-					event.target.innerText = Array.from(event.target.innerText)
+					target.innerText = Array.from(target.innerText)
 						.map((letter, index) => {
 							if (iteration === 0) {
 								return letters[Math.floor(Math.random() * letters.length)];
 							} else if (index < iteration) {
-								return event.target.dataset.value![index];
-							} else if (index === iteration && letter === event.target.dataset.value![index]) {
+								return target.dataset.value![index];
+							} else if (index === iteration && letter === target.dataset.value![index]) {
 								return letter; // Stop generating for this letter
 							}
 
@@ -36,10 +38,10 @@
 						})
 						.join('');
 
-					if (iteration >= event.target.dataset.value!.length) {
+					if (iteration >= target.dataset.value!.length) {
 						clearInterval(interval!);
-						event.target.classList.remove('animating'); // Remove class after animation
-					} else if (event.target.innerText[iteration] === event.target.dataset.value![iteration]) {
+						target.classList.remove('animating'); // Remove class after animation
+					} else if (target.innerText[iteration] === target.dataset.value![iteration]) {
 						iteration++; // Move to the next letter
 					}
 				}, 30);
