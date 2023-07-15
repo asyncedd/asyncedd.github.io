@@ -14,8 +14,6 @@
 			}
 		});
 	};
-
-	let moonOrSun = theme.toString === 'ctp-latte' ? 'moon' : 'sun';
 </script>
 
 <head>
@@ -28,7 +26,9 @@
 		<li style="flex-grow: 1;" />
 		<li>
 			<a
-				class={`fa-solid ${moonOrSun === 'moon' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem]`}
+				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
+					$theme === 'ctp-latte' ? 'bg-gradient-to-r from-ctp-lavender to-ctp-blue' : 'bg-ctp-base'
+				} sunAndMoon`}
 				on:click={toggleTheme}
 			/>
 		</li>
@@ -121,5 +121,11 @@
 
 	.discord:hover {
 		color: #5865f2;
+	}
+
+	.sunAndMoon {
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>
