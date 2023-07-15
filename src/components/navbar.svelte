@@ -17,7 +17,7 @@
 		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
 		if (sunAndMoon) {
 			sunAndMoon.style.opacity = '0';
-			sunAndMoon.style.transform = 'translateY(-20px)';
+			sunAndMoon.style.transform = 'translateY(-30px)';
 
 			setTimeout(() => {
 				theme.update((currentTheme) => {
@@ -26,7 +26,7 @@
 					sunAndMoon.style.transform = 'translateY(0)';
 					return newTheme;
 				});
-			}, 200);
+			}, 300);
 		}
 	};
 
@@ -168,7 +168,7 @@
 	}
 
 	.sunAndMoon {
-		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
 	}
 
 	.bg-black {
