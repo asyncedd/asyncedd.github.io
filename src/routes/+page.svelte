@@ -55,7 +55,7 @@
 		font-family: 'JetBrains Mono';
 		font-style: normal;
 		font-weight: 400;
-		src: url('fonts/jetbrains-mono-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+		src: url('/fonts/jetbrains-mono-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 	}
 
 	@tailwind base;
