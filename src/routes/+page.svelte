@@ -9,6 +9,7 @@
 	import Header from '../components/header.svelte';
 	import DividersPacman from '../components/dividers/pacman.svelte';
 	import { theme } from '../components/navbar.svelte';
+	import '@fontsource/jetbrains-mono';
 </script>
 
 <svelte:head>
@@ -48,15 +49,6 @@
 <Footer />
 
 <style>
-	/* jetbrains-mono-regular - latin */
-	@font-face {
-		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-		font-family: 'JetBrains Mono';
-		font-style: normal;
-		font-weight: 400;
-		src: url('/fonts/jetbrains-mono-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-	}
-
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;

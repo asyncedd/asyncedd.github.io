@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@fontsource/jetbrains-mono':
+    specifier: ^5.0.5
+    version: 5.0.5
+
 devDependencies:
   '@catppuccin/tailwindcss':
     specifier: ^0.1.6
@@ -265,6 +270,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/jetbrains-mono@5.0.5:
+    resolution: {integrity: sha512-Smuppiu7QzNCatnccTXdUYbxUmEVywklM/hntWKhig0Q+hm7SYzQpNpxCR1Gm8npE8jpaKslhIsBPGuTBGZgdA==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
