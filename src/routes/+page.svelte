@@ -56,7 +56,6 @@
 	body {
 		@apply m-[0rem] bg-ctp-base;
 		font-family: 'JetBrains Mono', monospace;
-		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 	}
 
 	h1 {
