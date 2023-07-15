@@ -33,23 +33,30 @@
 	const handleMouseOver = () => {
 		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
 		if (sunAndMoon) {
-			sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
-			sunAndMoon.classList.remove(
-				currentTheme === 'ctp-mocha' ? 'text-ctp-lavender' : 'text-ctp-yellow'
-			);
-			sunAndMoon.classList.add(
-				currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender'
-			);
+			const removeClass = currentTheme === 'ctp-mocha' ? 'text-ctp-lavender' : 'text-ctp-yellow';
+			const addClass = currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender';
+
+			updateSunAndMoonStyles(sunAndMoon, 'scale(1.3) rotate(370deg)', removeClass, addClass);
 		}
 	};
 
 	const handleMouseOut = () => {
 		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
 		if (sunAndMoon) {
-			sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
-			sunAndMoon.classList.remove(
-				currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender'
-			);
+			const removeClass = currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender';
+			updateSunAndMoonStyles(sunAndMoon, 'scale(1.0) rotate(0deg)', removeClass);
+		}
+	};
+
+	const updateSunAndMoonStyles = (element, transformValue, removeClass, addClass) => {
+		element.style.transform = transformValue;
+
+		if (removeClass) {
+			element.classList.remove(removeClass);
+		}
+
+		if (addClass) {
+			element.classList.add(addClass);
 		}
 	};
 
@@ -158,19 +165,21 @@
 	}
 
 	.github {
-		transition: color 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
 	}
 
 	.github:hover {
 		color: #f5f5f5;
+		transform: scale(1.3);
 	}
 
 	.discord {
-		transition: color 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
 	}
 
 	.discord:hover {
 		color: #5865f2;
+		transform: scale(1.3);
 	}
 
 	.sunAndMoon {
