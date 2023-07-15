@@ -39,10 +39,10 @@
 		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Langs</h1>
 		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Tools</h1>
 	</div>
+	<DividersPacman />
 	<div class="flex items-center justify-center p-[3rem]">
 		<h1 data-value="Lorem" class="m-8 w-[20rem] text-[5rem]" style="white-space: nowrap;">Lorem</h1>
 	</div>
-	<DividersPacman />
 	<Lorem />
 </body>
 
