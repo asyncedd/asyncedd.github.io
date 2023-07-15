@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
+	import { theme } from '../components/navbar.svelte';
 
 	let showPopup = 0;
 	let showedPopup = false;
@@ -52,7 +53,7 @@
 </script>
 
 <div
-	class="popup"
+	class="popup {$theme}"
 	role="button"
 	style="opacity: {showPopup}; pointer-events: {showPointer};"
 	on:click={scrollDown}
