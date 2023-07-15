@@ -1,11 +1,38 @@
+<script context="module" lang="ts">
+	import { writable } from 'svelte/store';
+
+	export const theme = writable('ctp-mocha');
+</script>
+
+<script lang="ts">
+	import { variants } from '@catppuccin/palette';
+
+	const latteOrMocha = (flavor) => {
+		theme.set(flavor);
+	};
+
+	const toggleTheme = () => {
+		theme.update((currentTheme) => {
+			if (currentTheme === 'ctp-mocha') {
+				return 'ctp-latte';
+			} else {
+				return 'ctp-mocha';
+			}
+		});
+	};
+</script>
+
 <head>
 	<script src="https://kit.fontawesome.com/777ef29ec5.js" crossorigin="anonymous"></script>
 </head>
 
-<nav class="transparent sticky bg-ctp-yellow" style="z-index: 9998;">
+<nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
 	<ul class="navbar-list">
 		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
 		<li style="flex-grow: 1;" />
+		<li>
+			<a class="fa-solid fa-sun fg-ctp-base text-[2rem]" on:click={toggleTheme} />
+		</li>
 		<li>
 			<a class="fa-brands fa-github github text-[2rem]" href="https://github.com/asyncedd" />
 		</li>

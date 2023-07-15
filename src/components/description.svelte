@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { theme } from '../components/navbar.svelte';
 
 	let currentIndex = 0;
 	let texts = ['Avid ricer', 'The average Linux enjoyer', '🇺🇦 Ukraine foreva'];
@@ -77,7 +78,7 @@
 	});
 </script>
 
-<div class="m-8 text-center text-[25px] text-ctp-base">
+<div class="{$theme} m-8 text-center text-[25px] text-ctp-base">
 	<div class="text-container">
 		<p id="demo" class="text-center" />
 		<span id="cursor" class="cursor bg-ctp-base" />

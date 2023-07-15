@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { variants } from '@catppuccin/palette';
 	import Hackerman from '../components/hackerman.svelte';
 	import Wave from '../components/wave.svelte';
 	import Font from '../components/fonts.svelte';
@@ -8,7 +9,12 @@
 	import Navbar from '../components/navbar.svelte';
 	import Header from '../components/header.svelte';
 	import DividersPacman from '../components/dividers/pacman.svelte';
+	import { theme } from '../components/navbar.svelte';
 </script>
+
+<svelte:head>
+	<title>async</title>
+</svelte:head>
 
 <Navbar />
 
@@ -18,11 +24,10 @@
 
 <Hackerman />
 
-<svelte:head>
-	<title>async</title>
-</svelte:head>
-
-<body class="bg-ctp-text dark:bg-ctp-base" style="overflow: hidden scroll; scroll-smooth">
+<body
+	class="bg-ctp-text dark:bg-ctp-base {$theme} scroll-smooth transition-colors"
+	style="overflow: hidden scroll; transition-duration: 3s; transition-timing-function: ease"
+>
 	<div class="bg-ctp-blue">
 		<Header />
 	</div>
@@ -34,8 +39,8 @@
 		</div>
 	</div>
 	<div class="flex justify-center p-[3rem]">
-		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem]">Langs</h1>
-		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem]">Tools</h1>
+		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Langs</h1>
+		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Tools</h1>
 	</div>
 	<div class="flex items-center justify-center p-[3rem]">
 		<h1 data-value="Lorem" class="m-8 w-[20rem] text-[5rem]" style="white-space: nowrap;">Lorem</h1>

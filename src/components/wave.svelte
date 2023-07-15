@@ -1,4 +1,14 @@
-<div>
+<script>
+	import { writable } from 'svelte/store';
+	import { theme } from '../components/navbar.svelte';
+
+	let colors = {
+		'ctp-mocha': ['rgba(137, 180,  250, 0.7)', 'rgba(137, 180,  250, 0.5)', 'rgb(137, 180,  250)'],
+		'ctp-latte': ['rgba(30, 102, 245, 0.7)', 'rgba(30, 102, 245, 0.5)', 'rgba(30, 102, 245)']
+	};
+</script>
+
+<div class={$theme}>
 	<svg
 		class="waves"
 		xmlns="http://www.w3.org/2000/svg"
@@ -14,9 +24,9 @@
 			/>
 		</defs>
 		<g class="parallax">
-			<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(137, 180, 250, 0.7)" />
-			<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(137, 180, 250, 0.5)" />
-			<use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(137, 180, 250)" />
+			<use xlink:href="#gentle-wave" x="48" y="0" fill={colors[$theme][0]} />
+			<use xlink:href="#gentle-wave" x="48" y="3" fill={colors[$theme][1]} />
+			<use xlink:href="#gentle-wave" x="48" y="7" fill={colors[$theme][2]} />
 		</g>
 	</svg>
 </div>
