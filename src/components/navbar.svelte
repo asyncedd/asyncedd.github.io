@@ -5,6 +5,14 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	let currentTheme = '';
+
+	theme.subscribe((value) => {
+		currentTheme = value;
+	});
+
 	const toggleTheme = () => {
 		const sunAndMoon = document.querySelector('.sunAndMoon');
 		if (sunAndMoon) {
@@ -26,6 +34,26 @@
 			}, 200);
 		}
 	};
+
+	onMount(() => {
+		const sunAndMoon = document.querySelector('.sunAndMoon');
+		sunAndMoon.onmouseover = () => {
+			if (currentTheme == 'ctp-mocha') {
+				sunAndMoon.classList.remove('text-ctp-lavender');
+				sunAndMoon.classList.add('text-ctp-peach');
+			} else {
+				sunAndMoon.classList.remove('text-ctp-yellow');
+				sunAndMoon?.classList.add('text-ctp-lavender');
+			}
+		};
+		sunAndMoon.onmouseout = () => {
+			if (currentTheme == 'ctp-mocha') {
+				sunAndMoon.classList.remove('text-ctp-peach');
+			} else {
+				sunAndMoon.classList.remove('text-ctp-lavender');
+			}
+		};
+	});
 </script>
 
 <head>
@@ -134,7 +162,7 @@
 	}
 
 	.sunAndMoon {
-		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.3s ease-in-out;
 	}
 
 	.bg-black {
