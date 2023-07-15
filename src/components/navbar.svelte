@@ -67,7 +67,11 @@
 </head>
 <nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
 	<ul class="navbar-list">
-		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
+		<li>
+			<span class="async menu-heading text-[3rem] font-semibold"
+				><i class="fa-solid fa-house" /> async</span
+			>
+		</li>
 		<li style="flex-grow: 1;" />
 		<li>
 			<div
