@@ -67,11 +67,13 @@
 </head>
 <nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
 	<ul class="navbar-list">
-		<li>
-			<span class="async menu-heading text-[3rem] font-semibold"
-				><i class="fa-solid fa-house" /> async</span
-			>
-		</li>
+		<div class="enlarge">
+			<li>
+				<span class="async menu-heading text-[3rem] font-semibold"
+					><i class="fa-solid fa-house" /> async</span
+				>
+			</li>
+		</div>
 		<li style="flex-grow: 1;" />
 		<li>
 			<div
@@ -177,5 +179,14 @@
 
 	.bg-black {
 		color: black;
+	}
+
+	.enlarge {
+		transform: scale(1);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.enlarge:hover {
+		transform: scale(1.3);
 	}
 </style>
