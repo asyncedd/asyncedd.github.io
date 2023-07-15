@@ -29,6 +29,42 @@
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
 					$theme === 'ctp-latte' ? 'bg-gradient-to-r from-ctp-lavender to-ctp-blue' : 'bg-ctp-base'
 				} sunAndMoon`}
+				on:mouseenter={() => {
+					if ($theme === 'ctp-latte') {
+						document
+							.querySelector('.sunAndMoon')
+							.classList.remove(
+								'bg-gradient-to-r',
+								'from-ctp-blue',
+								'to-ctp-lavender',
+								'from-ctp-lavender',
+								'to-ctp-blue'
+							);
+						document.querySelector('.sunAndMoon').classList.add('bg-ctp-text');
+					} else {
+						document
+							.querySelector('.sunAndMoon')
+							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
+					}
+				}}
+				on:mouseleave={() => {
+					document
+						.querySelector('.sunAndMoon')
+						.classList.remove(
+							'bg-gradient-to-r',
+							'from-ctp-blue',
+							'to-ctp-lavender',
+							'from-ctp-lavender',
+							'to-ctp-blue'
+						);
+					if ($theme === 'ctp-latte') {
+						document
+							.querySelector('.sunAndMoon')
+							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
+					} else {
+						document.querySelector('.sunAndMoon').classList.add('bg-ctp-base');
+					}
+				}}
 				on:click={toggleTheme}
 			/>
 		</li>
