@@ -27,42 +27,8 @@
 		<li>
 			<a
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
-					$theme === 'ctp-latte' ? 'bg-black' : 'bg-ctp-base'
+					$theme === 'ctp-latte' ? 'text-black' : 'text-black'
 				} sunAndMoon`}
-				on:mouseenter={() => {
-					if ($theme === 'ctp-latte') {
-						document
-							.querySelector('.sunAndMoon')
-							.classList.remove(
-								'bg-gradient-to-r',
-								'from-ctp-blue',
-								'to-ctp-lavender',
-								'from-ctp-lavender',
-								'to-ctp-blue'
-							);
-						document
-							.querySelector('.sunAndMoon')
-							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
-					} else {
-						document
-							.querySelector('.sunAndMoon')
-							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
-					}
-				}}
-				on:mouseleave={() => {
-					document
-						.querySelector('.sunAndMoon')
-						.classList.remove(
-							'bg-gradient-to-r',
-							'from-ctp-blue',
-							'to-ctp-lavender',
-							'from-ctp-lavender',
-							'to-ctp-blue'
-						);
-					if (!$theme === 'ctp-latte') {
-						document.querySelector('.sunAndMoon').classList.add('bg-ctp-base');
-					}
-				}}
 				on:click={toggleTheme}
 			/>
 		</li>
@@ -156,9 +122,11 @@
 	}
 
 	.sunAndMoon {
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		transition: color 0.3s ease-in-out;
+	}
+
+	.sunAndMoon:hover {
+		color: hsl(316, 72%, 86%);
 	}
 
 	.bg-black {
