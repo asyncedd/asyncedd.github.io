@@ -11,9 +11,7 @@
 		alt=""
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 w-[20rem] text-center text-[100px]  antialiased">
-		async
-	</h1>
+	<h1 data-value="async" class="m-8 w-[20rem] text-center text-[100px] antialiased">async</h1>
 </div>
 <div class="flex items-center justify-center">
 	<Description />
@@ -22,6 +20,7 @@
 <style>
 	h1 {
 		@apply rounded-[10px] bg-ctp-blue text-center;
+		transition: transform 500ms ease;
 	}
 
 	h1:hover {
