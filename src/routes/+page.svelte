@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { variants } from '@catppuccin/palette';
 	import Hackerman from '../components/hackerman.svelte';
 	import Wave from '../components/wave.svelte';
 	import Font from '../components/fonts.svelte';
