@@ -38,15 +38,17 @@
 	onMount(() => {
 		const sunAndMoon = document.querySelector('.sunAndMoon');
 		sunAndMoon.onmouseover = () => {
+			sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
 			if (currentTheme == 'ctp-mocha') {
 				sunAndMoon.classList.remove('text-ctp-lavender');
 				sunAndMoon.classList.add('text-ctp-peach');
 			} else {
 				sunAndMoon.classList.remove('text-ctp-yellow');
-				sunAndMoon?.classList.add('text-ctp-lavender');
+				sunAndMoon.classList.add('text-ctp-lavender');
 			}
 		};
 		sunAndMoon.onmouseout = () => {
+			sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
 			if (currentTheme == 'ctp-mocha') {
 				sunAndMoon.classList.remove('text-ctp-peach');
 			} else {
