@@ -14,7 +14,7 @@
 	});
 
 	const toggleTheme = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon');
+		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
 		if (sunAndMoon) {
 			sunAndMoon.style.opacity = '0';
 			sunAndMoon.style.transform = 'translateY(-20px)';
@@ -31,31 +31,34 @@
 	};
 
 	const handleMouseOver = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon');
-		sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
-		if (currentTheme == 'ctp-mocha') {
-			sunAndMoon.classList.remove('text-ctp-lavender');
-			sunAndMoon.classList.add('text-ctp-peach');
-		} else {
-			sunAndMoon.classList.remove('text-ctp-yellow');
-			sunAndMoon.classList.add('text-ctp-lavender');
+		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
+		if (sunAndMoon) {
+			sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
+			sunAndMoon.classList.remove(
+				currentTheme === 'ctp-mocha' ? 'text-ctp-lavender' : 'text-ctp-yellow'
+			);
+			sunAndMoon.classList.add(
+				currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender'
+			);
 		}
 	};
 
 	const handleMouseOut = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon');
-		sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
-		if (currentTheme == 'ctp-mocha') {
-			sunAndMoon.classList.remove('text-ctp-peach');
-		} else {
-			sunAndMoon.classList.remove('text-ctp-lavender');
+		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
+		if (sunAndMoon) {
+			sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
+			sunAndMoon.classList.remove(
+				currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender'
+			);
 		}
 	};
 
 	onMount(() => {
-		const sunAndMoon = document.querySelector('.sunAndMoon');
-		sunAndMoon.onmouseover = handleMouseOver;
-		sunAndMoon.onmouseout = handleMouseOut;
+		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
+		if (sunAndMoon) {
+			sunAndMoon.addEventListener('mouseover', handleMouseOver);
+			sunAndMoon.addEventListener('mouseout', handleMouseOut);
+		}
 	});
 </script>
 
