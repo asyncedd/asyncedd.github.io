@@ -73,7 +73,6 @@
 			<div
 				role="button"
 				tabindex="0"
-				on:keydown={toggleTheme}
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
 					$theme === 'ctp-latte' ? 'text-black' : 'text-black'
 				} sunAndMoon`}
