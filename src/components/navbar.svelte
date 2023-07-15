@@ -6,13 +6,25 @@
 
 <script lang="ts">
 	const toggleTheme = () => {
-		theme.update((currentTheme) => {
-			if (currentTheme === 'ctp-mocha') {
-				return 'ctp-latte';
-			} else {
-				return 'ctp-mocha';
-			}
-		});
+		const sunAndMoon = document.querySelector('.sunAndMoon');
+		if (sunAndMoon) {
+			sunAndMoon.style.opacity = '0';
+			sunAndMoon.style.transform = 'translateY(-20px)';
+
+			setTimeout(() => {
+				theme.update((currentTheme) => {
+					if (currentTheme === 'ctp-mocha') {
+						sunAndMoon.style.opacity = '1';
+						sunAndMoon.style.transform = 'translateY(0)';
+						return 'ctp-latte';
+					} else {
+						sunAndMoon.style.opacity = '1';
+						sunAndMoon.style.transform = 'translateY(0)';
+						return 'ctp-mocha';
+					}
+				});
+			}, 200);
+		}
 	};
 </script>
 
@@ -122,11 +134,7 @@
 	}
 
 	.sunAndMoon {
-		transition: color 0.3s ease-in-out;
-	}
-
-	.sunAndMoon:hover {
-		color: hsl(316, 72%, 86%);
+		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
 	}
 
 	.bg-black {
