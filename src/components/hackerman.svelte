@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
+	const animationIntervalDuration = 30;
 
 	function hackerMan(): void {
 		const h1Elements = Array.from(document.querySelectorAll('h1'));
@@ -45,7 +46,7 @@
 					} else if (target.innerText[iteration] === targetValue![iteration]) {
 						iteration++; // Move to the next letter
 					}
-				}, 30);
+				}, animationIntervalDuration);
 			});
 		}
 	}
