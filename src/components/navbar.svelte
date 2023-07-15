@@ -21,47 +21,47 @@
 
 			setTimeout(() => {
 				theme.update((currentTheme) => {
-					if (currentTheme === 'ctp-mocha') {
-						sunAndMoon.style.opacity = '1';
-						sunAndMoon.style.transform = 'translateY(0)';
-						return 'ctp-latte';
-					} else {
-						sunAndMoon.style.opacity = '1';
-						sunAndMoon.style.transform = 'translateY(0)';
-						return 'ctp-mocha';
-					}
+					const newTheme = currentTheme === 'ctp-mocha' ? 'ctp-latte' : 'ctp-mocha';
+					sunAndMoon.style.opacity = '1';
+					sunAndMoon.style.transform = 'translateY(0)';
+					return newTheme;
 				});
 			}, 200);
 		}
 	};
 
+	const handleMouseOver = () => {
+		const sunAndMoon = document.querySelector('.sunAndMoon');
+		sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
+		if (currentTheme == 'ctp-mocha') {
+			sunAndMoon.classList.remove('text-ctp-lavender');
+			sunAndMoon.classList.add('text-ctp-peach');
+		} else {
+			sunAndMoon.classList.remove('text-ctp-yellow');
+			sunAndMoon.classList.add('text-ctp-lavender');
+		}
+	};
+
+	const handleMouseOut = () => {
+		const sunAndMoon = document.querySelector('.sunAndMoon');
+		sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
+		if (currentTheme == 'ctp-mocha') {
+			sunAndMoon.classList.remove('text-ctp-peach');
+		} else {
+			sunAndMoon.classList.remove('text-ctp-lavender');
+		}
+	};
+
 	onMount(() => {
 		const sunAndMoon = document.querySelector('.sunAndMoon');
-		sunAndMoon.onmouseover = () => {
-			sunAndMoon.style.transform = 'scale(1.3) rotate(370deg)';
-			if (currentTheme == 'ctp-mocha') {
-				sunAndMoon.classList.remove('text-ctp-lavender');
-				sunAndMoon.classList.add('text-ctp-peach');
-			} else {
-				sunAndMoon.classList.remove('text-ctp-yellow');
-				sunAndMoon.classList.add('text-ctp-lavender');
-			}
-		};
-		sunAndMoon.onmouseout = () => {
-			sunAndMoon.style.transform = 'scale(1.0) rotate(0deg)';
-			if (currentTheme == 'ctp-mocha') {
-				sunAndMoon.classList.remove('text-ctp-peach');
-			} else {
-				sunAndMoon.classList.remove('text-ctp-lavender');
-			}
-		};
+		sunAndMoon.onmouseover = handleMouseOver;
+		sunAndMoon.onmouseout = handleMouseOut;
 	});
 </script>
 
 <head>
 	<script src="https://kit.fontawesome.com/777ef29ec5.js" crossorigin="anonymous"></script>
 </head>
-
 <nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
 	<ul class="navbar-list">
 		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
@@ -88,7 +88,7 @@
 
 <style>
 	.async {
-		--s: 0.1em; /* the thickness of the line */
+		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				hsl(170, 57%, 73%) 10%,
@@ -119,7 +119,7 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		align-items: center; /* Align items vertically */
+		align-items: center;
 	}
 
 	li {
@@ -131,7 +131,7 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: space-between; /* Align items to the left */
+		justify-content: space-between;
 		align-items: center;
 		padding: 0 5%;
 	}
@@ -140,7 +140,6 @@
 		font-size: 25px;
 	}
 
-	/* Add sticky styles */
 	.sticky {
 		position: sticky;
 		top: 0;
