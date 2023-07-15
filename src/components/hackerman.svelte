@@ -8,11 +8,11 @@
 
 		h1Elements.forEach((h1) => {
 			h1.addEventListener('mouseover', (event) => {
-				if (event.target.classList.contains('animating')) {
+				const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
+
+				if (target.classList.contains('animating')) {
 					return; // Exit if already animating
 				}
-
-				const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
 
 				target.classList.add('animating'); // Add class to indicate animation
 
