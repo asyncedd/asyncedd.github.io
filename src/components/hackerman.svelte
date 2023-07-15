@@ -7,6 +7,7 @@
 		const h1Elements = Array.from(document.querySelectorAll('h1'));
 
 		h1Elements.forEach((h1) => {
+			const targetValue = h1.dataset.value;
 			h1.addEventListener('mouseover', (event) => {
 				const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
 
@@ -29,8 +30,8 @@
 							if (iteration === 0) {
 								return letters[Math.floor(Math.random() * letters.length)];
 							} else if (index < iteration) {
-								return target.dataset.value![index];
-							} else if (index === iteration && letter === target.dataset.value![index]) {
+								return targetValue![index];
+							} else if (index === iteration && letter === targetValue![index]) {
 								return letter; // Stop generating for this letter
 							}
 
@@ -41,7 +42,7 @@
 					if (iteration >= target.dataset.value!.length) {
 						clearInterval(interval!);
 						target.classList.remove('animating'); // Remove class after animation
-					} else if (target.innerText[iteration] === target.dataset.value![iteration]) {
+					} else if (target.innerText[iteration] === targetValue![iteration]) {
 						iteration++; // Move to the next letter
 					}
 				}, 30);
