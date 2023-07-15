@@ -5,8 +5,6 @@
 </script>
 
 <script lang="ts">
-	import { variants } from '@catppuccin/palette';
-
 	const toggleTheme = () => {
 		theme.update((currentTheme) => {
 			if (currentTheme === 'ctp-mocha') {
