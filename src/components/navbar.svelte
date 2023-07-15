@@ -27,7 +27,7 @@
 		<li>
 			<a
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
-					$theme === 'ctp-latte' ? 'bg-ctp-text' : 'bg-ctp-base'
+					$theme === 'ctp-latte' ? 'bg-black' : 'bg-ctp-base'
 				} sunAndMoon`}
 				on:mouseenter={() => {
 					if ($theme === 'ctp-latte') {
@@ -59,9 +59,7 @@
 							'from-ctp-lavender',
 							'to-ctp-blue'
 						);
-					if ($theme === 'ctp-latte') {
-						document.querySelector('.sunAndMoon').classList.add('bg-ctp-text');
-					} else {
+					if (!$theme === 'ctp-latte') {
 						document.querySelector('.sunAndMoon').classList.add('bg-ctp-base');
 					}
 				}}
@@ -161,5 +159,9 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+
+	.bg-black {
+		color: black;
 	}
 </style>
