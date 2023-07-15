@@ -27,7 +27,7 @@
 		<li>
 			<a
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
-					$theme === 'ctp-latte' ? 'bg-gradient-to-r from-ctp-lavender to-ctp-blue' : 'bg-ctp-base'
+					$theme === 'ctp-latte' ? 'bg-ctp-text' : 'bg-ctp-base'
 				} sunAndMoon`}
 				on:mouseenter={() => {
 					if ($theme === 'ctp-latte') {
@@ -40,7 +40,9 @@
 								'from-ctp-lavender',
 								'to-ctp-blue'
 							);
-						document.querySelector('.sunAndMoon').classList.add('bg-ctp-text');
+						document
+							.querySelector('.sunAndMoon')
+							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
 					} else {
 						document
 							.querySelector('.sunAndMoon')
@@ -58,9 +60,7 @@
 							'to-ctp-blue'
 						);
 					if ($theme === 'ctp-latte') {
-						document
-							.querySelector('.sunAndMoon')
-							.classList.add('bg-gradient-to-r', 'from-ctp-lavender', 'to-ctp-blue');
+						document.querySelector('.sunAndMoon').classList.add('bg-ctp-text');
 					} else {
 						document.querySelector('.sunAndMoon').classList.add('bg-ctp-base');
 					}
