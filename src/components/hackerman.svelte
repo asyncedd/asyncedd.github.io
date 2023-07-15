@@ -8,8 +8,6 @@
 		const h1Elements = Array.from(document.querySelectorAll('h1'));
 
 		for (const h1 of h1Elements) {
-			const targetValue = h1.dataset.value;
-
 			h1.addEventListener('mouseover', handleMouseOver);
 		}
 	}
