@@ -22,7 +22,6 @@
 <style>
 	h1 {
 		@apply rounded-[10px] bg-ctp-blue text-center;
-		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
 	}
 
 	h1:hover {

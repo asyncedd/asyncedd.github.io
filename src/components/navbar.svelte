@@ -14,6 +14,8 @@
 			}
 		});
 	};
+
+	let moonOrSun = theme.toString === 'ctp-latte' ? 'moon' : 'sun';
 </script>
 
 <head>
@@ -25,7 +27,10 @@
 		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
-			<a class="fa-solid fa-sun fg-ctp-base text-[2rem]" on:click={toggleTheme} />
+			<a
+				class={`fa-solid ${moonOrSun === 'moon' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem]`}
+				on:click={toggleTheme}
+			/>
 		</li>
 		<li>
 			<a class="fa-brands fa-github github text-[2rem]" href="https://github.com/asyncedd" />
