@@ -31,18 +31,18 @@
 	<div class="p-[5rem]" />
 	<div class="flex items-center justify-center">
 		<div class="flex items-center justify-center p-[5rem] text-[5rem]">
-			<h1 data-value="Skills" class="w-[20rem] text-center text-ctp-base">Skills</h1>
+			<h1 data-value="Skills" class="w-[20rem] text-center ">Skills</h1>
 		</div>
 	</div>
 	<div class="flex justify-center p-[3rem]">
-		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Langs</h1>
-		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem] text-ctp-base">Tools</h1>
+		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem] ">Langs</h1>
+		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem] ">Tools</h1>
 	</div>
 	<DividersPacman />
 	<div class="flex items-center justify-center p-[3rem]">
 		<h1
 			data-value="Lorem"
-			class="m-8 w-[20rem] text-[5rem] text-ctp-base"
+			class="m-8 w-[20rem] text-[5rem] "
 			style="white-space: nowrap;"
 		>
 			Lorem

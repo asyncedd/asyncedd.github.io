@@ -142,7 +142,6 @@
 	}
 
 	.github {
-		@apply text-ctp-base;
 		transition: color 0.3s ease-in-out;
 	}
 
@@ -151,7 +150,6 @@
 	}
 
 	.discord {
-		@apply text-ctp-base;
 		transition: color 0.3s ease-in-out;
 	}
 

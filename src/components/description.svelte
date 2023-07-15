@@ -78,7 +78,7 @@
 	});
 </script>
 
-<div class="{$theme} m-8 text-center text-[25px] text-ctp-base">
+<div class="{$theme} m-8 text-center text-[25px] ">
 	<div class="text-container">
 		<p id="demo" class="text-center" />
 		<span id="cursor" class="cursor bg-ctp-base" />

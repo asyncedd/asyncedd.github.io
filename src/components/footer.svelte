@@ -7,7 +7,7 @@
 
 <style>
 	footer {
-		@apply bg-ctp-blue text-ctp-base;
+		@apply bg-ctp-blue ;
 		padding: 20px;
 	}
 

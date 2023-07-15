@@ -11,7 +11,7 @@
 		alt=""
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 w-[20rem] text-center text-[100px] text-ctp-base antialiased">
+	<h1 data-value="async" class="m-8 w-[20rem] text-center text-[100px]  antialiased">
 		async
 	</h1>
 </div>

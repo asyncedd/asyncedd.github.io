@@ -66,7 +66,7 @@
 <style>
 	.popup {
 		transform: translateX(-50%);
-		@apply fixed bottom-[20px] ml-[50%] w-[45px] rounded-[4px] bg-ctp-blue p-[10px] text-center text-ctp-base;
+		@apply fixed bottom-[20px] ml-[50%] w-[45px] rounded-[4px] bg-ctp-blue p-[10px] text-center ;
 		box-shadow: 0px 4px 4px 0px rgba(137, 180, 250, 0.5);
 		transition: opacity 0.5s ease-out, bottom 0.5s ease-in, width 0.5s ease-in, padding 0.5s ease-in; /* Added transition property */
 		z-index: 9999;
