@@ -6,7 +6,7 @@
 	function hackerMan(): void {
 		const h1Elements = Array.from(document.querySelectorAll('h1'));
 
-		h1Elements.forEach((h1) => {
+		for (const h1 of h1Elements) {
 			const targetValue = h1.dataset.value;
 			h1.addEventListener('mouseover', (event) => {
 				const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
@@ -47,7 +47,7 @@
 					}
 				}, 30);
 			});
-		});
+		}
 	}
 
 	onMount(() => {
