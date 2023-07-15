@@ -70,7 +70,10 @@
 		<li><span class="async menu-heading text-[3rem] font-semibold">async</span></li>
 		<li style="flex-grow: 1;" />
 		<li>
-			<a
+			<div
+				role="button"
+				tabindex="0"
+				on:keydown={toggleTheme}
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
 					$theme === 'ctp-latte' ? 'text-black' : 'text-black'
 				} sunAndMoon`}
