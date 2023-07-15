@@ -7,10 +7,6 @@
 <script lang="ts">
 	import { variants } from '@catppuccin/palette';
 
-	const latteOrMocha = (flavor) => {
-		theme.set(flavor);
-	};
-
 	const toggleTheme = () => {
 		theme.update((currentTheme) => {
 			if (currentTheme === 'ctp-mocha') {

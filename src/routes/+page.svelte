@@ -24,10 +24,7 @@
 
 <Hackerman />
 
-<body
-	class="bg-ctp-text dark:bg-ctp-base {$theme} scroll-smooth transition-colors"
-	style="overflow: hidden scroll; transition-duration: 3s; transition-timing-function: ease"
->
+<body class="bg-ctp-base {$theme} scroll-smooth" style="overflow: hidden scroll;">
 	<div class="bg-ctp-blue">
 		<Header />
 	</div>
@@ -66,13 +63,16 @@
 	@tailwind utilities;
 
 	body {
-		@apply m-[0rem] grid;
+		@apply m-[0rem] bg-ctp-base;
 		font-family: 'JetBrains Mono', monospace;
+		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 500ms;
 	}
 
 	h1 {
 		@apply rounded-[10px] bg-ctp-blue text-center;
-		transition: transform 500ms ease, background-color 500ms ease, color 500ms ease;
+		transition: transform 500ms ease;
 	}
 
 	h1:hover {
