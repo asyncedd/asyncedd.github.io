@@ -7,7 +7,9 @@
 		const h1Elements = document.querySelectorAll('h1');
 
 		h1Elements.forEach((h1) => {
-			h1.onmouseover = (event) => {
+			h1.addEventListener('mouseover', startAnimation, { once: true });
+
+			function startAnimation(event) {
 				if (event.target.classList.contains('animating')) {
 					return; // Exit if already animating
 				}
@@ -17,34 +19,36 @@
 				let iteration = 0;
 				let interval;
 
-				clearInterval(interval);
-
 				interval = setInterval(() => {
-					event.target.innerText = event.target.innerText
-						.split('')
-						.map((letter, index) => {
-							if (iteration === 0) {
-								return letters[Math.floor(Math.random() * letters.length)];
-							} else if (index < iteration) {
-								return event.target.dataset.value[index];
-							} else if (index === iteration) {
-								if (letter === event.target.dataset.value[index]) {
-									return letter; // Stop generating for this letter
-								}
-							}
+					const target = event.target;
+					const targetValue = target.dataset.value;
+					const currentText = target.innerText;
+					const newText = [];
 
-							return letters[Math.floor(Math.random() * letters.length)];
-						})
-						.join('');
+					for (let index = 0; index < currentText.length; index++) {
+						const letter = currentText[index];
 
-					if (iteration >= event.target.dataset.value.length) {
+						if (iteration === 0) {
+							newText.push(letters[Math.floor(Math.random() * letters.length)]);
+						} else if (index < iteration) {
+							newText.push(targetValue[index]);
+						} else if (index === iteration && letter === targetValue[index]) {
+							newText.push(letter);
+						} else {
+							newText.push(letters[Math.floor(Math.random() * letters.length)]);
+						}
+					}
+
+					target.innerText = newText.join('');
+
+					if (iteration >= targetValue.length) {
 						clearInterval(interval);
-						event.target.classList.remove('animating'); // Remove class after animation
-					} else if (event.target.innerText[iteration] === event.target.dataset.value[iteration]) {
+						target.classList.remove('animating'); // Remove class after animation
+					} else if (target.innerText[iteration] === targetValue[iteration]) {
 						iteration++; // Move to the next letter
 					}
 				}, 30);
-			};
+			}
 		});
 	}
 
