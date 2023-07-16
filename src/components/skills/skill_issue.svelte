@@ -54,6 +54,10 @@
 		transition: background-color 0.3s;
 	}
 
+	.bento-box-item:hover {
+		@apply bg-ctp-surface2;
+	}
+
 	.grow-on-hover {
 		transition: transform 0.3s;
 	}
