@@ -38,14 +38,26 @@
 		</div>
 	</div>
 	<div class="flex justify-center p-[3rem]">
-		<h1 data-value="Langs" class="m-8 w-[17rem] text-[5rem]">Langs</h1>
-		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem]">Tools</h1>
+		<h1
+			data-value="Langs"
+			class="m-8 w-[17rem] text-[5rem]"
+			style="padding-right: 9999; padding-left: 9999;"
+		>
+			Langs
+		</h1>
+		<h1
+			data-value="Tools"
+			class="m-8 w-[17rem] text-[5rem]"
+			style="padding-right: 9999; padding-left: 9999;"
+		>
+			Tools
+		</h1>
 	</div>
 	<div class="flex justify-center">
-		<div class="p-16" style="padding-right: 9999; padding-left: 0;">
+		<div class="p-16" style="padding-right: 1rem; padding-left: 1rem;">
 			<LanguageIssue />
 		</div>
-		<div class="p-16" style="padding-right: 9999; padding-left: 0;">
+		<div class="p-16" style="padding-right: 1rem; padding-left: 1rem;">
 			<SkillIssue />
 		</div>
 	</div>

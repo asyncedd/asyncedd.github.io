@@ -11,13 +11,16 @@
 	<div class="bento-box-item">
 		<img src="/github.webp" alt="Github" class="grow-on-hover" />
 	</div>
+	<div class="bento-box-item">
+		<img src="/git.webp" alt="Git" class="grow-on-hover" />
+	</div>
 </div>
 
 <style>
 	.bento-box {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(3, auto);
 		grid-template-rows: repeat(2, auto);
 	}
 
