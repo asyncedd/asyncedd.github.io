@@ -1,0 +1,34 @@
+* Some notes
+
+** TODO
+
+*** HIGH
+    - ( ) Make everything more responsive
+**** RESPONSIVENESS
+***** Skills/Langs/Frames/Tools
+      PRIORITY: HIGH
+      DESCRIPTION:
+      This is by far the least reposive part of the page
+      - ( ) The headers
+      - ( ) The indivisual bento boxes
+***** Navbar
+      PRIORITY: LOW
+      DESCRIPTION:
+      The navbar is relatively responsive
+      - ( ) Maybe hide buttons when x width?
+
+*** LOW
+**** Hackerman
+***** Ideas
+      PRIORITY: LOW
+      DESCRIPTION:
+      This is relatively stable at this point
+      - ( ) Animate on page load? That'll be cool :)
+      - ( ) We could make incorperate GSAP too!
+
+***** PERF
+      PRIORITY: LOW
+      DESCRIPTION:
+      The performance is pretty good
+      - ( ) Optimize the randomizer
+      - ( ) Refactor more
