@@ -30,6 +30,9 @@
   <div class="bento-box-item">
     <img src="/C.webp" alt="C" class="grow-on-hover" loading="lazy" decoding="async" />
   </div>
+  <div class="bento-box-item">
+    <img src="/go.webp" alt="go" class="grow-on-hover" loading="lazy" decoding="async" />
+  </div>
 </div>
 
 <style>
