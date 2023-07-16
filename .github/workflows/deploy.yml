@@ -28,7 +28,7 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: '/svelte.app.v2'
+          BASE_PATH: '/asyncedd.github.io'
         run: |
           pnpm run build
           touch build/.nojekyll
