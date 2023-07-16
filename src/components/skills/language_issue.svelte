@@ -1,21 +1,21 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/rust.png" alt="Rust" />
+		<img src="/rust.webp" alt="Rust" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/lua.png" alt="Lua" />
+		<img src="/lua.webp" alt="Lua" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/css.png" alt="CSS" />
+		<img src="/css.webp" alt="CSS" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/html.png" alt="HTML" />
+		<img src="/html.webp" alt="HTML" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/tailwindcss.png" alt="Tailwind" />
+		<img src="/tailwindcss.webp" alt="Tailwind" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/svelte.png" alt="Svelte" />
+		<img src="/svelte.webp" alt="Svelte" />
 	</div>
 </div>
 
