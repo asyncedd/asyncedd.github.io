@@ -5,13 +5,18 @@
 <div class="flex items-center justify-center">
 	<img
 		src="/moutains.webp"
-		class="rotate rounded-full text-center aspect-square max-h-48 max-w-48"
+		class="rotate max-w-48 aspect-square max-h-48 rounded-full text-center"
 		loading="lazy"
 		style="z-index: 999;"
 		alt="async"
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 max-w-[35rem] text-center text-5xl md:text-6xl sm:text-4xl antialiased">async</h1>
+	<h1
+		data-value="async"
+		class="m-8 max-w-[35rem] text-center text-5xl antialiased sm:text-4xl md:text-6xl"
+	>
+		async
+	</h1>
 </div>
 <div class="flex items-center justify-center">
 	<Description />

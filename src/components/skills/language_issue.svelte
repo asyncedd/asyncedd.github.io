@@ -1,23 +1,35 @@
 <script>
-  const languages = [
-    { name: 'Rust', src: '/rust.webp' },
-    { name: 'Lua', src: '/lua.webp' },
-    { name: 'CSS', src: '/css.webp' },
-    { name: 'HTML', src: '/html.webp' },
-    { name: 'JavaScript', src: '/javascript.webp', className: 'the-worst-and-best-programming-language-of-all-time', style: "border-radius: 10px" },
-    { name: 'Typescript', src: '/typescript.webp' },
-    { name: 'C++', src: '/C++.webp' },
-    { name: 'C', src: '/C.webp' },
-    { name: 'Go', src: '/go.webp' },
-  ];
+	const languages = [
+		{ name: 'Rust', src: '/rust.webp' },
+		{ name: 'Lua', src: '/lua.webp' },
+		{ name: 'CSS', src: '/css.webp' },
+		{ name: 'HTML', src: '/html.webp' },
+		{
+			name: 'JavaScript',
+			src: '/javascript.webp',
+			className: 'the-worst-and-best-programming-language-of-all-time',
+			style: 'border-radius: 10px'
+		},
+		{ name: 'Typescript', src: '/typescript.webp' },
+		{ name: 'C++', src: '/C++.webp' },
+		{ name: 'C', src: '/C.webp' },
+		{ name: 'Go', src: '/go.webp' }
+	];
 </script>
 
 <div class="bento-box grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  {#each languages as language}
-    <div class="bento-box-item">
-      <img src={language.src} alt={language.name} class="{language.className} grow-on-hover" style={language.style} loading="lazy" decoding="async" />
-    </div>
-  {/each}
+	{#each languages as language}
+		<div class="bento-box-item">
+			<img
+				src={language.src}
+				alt={language.name}
+				class="{language.className} grow-on-hover"
+				style={language.style}
+				loading="lazy"
+				decoding="async"
+			/>
+		</div>
+	{/each}
 </div>
 
 <style>
