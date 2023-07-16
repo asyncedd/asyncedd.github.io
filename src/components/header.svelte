@@ -11,7 +11,7 @@
 		alt="async"
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 max-w-[25rem] text-center text-5xl md:text-6xl sm:text-4xl antialiased">async</h1>
+	<h1 data-value="async" class="m-8 max-w-[35rem] text-center text-5xl md:text-6xl sm:text-4xl antialiased">async</h1>
 </div>
 <div class="flex items-center justify-center">
 	<Description />
