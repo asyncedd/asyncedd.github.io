@@ -18,11 +18,11 @@
 		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/typescript.png" alt="Typescript" class="grow-on-hover" />
+		<img src="/typescript.webp" alt="Typescript" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
 		<img
-			src="/javascript.png"
+			src="/javascript.webp"
 			alt="Javascript"
 			style="border-radius: 10px;"
 			class="the-worst-and-best-programming-language-of-all-time"
