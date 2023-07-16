@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
-	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
   const animationIntervalDuration = 10;
 
   function hackerMan(): void {
@@ -12,11 +12,17 @@
     }
   }
 
-  function getRandomLetter(): string {
-    const randomIndex = Math.floor(Math.random() * letters.length);
-    return letters[randomIndex];
-  }
+  function getRandomLetter(targetValue: string, currentIndex: number): string {
+    const targetLetter = targetValue[currentIndex];
+    const bias = 0.2; // Adjust the bias value as needed
 
+    if (Math.random() < bias) {
+      return targetLetter;
+    } else {
+      const randomIndex = Math.floor(Math.random() * letters.length);
+      return letters[randomIndex];
+    }
+  }
 
   function handleMouseOver(event) {
     const target = event.target;
@@ -41,7 +47,7 @@
 
       for (let i = 0; i < currentText.length; i++) {
         if (iteration === 0) {
-          nextText += getRandomLetter();
+          nextText += getRandomLetter(targetValue, i);
         } else if (i < iteration) {
           nextText += targetValue[i];
         } else if (i === iteration && currentText[i] === targetValue[i]) {
@@ -55,7 +61,7 @@
             nextText += currentText[i];
           }
         } else {
-          nextText += getRandomLetter();
+          nextText += getRandomLetter(targetValue, i);
         }
       }
 
