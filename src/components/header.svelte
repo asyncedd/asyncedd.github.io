@@ -5,13 +5,13 @@
 <div class="flex items-center justify-center" style="vertical-align: baseline;">
 	<img
 		src="/moutains.webp"
-		class="rotate h-48 w-48 rounded-full text-center md:h-48 md:w-48"
+		class="rotate rounded-full text-center aspect-square max-h-48 max-w-48"
 		loading="lazy"
-		style="z-index: 999; aspect-ratio: 1;"
-		alt=""
+		style="z-index: 999;"
+		alt="async"
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 w-[20rem] text-center text-[100px] antialiased">async</h1>
+	<h1 data-value="async" class="m-8 max-w-[20rem] text-center text-[100px] md:text-[100px] sm:text-[70px] antialiased">async</h1>
 </div>
 <div class="flex items-center justify-center">
 	<Description />
