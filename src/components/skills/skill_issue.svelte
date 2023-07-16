@@ -1,15 +1,15 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/tux.webp" alt="Linux" />
+		<img src="/tux.webp" alt="Linux" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/neovim.webp" alt="Neovim" />
+		<img src="/neovim.webp" alt="Neovim" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/fish.webp" alt="Fish" />
+		<img src="/fish.webp" alt="Fish" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/github.webp" alt="Github" />
+		<img src="/github.webp" alt="Github" class="grow-on-hover" />
 	</div>
 </div>
 
@@ -32,8 +32,12 @@
 		transition: background-color 0.3s;
 	}
 
-	.bento-box-item:hover {
-		@apply bg-ctp-surface2;
+	.grow-on-hover {
+		transition: transform 0.3s;
+	}
+
+	.grow-on-hover:hover {
+		transform: scale(1.1);
 	}
 
 	.bento-box-item img {

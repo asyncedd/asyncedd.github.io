@@ -1,21 +1,21 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/rust.webp" alt="Rust" />
+		<img src="/rust.webp" alt="Rust" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/lua.webp" alt="Lua" />
+		<img src="/lua.webp" alt="Lua" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/css.webp" alt="CSS" />
+		<img src="/css.webp" alt="CSS" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/html.webp" alt="HTML" />
+		<img src="/html.webp" alt="HTML" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/tailwindcss.webp" alt="Tailwind" />
+		<img src="/tailwindcss.webp" alt="Tailwind" class="grow-on-hover" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/svelte.webp" alt="Svelte" />
+		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" />
 	</div>
 </div>
 
@@ -40,6 +40,14 @@
 
 	.bento-box-item:hover {
 		@apply bg-ctp-surface2;
+	}
+
+	.grow-on-hover {
+		transition: transform 0.3s;
+	}
+
+	.grow-on-hover:hover {
+		transform: scale(1.1);
 	}
 
 	.bento-box-item img {
