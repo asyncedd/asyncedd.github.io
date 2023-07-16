@@ -1,24 +1,24 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/rust.webp" alt="Rust" class="grow-on-hover" />
+		<img src="/rust.webp" alt="Rust" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/lua.webp" alt="Lua" class="grow-on-hover" />
+		<img src="/lua.webp" alt="Lua" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/css.webp" alt="CSS" class="grow-on-hover" />
+		<img src="/css.webp" alt="CSS" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/html.webp" alt="HTML" class="grow-on-hover" />
+		<img src="/html.webp" alt="HTML" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/tailwindcss.webp" alt="Tailwind" class="grow-on-hover" />
+		<img src="/tailwindcss.webp" alt="Tailwind" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" />
+		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/typescript.webp" alt="Typescript" class="grow-on-hover" />
+		<img src="/typescript.webp" alt="Typescript" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
 		<img
@@ -26,10 +26,12 @@
 			alt="Javascript"
 			style="border-radius: 10px;"
 			class="the-worst-and-best-programming-language-of-all-time"
+			loading="lazy"
+			decoding="async"
 		/>
 	</div>
 	<div class="bento-box-item">
-		<img src="/C++.webp" alt="C++" class="grow-on-hover" />
+		<img src="/C++.webp" alt="C++" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 </div>
 

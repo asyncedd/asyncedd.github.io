@@ -1,27 +1,27 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/tux.webp" alt="Linux" class="grow-on-hover" />
+		<img src="/tux.webp" alt="Linux" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/neovim.webp" alt="Neovim" class="grow-on-hover" />
+		<img src="/neovim.webp" alt="Neovim" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/fish.webp" alt="Fish" class="grow-on-hover" />
+		<img src="/fish.webp" alt="Fish" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/github.webp" alt="Github" class="grow-on-hover" />
+		<img src="/github.webp" alt="Github" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/git.webp" alt="Git" class="grow-on-hover" />
+		<img src="/git.webp" alt="Git" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/sveltekit.webp" alt="Sveltekit" class="grow-on-hover" />
+		<img src="/sveltekit.webp" alt="Sveltekit" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/clangd.webp" alt="Clangd" class="grow-on-hover" />
+		<img src="/clangd.webp" alt="Clangd" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/nixos.webp" alt="Nix" class="grow-on-hover" />
+		<img src="/nixos.webp" alt="Nix" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
 		<img
@@ -29,6 +29,8 @@
 			alt="Prettier"
 			style="border-radius: 10px;"
 			class="the-worst-and-best-programming-language-of-all-time"
+			loading="lazy"
+			decoding="async"
 		/>
 	</div>
 </div>
