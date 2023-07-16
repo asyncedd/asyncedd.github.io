@@ -2,7 +2,7 @@
 	import Description from '../components/description.svelte';
 </script>
 
-<div class="flex items-center justify-center" style="vertical-align: baseline;">
+<div class="flex items-center justify-center">
 	<img
 		src="/moutains.webp"
 		class="rotate rounded-full text-center aspect-square max-h-48 max-w-48"
@@ -11,7 +11,7 @@
 		alt="async"
 		decoding="async"
 	/>
-	<h1 data-value="async" class="m-8 max-w-[20rem] text-center text-[100px] md:text-[100px] sm:text-[70px] antialiased">async</h1>
+	<h1 data-value="async" class="m-8 max-w-[25rem] text-center text-5xl md:text-6xl sm:text-4xl antialiased">async</h1>
 </div>
 <div class="flex items-center justify-center">
 	<Description />
@@ -21,6 +21,7 @@
 	h1 {
 		@apply rounded-[10px] bg-ctp-blue text-center;
 		transition: transform 500ms ease;
+		font-size: clamp(3rem, 8vw, 10rem); /* Adjust font size responsively */
 	}
 
 	h1:hover {
