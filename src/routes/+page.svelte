@@ -42,10 +42,10 @@
 		<h1 data-value="Tools" class="m-8 w-[17rem] text-[5rem]">Tools</h1>
 	</div>
 	<div class="flex justify-center">
-		<div class="p-16">
+		<div class="p-16" style="padding-right: 4; padding-left: 0;">
 			<LanguageIssue />
 		</div>
-		<div class="p-16">
+		<div class="p-16" style="padding-right: 4; padding-left: 0;">
 			<SkillIssue />
 		</div>
 	</div>

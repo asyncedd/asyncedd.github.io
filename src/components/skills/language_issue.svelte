@@ -34,7 +34,7 @@
 	.bento-box {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(3, auto);
 		grid-template-rows: repeat(2, auto);
 	}
 
