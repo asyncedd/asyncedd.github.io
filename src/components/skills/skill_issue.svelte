@@ -1,38 +1,23 @@
-<div class="bento-box grid">
-	<div class="bento-box-item">
-		<img src="/tux.webp" alt="Linux" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/neovim.webp" alt="Neovim" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/fish.webp" alt="Fish" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/github.webp" alt="Github" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/git.webp" alt="Git" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/sveltekit.webp" alt="Sveltekit" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/clangd.webp" alt="Clangd" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/nixos.webp" alt="Nix" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img
-			src="/prettier.webp"
-			alt="Prettier"
-			style="border-radius: 10px;"
-			class="the-worst-and-best-programming-language-of-all-time"
-			loading="lazy"
-			decoding="async"
-		/>
-	</div>
+<script>
+  const items = [
+    { name: 'Linux', src: '/tux.webp' },
+    { name: 'Neovim', src: '/neovim.webp' },
+    { name: 'Fish', src: '/fish.webp' },
+    { name: 'Github', src: '/github.webp' },
+    { name: 'Git', src: '/git.webp' },
+    { name: 'Sveltekit', src: '/sveltekit.webp' },
+    { name: 'Clangd', src: '/clangd.webp' },
+    { name: 'Nix', src: '/nixos.webp' },
+    { name: 'Prettier', src: '/prettier.webp', className: 'the-worst-and-best-programming-language-of-all-time' },
+  ];
+</script>
+
+<div class="bento-box grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {#each items as item}
+    <div class="bento-box-item">
+      <img src={item.src} alt={item.name} class="grow-on-hover" loading="lazy" decoding="async" class:tw={item.className} />
+    </div>
+  {/each}
 </div>
 
 <style>
