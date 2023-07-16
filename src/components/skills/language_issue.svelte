@@ -12,12 +12,6 @@
 		<img src="/html.webp" alt="HTML" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/tailwindcss.webp" alt="Tailwind" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
-		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" loading="lazy" decoding="async" />
-	</div>
-	<div class="bento-box-item">
 		<img src="/typescript.webp" alt="Typescript" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
 	<div class="bento-box-item">

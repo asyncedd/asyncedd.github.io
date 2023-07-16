@@ -10,6 +10,7 @@
 	import DividersPacman from '../components/dividers/pacman.svelte';
 	import SkillIssue from '../components/skills/skill_issue.svelte';
 	import LanguageIssue from '../components/skills/language_issue.svelte';
+  import FrameworkIssue from '../components/skills/framework_issue.svelte';
 	import { theme } from '../components/navbar.svelte';
 	import '@fontsource/jetbrains-mono';
 </script>
@@ -45,6 +46,14 @@
 		>
 			Langs
 		</h1>
+    <h1
+      data-value="Frames"
+      class="m-8 w-[20rem] text-[5rem]"
+      style="padding-right: 9999; padding-left: 9999;"
+      >
+      Frames
+		</h1>
+
 		<h1
 			data-value="Tools"
 			class="m-8 w-[17rem] text-[5rem]"
@@ -57,10 +66,13 @@
 		<div class="p-16" style="padding-right: 1rem; padding-left: 1rem;">
 			<LanguageIssue />
 		</div>
+    <div class="p-16" style="padding-right: 3rem; padding-left: 3rem;">
+      <FrameworkIssue />
+    </div>
 		<div class="p-16" style="padding-right: 1rem; padding-left: 1rem;">
 			<SkillIssue />
 		</div>
-	</div>
+  </div>
 	<div class="p-16" />
 	<DividersPacman />
 	<div class="flex items-center justify-center p-[3rem]">
