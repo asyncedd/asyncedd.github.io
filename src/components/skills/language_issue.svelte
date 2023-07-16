@@ -17,6 +17,17 @@
 	<div class="bento-box-item">
 		<img src="/svelte.webp" alt="Svelte" class="grow-on-hover" />
 	</div>
+	<div class="bento-box-item">
+		<img src="/typescript.png" alt="Typescript" class="grow-on-hover" />
+	</div>
+	<div class="bento-box-item">
+		<img
+			src="/javascript.png"
+			alt="Javascript"
+			style="border-radius: 10px;"
+			class="the-worst-and-best-programming-language-of-all-time"
+		/>
+	</div>
 </div>
 
 <style>
@@ -42,16 +53,25 @@
 		@apply bg-ctp-surface2;
 	}
 
-	.grow-on-hover {
+	.bento-box-item .grow-on-hover {
 		transition: transform 0.3s;
 	}
 
-	.grow-on-hover:hover {
+	.bento-box-item .grow-on-hover:hover {
 		transform: scale(1.1);
 	}
 
 	.bento-box-item img {
 		max-width: 100%;
 		max-height: 100%;
+	}
+
+	.the-worst-and-best-programming-language-of-all-time:hover {
+		transform: scale(0.95);
+	}
+
+	.the-worst-and-best-programming-language-of-all-time {
+		transform: scale(0.85);
+		transition: transform 0.3s;
 	}
 </style>
