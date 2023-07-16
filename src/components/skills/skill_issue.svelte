@@ -1,9 +1,15 @@
 <div class="bento-box grid">
 	<div class="bento-box-item">
-		<img src="/Tux.svg.png" alt="Linux" />
+		<img src="/tux.png" alt="Linux" />
 	</div>
 	<div class="bento-box-item">
 		<img src="/neovim.png" alt="Neovim" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/fish.png" alt="Fish" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/github.png" alt="Github" />
 	</div>
 </div>
 

@@ -8,6 +8,15 @@
 	<div class="bento-box-item">
 		<img src="/css.png" alt="CSS" />
 	</div>
+	<div class="bento-box-item">
+		<img src="/html.png" alt="HTML" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/tailwindcss.png" alt="Tailwind" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/svelte.png" alt="Svelte" />
+	</div>
 </div>
 
 <style>
