@@ -90,7 +90,7 @@
 
 	h1 {
 		@apply rounded-[10px] bg-ctp-blue text-center;
-		transition: transform 500ms ease;
+		transition: transform 500ms ease, width 500ms ease, margin 500ms ease, font-size 500ms ease;
 	}
 
 	h1:hover {
