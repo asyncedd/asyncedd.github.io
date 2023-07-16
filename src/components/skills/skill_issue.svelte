@@ -14,6 +14,23 @@
 	<div class="bento-box-item">
 		<img src="/git.webp" alt="Git" class="grow-on-hover" />
 	</div>
+	<div class="bento-box-item">
+		<img src="/sveltekit.webp" alt="Sveltekit" class="grow-on-hover" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/clangd.webp" alt="Clangd" class="grow-on-hover" />
+	</div>
+	<div class="bento-box-item">
+		<img src="/nixos.webp" alt="Nix" class="grow-on-hover" />
+	</div>
+	<div class="bento-box-item">
+		<img
+			src="/prettier.webp"
+			alt="Prettier"
+			style="border-radius: 10px;"
+			class="the-worst-and-best-programming-language-of-all-time"
+		/>
+	</div>
 </div>
 
 <style>
@@ -46,5 +63,14 @@
 	.bento-box-item img {
 		max-width: 100%;
 		max-height: 100%;
+	}
+
+	.the-worst-and-best-programming-language-of-all-time:hover {
+		transform: scale(0.95);
+	}
+
+	.the-worst-and-best-programming-language-of-all-time {
+		transform: scale(0.85);
+		transition: transform 0.3s;
 	}
 </style>

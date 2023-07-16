@@ -28,6 +28,9 @@
 			class="the-worst-and-best-programming-language-of-all-time"
 		/>
 	</div>
+	<div class="bento-box-item">
+		<img src="/C++.webp" alt="C++" class="grow-on-hover" />
+	</div>
 </div>
 
 <style>
