@@ -36,9 +36,4 @@
 	.rotate:hover {
 		transform: scale(1.1) rotate(720deg);
 	}
-
-	.rotate:not(:hover) {
-		transition: transform 1s ease;
-		transform: scale(1) rotate(360deg);
-	}
 </style>
