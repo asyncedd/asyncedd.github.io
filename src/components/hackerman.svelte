@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
-	const animationIntervalDuration = 30;
+	const animationIntervalDuration = 10;
 
 	function hackerMan(): void {
 		const h1Elements = Array.from(document.querySelectorAll('h1'));
