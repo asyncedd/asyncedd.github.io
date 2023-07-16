@@ -74,13 +74,13 @@
 </head>
 <nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
 	<ul class="navbar-list">
-		<div class="enlarge">
+		<a class="enlarge" href="">
 			<li>
 				<span class="async menu-heading text-[3rem] font-semibold"
 					><i class="fa-solid fa-house" /> async</span
 				>
 			</li>
-		</div>
+		</a>
 		<li style="flex-grow: 1;" />
 		<li>
 			<div
@@ -89,6 +89,7 @@
 				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
 					$theme === 'ctp-latte' ? 'text-black' : 'text-black'
 				} sunAndMoon`}
+				href="#"
 				on:click={toggleTheme}
 			/>
 		</li>
