@@ -2,66 +2,96 @@
 	import { onMount } from 'svelte';
 
 	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
-	const animationIntervalDuration = 10;
+  const animationIntervalDuration = 10;
 
-	function hackerMan(): void {
-		const h1Elements = Array.from(document.querySelectorAll('h1'));
+  function hackerMan(): void {
+    const h1Elements = Array.from(document.querySelectorAll('h1'));
 
-		for (const h1 of h1Elements) {
-			h1.addEventListener('mouseover', handleMouseOver);
-		}
-	}
+    for (const h1 of h1Elements) {
+      h1.addEventListener('mouseover', handleMouseOver);
+    }
+  }
 
-	function getRandomLetter(): string {
-		const randomIndex = Math.floor(Math.random() * letters.length);
-		return letters[randomIndex];
-	}
+  function getRandomLetter(): string {
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    return letters[randomIndex];
+  }
 
-	function handleMouseOver(event: MouseEvent): void {
-		const target = event.target as HTMLHeadingElement; // Type assertion to HTMLHeadingElement
 
-		if (target.classList.contains('animating')) {
-			return; // Exit if already animating
-		}
+  function handleMouseOver(event) {
+    const target = event.target;
 
-		target.classList.add('animating'); // Add class to indicate animation
+    if (target.classList.contains('animating')) {
+      return;
+    }
 
-		let iteration = 0;
-		let interval: ReturnType<typeof setInterval> | undefined = undefined;
+    target.classList.add('animating');
 
-		if (interval) {
-			clearInterval(interval);
-		}
+    let iteration = 0;
+    let interval = undefined;
 
-		interval = setInterval(() => {
-			const targetValue = target.dataset.value!;
-			const currentText = target.innerText;
-			const nextText = Array.from(currentText)
-				.map((letter, index) => {
-					if (iteration === 0) {
-						return getRandomLetter();
-					} else if (index < iteration) {
-						return targetValue[index];
-					} else if (index === iteration && letter === targetValue[index]) {
-						return letter; // Stop generating for this letter
-					}
+    if (interval) {
+      clearInterval(interval);
+    }
 
-					return getRandomLetter();
-				})
-				.join('');
+    interval = setInterval(() => {
+      const targetValue = target.dataset.value;
+      const currentText = target.innerText;
+      let nextText = '';
 
-			target.innerText = nextText;
+      for (let i = 0; i < currentText.length; i++) {
+        if (iteration === 0) {
+          nextText += getRandomLetter();
+        } else if (i < iteration) {
+          nextText += targetValue[i];
+        } else if (i === iteration && currentText[i] === targetValue[i]) {
+          const nonMatchingIndices = getNonMatchingIndices(i, targetValue, currentText);
+          if (nonMatchingIndices.length > 0) {
+            const randomIndex = nonMatchingIndices[Math.floor(Math.random() * nonMatchingIndices.length)];
+            nextText += targetValue[randomIndex];
+            nextText += currentText[i];
+            iteration = randomIndex; // Update the iteration to the swapped index
+          } else {
+            nextText += currentText[i];
+          }
+        } else {
+          nextText += getRandomLetter();
+        }
+      }
 
-			if (iteration >= targetValue.length) {
-				clearInterval(interval!);
-				target.classList.remove('animating'); // Remove class after animation
-			} else if (nextText[iteration] === targetValue[iteration]) {
-				iteration++; // Move to the next letter
-			}
-		}, animationIntervalDuration);
-	}
+      target.innerText = nextText;
 
-	onMount(() => {
-		hackerMan();
-	});
+      if (iteration >= targetValue.length) {
+        clearInterval(interval);
+        target.classList.remove('animating');
+      } else if (nextText[iteration] === targetValue[iteration]) {
+        iteration++;
+      }
+    }, animationIntervalDuration);
+  }
+
+  function getNonMatchingIndices(index: number, targetValue: string, currentText: string): number[] {
+    const nonMatchingIndices: number[] = [];
+
+    for (let i = 0; i < targetValue.length; i++) {
+      if (i !== index && targetValue[i] !== currentText[i]) {
+        nonMatchingIndices.push(i);
+      }
+    }
+
+    if (nonMatchingIndices.length === 0 && currentText[index] !== targetValue[index]) {
+      for (let i = 0; i < targetValue.length; i++) {
+        if (i !== index && targetValue[i] === currentText[index]) {
+          nonMatchingIndices.push(i);
+          break;
+        }
+      }
+    }
+
+    return nonMatchingIndices;
+  }
+
+  onMount(() => {
+    hackerMan();
+  });
 </script>
