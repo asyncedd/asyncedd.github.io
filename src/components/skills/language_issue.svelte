@@ -27,6 +27,9 @@
 	<div class="bento-box-item">
 		<img src="/C++.webp" alt="C++" class="grow-on-hover" loading="lazy" decoding="async" />
 	</div>
+  <div class="bento-box-item">
+    <img src="/C.webp" alt="C" class="grow-on-hover" loading="lazy" decoding="async" />
+  </div>
 </div>
 
 <style>
