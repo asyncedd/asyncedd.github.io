@@ -48,13 +48,4 @@
 		max-width: 100%;
 		max-height: 100%;
 	}
-
-	.the-worst-and-best-programming-language-of-all-time:hover {
-		transform: scale(0.95);
-	}
-
-	.the-worst-and-best-programming-language-of-all-time {
-		transform: scale(0.85);
-		transition: transform 0.3s;
-	}
 </style>
