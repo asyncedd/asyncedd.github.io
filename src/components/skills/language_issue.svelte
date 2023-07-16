@@ -6,17 +6,16 @@
 		<img src="/lua.png" alt="Lua" />
 	</div>
 	<div class="bento-box-item">
-		<img src="/css.png" alt="Lua" />
+		<img src="/css.png" alt="CSS" />
 	</div>
 </div>
 
 <style>
 	.bento-box {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 		gap: 1rem;
-
-		--stagger-delay: 100ms;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
 	}
 
 	.bento-box-item {

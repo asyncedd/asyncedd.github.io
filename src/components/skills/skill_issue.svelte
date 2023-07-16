@@ -10,18 +10,9 @@
 <style>
 	.bento-box {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 		gap: 1rem;
-		grid-template-areas:
-			'a  b  c  d'
-			'l  🌟 🌟 e'
-			'k  🌟 🌟 f'
-			'j  i  h  g';
-
-		grid-template-rows: repeat(auto-fit, minmax(120px, 1fr));
-		grid-template-columns: 120px auto auto 120px;
-
-		--stagger-delay: 100ms;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
 	}
 
 	.bento-box-item {

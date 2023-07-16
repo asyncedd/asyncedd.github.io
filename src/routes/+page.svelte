@@ -44,10 +44,10 @@
 	<div class="flex justify-center">
 		<div class="w-[80%]">
 			<div class="flex justify-center">
-				<div>
+				<div class="m-16">
 					<LanguageIssue />
 				</div>
-				<div>
+				<div class="m-16">
 					<SkillIssue />
 				</div>
 			</div>
