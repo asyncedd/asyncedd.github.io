@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
-	const animationIntervalDuration = 30;
+	// Specify the types for variables and functions
+	const letters: string =
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
+	const animationIntervalDuration: number = 30;
 
 	function hackerMan(): void {
-		const h1Elements = Array.from(document.querySelectorAll('h1'));
+		const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
 
 		for (const h1 of h1Elements) {
 			h1.addEventListener('mouseover', handleMouseOver);
@@ -13,12 +15,13 @@
 	}
 
 	function getRandomLetter(): string {
-		const randomIndex = Math.floor(Math.random() * letters.length);
+		const randomIndex: number = Math.floor(Math.random() * letters.length);
 		return letters[randomIndex];
 	}
 
-	function handleMouseOver(event) {
-		const target = event.target;
+	// Specify the event type for the event parameter
+	function handleMouseOver(event: MouseEvent): void {
+		const target: HTMLElement = event.target as HTMLElement;
 
 		if (target.classList.contains('animating')) {
 			return;
@@ -26,17 +29,17 @@
 
 		target.classList.add('animating');
 
-		let iteration = 0;
-		let interval = undefined;
+		let iteration: number = 0;
+		let interval: any = undefined; // Specify the type for 'interval'
 
 		if (interval) {
 			clearInterval(interval);
 		}
 
 		interval = setInterval(() => {
-			const targetValue = target.dataset.value;
-			const currentText = target.innerText;
-			let nextText = '';
+			const targetValue: string = target.dataset.value as string;
+			const currentText: string = target.innerText;
+			let nextText: string = '';
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
