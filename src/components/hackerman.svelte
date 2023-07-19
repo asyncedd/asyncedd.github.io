@@ -40,7 +40,11 @@
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
-					nextText += getRandomLetter();
+					if (Math.random() < 0.5) {
+						nextText += targetValue[i]; // 50% chance of being correct
+					} else {
+						nextText += getRandomLetter(); // 50% chance of random character
+					}
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
