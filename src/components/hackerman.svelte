@@ -61,31 +61,6 @@
 		}, animationIntervalDuration);
 	}
 
-	function getNonMatchingIndices(
-		index: number,
-		targetValue: string,
-		currentText: string
-	): number[] {
-		const nonMatchingIndices: number[] = [];
-
-		for (let i = 0; i < targetValue.length; i++) {
-			if (i !== index && targetValue[i] !== currentText[i]) {
-				nonMatchingIndices.push(i);
-			}
-		}
-
-		if (nonMatchingIndices.length === 0 && currentText[index] !== targetValue[index]) {
-			for (let i = 0; i < targetValue.length; i++) {
-				if (i !== index && targetValue[i] === currentText[index]) {
-					nonMatchingIndices.push(i);
-					break;
-				}
-			}
-		}
-
-		return nonMatchingIndices;
-	}
-
 	onMount(() => {
 		hackerMan();
 	});
