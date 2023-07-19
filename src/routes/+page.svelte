@@ -3,7 +3,6 @@
 	import Wave from '../components/wave.svelte';
 	import Font from '../components/fonts.svelte';
 	import Popup from '../components/popup.svelte';
-	import Lorem from '../components/lorem.svelte';
 	import Footer from '../components/footer.svelte';
 	import Navbar from '../components/navbar.svelte';
 	import Header from '../components/header.svelte';
@@ -83,7 +82,6 @@
 	<div class="flex items-center justify-center p-[3rem]">
 		<h1 data-value="Lorem" class="m-8 w-[20rem] text-[5rem]" style="white-space: nowrap;">Lorem</h1>
 	</div>
-	<Lorem />
 </body>
 <Footer />
 
