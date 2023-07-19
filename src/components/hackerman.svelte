@@ -44,16 +44,7 @@
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
-					const nonMatchingIndices = getNonMatchingIndices(i, targetValue, currentText);
-					if (nonMatchingIndices.length > 0) {
-						const randomIndex =
-							nonMatchingIndices[Math.floor(Math.random() * nonMatchingIndices.length)];
-						nextText += targetValue[randomIndex];
-						nextText += currentText[i];
-						iteration = randomIndex; // Update the iteration to the swapped index
-					} else {
-						nextText += currentText[i];
-					}
+					nextText += targetValue[i]; // Use the character from targetValue directly
 				} else {
 					nextText += getRandomLetter();
 				}
