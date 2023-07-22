@@ -14,9 +14,18 @@
 		}
 	}
 
-	function getRandomLetter(): string {
+	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomIndex: number = Math.floor(Math.random() * letters.length);
-		return letters[randomIndex];
+		let letter: string = letters[randomIndex];
+
+		// Check if the current letter needs to be swapped with the correct case
+		if (iteration < targetValue.length) {
+			const targetChar: string = targetValue[iteration];
+			const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
+			letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
+		}
+
+		return letter;
 	}
 
 	// Specify the event type for the event parameter
@@ -44,13 +53,13 @@
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
 					// Always randomize during the first iteration
-					nextText += getRandomLetter();
+					nextText += getRandomLetter(targetValue, iteration);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
 					nextText += targetValue[i]; // Use the character from targetValue directly
 				} else {
-					nextText += getRandomLetter();
+					nextText += getRandomLetter(targetValue, iteration);
 				}
 			}
 
