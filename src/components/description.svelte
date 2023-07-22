@@ -3,7 +3,7 @@
 	import { theme } from '../components/navbar.svelte';
 
 	let currentIndex = 0;
-	let texts = ['Avid ricer', 'The average Linux enjoyer', '🇺🇦 Ukraine foreva'];
+	let texts: string[] = ['Avid ricer', 'The average Linux enjoyer', '🇺🇦 Ukraine foreva'];
 
 	const result: string[] = [];
 	for (let i = 0; i < texts.length; i++) {
@@ -24,8 +24,8 @@
 	let showCursor = false;
 
 	function typeWriter() {
-		const element = document.getElementById('demo');
-		const cursor = document.getElementById('cursor');
+		const element = document.getElementById('demo') as HTMLElement; // Type assertion here
+		const cursor = document.getElementById('cursor') as HTMLElement; // Type assertion here
 		const txt = texts[currentIndex];
 
 		if (i < txt.length) {
@@ -56,8 +56,8 @@
 	}
 
 	function backspaceEffect() {
-		const element = document.getElementById('demo');
-		const cursor = document.getElementById('cursor');
+		const element = document.getElementById('demo') as HTMLElement; // Type assertion here
+		const cursor = document.getElementById('cursor') as HTMLElement; // Type assertion here
 		const currentText = element.innerHTML;
 
 		if (currentText.length > 0 || !(currentText.length == 0)) {
