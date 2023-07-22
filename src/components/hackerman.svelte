@@ -5,6 +5,7 @@
 	const lettersArray: string[] =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'.split('');
 	const animationIntervalDuration: number = 30;
+	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
 
 	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomValue: number = Math.random();
@@ -63,10 +64,15 @@
 					target.dataset.animating = 'false';
 				} else if (nextText[iteration] === targetValue[iteration]) {
 					iteration++;
-				}
-
-				if (target.dataset.animating === 'true') {
-					interval = window.requestAnimationFrame(animate);
+					// Schedule the next animation frame after the animationFrameDuration
+					setTimeout(() => {
+						interval = window.requestAnimationFrame(animate);
+					}, animationFrameDuration);
+				} else {
+					// If the character hasn't reached the target yet, continue animating
+					setTimeout(() => {
+						interval = window.requestAnimationFrame(animate);
+					}, animationFrameDuration);
 				}
 			}
 
