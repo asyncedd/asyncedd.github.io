@@ -18,12 +18,9 @@
 		const randomIndex: number = Math.floor(Math.random() * letters.length);
 		let letter: string = letters[randomIndex];
 
-		// Check if the current letter needs to be swapped with the correct case
-		if (iteration < targetValue.length) {
-			const targetChar: string = targetValue[iteration];
-			const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
-			letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
-		}
+		const targetChar: string = targetValue[iteration];
+		const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
+		letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
 
 		return letter;
 	}
