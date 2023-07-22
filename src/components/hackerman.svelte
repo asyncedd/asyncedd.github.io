@@ -2,29 +2,21 @@
 	import { onMount } from 'svelte';
 
 	// Specify the types for variables and functions
-	const letters: string =
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()';
+	const lettersArray: string[] =
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'.split('');
 	const animationIntervalDuration: number = 30;
-
-	function hackerMan(): void {
-		const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
-
-		for (const h1 of h1Elements) {
-			h1.addEventListener('mouseover', handleMouseOver);
-		}
-	}
 
 	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomValue: number = Math.random();
-		const randomIndex: number = Math.floor(Math.random() * letters.length);
-		let letter: string = letters[randomIndex];
+		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
+		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		if (randomValue < 0.3) {
+		if (randomValue < 0.5 && randomValue > 0.3 && iteration != 0) {
 			return targetChar;
 		}
 
-		if (iteration) {
+		if (iteration != 0) {
 			const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
 			letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
 		}
@@ -36,49 +28,57 @@
 	function handleMouseOver(event: MouseEvent): void {
 		const target: HTMLElement = event.target as HTMLElement;
 
-		if (target.classList.contains('animating')) {
+		if (target.dataset.animating === 'true') {
 			return;
 		}
 
-		target.classList.add('animating');
+		target.dataset.animating = 'true';
 
 		let iteration: number = 0;
-		let interval: any = undefined; // Specify the type for 'interval'
+		let interval: number | undefined = undefined;
 
-		if (interval) {
-			clearInterval(interval);
-		}
+		// Delay the animation start
+		setTimeout(() => {
+			function animate() {
+				const targetValue: string = target.dataset.value as string;
+				const currentText: string = target.textContent!;
+				let nextText: string = '';
 
-		interval = setInterval(() => {
-			const targetValue: string = target.dataset.value as string;
-			const currentText: string = target.innerText;
-			let nextText: string = '';
+				for (let i = 0; i < currentText.length; i++) {
+					if (iteration === 0) {
+						// Always randomize during the first iteration
+						nextText += getRandomLetter(targetValue, iteration);
+					} else if (i < iteration) {
+						nextText += targetValue[i];
+					} else if (i === iteration && currentText[i] === targetValue[i]) {
+						nextText += targetValue[i]; // Use the character from targetValue directly
+					} else {
+						nextText += getRandomLetter(targetValue, iteration);
+					}
+				}
 
-			for (let i = 0; i < currentText.length; i++) {
-				if (iteration === 0) {
-					// Always randomize during the first iteration
-					nextText += getRandomLetter(targetValue, iteration);
-				} else if (i < iteration) {
-					nextText += targetValue[i];
-				} else if (i === iteration && currentText[i] === targetValue[i]) {
-					nextText += targetValue[i]; // Use the character from targetValue directly
-				} else {
-					nextText += getRandomLetter(targetValue, iteration);
+				target.textContent = nextText;
+
+				if (iteration >= targetValue.length) {
+					target.dataset.animating = 'false';
+				} else if (nextText[iteration] === targetValue[iteration]) {
+					iteration++;
+				}
+
+				if (target.dataset.animating === 'true') {
+					interval = window.requestAnimationFrame(animate);
 				}
 			}
 
-			target.innerText = nextText;
-
-			if (iteration >= targetValue.length) {
-				clearInterval(interval);
-				target.classList.remove('animating');
-			} else if (nextText[iteration] === targetValue[iteration]) {
-				iteration++;
-			}
+			animate();
 		}, animationIntervalDuration);
 	}
 
 	onMount(() => {
-		hackerMan();
+		const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
+		for (const h1 of h1Elements) {
+			h1.addEventListener('mouseover', handleMouseOver);
+			h1.dataset.animating = 'false'; // Initialize the data attribute
+		}
 	});
 </script>
