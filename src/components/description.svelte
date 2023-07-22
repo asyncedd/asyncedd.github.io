@@ -3,7 +3,13 @@
 	import { theme } from '../components/navbar.svelte';
 
 	let currentIndex = 0;
-	let texts: string[] = ['Avid ricer', 'The average Linux enjoyer', '🇺🇦 Ukraine foreva'];
+	let texts: string[] = [
+		'Avid ricer',
+		'The average GNU/Linux enjoyer',
+		'Aspiring learner',
+		'thou shalt use Vim.',
+		'🇺🇦 Ukraine foreva'
+	];
 
 	const result: string[] = [];
 	for (let i = 0; i < texts.length; i++) {
