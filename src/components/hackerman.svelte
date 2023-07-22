@@ -15,10 +15,15 @@
 	}
 
 	function getRandomLetter(targetValue: string, iteration: number): string {
+		const randomValue: number = Math.random();
 		const randomIndex: number = Math.floor(Math.random() * letters.length);
 		let letter: string = letters[randomIndex];
-
 		const targetChar: string = targetValue[iteration];
+
+		if (randomValue < 0.3) {
+			return targetChar;
+		}
+
 		const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
 		letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
 
