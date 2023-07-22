@@ -18,8 +18,14 @@
 		}
 
 		if (iteration != 0) {
-			const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
-			letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
+			if (letter.toUpperCase() === targetChar || letter.toLowerCase() === targetChar) {
+				// Swap case of the letter
+				if (letter === letter.toUpperCase()) {
+					return letter.toLowerCase();
+				} else {
+					return letter.toUpperCase();
+				}
+			}
 		}
 
 		return letter;
