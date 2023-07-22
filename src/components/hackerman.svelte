@@ -24,8 +24,10 @@
 			return targetChar;
 		}
 
-		const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
-		letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
+		if (iteration) {
+			const isUpperCase: boolean = targetChar.toUpperCase() === targetChar;
+			letter = isUpperCase ? letter.toUpperCase() : letter.toLowerCase();
+		}
 
 		return letter;
 	}
