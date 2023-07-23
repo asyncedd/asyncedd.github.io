@@ -6,7 +6,7 @@
 <Hackerman />
 
 <body class="bg-ctp-base">
-	<div class="flex justify-center bg-ctp-blue p-[3rem] shrink-class">
+	<div class="flex justify-center bg-ctp-blue pt-[3rem] shrink-class">
 		<div class="h1-container">
 			<h1
 				class="text-ctp-base text-center text-[3rem]"
@@ -17,9 +17,11 @@
 			</h1>
 		</div>
 	</div>
-	<div class="flex justify-center p-[3rem] blue-lavender-mix">
-		<div class="h1-container">
-			<p class="text-ctp-base text-center p-[3rem]" id="typewriter"><Typewriter /></p>
+	<div class="pt-[1rem] bg-ctp-blue">
+		<div class="diagonal flex justify-center">
+			<div class="h1-container text-[1.3rem]">
+				<Typewriter />
+			</div>
 		</div>
 	</div>
 </body>
@@ -64,5 +66,20 @@
 
 	.blue-lavender-mix {
 		background: color-mix(in srgb, #89b4fa, #1e1e2e 30%);
+	}
+
+	.diagonal {
+		position: relative;
+		isolation: isolate;
+	}
+
+	.diagonal::after {
+		content: '';
+		background-image: linear-gradient(180deg, #89b4fa 80%, #1e1e2e);
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		transform: skewY(-3deg);
+		@apply p-[7rem];
 	}
 </style>
