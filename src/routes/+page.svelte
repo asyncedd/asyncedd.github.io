@@ -6,6 +6,7 @@
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'.split('');
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
+	let animating = false;
 
 	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomValue: number = Math.random();
@@ -39,6 +40,7 @@
 			return;
 		}
 
+		animating = true;
 		target.dataset.animating = 'true';
 
 		let iteration: number = 0;
@@ -68,6 +70,7 @@
 
 				if (iteration >= targetValue.length) {
 					target.dataset.animating = 'false';
+					animating = false;
 				} else if (nextText[iteration] === targetValue[iteration]) {
 					iteration++;
 					// Schedule the next animation frame after the animationFrameDuration
@@ -96,7 +99,15 @@
 </script>
 
 <body class="bg-ctp-base">
-	<h1 class="text-ctp-text text-center text-[3rem]" data-value="async">async</h1>
+	<div class="flex justify-center">
+		<h1
+			class="text-ctp-text text-center text-[3rem]"
+			class:animating={animating === true}
+			data-value="async"
+		>
+			async
+		</h1>
+	</div>
 </body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,7 +117,7 @@
 	rel="stylesheet"
 />
 
-<style>
+<style lang="postcss">
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
@@ -117,11 +128,14 @@
 
 	h1 {
 		transition: font-size 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
-			color 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+			color 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 	}
 
 	h1:hover {
-		font-size: 5rem;
+		@apply text-ctp-green text-[5rem];
+	}
+
+	.animating {
 		@apply text-ctp-green;
 	}
 </style>
