@@ -117,7 +117,7 @@
 	rel="stylesheet"
 />
 
-<style lang="postcss">
+<style>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
@@ -127,8 +127,7 @@
 	}
 
 	h1 {
-		transition: font-size 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
-			color 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+		transition: font-size 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6), color 1s ease-in-out;
 	}
 
 	h1:hover {
