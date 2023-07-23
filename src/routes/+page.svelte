@@ -99,9 +99,9 @@
 </script>
 
 <body class="bg-ctp-base">
-	<div class="flex justify-center">
+	<div class="flex justify-center bg-ctp-blue p-[3rem]">
 		<h1
-			class="text-ctp-text text-center text-[3rem]"
+			class="text-ctp-base text-center text-[3rem]"
 			class:animating={animating === true}
 			data-value="async"
 		>
@@ -111,7 +111,7 @@
 </body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" rossorigin />
 <link
 	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
 	rel="stylesheet"
