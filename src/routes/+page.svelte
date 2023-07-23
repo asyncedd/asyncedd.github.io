@@ -99,14 +99,19 @@
 </script>
 
 <body class="bg-ctp-base">
-	<div class="flex justify-center bg-ctp-blue p-[3rem]">
-		<h1
-			class="text-ctp-base text-center text-[3rem]"
-			class:animating={animating === true}
-			data-value="async"
-		>
-			async
-		</h1>
+	<div class="flex justify-center bg-ctp-blue p-[3rem] shrink-class">
+		<div class="h1-container">
+			<h1
+				class="text-ctp-base text-center text-[3rem]"
+				class:animating={animating === true}
+				data-value="async"
+			>
+				async
+			</h1>
+		</div>
+	</div>
+	<div class="bg-ctp-yellow flex justify-center p-[7rem]">
+		<p class="text-ctp-base text-center">A</p>
 	</div>
 </body>
 
@@ -124,6 +129,7 @@
 
 	* {
 		font-family: JetBrains Mono;
+		overflow: none visible;
 	}
 
 	h1 {
@@ -131,10 +137,19 @@
 	}
 
 	h1:hover {
-		@apply text-ctp-green text-[5rem];
+		@apply text-ctp-green text-[4rem];
+	}
+
+	.h1-container {
+		height: 7rem; /* Set the desired height */
+		overflow: hidden; /* Hide any overflow caused by growing text */
 	}
 
 	.animating {
 		@apply text-ctp-green;
+	}
+
+	h1:hover + .shrink-class {
+		@apply p-[1rem];
 	}
 </style>
