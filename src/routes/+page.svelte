@@ -2,11 +2,14 @@
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
+	import Navbar from '../components/navbar.svelte';
 </script>
 
 <Fontawesome />
 
 <Hackerman />
+
+<Navbar />
 
 <body class="bg-ctp-base">
 	<div class="flex justify-center bg-ctp-blue pt-[3rem] shrink-class">
