@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
+	import Fontawesome from '../components/fontawesome.svelte';
 </script>
+
+<Fontawesome />
 
 <Hackerman />
 
