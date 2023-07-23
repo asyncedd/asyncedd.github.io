@@ -15,6 +15,7 @@
 	/* Navbar links */
 	.navbar {
 		justify-content: flex-end;
+		padding-right: 20px; /* Add desired padding to the right side */
 	}
 
 	.navbar a {
