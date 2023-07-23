@@ -44,7 +44,8 @@
 	}
 
 	h1 {
-		transition: font-size 0.5s ease-in-out, color 1s ease-in-out;
+		border-radius: 1rem;
+		transition: font-size 0.7s ease-in-out, color 1s ease-in-out, background 1s ease-in-out;
 	}
 
 	h1:hover {
@@ -57,7 +58,7 @@
 	}
 
 	.animating {
-		@apply text-ctp-green;
+		@apply text-ctp-green bg-ctp-base;
 	}
 
 	h1:hover + .shrink-class {
