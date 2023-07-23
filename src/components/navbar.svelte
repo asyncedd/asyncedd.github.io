@@ -21,6 +21,7 @@
 		padding: 12px;
 		@apply text-ctp-base text-center;
 		font-size: 30px;
+		height: 60px;
 	}
 
 	/* Center the icons */
