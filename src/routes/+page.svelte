@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Typewriter from '../components/typewriter.svelte';
 
 	// Specify the types for variables and functions
 	const lettersArray: string[] =
@@ -110,8 +111,10 @@
 			</h1>
 		</div>
 	</div>
-	<div class="flex justify-center p-[7rem] blue-lavender-mix">
-		<p class="text-ctp-base text-center">A</p>
+	<div class="flex justify-center p-[3rem] blue-lavender-mix">
+		<div class="h1-container">
+			<p class="text-ctp-base text-center p-[3rem]" id="typewriter"><Typewriter /></p>
+		</div>
 	</div>
 </body>
 
