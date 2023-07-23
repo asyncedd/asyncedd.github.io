@@ -110,7 +110,7 @@
 			</h1>
 		</div>
 	</div>
-	<div class="bg-ctp-yellow flex justify-center p-[7rem]">
+	<div class="flex justify-center p-[7rem] blue-lavender-mix">
 		<p class="text-ctp-base text-center">A</p>
 	</div>
 </body>
@@ -151,5 +151,9 @@
 
 	h1:hover + .shrink-class {
 		@apply p-[1rem];
+	}
+
+	.blue-lavender-mix {
+		background: color-mix(in srgb, #89b4fa, #1e1e2e 30%);
 	}
 </style>
