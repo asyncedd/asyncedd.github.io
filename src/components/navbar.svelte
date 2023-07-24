@@ -125,12 +125,13 @@
 	}
 
 	.head-parent {
-		transition: background 0.3s ease-in-out;
+		transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 		@apply rounded-[0.7rem];
 	}
 
 	.head-parent:hover {
 		@apply bg-ctp-base;
 		--_p: 100%;
+		transform: scale(1.1);
 	}
 </style>
