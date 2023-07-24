@@ -2,7 +2,7 @@
 	<div class="left-content pl-3 inline-flex">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square" />
 		<div class="head-parent">
-			<h1 class="pt-2 async">async</h1>
+			<h2 class="pt-2 async">async</h2>
 		</div>
 	</div>
 	<div class="right-content">
