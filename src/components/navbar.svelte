@@ -1,21 +1,41 @@
 <div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
-	<a href="https://discord.com/users/797422750321999943" class="text-center">
-		<div class="icon-wrapper">
-			<i class="fa-brands fa-discord discord" />
-		</div>
-	</a>
-	<a href="https://github.com/asyncedd">
-		<div class="icon-wrapper">
-			<i class="fa-brands fa-github github" />
-		</div>
-	</a>
+	<div class="left-content pl-3">
+		<img src="moutains.webp" alt="" class="w-12 h-12 rounded-[100%] aspect-square" />
+	</div>
+	<div class="right-content">
+		<a href="https://discord.com/users/797422750321999943" class="text-center">
+			<div class="icon-wrapper">
+				<i class="fa-brands fa-discord discord" />
+			</div>
+		</a>
+		<a href="https://github.com/asyncedd">
+			<div class="icon-wrapper">
+				<i class="fa-brands fa-github github" />
+			</div>
+		</a>
+	</div>
 </div>
 
 <style>
 	/* Navbar links */
 	.navbar {
-		justify-content: flex-end;
+		display: flex;
+		align-items: center; /* Align items vertically in the center */
 		padding-right: 20px; /* Add desired padding to the right side */
+	}
+
+	/* Content on the left */
+	.left-content {
+		margin-right: auto; /* Pushes the content to the left side */
+	}
+
+	.left-content img {
+		margin-right: 10px; /* Add some space between the image and the right content */
+	}
+
+	/* Content on the right */
+	.right-content {
+		display: flex; /* Display the content on the right side in a flex layout */
 	}
 
 	.navbar a {
@@ -55,6 +75,10 @@
 		.navbar a {
 			float: none;
 			display: block;
+		}
+
+		.left-content img {
+			margin-right: 0; /* Reset the margin for the image on smaller screens */
 		}
 	}
 </style>
