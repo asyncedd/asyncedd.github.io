@@ -1,23 +1,23 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let i = 0;
 	let txt = 'GNU/Linux enjoyer'; /* The text */
 	let speed = 50; /* The speed/duration of the effect in milliseconds */
+	let currentText = '';
+	let isTyping = false;
 
 	function typeWriter() {
-		if (i < txt.length) {
-			document.getElementById('typewriter').classList.add('typing-cursor');
-			document.getElementById('typewriter').innerHTML += txt.charAt(i);
-			i++;
-			setTimeout(typeWriter, speed);
-		} else {
-			// Typing is finished, remove cursor
-			document.getElementById('typewriter').classList.add('typing-cursor');
-			setTimeout(() => {
-				document.getElementById('typewriter').classList.remove('typing-cursor');
-			}, 3000);
-		}
+		isTyping = true;
+		let i = 0;
+		const interval = setInterval(() => {
+			if (i < txt.length) {
+				currentText += txt.charAt(i);
+				i++;
+			} else {
+				clearInterval(interval);
+				isTyping = false;
+			}
+		}, speed);
 	}
 
 	onMount(() => {
@@ -25,14 +25,12 @@
 	});
 </script>
 
-<p class="text-ctp-base pt-[3rem] typing-cursor" id="typewriter" />
+<p class="text-ctp-base pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
+	{currentText}
+</p>
 
 <style>
-	.typing-cursor {
-		position: relative;
-	}
-
-	.typing-cursor::after {
+	#typewriter.typing-cursor::after {
 		content: '';
 		height: 1rem;
 		border-left: 1px solid #1e1e2e;
