@@ -1,5 +1,5 @@
 <div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
-	<a href="https://discord.com/user/797422750321999943" class="text-center">
+	<a href="https://discord.com/users/797422750321999943" class="text-center">
 		<div class="icon-wrapper">
 			<i class="fa-brands fa-discord discord" />
 		</div>
