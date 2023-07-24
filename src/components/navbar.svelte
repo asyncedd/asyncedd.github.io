@@ -1,6 +1,6 @@
 <div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
 	<div class="left-content pl-3 inline-flex">
-		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square" />
+		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 		<div class="head-parent">
 			<h2 class="pt-2 async">async</h2>
 		</div>
@@ -89,6 +89,15 @@
 		.left-content img {
 			margin-right: 1.3; /* Reset the margin for the image on smaller screens */
 		}
+	}
+
+	.rotate {
+		transition: transform 5s ease;
+		transform: scale(1) rotate(360deg);
+	}
+
+	.rotate:hover {
+		transform: scale(1.1) rotate(720deg);
 	}
 
 	.async {
