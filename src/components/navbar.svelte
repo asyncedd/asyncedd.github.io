@@ -1,6 +1,9 @@
 <div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
-	<div class="left-content pl-3">
+	<div class="left-content pl-3 inline-flex">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square" />
+		<div class="head-parent">
+			<h1 class="pt-2 async">async</h1>
+		</div>
 	</div>
 	<div class="right-content">
 		<a href="https://discord.com/users/797422750321999943" class="text-center">
@@ -84,7 +87,41 @@
 		}
 
 		.left-content img {
-			margin-right: 0; /* Reset the margin for the image on smaller screens */
+			margin-right: 1.3; /* Reset the margin for the image on smaller screens */
 		}
+	}
+
+	.async {
+		--s: 0.1em;
+		background: linear-gradient(
+				90deg,
+				hsl(170, 57%, 73%) 10%,
+				hsl(189, 71%, 73%) 20%,
+				hsl(199, 76%, 69%) 30%,
+				hsl(217, 92%, 76%) 40%,
+				hsl(232, 97%, 85%) 50%,
+				#1e1e2e 0
+			)
+			calc(100% - var(--_p, 0%)) / 200% 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: 0.5s;
+		cursor: pointer;
+		@apply pl-2 pr-2;
+	}
+
+	.async:hover {
+		--_p: 100%;
+	}
+
+	.head-parent {
+		transition: background 0.3s ease;
+		@apply rounded-[3px];
+	}
+
+	.head-parent:hover {
+		@apply bg-ctp-base;
+		--_p: 100%;
 	}
 </style>
