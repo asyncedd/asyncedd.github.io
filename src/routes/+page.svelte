@@ -55,7 +55,7 @@
 	}
 
 	h1:hover {
-		@apply text-ctp-green text-[4rem];
+		@apply text-ctp-green text-[3.5rem];
 	}
 
 	.h1-container {
