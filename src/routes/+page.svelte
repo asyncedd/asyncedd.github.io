@@ -1,104 +1,85 @@
 <script lang="ts">
-	import Hackerman from '../components/hackerman.svelte';
-	import Wave from '../components/wave.svelte';
-	import Font from '../components/fonts.svelte';
-	import Popup from '../components/popup.svelte';
-	import Footer from '../components/footer.svelte';
+	import Typewriter from '../components/typewriter.svelte';
+	import Hackerman, { animating } from '../components/hackerman.svelte';
+	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
-	import Header from '../components/header.svelte';
-	import DividersPacman from '../components/dividers/pacman.svelte';
-	import SkillIssue from '../components/skills/skill_issue.svelte';
-	import LanguageIssue from '../components/skills/language_issue.svelte';
-	import FrameworkIssue from '../components/skills/framework_issue.svelte';
-	import { theme } from '../components/navbar.svelte';
-	import '@fontsource/jetbrains-mono';
 </script>
 
-<svelte:head>
-	<title>async</title>
-</svelte:head>
-
-<Navbar />
-
-<Popup />
-
-<Font />
+<Fontawesome />
 
 <Hackerman />
 
-<body class="bg-ctp-base {$theme} scroll-smooth" style="overflow: hidden visible;">
-	<div class="bg-ctp-blue">
-		<Header />
-	</div>
-	<Wave />
-	<div class="p-[5rem]" />
-	<div class="flex items-center justify-center">
-		<div class="flex items-center justify-center p-[5rem] text-[5rem]">
-			<h1 data-value="Skills" class="w-[20rem] text-center">Skills</h1>
+<Navbar />
+
+<body class="bg-ctp-base">
+	<div class="flex justify-center bg-ctp-blue pt-[1rem] shrink-class">
+		<div class="h1-container">
+			<h1
+				class="text-ctp-base text-center text-[3rem]"
+				class:animating={$animating === true}
+				data-value="async"
+			>
+				async
+			</h1>
 		</div>
 	</div>
-	<div class="flex justify-center p-6 md:p-3 lg:p-1.5">
-		<h1
-			data-value="Langs"
-			class="w-50 lg:text-10xl m-2 text-4xl md:m-4 md:w-64 md:text-6xl lg:m-6 lg:w-80"
-		>
-			Langs
-		</h1>
-		<h1
-			data-value="Frames"
-			class="w-50 lg:text-10xl m-2 text-4xl md:m-4 md:w-60 md:text-6xl lg:m-6 lg:w-80"
-		>
-			Frames
-		</h1>
-		<h1
-			data-value="Tools"
-			class="w-50 lg:text-10xl m-2 text-4xl md:m-4 md:w-64 md:text-6xl lg:m-6 lg:w-80"
-		>
-			Tools
-		</h1>
-	</div>
-	<div class="flex justify-center">
-		<div
-			class="md:md-4 m-4 p-4 md:p-8 lg:m-6 lg:p-16"
-			style="padding-right: 0.5rem; padding-left: 0.5rem;"
-		>
-			<LanguageIssue />
-		</div>
-		<div
-			class="md:md-4 m-4 p-4 md:p-8 lg:m-6 lg:p-16"
-			style="padding-right: 1rem; padding-left: 1rem;"
-		>
-			<FrameworkIssue />
-		</div>
-		<div
-			class="md:md-4 m-4 p-4 md:p-8 lg:m-6 lg:p-16"
-			style="padding-right: 0.5rem; padding-left: 0.5rem;"
-		>
-			<SkillIssue />
+	<div class="pt-[1rem] bg-ctp-blue">
+		<div class="diagonal flex justify-center">
+			<div class="h1-container text-[1.3rem]">
+				<Typewriter />
+			</div>
 		</div>
 	</div>
-	<div class="p-16" />
-	<DividersPacman />
 </body>
-<Footer />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" rossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+	rel="stylesheet"
+/>
 
 <style>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
 
-	body {
-		@apply m-[0rem] bg-ctp-base;
-		font-family: 'JetBrains Mono', monospace;
+	* {
+		font-family: JetBrains Mono;
+		overflow: none visible;
 	}
 
 	h1 {
-		@apply rounded-[10px] bg-ctp-blue text-center;
-		transition: transform 500ms ease, width 500ms ease, margin 500ms ease, font-size 500ms ease;
+		border-radius: 1rem;
+		transition: font-size 0.7s ease-in-out, color 1s ease-in-out, background 1s ease-in-out;
+		padding: 0.5rem;
 	}
 
 	h1:hover {
-		@apply bg-ctp-base text-ctp-green;
-		transform: scale(1.1);
+		@apply text-ctp-green text-[3.5rem];
+	}
+
+	.h1-container {
+		height: 7rem; /* Set the desired height */
+		overflow: hidden; /* Hide any overflow caused by growing text */
+	}
+
+	.animating {
+		@apply text-ctp-green bg-ctp-base;
+	}
+
+	.diagonal {
+		position: relative;
+		isolation: isolate;
+	}
+
+	.diagonal::after {
+		content: '';
+		background-image: linear-gradient(180deg, #89b4fa 80%, #1e1e2e);
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		transform: skewY(-5deg);
+		@apply p-[7rem];
 	}
 </style>

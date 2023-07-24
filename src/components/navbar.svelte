@@ -1,111 +1,105 @@
-<script context="module" lang="ts">
-	import { writable } from 'svelte/store';
-
-	export const theme = writable('ctp-mocha');
-</script>
-
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	let currentTheme = '';
-
-	theme.subscribe((value) => {
-		currentTheme = value;
-	});
-
-	const toggleTheme = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
-		if (sunAndMoon) {
-			sunAndMoon.style.opacity = '0';
-			sunAndMoon.style.transform = 'translateY(-30px)';
-
-			setTimeout(() => {
-				theme.update((currentTheme) => {
-					const newTheme = currentTheme === 'ctp-mocha' ? 'ctp-latte' : 'ctp-mocha';
-					sunAndMoon.style.opacity = '1';
-					sunAndMoon.style.transform = 'translateY(0)';
-					return newTheme;
-				});
-			}, 300);
-		}
-	};
-
-	const handleMouseOver = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
-		if (sunAndMoon) {
-			const removeClass = currentTheme === 'ctp-mocha' ? 'text-ctp-lavender' : 'text-ctp-yellow';
-			const addClass = currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender';
-
-			updateSunAndMoonStyles(sunAndMoon, 'scale(1.3) rotate(370deg)', removeClass, addClass);
-		}
-	};
-
-	const handleMouseOut = () => {
-		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
-		if (sunAndMoon) {
-			const removeClass = currentTheme === 'ctp-mocha' ? 'text-ctp-peach' : 'text-ctp-lavender';
-			updateSunAndMoonStyles(sunAndMoon, 'scale(1.0) rotate(0deg)', removeClass);
-		}
-	};
-
-	const updateSunAndMoonStyles = (element, transformValue, removeClass, addClass) => {
-		element.style.transform = transformValue;
-
-		if (removeClass) {
-			element.classList.remove(removeClass);
-		}
-
-		if (addClass) {
-			element.classList.add(addClass);
-		}
-	};
-
-	onMount(() => {
-		const sunAndMoon = document.querySelector('.sunAndMoon') as HTMLElement | null;
-		if (sunAndMoon) {
-			sunAndMoon.addEventListener('mouseover', handleMouseOver);
-			sunAndMoon.addEventListener('mouseout', handleMouseOut);
-		}
-	});
-</script>
-
-<head>
-	<script src="https://kit.fontawesome.com/777ef29ec5.js" crossorigin="anonymous"></script>
-</head>
-<nav class="transparent sticky bg-ctp-yellow {$theme}" style="z-index: 9998;">
-	<ul class="navbar-list">
-		<a class="enlarge" href="">
-			<li>
-				<span class="async menu-heading text-[3rem] font-semibold"
-					><i class="fa-solid fa-house" /> async</span
-				>
-			</li>
+<div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
+	<div class="left-content pl-3 inline-flex">
+		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
+		<div class="head-parent">
+			<h2 class="pt-2 async">async</h2>
+		</div>
+	</div>
+	<div class="right-content">
+		<a href="https://discord.com/users/797422750321999943" class="text-center">
+			<div class="icon-wrapper">
+				<i class="fa-brands fa-discord discord" />
+			</div>
 		</a>
-		<li style="flex-grow: 1;" />
-		<li>
-			<div
-				role="button"
-				tabindex="0"
-				class={`fa-solid ${$theme === 'ctp-latte' ? 'fa-moon' : 'fa-sun'} fg-ctp-base text-[2rem] ${
-					$theme === 'ctp-latte' ? 'text-black' : 'text-black'
-				} sunAndMoon`}
-				href="#"
-				on:click={toggleTheme}
-			/>
-		</li>
-		<li>
-			<a class="fa-brands fa-github github text-[2rem]" href="https://github.com/asyncedd" />
-		</li>
-		<li>
-			<a
-				class="fa-brands fa-discord discord text-[2rem]"
-				href="https://discord.com/users/797422750321999943"
-			/>
-		</li>
-	</ul>
-</nav>
+		<a href="https://github.com/asyncedd">
+			<div class="icon-wrapper">
+				<i class="fa-brands fa-github github" />
+			</div>
+		</a>
+	</div>
+</div>
 
 <style>
+	/* Navbar links */
+	.navbar {
+		display: flex;
+		align-items: center; /* Align items vertically in the center */
+		padding-right: 20px; /* Add desired padding to the right side */
+	}
+
+	/* Content on the left */
+	.left-content {
+		margin-right: auto; /* Pushes the content to the left side */
+	}
+
+	.left-content img {
+		margin-right: 10px; /* Add some space between the image and the right content */
+		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+	}
+
+	/* Content on the right */
+	.right-content {
+		display: flex; /* Display the content on the right side in a flex layout */
+	}
+
+	.navbar a {
+		padding: 12px;
+		@apply text-ctp-base text-center;
+		font-size: 30px;
+		height: 60px;
+	}
+
+	/* Center the icons */
+	.icon-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Icons settings */
+	i {
+		font-size: 25px;
+		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+		transform-origin: center; /* Set the transform origin to center */
+	}
+
+	/* Hover effect for icons and images */
+	.discord:hover,
+	.github:hover,
+	.left-content img:hover {
+		/* Apply the effect to the image when it's hovered */
+		transform: scale(1.2); /* Increase the scale on hover */
+	}
+
+	.discord:hover {
+		color: #6666ff;
+	}
+
+	.github:hover {
+		color: #fafafa;
+	}
+
+	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+	@media screen and (max-width: 500px) {
+		.navbar a {
+			float: none;
+			display: block;
+		}
+
+		.left-content img {
+			margin-right: 1.3; /* Reset the margin for the image on smaller screens */
+		}
+	}
+
+	.rotate {
+		transition: transform 5s ease;
+		transform: scale(1) rotate(360deg);
+	}
+
+	.rotate:hover {
+		transform: scale(1.1) rotate(720deg);
+	}
+
 	.async {
 		--s: 0.1em;
 		background: linear-gradient(
@@ -123,80 +117,20 @@
 		-webkit-text-fill-color: transparent;
 		transition: 0.5s;
 		cursor: pointer;
+		@apply pl-2 pr-2;
 	}
 
 	.async:hover {
 		--_p: 100%;
 	}
 
-	nav {
-		padding: 10px;
+	.head-parent {
+		transition: background 0.3s ease-in-out;
+		@apply rounded-[0.7rem];
 	}
 
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		align-items: center;
-	}
-
-	li {
-		margin-right: 10px;
-	}
-
-	ul.navbar-list {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 5%;
-	}
-
-	.menu-heading {
-		font-size: 25px;
-	}
-
-	.sticky {
-		position: sticky;
-		top: 0;
-		z-index: 100;
-	}
-
-	.github {
-		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
-	}
-
-	.github:hover {
-		color: #f5f5f5;
-		transform: scale(1.3);
-	}
-
-	.discord {
-		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
-	}
-
-	.discord:hover {
-		color: #5865f2;
-		transform: scale(1.3);
-	}
-
-	.sunAndMoon {
-		transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out, color 0.5s ease-in-out;
-	}
-
-	.bg-black {
-		color: black;
-	}
-
-	.enlarge {
-		transform: scale(1);
-		transition: transform 0.5s ease-in-out;
-	}
-
-	.enlarge:hover {
-		transform: scale(1.3);
+	.head-parent:hover {
+		@apply bg-ctp-base;
+		--_p: 100%;
 	}
 </style>

@@ -1,6 +1,10 @@
+<script context="module">
+	import { writable } from 'svelte/store';
+	export let animating = writable(false);
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
-
 	// Specify the types for variables and functions
 	const lettersArray: string[] =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'.split('');
@@ -13,7 +17,8 @@
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		if (randomValue < 0.5 && randomValue > 0.3 && iteration != 0) {
+		console.log(randomValue);
+		if (randomValue < 0.5 && randomValue > 0.4 && iteration != 0) {
 			return targetChar;
 		}
 
@@ -39,6 +44,7 @@
 			return;
 		}
 
+		animating.set(true);
 		target.dataset.animating = 'true';
 
 		let iteration: number = 0;
@@ -68,6 +74,7 @@
 
 				if (iteration >= targetValue.length) {
 					target.dataset.animating = 'false';
+					animating.set(false);
 				} else if (nextText[iteration] === targetValue[iteration]) {
 					iteration++;
 					// Schedule the next animation frame after the animationFrameDuration
