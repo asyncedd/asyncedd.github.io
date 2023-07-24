@@ -59,7 +59,7 @@
 
 <p class="text-ctp-base pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
 	{#each currentText as letter, index}
-		<span style="animation-delay: 150ms;">{letter === ' ' ? '\u00A0' : letter}</span>
+		<span style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span>
 	{/each}
 </p>
 
@@ -71,7 +71,7 @@
 
 	#typewriter.typing-cursor span {
 		opacity: 0.3;
-		animation: cat-jump 1s forwards;
+		animation: cat-jump 0.1s forwards;
 	}
 
 	@keyframes cat-jump {
