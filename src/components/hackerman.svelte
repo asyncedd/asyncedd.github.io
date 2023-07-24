@@ -17,7 +17,8 @@
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		if (randomValue < 0.5 && randomValue > 0.3 && iteration != 0) {
+		console.log(randomValue);
+		if (randomValue < 0.5 && randomValue > 0.4 && iteration != 0) {
 			return targetChar;
 		}
 
