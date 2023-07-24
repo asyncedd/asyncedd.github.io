@@ -1,6 +1,6 @@
 <div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
 	<div class="left-content pl-3">
-		<img src="moutains.webp" alt="" class="w-12 h-12 rounded-[100%] aspect-square" />
+		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square" />
 	</div>
 	<div class="right-content">
 		<a href="https://discord.com/users/797422750321999943" class="text-center">
@@ -31,6 +31,7 @@
 
 	.left-content img {
 		margin-right: 10px; /* Add some space between the image and the right content */
+		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 	}
 
 	/* Content on the right */
@@ -59,15 +60,20 @@
 		transform-origin: center; /* Set the transform origin to center */
 	}
 
-	/* Hover effect */
+	/* Hover effect for icons and images */
+	.discord:hover,
+	.github:hover,
+	.left-content img:hover {
+		/* Apply the effect to the image when it's hovered */
+		transform: scale(1.2); /* Increase the scale on hover */
+	}
+
 	.discord:hover {
 		color: #6666ff;
-		transform: scale(1.2); /* Increase the scale on hover */
 	}
 
 	.github:hover {
 		color: #fafafa;
-		transform: scale(1.2);
 	}
 
 	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
