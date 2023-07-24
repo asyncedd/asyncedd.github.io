@@ -3,7 +3,10 @@
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
+	import Spookyparticles from '../components/spookyparticles.svelte';
 </script>
+
+<Spookyparticles />
 
 <Fontawesome />
 
