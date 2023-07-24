@@ -68,14 +68,6 @@
 		@apply text-ctp-green bg-ctp-base;
 	}
 
-	h1:hover + .shrink-class {
-		@apply p-[1rem];
-	}
-
-	.blue-lavender-mix {
-		background: color-mix(in srgb, #89b4fa, #1e1e2e 30%);
-	}
-
 	.diagonal {
 		position: relative;
 		isolation: isolate;
@@ -87,7 +79,7 @@
 		position: absolute;
 		z-index: -1;
 		inset: 0;
-		transform: skewY(-3deg);
+		transform: skewY(-5deg);
 		@apply p-[7rem];
 	}
 </style>
