@@ -12,7 +12,7 @@
 <Navbar />
 
 <body class="bg-ctp-base">
-	<div class="flex justify-center bg-ctp-blue pt-[3rem] shrink-class">
+	<div class="flex justify-center bg-ctp-blue pt-[1rem] shrink-class">
 		<div class="h1-container">
 			<h1
 				class="text-ctp-base text-center text-[3rem]"
@@ -52,6 +52,7 @@
 	h1 {
 		border-radius: 1rem;
 		transition: font-size 0.7s ease-in-out, color 1s ease-in-out, background 1s ease-in-out;
+		padding: 0.5rem;
 	}
 
 	h1:hover {
