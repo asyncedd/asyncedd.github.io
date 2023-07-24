@@ -117,7 +117,7 @@
 
 	.head-parent {
 		transition: background 0.3s ease;
-		@apply rounded-[3px];
+		@apply rounded-[0.7rem];
 	}
 
 	.head-parent:hover {
