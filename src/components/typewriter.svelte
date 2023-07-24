@@ -42,7 +42,7 @@
 								}
 							}
 						}, speed / 2); // Adjust the backspace speed as per your preference
-					}, 1000); // Delay before starting the backspace
+					}, 3000); // Delay before starting the backspace
 				} else {
 					setTimeout(() => {
 						isTyping = false;
@@ -58,14 +58,39 @@
 </script>
 
 <p class="text-ctp-base pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
-	{currentText}
+	{#each currentText as letter, index}
+		<span style="animation-delay: {index * 50}ms;">{letter === ' ' ? '\u00A0' : letter}</span>
+	{/each}
 </p>
 
 <style>
+	#typewriter {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	#typewriter.typing-cursor span {
+		opacity: 0.3;
+		animation: cat-jump 0.1s forwards;
+	}
+
+	@keyframes cat-jump {
+		from {
+			transform: translateY(-10px);
+			opacity: 0.3;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
 	#typewriter.typing-cursor::after {
 		content: '';
 		height: 1rem;
 		border-left: 1px solid #1e1e2e;
+		position: relative;
+		top: -7px; /* Adjust the vertical position as per your preference */
 		animation: blink-caret 0.75s step-end infinite; /* Blinking animation */
 	}
 
