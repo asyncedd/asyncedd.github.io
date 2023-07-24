@@ -15,41 +15,32 @@
 
 	function typeWriter() {
 		isTyping = true;
-		let i = 0;
 		const sentenceLength = sentences[currentSentenceIndex].length;
+		let i = 0;
 		const interval = setInterval(() => {
 			if (i < sentenceLength) {
 				currentText += sentences[currentSentenceIndex].charAt(i);
 				i++;
 			} else {
 				clearInterval(interval);
-
-				// Start backspacing if not on the last iteration
-				if (currentSentenceIndex < sentences.length - 1) {
-					isTyping = true;
-					setTimeout(() => {
-						const backspaceInterval = setInterval(() => {
-							currentText = currentText.slice(0, -1);
-							if (currentText === '') {
-								clearInterval(backspaceInterval);
-								// Move to the next sentence
-								currentSentenceIndex++;
-								if (currentSentenceIndex < sentences.length) {
-									isTyping = false;
-									setTimeout(() => {
-										typeWriter(); // Start typing the next sentence
-									}, 1000); // Delay before starting the next sentence
-								}
-							}
-						}, speed / 2); // Adjust the backspace speed as per your preference
-					}, 3000); // Delay before starting the backspace
-				} else {
-					setTimeout(() => {
-						isTyping = false;
-					}, 5000);
-				}
+				isTyping = true;
+				setTimeout(() => {
+					isTyping = false;
+					backspace();
+				}, 3000);
 			}
 		}, speed);
+	}
+
+	function backspace() {
+		const backspaceInterval = setInterval(() => {
+			currentText = currentText.slice(0, -1);
+			if (currentText === '') {
+				clearInterval(backspaceInterval);
+				currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+				typeWriter(); // Start typing the next sentence
+			}
+		}, speed / 2); // Adjust the backspace speed as per your preference
 	}
 
 	onMount(() => {
