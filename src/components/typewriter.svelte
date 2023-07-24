@@ -15,7 +15,9 @@
 				i++;
 			} else {
 				clearInterval(interval);
-				isTyping = false;
+				setTimeout(() => {
+					isTyping = false;
+				}, 3000);
 			}
 		}, speed);
 	}
