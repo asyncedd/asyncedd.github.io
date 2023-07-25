@@ -3,19 +3,19 @@
 	export let animating = writable(false);
 </script>
 
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
-	// Specify the types for variables and functions
-	const lettersArray: string[] =
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
-	const animationIntervalDuration: number = 30;
-	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
 
-	function getRandomLetter(targetValue: string, iteration: number): string {
-		const randomValue: number = Math.random();
-		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
-		let letter: string = lettersArray[randomIndex];
-		const targetChar: string = targetValue[iteration];
+	const lettersArray =
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
+	const animationIntervalDuration = 30;
+	const animationFrameDuration = 30;
+
+	function getRandomLetter(targetValue, iteration) {
+		const randomValue = Math.random();
+		const randomIndex = Math.floor(Math.random() * lettersArray.length);
+		let letter = lettersArray[randomIndex];
+		const targetChar = targetValue[iteration];
 
 		if (targetChar === ' ') {
 			return ' ';
@@ -25,27 +25,24 @@
 			return targetChar;
 		}
 
-		if (iteration !== 0) {
-			if (
-				letter.toUpperCase() === targetChar ||
+		if (
+			iteration !== 0 &&
+			(letter.toUpperCase() === targetChar ||
 				letter.toLowerCase() === targetChar ||
-				targetChar === ' ' // Add this condition to preserve spaces in the targetValue
-			) {
-				// Swap case of the letter
-				if (letter === letter.toUpperCase()) {
-					return letter.toLowerCase();
-				} else {
-					return letter.toUpperCase();
-				}
+				targetChar === ' ')
+		) {
+			if (letter === letter.toUpperCase()) {
+				return letter.toLowerCase();
+			} else {
+				return letter.toUpperCase();
 			}
 		}
 
 		return letter;
 	}
 
-	// Specify the event type for the event parameter
-	function handleMouseOver(event: MouseEvent): void {
-		const target: HTMLElement = event.target as HTMLElement;
+	function handleMouseOver(event) {
+		const target = event.target;
 
 		if (target.dataset.animating === 'true') {
 			return;
@@ -54,84 +51,26 @@
 		animating.set(true);
 		target.dataset.animating = 'true';
 
-		let iteration: number = 0;
-		let interval: number | undefined = undefined;
+		let iteration = 0;
+		let interval;
 
-		// Delay the animation start
 		setTimeout(() => {
-			function animate() {
-				const targetValue: string = target.dataset.value as string;
-				const currentText: string = target.textContent!;
-				let nextText: string = '';
-
-				for (let i = 0; i < currentText.length; i++) {
-					const currentChar = currentText[i];
-					if (iteration === 0) {
-						// Always randomize during the first iteration
-						nextText += getRandomLetter(targetValue, iteration);
-					} else if (i < iteration) {
-						nextText += targetValue[i];
-					} else if (currentChar === targetValue[i]) {
-						nextText += targetValue[i]; // Use the character from targetValue directly
-					} else {
-						nextText += getRandomLetter(targetValue, iteration);
-					}
-				}
-
-				target.textContent = nextText;
-
-				if (iteration >= targetValue.length) {
-					target.dataset.animating = 'false';
-					animating.set(false);
-				} else if (nextText[iteration] === targetValue[iteration]) {
-					iteration++;
-					// Schedule the next animation frame after the animationFrameDuration
-					setTimeout(() => {
-						interval = window.requestAnimationFrame(animate);
-					}, animationFrameDuration);
-				} else {
-					// If the character hasn't reached the target yet, continue animating
-					setTimeout(() => {
-						interval = window.requestAnimationFrame(animate);
-					}, animationFrameDuration);
-				}
-			}
-
 			animate();
 		}, animationIntervalDuration);
-	}
-
-	onMount(() => {
-		const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
-		for (const h1 of h1Elements) {
-			h1.addEventListener('mouseover', handleMouseOver);
-			h1.dataset.animating = 'false'; // Initialize the data attribute
-			animateH1Element(h1); // Start the animation for each h1 element
-		}
-	});
-
-	function animateH1Element(target: HTMLElement) {
-		const targetValue: string = target.dataset.value as string;
-		const animationDuration: number = animationIntervalDuration * targetValue.length;
-
-		animating.set(true);
-		target.dataset.animating = 'true';
-
-		let iteration: number = 0;
-		let interval: number | undefined = undefined;
 
 		function animate() {
-			const currentText: string = target.textContent!;
-			let nextText: string = '';
+			const targetValue = target.dataset.value;
+			const currentText = target.textContent;
+			let nextText = '';
 
 			for (let i = 0; i < currentText.length; i++) {
+				const currentChar = currentText[i];
 				if (iteration === 0) {
-					// Always randomize during the first iteration
 					nextText += getRandomLetter(targetValue, iteration);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
-				} else if (i === iteration && currentText[i] === targetValue[i]) {
-					nextText += targetValue[i]; // Use the character from targetValue directly
+				} else if (currentChar === targetValue[i]) {
+					nextText += targetValue[i];
 				} else {
 					nextText += getRandomLetter(targetValue, iteration);
 				}
@@ -144,21 +83,71 @@
 				animating.set(false);
 			} else if (nextText[iteration] === targetValue[iteration]) {
 				iteration++;
-				// Schedule the next animation frame after the animationFrameDuration
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			} else {
-				// If the character hasn't reached the target yet, continue animating
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			}
 		}
+	}
 
-		// Delay the animation start
+	onMount(() => {
+		const h1Elements = document.querySelectorAll('h1');
+		for (const h1 of h1Elements) {
+			h1.addEventListener('mouseover', handleMouseOver);
+			h1.dataset.animating = 'false';
+			animateH1Element(h1);
+		}
+	});
+
+	function animateH1Element(target) {
+		const targetValue = target.dataset.value;
+		const animationDuration = animationIntervalDuration * targetValue.length;
+
+		animating.set(true);
+		target.dataset.animating = 'true';
+
+		let iteration = 0;
+		let interval;
+
 		setTimeout(() => {
 			animate();
 		}, animationDuration);
+
+		function animate() {
+			const currentText = target.textContent;
+			let nextText = '';
+
+			for (let i = 0; i < currentText.length; i++) {
+				if (iteration === 0) {
+					nextText += getRandomLetter(targetValue, iteration);
+				} else if (i < iteration) {
+					nextText += targetValue[i];
+				} else if (i === iteration && currentText[i] === targetValue[i]) {
+					nextText += targetValue[i];
+				} else {
+					nextText += getRandomLetter(targetValue, iteration);
+				}
+			}
+
+			target.textContent = nextText;
+
+			if (iteration >= targetValue.length) {
+				target.dataset.animating = 'false';
+				animating.set(false);
+			} else if (nextText[iteration] === targetValue[iteration]) {
+				iteration++;
+				setTimeout(() => {
+					interval = window.requestAnimationFrame(animate);
+				}, animationFrameDuration);
+			} else {
+				setTimeout(() => {
+					interval = window.requestAnimationFrame(animate);
+				}, animationFrameDuration);
+			}
+		}
 	}
 </script>
