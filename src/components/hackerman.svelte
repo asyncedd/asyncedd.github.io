@@ -11,7 +11,7 @@
 	const animationIntervalDuration = 30;
 	const animationFrameDuration = 30;
 
-	function getRandomLetter(targetValue, iteration) {
+	function getRandomLetter(targetValue, iteration, previousInterpretationCorrect) {
 		const randomValue = Math.random();
 		const randomIndex = Math.floor(Math.random() * lettersArray.length);
 		let letter = lettersArray[randomIndex];
@@ -21,7 +21,12 @@
 			return ' ';
 		}
 
-		if (randomValue < 0.5 && randomValue > 0.4 && iteration !== 0) {
+		if (
+			previousInterpretationCorrect &&
+			randomValue < 0.5 &&
+			randomValue > 0.4 &&
+			iteration !== 0
+		) {
 			return targetChar;
 		}
 
@@ -53,6 +58,7 @@
 
 		let iteration = 0;
 		let interval;
+		let previousInterpretationCorrect = true; // New variable to track the correctness of the previous interpretation
 
 		setTimeout(() => {
 			animate();
@@ -66,13 +72,14 @@
 			for (let i = 0; i < currentText.length; i++) {
 				const currentChar = currentText[i];
 				if (iteration === 0) {
-					nextText += getRandomLetter(targetValue, iteration);
+					nextText += getRandomLetter(targetValue, iteration, previousInterpretationCorrect);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (currentChar === targetValue[i]) {
 					nextText += targetValue[i];
 				} else {
-					nextText += getRandomLetter(targetValue, iteration);
+					previousInterpretationCorrect = false;
+					nextText += getRandomLetter(targetValue, iteration, previousInterpretationCorrect);
 				}
 			}
 
@@ -83,6 +90,7 @@
 				animating.set(false);
 			} else if (nextText[iteration] === targetValue[iteration]) {
 				iteration++;
+				previousInterpretationCorrect = true; // Reset to true for the next iteration
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
@@ -112,6 +120,7 @@
 
 		let iteration = 0;
 		let interval;
+		let previousInterpretationCorrect = true; // New variable to track the correctness of the previous interpretation
 
 		setTimeout(() => {
 			animate();
@@ -123,13 +132,14 @@
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
-					nextText += getRandomLetter(targetValue, iteration);
+					nextText += getRandomLetter(targetValue, iteration, previousInterpretationCorrect);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
 					nextText += targetValue[i];
 				} else {
-					nextText += getRandomLetter(targetValue, iteration);
+					previousInterpretationCorrect = false;
+					nextText += getRandomLetter(targetValue, iteration, previousInterpretationCorrect);
 				}
 			}
 
@@ -140,6 +150,7 @@
 				animating.set(false);
 			} else if (nextText[iteration] === targetValue[iteration]) {
 				iteration++;
+				previousInterpretationCorrect = true; // Reset to true for the next iteration
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
