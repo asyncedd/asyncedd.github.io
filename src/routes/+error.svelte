@@ -15,6 +15,8 @@
 	rel="stylesheet"
 />
 
+<Hackerman />
+
 <Fontawesome />
 
 <body class="bg-ctp-base">
@@ -22,8 +24,6 @@
 	<div class="flex justify-center items-center min-h-screen">
 		<div>
 			<div class="h1-container">
-				<Hackerman />
-
 				<div class="text-ctp-text text-[3rem] flex justify-center">
 					<h1
 						class:animating={$animating === true}

@@ -66,10 +66,7 @@
 
 				for (let i = 0; i < currentText.length; i++) {
 					const currentChar = currentText[i];
-					if (currentChar === ' ') {
-						// Preserve spaces as they are
-						nextText += ' ';
-					} else if (iteration === 0) {
+					if (iteration === 0) {
 						// Always randomize during the first iteration
 						nextText += getRandomLetter(targetValue, iteration);
 					} else if (i < iteration) {
