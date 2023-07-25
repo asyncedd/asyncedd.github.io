@@ -31,7 +31,7 @@
       PRIORITY: LOW
       DESCRIPTION:
       This is relatively stable at this point
-      - ( ) Animate on page load? That'll be cool :)
+      - (x) Animate on page load? That'll be cool :)
       - (_) We could make incorperate GSAP too!
 
 ***** PERF
