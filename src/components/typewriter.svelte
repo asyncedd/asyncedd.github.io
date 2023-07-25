@@ -1,17 +1,13 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, createEventDispatcher } from 'svelte';
 
-	let sentences = [
-		'GNU/Linux enjoyer',
-		'Coding enthusiast',
-		'Svelte fan',
-		'Welcome to my website!'
-	];
-
-	let speed = 50; /* The speed/duration of the effect in milliseconds */
+	export let sentences = [];
+	let speed = 50;
 	let currentText = '';
 	let currentSentenceIndex = 0;
 	let isTyping = false;
+
+	const dispatch = createEventDispatcher();
 
 	function typeWriter() {
 		isTyping = true;
@@ -40,7 +36,7 @@
 				currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
 				typeWriter(); // Start typing the next sentence
 			}
-		}, speed / 2); // Adjust the backspace speed as per your preference
+		}, speed / 2);
 	}
 
 	onMount(() => {
@@ -48,7 +44,7 @@
 	});
 </script>
 
-<p class="text-ctp-base pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
+<p class="pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
 	{#each currentText as letter, index}
 		<span style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span>
 	{/each}

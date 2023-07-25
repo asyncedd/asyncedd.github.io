@@ -4,6 +4,13 @@
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
 	import Spookyparticles from '../components/spookyparticles.svelte';
+
+	let externalSentences = [
+		'GNU/Linux enjoyer',
+		'Coding enthusiast',
+		'Svelte fan',
+		'Welcome to my website!'
+	];
 </script>
 
 <Spookyparticles />
@@ -28,8 +35,8 @@
 	</div>
 	<div class="pt-[1rem] bg-ctp-blue">
 		<div class="diagonal flex justify-center">
-			<div class="h1-container text-[1.3rem]">
-				<Typewriter />
+			<div class="h1-container text-[1.3rem] text-ctp-base">
+				<Typewriter sentences={externalSentences} />
 			</div>
 		</div>
 	</div>
