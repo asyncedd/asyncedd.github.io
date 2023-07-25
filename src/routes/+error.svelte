@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
+	import Navbar from '../components/navbar.svelte';
+	import Fontawesome from '../components/fontawesome.svelte';
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,6 +13,10 @@
 />
 
 <Hackerman />
+
+<Fontawesome />
+
+<Navbar />
 
 <div class="bg-ctp-base items-center min-h-screen flex justify-center">
 	<div class="text-ctp-text text-[3rem] flex justify-center">
