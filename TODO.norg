@@ -9,13 +9,21 @@
       PRIORITY: HIGH
       DESCRIPTION:
       This is by far the least reposive part of the page
-      - ( ) The headers
-      - ( ) The indivisual bento boxes
+      - (x) The headers
+      - (x) The indivisual bento boxes
 ***** Navbar
       PRIORITY: LOW
       DESCRIPTION:
       The navbar is relatively responsive
       - ( ) Maybe hide buttons when x width?
+****  FEATURES
+***** Bento
+      PRIORITY: HIGH
+      DESCRIPTION:
+      Add a skills/hobbys/tools section
+      - ( ) Add a **skills** section
+      - ( ) Add a **hobbys** section
+      - ( ) Add a **tools** section
 
 *** LOW
 **** Hackerman
@@ -24,11 +32,11 @@
       DESCRIPTION:
       This is relatively stable at this point
       - ( ) Animate on page load? That'll be cool :)
-      - ( ) We could make incorperate GSAP too!
+      - (_) We could make incorperate GSAP too!
 
 ***** PERF
       PRIORITY: LOW
       DESCRIPTION:
       The performance is pretty good
-      - ( ) Optimize the randomizer
-      - ( ) Refactor more
+      - (x) Optimize the randomizer
+      - (x) Refactor more
