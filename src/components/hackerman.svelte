@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	// Specify the types for variables and functions
 	const lettersArray: string[] =
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()'.split('');
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
 
@@ -17,13 +17,20 @@
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		console.log(randomValue);
-		if (randomValue < 0.5 && randomValue > 0.4 && iteration != 0) {
+		if (targetChar === ' ') {
+			return ' ';
+		}
+
+		if (randomValue < 0.5 && randomValue > 0.4 && iteration !== 0) {
 			return targetChar;
 		}
 
-		if (iteration != 0) {
-			if (letter.toUpperCase() === targetChar || letter.toLowerCase() === targetChar) {
+		if (iteration !== 0) {
+			if (
+				letter.toUpperCase() === targetChar ||
+				letter.toLowerCase() === targetChar ||
+				targetChar === ' ' // Add this condition to preserve spaces in the targetValue
+			) {
 				// Swap case of the letter
 				if (letter === letter.toUpperCase()) {
 					return letter.toLowerCase();
@@ -58,12 +65,16 @@
 				let nextText: string = '';
 
 				for (let i = 0; i < currentText.length; i++) {
-					if (iteration === 0) {
+					const currentChar = currentText[i];
+					if (currentChar === ' ') {
+						// Preserve spaces as they are
+						nextText += ' ';
+					} else if (iteration === 0) {
 						// Always randomize during the first iteration
 						nextText += getRandomLetter(targetValue, iteration);
 					} else if (i < iteration) {
 						nextText += targetValue[i];
-					} else if (i === iteration && currentText[i] === targetValue[i]) {
+					} else if (currentChar === targetValue[i]) {
 						nextText += targetValue[i]; // Use the character from targetValue directly
 					} else {
 						nextText += getRandomLetter(targetValue, iteration);

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Hackerman, { animating } from '../components/hackerman.svelte';
+	import Hackerman, { animating } from '../components/hackerman.svelte'; // If you're using the Hackerman component
 	import Navbar from '../components/navbar.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Typewriter from '../components/typewriter.svelte';
@@ -15,25 +15,16 @@
 	rel="stylesheet"
 />
 
-<Hackerman />
-
 <Fontawesome />
 
 <body class="bg-ctp-base">
 	<Navbar />
 	<div class="flex justify-center items-center min-h-screen">
 		<div>
-			<div class="text-ctp-text text-[3rem] flex justify-center">
-				<h1
-					class:animating={$animating === true}
-					data-value="{$page.status}| {$page.error.message}"
-				>
-					{$page.status}| {$page.error.message}
-				</h1>
-			</div>
 			<div class="h1-container">
-				<!-- Wrap the h1 in a container with fixed height and hidden overflow -->
-				<div class="h1-content">
+				<Hackerman />
+
+				<div class="text-ctp-text text-[3rem] flex justify-center">
 					<h1
 						class:animating={$animating === true}
 						data-value="{$page.status}| {$page.error.message}"
@@ -41,6 +32,9 @@
 						{$page.status}| {$page.error.message}
 					</h1>
 				</div>
+			</div>
+			<div class="text-center mt-4 text-ctp-text">
+				<Typewriter sentences={p} />
 			</div>
 		</div>
 	</div>
@@ -52,7 +46,7 @@
 	@tailwind utilities;
 
 	div {
-		font-family: JetBrains Mono;
+		font-family: JetBrains Mono, monospace;
 	}
 
 	h1 {
@@ -66,17 +60,5 @@
 	.h1-container {
 		height: 7rem; /* Set the desired height */
 		overflow: hidden; /* Hide any overflow caused by growing text */
-	}
-
-	.h1-container {
-		height: 3rem; /* Set the desired height */
-		overflow: hidden; /* Hide any overflow caused by growing text */
-	}
-
-	/* Optional: Center the text vertically within the container */
-	.h1-content {
-		display: flex;
-		align-items: center;
-		height: 100%;
 	}
 </style>
