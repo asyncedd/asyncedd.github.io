@@ -34,11 +34,15 @@
 				</div>
 			</div>
 			<div class="text-center mt-4 text-ctp-text typewriter-container">
-				<Typewriter sentences={p} />
+				<div class="text-center">
+					<Typewriter sentences={p} />
+				</div>
 			</div>
 
 			<div class="text-center mt-4 text-ctp-text typewriter-container">
-				<a href="/"><i class="fa-solid fa-house home-sweet-home" /></a>
+				<a class=" home-sweet-home text-[1.3rem]" href="/"
+					><i class="fa-solid fa-house" /> Go back</a
+				>
 			</div>
 		</div>
 	</div>
