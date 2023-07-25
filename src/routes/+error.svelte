@@ -33,7 +33,7 @@
 					</h1>
 				</div>
 			</div>
-			<div class="text-center mt-4 text-ctp-text">
+			<div class="text-center mt-4 text-ctp-text typewriter-container">
 				<Typewriter sentences={p} />
 			</div>
 		</div>
@@ -58,6 +58,11 @@
 	}
 
 	.h1-container {
+		height: 7rem; /* Set the desired height */
+		overflow: hidden; /* Hide any overflow caused by growing text */
+	}
+
+	.typewriter-container {
 		height: 7rem; /* Set the desired height */
 		overflow: hidden; /* Hide any overflow caused by growing text */
 	}
