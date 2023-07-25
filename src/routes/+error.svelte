@@ -36,6 +36,10 @@
 			<div class="text-center mt-4 text-ctp-text typewriter-container">
 				<Typewriter sentences={p} />
 			</div>
+
+			<div class="text-center mt-4 text-ctp-text typewriter-container">
+				<a href="/"><i class="fa-solid fa-house home-sweet-home" /></a>
+			</div>
 		</div>
 	</div>
 </body>
@@ -65,5 +69,13 @@
 	.typewriter-container {
 		height: 7rem; /* Set the desired height */
 		overflow: hidden; /* Hide any overflow caused by growing text */
+	}
+
+	.home-sweet-home {
+		transition: color 0.5s ease-in-out;
+	}
+
+	.home-sweet-home:hover {
+		@apply text-ctp-green;
 	}
 </style>
