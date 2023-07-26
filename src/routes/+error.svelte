@@ -5,7 +5,18 @@
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Typewriter from '../components/typewriter.svelte';
 
-	let p = ["This isn't the site you're looking for."];
+	let p = [
+		"This isn't the site you're looking for.",
+		"Maybe you're a time traveler who's looking for a new home :')",
+		'But why wait? Just go back home :D!',
+		'Do you see that little button down here?',
+		'Like that button righhttttt over there',
+		'Go',
+		'click',
+		'it',
+		':q!',
+		'kthxbye'
+	];
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
