@@ -21,6 +21,10 @@
 			return targetChar;
 		}
 
+		if (targetChar === ' ') {
+			return targetChar;
+		}
+
 		if (iteration !== 0) {
 			if (
 				letter.toUpperCase() === targetChar ||
