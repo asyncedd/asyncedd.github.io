@@ -1,4 +1,6 @@
-<div class="w-[100%] bg-ctp-blue overflow-auto navbar flex">
+<div
+	class="w-[100%] bg-ctp-blue overflow-auto navbar flex bg-opacity-90 backdrop-blur sticky top-0 z-50"
+>
 	<div class="left-content pl-3 inline-flex">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 		<div class="head-parent">
@@ -25,6 +27,9 @@
 		display: flex;
 		align-items: center; /* Align items vertically in the center */
 		padding-right: 20px; /* Add desired padding to the right side */
+		position: fixed; /* Make the navbar sticky */
+		top: 0; /* Stick the navbar to the top of the viewport */
+		z-index: 50; /* Add a higher z-index to ensure it stays above other elements */
 	}
 
 	/* Content on the left */
@@ -40,6 +45,7 @@
 	/* Content on the right */
 	.right-content {
 		display: flex; /* Display the content on the right side in a flex layout */
+		padding-right: 20px; /* Add desired padding to the right side */
 	}
 
 	.navbar a {

@@ -16,9 +16,10 @@
 
 <Hackerman />
 
-<Navbar />
-
 <body class="bg-ctp-base">
+	<div class="bg-ctp-blue p-[30px]">
+		<Navbar />
+	</div>
 	<div class="flex justify-center bg-ctp-blue pt-[1rem] shrink-class">
 		<div class="h1-container">
 			<h1
@@ -36,6 +37,15 @@
 				<Typewriter sentences={externalSentences} />
 			</div>
 		</div>
+	</div>
+	<div class="pt-[50rem] text-center px-8 text-ctp-text">
+		<i>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</i>
 	</div>
 </body>
 
