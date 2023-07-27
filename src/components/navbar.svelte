@@ -1,5 +1,5 @@
 <div
-	class="w-[100%] bg-ctp-blue overflow-auto navbar flex bg-opacity-90 backdrop-blur sticky top-0 z-50"
+	class="w-[100%] bg-ctp-blue overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
 >
 	<div class="left-content pl-3 inline-flex">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
