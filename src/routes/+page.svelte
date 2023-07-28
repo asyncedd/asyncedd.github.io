@@ -89,21 +89,6 @@
 		@apply text-ctp-green bg-ctp-base;
 	}
 
-	.diagonal {
-		position: relative;
-		isolation: isolate;
-	}
-
-	.diagonal::after {
-		content: '';
-		background-image: linear-gradient(180deg, #89b4fa 80%, #1e1e2e);
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		transform: skewY(-5deg);
-		@apply p-[7rem];
-	}
-
 	.rotate {
 		transition: transform 1s ease;
 		transform: scale(1) rotate(360deg);
