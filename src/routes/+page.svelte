@@ -21,9 +21,10 @@
 		<Navbar />
 	</div>
 	<div class="flex justify-center bg-ctp-blue pt-[10vh]">
-		<div class="h1-container">
+		<div class="inline-flex mx-[3vw]">
+			<img src="moutains.webp" alt="" class="h-[12vh] rounded-[100%] aspect-square rotate" />
 			<h1
-				class="text-ctp-base text-center text-[3rem]"
+				class="text-ctp-base text-center text-[3rem] ml-4 items-center p-[1rem]"
 				class:animating={$animating === true}
 				data-value="async"
 			>
@@ -69,7 +70,6 @@
 	h1 {
 		border-radius: 1rem;
 		transition: font-size 0.7s ease-in-out, color 1s ease-in-out, background 1s ease-in-out;
-		padding: 0.5rem;
 	}
 
 	h1:hover {
@@ -98,5 +98,14 @@
 		inset: 0;
 		transform: skewY(-5deg);
 		@apply p-[7rem];
+	}
+
+	.rotate {
+		transition: transform 1s ease;
+		transform: scale(1) rotate(360deg);
+	}
+
+	.rotate:hover {
+		transform: scale(1.1) rotate(720deg);
 	}
 </style>
