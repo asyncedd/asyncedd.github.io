@@ -3,6 +3,7 @@
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
+	import Wave from '../components/wave.svelte';
 
 	let externalSentences = [
 		'GNU/Linux enjoyer',
@@ -35,12 +36,13 @@
 		</div>
 	</div>
 	<div class="pt-[1rem] bg-ctp-blue">
-		<div class="diagonal flex justify-center">
+		<div class="flex justify-center">
 			<div class="h1-container text-[1.3rem] text-ctp-base">
 				<Typewriter sentences={externalSentences} />
 			</div>
 		</div>
 	</div>
+	<Wave />
 	<div class="p-[25rem] text-center px-[10vw] text-ctp-text">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
