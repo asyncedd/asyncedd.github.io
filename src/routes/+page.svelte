@@ -77,7 +77,7 @@
 	}
 
 	h1:hover {
-		@apply text-ctp-green text-[8vh];
+		@apply text-ctp-green text-[7.5vh];
 	}
 
 	.h1-container {
