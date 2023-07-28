@@ -17,10 +17,10 @@
 <Hackerman />
 
 <body class="bg-ctp-base">
-	<div class="bg-ctp-blue p-[30px]">
+	<div class="bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="flex justify-center bg-ctp-blue pt-[1rem] shrink-class">
+	<div class="flex justify-center bg-ctp-blue pt-[10rem] shrink-class">
 		<div class="h1-container">
 			<h1
 				class="text-ctp-base text-center text-[3rem]"
