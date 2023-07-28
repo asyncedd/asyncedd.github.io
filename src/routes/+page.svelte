@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="p-[25rem] text-center px-[10rem] text-ctp-text">
+	<div class="p-[25rem] text-center px-[10vw] text-ctp-text">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
