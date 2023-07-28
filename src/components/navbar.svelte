@@ -3,17 +3,17 @@
 >
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
-		<div class="head-parent">
-			<h2 class="pt-2 async">async</h2>
+		<div class="head-parent items-center">
+			<a class="p-2 text-[2.5vh] async">async</a>
 		</div>
 	</div>
 	<div class="right-content">
-		<a href="https://discord.com/users/797422750321999943" class="text-center">
+		<a href="https://discord.com/users/797422750321999943" class="text-center a-icons">
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-discord discord" />
 			</div>
 		</a>
-		<a href="https://github.com/asyncedd">
+		<a href="https://github.com/asyncedd" class="a-icons">
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-github github" />
 			</div>
@@ -47,7 +47,7 @@
 		display: flex; /* Display the content on the right side in a flex layout */
 	}
 
-	.navbar a {
+	.a-icons {
 		padding: 12px;
 		@apply text-ctp-base text-center;
 		font-size: 30px;
