@@ -22,9 +22,9 @@
 	</div>
 	<div class="flex justify-center bg-ctp-blue pt-[10vh]">
 		<div class="inline-flex mx-[3vw]">
-			<img src="moutains.webp" alt="" class="h-[12vh] rounded-[100%] aspect-square rotate" />
+			<img src="moutains.webp" alt="" class="h-[15vh] rounded-[100%] aspect-square rotate" />
 			<h1
-				class="text-ctp-base text-center text-[3rem] ml-4 items-center p-[1rem]"
+				class="text-ctp-base text-center text-[7vh] ml-4 items-center p-[1rem]"
 				class:animating={$animating === true}
 				data-value="async"
 			>
@@ -73,7 +73,7 @@
 	}
 
 	h1:hover {
-		@apply text-ctp-green text-[3.5rem];
+		@apply text-ctp-green text-[8vh];
 	}
 
 	.h1-container {
