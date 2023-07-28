@@ -11,7 +11,11 @@
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
 
-	function getRandomLetter(targetValue: string, iteration: number, isLastIteration): string {
+	function getRandomLetter(
+		targetValue: string,
+		iteration: number,
+		isLastIteration: boolean
+	): string {
 		const randomValue: number = Math.random();
 		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
 		let letter: string = lettersArray[randomIndex];
