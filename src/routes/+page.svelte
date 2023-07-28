@@ -20,7 +20,7 @@
 	<div class="bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="flex justify-center bg-ctp-blue pt-[10rem] shrink-class">
+	<div class="flex justify-center bg-ctp-blue pt-[10vh]">
 		<div class="h1-container">
 			<h1
 				class="text-ctp-base text-center text-[3rem]"
