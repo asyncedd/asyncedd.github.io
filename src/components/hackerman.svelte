@@ -11,13 +11,19 @@
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
 
-	function getRandomLetter(targetValue: string, iteration: number): string {
+	function getRandomLetter(targetValue: string, iteration: number, isLastIteration): string {
 		const randomValue: number = Math.random();
 		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		if (randomValue < 0.5 && randomValue > 0.4 && iteration !== 0 && targetChar !== ' ') {
+		if (
+			randomValue < 0.5 &&
+			randomValue > 0.3 &&
+			iteration !== 0 &&
+			targetChar !== ' ' &&
+			!isLastIteration
+		) {
 			return targetChar;
 		}
 
@@ -70,13 +76,17 @@
 						nextText += ' ';
 					} else if (iteration === 0) {
 						// Always randomize during the first iteration
-						nextText += getRandomLetter(targetValue, iteration);
+						nextText += getRandomLetter(targetValue, iteration, false);
 					} else if (i < iteration) {
 						nextText += targetValue[i];
 					} else if (currentChar === targetValue[i]) {
 						nextText += targetValue[i]; // Use the character from targetValue directly
 					} else {
-						nextText += getRandomLetter(targetValue, iteration);
+						nextText += getRandomLetter(
+							targetValue,
+							iteration,
+							iteration === targetValue.length - 1
+						);
 					}
 				}
 
