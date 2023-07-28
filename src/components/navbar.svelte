@@ -1,7 +1,7 @@
 <div
 	class="w-[100%] bg-ctp-blue overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
 >
-	<div class="left-content pl-3 inline-flex">
+	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 		<div class="head-parent">
 			<h2 class="pt-2 async">async</h2>
@@ -19,6 +19,7 @@
 			</div>
 		</a>
 	</div>
+	<div class="mr-[2vw]" />
 </div>
 
 <style>
@@ -26,7 +27,6 @@
 	.navbar {
 		display: flex;
 		align-items: center; /* Align items vertically in the center */
-		padding-right: 20px; /* Add desired padding to the right side */
 		position: fixed; /* Make the navbar sticky */
 		top: 0; /* Stick the navbar to the top of the viewport */
 		z-index: 50; /* Add a higher z-index to ensure it stays above other elements */
@@ -45,7 +45,6 @@
 	/* Content on the right */
 	.right-content {
 		display: flex; /* Display the content on the right side in a flex layout */
-		padding-right: 20px; /* Add desired padding to the right side */
 	}
 
 	.navbar a {
@@ -90,10 +89,6 @@
 		.navbar a {
 			float: none;
 			display: block;
-		}
-
-		.left-content img {
-			margin-right: 1.3; /* Reset the margin for the image on smaller screens */
 		}
 	}
 
