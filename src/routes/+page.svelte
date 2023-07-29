@@ -21,24 +21,26 @@
 	<div class="bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="flex justify-center bg-ctp-blue pt-[10vh]">
-		<div class="h-[20vh] overflow-none">
-			<div class="inline-flex mx-[3vw]">
-				<img src="moutains.webp" alt="" class="h-[17vh] rounded-[100%] aspect-square rotate" />
-				<h1
-					class="text-ctp-base text-center text-[7vh] ml-4 p-[3vh]"
-					class:animating={$animating === true}
-					data-value="async"
-				>
-					async
-				</h1>
+	<div class="p-[40vh] bg-ctp-blue">
+		<div class="flex justify-center bg-ctp-blue">
+			<div class="h-[20vh] overflow-none">
+				<div class="inline-flex mx-[3vw]">
+					<img src="moutains.webp" alt="" class="h-[17vh] rounded-[100%] aspect-square rotate" />
+					<h1
+						class="text-ctp-base text-center text-[7vh] ml-4 p-[3vh]"
+						class:animating={$animating === true}
+						data-value="async"
+					>
+						async
+					</h1>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="pt-[1rem] bg-ctp-blue">
-		<div class="flex justify-center">
-			<div class="h1-container text-[1.3rem] text-ctp-base">
-				<Typewriter sentences={externalSentences} />
+		<div class="pt-[1rem] bg-ctp-blue">
+			<div class="flex justify-center">
+				<div class="h1-container text-[1.3rem] text-ctp-base">
+					<Typewriter sentences={externalSentences} />
+				</div>
 			</div>
 		</div>
 	</div>
