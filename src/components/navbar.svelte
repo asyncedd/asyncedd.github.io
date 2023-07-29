@@ -1,5 +1,7 @@
 <div
-	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
+	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex bg-opacity-50 sticky top-0 z-50"
+	,
+	style="overflow-y: hidden"
 >
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
@@ -53,7 +55,10 @@
 	.a-icons,
 	.discord,
 	.github {
-		padding: 12px;
+		padding-bottom: 13px;
+		padding-top: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
 		font-size: 30px;
 		height: 60px;
 	}
