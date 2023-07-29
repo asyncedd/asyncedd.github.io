@@ -88,7 +88,7 @@
 	}
 
 	.animating {
-		@apply text-ctp-green bg-ctp-base;
+		@apply text-ctp-green bg-ctp-mantle;
 	}
 
 	.rotate {
