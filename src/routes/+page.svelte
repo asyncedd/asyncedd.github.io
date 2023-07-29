@@ -3,6 +3,7 @@
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
+	import Underwave from '../components/underwave.svelte';
 	import Wave from '../components/wave.svelte';
 
 	let externalSentences = [
@@ -44,7 +45,7 @@
 			</div>
 		</div>
 	</div>
-	<Wave />
+	<Underwave />
 	<div class="p-[25rem] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -54,6 +55,12 @@
 			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</i>
 	</div>
+	<Wave />
+	<footer class="dark:bg-ctp-base bg-ctp-blue">
+		<h2 class="text-center text-ctp-base dark:text-ctp-text text-[1rem] p-[1rem]">
+			Made with ❤️ by asyncedd
+		</h2>
+	</footer>
 </body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />

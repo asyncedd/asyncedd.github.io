@@ -64,6 +64,7 @@
 		margin-bottom: -7px; /*Fix for safari gap*/
 		min-height: 100px;
 		max-height: 150px;
+		transform: rotateX(180deg);
 	}
 
 	/* Animation */
