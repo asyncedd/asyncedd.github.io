@@ -24,12 +24,14 @@
 </div>
 
 <style>
-	/* Navbar links */
 	.navbar {
 		@apply bg-opacity-95;
 		display: flex;
 		align-items: center; /* Align items vertically in the center */
 		overflow: hidden;
+		position: fixed;
+		top: 0;
+		z-index: 50; /* Add a z-index to ensure the navbar stays on top of other elements */
 	}
 
 	/* Content on the left */
