@@ -47,7 +47,9 @@
 		display: flex; /* Display the content on the right side in a flex layout */
 	}
 
-	.a-icons {
+	.a-icons,
+	.discord,
+	.github {
 		padding: 12px;
 		@apply text-ctp-text text-center;
 		font-size: 30px;
