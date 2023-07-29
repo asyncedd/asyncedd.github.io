@@ -46,7 +46,7 @@
 		</div>
 	</div>
 	<Underwave />
-	<div class="p-[25rem] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
+	<div class="p-[30vh] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
