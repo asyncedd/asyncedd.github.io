@@ -8,12 +8,15 @@
 		</div>
 	</div>
 	<div class="right-content">
-		<a href="https://discord.com/users/797422750321999943" class="text-center a-icons">
+		<a
+			href="https://discord.com/users/797422750321999943"
+			class="text-center a-icons dark:text-ctp-text text-ctp-base"
+		>
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-discord discord" />
 			</div>
 		</a>
-		<a href="https://github.com/asyncedd" class="a-icons">
+		<a href="https://github.com/asyncedd" class="a-icons dark:text-ctp-text text-ctp-base">
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-github github" />
 			</div>
@@ -51,7 +54,6 @@
 	.discord,
 	.github {
 		padding: 12px;
-		@apply text-ctp-text text-center;
 		font-size: 30px;
 		height: 60px;
 	}
