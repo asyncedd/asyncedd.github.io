@@ -29,9 +29,7 @@
 		@apply bg-opacity-95;
 		display: flex;
 		align-items: center; /* Align items vertically in the center */
-		position: fixed; /* Make the navbar sticky */
-		top: 0; /* Stick the navbar to the top of the viewport */
-		z-index: 50; /* Add a higher z-index to ensure it stays above other elements */
+		overflow: hidden;
 	}
 
 	/* Content on the left */
