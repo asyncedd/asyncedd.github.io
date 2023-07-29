@@ -1,8 +1,4 @@
-<div
-	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex sticky top-0 z-50"
-	,
-	style="overflow-y: hidden"
->
+<div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex sticky top-0 z-50">
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 		<div class="head-parent items-center">
