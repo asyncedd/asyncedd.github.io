@@ -15,16 +15,44 @@
 				/>
 			</defs>
 			<g class="parallax">
-				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(30, 30, 46, 0.7)" />
-				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(30, 30, 46, 0.5)" />
-				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(30, 30, 46, 0.3)" />
-				<use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(30, 30, 46)" />
+				<use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-1)" />
+				<use xlink:href="#gentle-wave" x="48" y="3" fill="var(--wave-color-2)" />
+				<use xlink:href="#gentle-wave" x="48" y="5" fill="var(--wave-color-3)" />
+				<use xlink:href="#gentle-wave" x="48" y="7" fill="var(--wave-color-4)" />
 			</g>
 		</svg>
 	</div>
 </div>
 
 <style>
+	:root {
+		--light-mode-wave-color-1: rgba(137, 180, 250, 0.7);
+		--light-mode-wave-color-2: rgba(137, 180, 250, 0.5);
+		--light-mode-wave-color-3: rgba(137, 180, 250, 0.3);
+		--light-mode-wave-color-4: rgb(137, 180, 250);
+		--dark-mode-wave-color-1: rgba(30, 30, 46, 0.7);
+		--dark-mode-wave-color-2: rgba(30, 30, 46, 0.5);
+		--dark-mode-wave-color-3: rgba(30, 30, 46, 0.3);
+		--dark-mode-wave-color-4: rgb(30, 30, 46);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.waves {
+			--wave-color-1: var(--dark-mode-wave-color-1);
+			--wave-color-2: var(--dark-mode-wave-color-2);
+			--wave-color-3: var(--dark-mode-wave-color-3);
+			--wave-color-4: var(--dark-mode-wave-color-4);
+		}
+	}
+
+	@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+		.waves {
+			--wave-color-1: var(--light-mode-wave-color-1);
+			--wave-color-2: var(--light-mode-wave-color-2);
+			--wave-color-3: var(--light-mode-wave-color-3);
+			--wave-color-4: var(--light-mode-wave-color-4);
+		}
+	}
 	.header {
 		position: relative;
 	}

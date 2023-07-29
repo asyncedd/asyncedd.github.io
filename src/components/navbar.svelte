@@ -1,5 +1,5 @@
 <div
-	class="w-[100%] bg-ctp-base overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
+	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
 >
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
@@ -110,7 +110,7 @@
 				hsl(199, 76%, 69%) 30%,
 				hsl(217, 92%, 76%) 40%,
 				hsl(232, 97%, 85%) 50%,
-				hsl(217, 92%, 76%) 0
+				hsl(189, 71%, 73%) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 		-webkit-background-clip: text;
@@ -118,7 +118,39 @@
 		-webkit-text-fill-color: transparent;
 		transition: 0.5s;
 		cursor: pointer;
-		@apply pl-2 pr-2;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.async {
+			--s: 0.1em;
+			background: linear-gradient(
+					90deg,
+					hsl(170, 57%, 73%) 10%,
+					hsl(189, 71%, 73%) 20%,
+					hsl(199, 76%, 69%) 30%,
+					hsl(217, 92%, 76%) 40%,
+					hsl(232, 97%, 85%) 50%,
+					hsl(240, 21%, 15%) 0%
+				)
+				calc(100% - var(--_p, 0%)) / 200% 100%;
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: 0.5s;
+			cursor: pointer;
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+
+		.a-icons {
+			padding: 12px;
+			text-align: center;
+			color: hsl(240, 21%, 15%);
+			font-size: 30px;
+			height: 60px;
+		}
 	}
 
 	.async:hover {

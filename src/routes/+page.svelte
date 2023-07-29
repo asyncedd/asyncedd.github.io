@@ -17,17 +17,17 @@
 
 <Hackerman />
 
-<body class="bg-ctp-mantle">
-	<div class="bg-ctp-base">
+<body class="dark:bg-ctp-mantle bg-ctp-text">
+	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="py-[40vh] bg-ctp-base">
-		<div class="flex justify-center bg-ctp-base">
+	<div class="py-[40vh] dark:bg-ctp-base bg-ctp-blue">
+		<div class="flex justify-center dark:bg-ctp-base bg-ctp-blue">
 			<div class="h-[20vh] overflow-none">
 				<div class="inline-flex mx-[3vw]">
 					<img src="moutains.webp" alt="" class="h-[17vh] rounded-[100%] aspect-square rotate" />
 					<h1
-						class="text-ctp-text text-center text-[7vh] ml-4 p-[3vh]"
+						class="dark:text-ctp-text text-ctp-base text-center text-[7vh] ml-4 p-[3vh]"
 						class:animating={$animating === true}
 						data-value="async"
 					>
@@ -36,16 +36,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="pt-[1rem] bg-ctp-base">
+		<div class="pt-[1rem] dark:bg-ctp-base bg-ctp-blue">
 			<div class="flex justify-center">
-				<div class="h1-container text-[1.3rem] text-ctp-text">
+				<div class="h1-container text-[1.3rem] text-ctp-base dark:text-ctp-text">
 					<Typewriter sentences={externalSentences} />
 				</div>
 			</div>
 		</div>
 	</div>
 	<Wave />
-	<div class="p-[25rem] text-center px-[10vw] text-ctp-text">
+	<div class="p-[25rem] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
