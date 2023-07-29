@@ -18,7 +18,7 @@
 <Hackerman />
 
 <body class="dark:bg-ctp-mantle bg-ctp-text">
-	<div class="dark:bg-ctp-base bg-ctp-blue bg-opacity-50">
+	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 	</div>
 	<div class="py-[40vh] dark:bg-ctp-base bg-ctp-blue">

@@ -1,5 +1,5 @@
 <div
-	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex bg-opacity-50 sticky top-0 z-50"
+	class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex sticky top-0 z-50"
 	,
 	style="overflow-y: hidden"
 >
@@ -30,6 +30,7 @@
 <style>
 	/* Navbar links */
 	.navbar {
+		@apply bg-opacity-95;
 		display: flex;
 		align-items: center; /* Align items vertically in the center */
 		position: fixed; /* Make the navbar sticky */
