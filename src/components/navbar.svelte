@@ -1,5 +1,5 @@
 <div
-	class="w-[100%] bg-ctp-blue overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
+	class="w-[100%] bg-ctp-base overflow-auto navbar flex bg-opacity-50 backdrop-blur sticky top-0 z-50"
 >
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
@@ -49,7 +49,7 @@
 
 	.a-icons {
 		padding: 12px;
-		@apply text-ctp-base text-center;
+		@apply text-ctp-text text-center;
 		font-size: 30px;
 		height: 60px;
 	}
@@ -110,7 +110,7 @@
 				hsl(199, 76%, 69%) 30%,
 				hsl(217, 92%, 76%) 40%,
 				hsl(232, 97%, 85%) 50%,
-				#1e1e2e 0
+				hsl(217, 92%, 76%) 0
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 		-webkit-background-clip: text;
@@ -131,7 +131,7 @@
 	}
 
 	.head-parent:hover {
-		@apply bg-ctp-base;
+		@apply bg-ctp-mantle;
 		--_p: 100%;
 		transform: scale(1.1);
 	}

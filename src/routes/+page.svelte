@@ -17,17 +17,17 @@
 
 <Hackerman />
 
-<body class="bg-ctp-base">
-	<div class="bg-ctp-blue">
+<body class="bg-ctp-mantle">
+	<div class="bg-ctp-base">
 		<Navbar />
 	</div>
-	<div class="py-[40vh] bg-ctp-blue">
-		<div class="flex justify-center bg-ctp-blue">
+	<div class="py-[40vh] bg-ctp-base">
+		<div class="flex justify-center bg-ctp-base">
 			<div class="h-[20vh] overflow-none">
 				<div class="inline-flex mx-[3vw]">
 					<img src="moutains.webp" alt="" class="h-[17vh] rounded-[100%] aspect-square rotate" />
 					<h1
-						class="text-ctp-base text-center text-[7vh] ml-4 p-[3vh]"
+						class="text-ctp-text text-center text-[7vh] ml-4 p-[3vh]"
 						class:animating={$animating === true}
 						data-value="async"
 					>
@@ -36,9 +36,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="pt-[1rem] bg-ctp-blue">
+		<div class="pt-[1rem] bg-ctp-base">
 			<div class="flex justify-center">
-				<div class="h1-container text-[1.3rem] text-ctp-base">
+				<div class="h1-container text-[1.3rem] text-ctp-text">
 					<Typewriter sentences={externalSentences} />
 				</div>
 			</div>
