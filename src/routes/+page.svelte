@@ -21,7 +21,7 @@
 	<div class="bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="p-[40vh] bg-ctp-blue">
+	<div class="py-[40vh] bg-ctp-blue">
 		<div class="flex justify-center bg-ctp-blue">
 			<div class="h-[20vh] overflow-none">
 				<div class="inline-flex mx-[3vw]">
