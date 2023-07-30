@@ -1,3 +1,7 @@
+<script lang="ts">
+	import ThemeSwitch from '../lib/ThemeSwitch.svelte';
+</script>
+
 <div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex top-0 z-50">
 	<div class="left-content inline-flex justify-center mx-[3vw]">
 		<a href="/">
@@ -10,6 +14,7 @@
 		</a>
 	</div>
 	<div class="right-content">
+		<ThemeSwitch />
 		<a
 			href="https://discord.com/users/797422750321999943"
 			class="text-center a-icons dark:text-ctp-text text-ctp-base"
