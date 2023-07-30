@@ -5,10 +5,18 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<script>
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-				? document.documentElement.classList.add('dark')
-				: document.documentElement.classList.remove('dark');
+			import { themeStore } from './lib/store';
+			let isDark =
+				localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+			if (isDark) {
+				document.documentElement.classList.add('dark');
+				themeStore.set(true);
+			} else {
+				document.documentElement.classList.remove('dark');
+				themeStore.set(false);
+			}
 		</script>
 		%sveltekit.head%
 	</head>

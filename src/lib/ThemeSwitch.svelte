@@ -1,7 +1,19 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { onDestroy } from 'svelte';
+	import { themeStore } from './store';
 
-	let darkMode = true;
+	let darkMode; // This variable will hold the current theme value from the store
+
+	// Subscribe to the theme store to get updates whenever the theme changes
+	const unsubscribe = themeStore.subscribe((value) => {
+		darkMode = value;
+	});
+
+	// Don't forget to unsubscribe when the component is destroyed to avoid memory leaks
+	onDestroy(() => {
+		unsubscribe();
+	});
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
@@ -11,19 +23,6 @@
 		darkMode
 			? document.documentElement.classList.add('dark')
 			: document.documentElement.classList.remove('dark');
-	}
-
-	if (browser) {
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-			darkMode = true;
-		} else {
-			document.documentElement.classList.remove('dark');
-			darkMode = false;
-		}
 	}
 </script>
 
