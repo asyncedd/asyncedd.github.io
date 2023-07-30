@@ -29,12 +29,16 @@
 
 <div>
 	<div on:click={handleSwitchDarkMode} class="text-[2rem]">
-		<i class="fa-solid fa-{darkMode ? 'sun' : 'moon'} dark:text-ctp-yellow text-ctp-lavender" />
+		<i
+			class="fa-solid fa-{darkMode
+				? 'sun'
+				: 'moon'} hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
+		/>
 	</div>
 </div>
 
-<style lang="postcss">
-	#theme-toggle + label {
-		@apply inline-block cursor-pointer h-12 w-12 top-6 right-24 rounded-full duration-300 content-[''];
+<style>
+	i {
+		transition: color 0.5s ease-in-out;
 	}
 </style>
