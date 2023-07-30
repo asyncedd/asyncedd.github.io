@@ -15,8 +15,6 @@
 
 <Fontawesome />
 
-<Hackerman />
-
 <body class="dark:bg-ctp-mantle bg-ctp-text">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
@@ -70,12 +68,26 @@
 		</h2>
 	</footer>
 </body>
+
+<Hackerman />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" rossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Preload the font resources -->
 <link
+	rel="preload"
 	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-	rel="stylesheet"
+	as="style"
+	onload="this.onload=null;this.rel='stylesheet'"
+	onerror="this.onload=null;this.rel='stylesheet'"
 />
+<noscript>
+	<link
+		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+		rel="stylesheet"
+	/>
+</noscript>
 
 <style>
 	@tailwind base;
