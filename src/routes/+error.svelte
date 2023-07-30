@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import Hackerman, { animating } from '../components/hackerman.svelte'; // If you're using the Hackerman component
 	import Navbar from '../components/navbar.svelte';
-	import Fontawesome from '../components/fontawesome.svelte';
 	import Typewriter from '../components/typewriter.svelte';
 
 	let p = [
@@ -27,8 +26,6 @@
 />
 
 <Hackerman />
-
-<Fontawesome />
 
 <body class="bg-ctp-base">
 	<Navbar />

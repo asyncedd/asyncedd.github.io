@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
-	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
 	import Wave from '../components/wave.svelte';
 
@@ -12,8 +11,6 @@
 		'Welcome to my website!'
 	];
 </script>
-
-<Fontawesome />
 
 <body class="dark:bg-ctp-mantle bg-ctp-text">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
@@ -44,7 +41,17 @@
 				</div>
 			</div>
 			<div class="items-center justify-center h-[20vh] sm:order-last">
-				<img src="moutains.webp" alt="" class="h-full rounded-[100%] aspect-square rotate" />
+				<img
+					src="moutains.webp"
+					alt="Mountains"
+					class="h-full rounded-[100%] aspect-square rotate"
+					loading="async"
+					srcset="
+          moutains.webp,             // Original WebP image
+          moutains-800w.webp 800w,   // 800px wide WebP image
+          moutains-500w.webp 500w    // 500px wide WebP image
+          "
+				/>
 			</div>
 		</div>
 		<div class="pb-[13vh]" />
