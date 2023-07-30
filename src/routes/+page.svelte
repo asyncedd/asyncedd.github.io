@@ -3,7 +3,6 @@
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Fontawesome from '../components/fontawesome.svelte';
 	import Navbar from '../components/navbar.svelte';
-	import Underwave from '../components/underwave.svelte';
 	import Wave from '../components/wave.svelte';
 
 	let externalSentences = [
@@ -45,7 +44,9 @@
 			</div>
 		</div>
 	</div>
-	<Underwave />
+	<div style="transform: rotate(-180deg);">
+		<Wave />
+	</div>
 	<div class="p-[30vh] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
 		<i>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
