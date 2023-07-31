@@ -8,7 +8,7 @@
 			<div class="left-content inline-flex justify-center">
 				<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 				<div class="head-parent items-center">
-					<a class="p-2 text-[2.5vh] async">async</a>
+					<a class="text-[1.5rem] async">async</a>
 				</div>
 			</div>
 		</a>

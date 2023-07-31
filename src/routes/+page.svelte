@@ -40,12 +40,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="items-center justify-center h-[20vh] sm:order-last">
+			<div class="items-center justify-center h-[13rem] sm:order-last">
 				<img
 					src="moutains.webp"
 					alt="Mountains"
 					class="h-full rounded-[100%] aspect-square rotate"
-					loading="async"
+					loading="lazy"
 					srcset="
           moutains.webp,             // Original WebP image
           moutains-800w.webp 800w,   // 800px wide WebP image
