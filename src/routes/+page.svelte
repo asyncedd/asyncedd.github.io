@@ -130,6 +130,6 @@
 	}
 
 	.rotate:hover {
-		transform: scale(1.1) rotate(720deg);
+		transform: scale(1.3) rotate(720deg);
 	}
 </style>
