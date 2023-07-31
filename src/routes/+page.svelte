@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" async>
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Navbar from '../components/navbar.svelte';
@@ -46,7 +46,8 @@
 					src="moutains.webp"
 					alt="Mountains"
 					class="h-full rounded-[100%] aspect-square rotate"
-					loading="lazy"
+					loading="eager"
+					decoding="async"
 					srcset="
           moutains.webp,             // Original WebP image
           moutains-800w.webp 800w,   // 800px wide WebP image
