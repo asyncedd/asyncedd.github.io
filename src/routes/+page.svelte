@@ -16,15 +16,15 @@
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="py-[30vh] sm:py-[40vh] dark:bg-ctp-base bg-ctp-blue items-center content-center">
+	<div class="py-[20vh] sm:py-[35vh] dark:bg-ctp-base bg-ctp-blue items-center content-center">
 		<div
 			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
 		>
-			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none mx-[3vw]">
-				<div class="min-w-[15vw]">
-					<div class="inline-flex items-center justify-center">
+			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none mr-[3vw] my-1">
+				<div class="min-w-15">
+					<div class="inline-flex items-center justify-center px-4">
 						<h1
-							class="dark:text-ctp-text text-ctp-base text-center text-[5rem] px-4"
+							class="dark:text-ctp-text text-ctp-base text-center text-[5rem] p-1 px-3"
 							class:animating={$animating === true}
 							data-value="async"
 						>
@@ -40,7 +40,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem]">
+			<div class="mx-1" />
+			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem] pb-1 pt-3">
 				<img
 					src="moutains.webp"
 					alt="Mountains"
@@ -130,6 +131,6 @@
 	}
 
 	.rotate:hover {
-		transform: scale(1.3) rotate(720deg);
+		transform: scale(1.1) rotate(720deg);
 	}
 </style>
