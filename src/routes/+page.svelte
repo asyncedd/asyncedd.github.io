@@ -43,7 +43,7 @@
 			<div class="mx-1" />
 			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem] pb-3 pt-3">
 				<img
-					src="moutains.webp"
+					src="moutains-200.webp"
 					alt="Mountains"
 					class="h-full rounded-[100%] aspect-square rotate"
 					loading="eager"
