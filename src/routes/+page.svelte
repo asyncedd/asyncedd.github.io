@@ -42,26 +42,12 @@
 			</div>
 			<div class="mx-1" />
 			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem] pb-3 pt-3">
-				<source
-					type="image/webp"
-					srcset="
-          /image.webp?width=100 100w,
-          /image.webp?width=200 200w,
-          /image.webp?width=400 400w,
-          /image.webp?width=800 800w
-          "
-				/>
 				<img
 					src="moutains.webp"
 					alt="Mountains"
 					class="h-full rounded-[100%] aspect-square rotate"
 					loading="eager"
 					decoding="async"
-					srcset="
-          moutains-200.webp,
-          moutains-200-800w.webp 800w,
-          moutains-200-500w.webp 500w
-          "
 				/>
 			</div>
 		</div>
