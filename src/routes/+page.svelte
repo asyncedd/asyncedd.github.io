@@ -33,7 +33,7 @@
 					</div>
 					<div class="pt-[1rem] dark:bg-ctp-base bg-ctp-blue">
 						<div class="flex justify-center">
-							<div class="h1-container text-[1.3rem] text-ctp-base dark:text-ctp-text">
+							<div class="h1-container text-[1.0rem] text-ctp-base dark:text-ctp-text">
 								<Typewriter sentences={externalSentences} />
 							</div>
 						</div>
