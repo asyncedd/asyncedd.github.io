@@ -7,7 +7,7 @@
 		<a href="/">
 			<div class="left-content inline-flex justify-center">
 				<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
-				<div class="head-parent items-center">
+				<div class="head-parent px-1 items-center">
 					<a class="text-[1.5rem] async">async</a>
 				</div>
 			</div>
