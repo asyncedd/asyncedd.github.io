@@ -18,11 +18,11 @@
 	</div>
 	<div class="py-[30vh] sm:py-[40vh] dark:bg-ctp-base bg-ctp-blue items-center content-center">
 		<div
-			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue mx-[3vw] space-x-4 justify-center items-center sm:items-start"
+			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
 		>
-			<div class="order-last sm:order-first h-[20vh] w-full sm:w-auto overflow-none">
+			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none mx-[3vw]">
 				<div class="min-w-[15vw]">
-					<div class="inline-flex items-center justify-center h-full w-full pt-[3vh] sm:pt-0">
+					<div class="inline-flex items-center justify-center">
 						<h1
 							class="dark:text-ctp-text text-ctp-base text-center text-[5rem] px-4"
 							class:animating={$animating === true}
