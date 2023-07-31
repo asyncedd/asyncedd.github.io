@@ -7,7 +7,8 @@ const dev = process.argv.includes('dev');
 const config = {
 	kit: {
 		adapter: adapter({
-			strict: false
+			strict: false,
+			precompress: true
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
