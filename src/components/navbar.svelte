@@ -6,7 +6,11 @@
 	<div class="left-content inline-flex justify-center mx-[3vw] my-3">
 		<a href="/" aria-label="HP">
 			<div class="left-content inline-flex justify-center">
-				<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
+				<img
+					src="moutains-small.webp"
+					alt=""
+					class="w-10 h-10 rounded-[100%] aspect-square rotate"
+				/>
 				<div class="head-parent px-1 items-center">
 					<a class="text-[1.5rem] async" href="/">async</a>
 				</div>
