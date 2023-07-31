@@ -34,7 +34,8 @@
 
 <style>
 	.navbar {
-		@apply bg-opacity-95;
+		@apply bg-opacity-80;
+		backdrop-filter: blur(20px);
 		display: inline-flex;
 		overflow: hidden;
 		position: fixed;
