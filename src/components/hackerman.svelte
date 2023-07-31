@@ -111,11 +111,13 @@
 	}
 
 	onMount(() => {
-		const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
-		for (const h1 of h1Elements) {
-			h1.addEventListener('mouseover', handleMouseOver);
-			h1.dataset.animating = 'false'; // Initialize the data attribute
-			animateH1Element(h1); // Start the animation for each h1 element
+		if (window.matchMedia('(prefers-reduced-motion: no-preference)')) {
+			const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
+			for (const h1 of h1Elements) {
+				h1.addEventListener('mouseover', handleMouseOver);
+				h1.dataset.animating = 'false'; // Initialize the data attribute
+				animateH1Element(h1); // Start the animation for each h1 element
+			}
 		}
 	});
 </script>
