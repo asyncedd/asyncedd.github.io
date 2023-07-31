@@ -75,10 +75,4 @@
 	i:hover {
 		transform: scale(1.2);
 	}
-
-	/* Remove the hover effect when going down */
-	.going-down {
-		opacity: 0;
-		transform: translateY(20px);
-	}
 </style>
