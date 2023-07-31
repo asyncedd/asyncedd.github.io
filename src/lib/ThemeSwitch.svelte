@@ -39,6 +39,12 @@
 
 <style>
 	i {
-		transition: color 0.5s ease-in-out;
+		transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	i:hover {
+		transform: scale(1.2);
 	}
 </style>
