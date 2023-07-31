@@ -4,11 +4,11 @@
 
 <div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex top-0 z-50">
 	<div class="left-content inline-flex justify-center mx-[3vw] my-3">
-		<a href="/">
+		<a href="/" aria-label="HP">
 			<div class="left-content inline-flex justify-center">
 				<img src="moutains.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
 				<div class="head-parent px-1 items-center">
-					<a class="text-[1.5rem] async">async</a>
+					<a class="text-[1.5rem] async" href="/">async</a>
 				</div>
 			</div>
 		</a>
@@ -18,12 +18,17 @@
 		<a
 			href="https://discord.com/users/797422750321999943"
 			class="text-center a-icons dark:text-ctp-text text-ctp-base"
+			aria-label="Discord"
 		>
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-discord discord" />
 			</div>
 		</a>
-		<a href="https://github.com/asyncedd" class="a-icons dark:text-ctp-text text-ctp-base">
+		<a
+			href="https://github.com/asyncedd"
+			class="a-icons dark:text-ctp-text text-ctp-base"
+			aria-label="Github"
+		>
 			<div class="icon-wrapper">
 				<i class="fa-brands fa-github github" />
 			</div>
