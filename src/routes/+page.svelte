@@ -40,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="items-center justify-center h-[13rem] sm:order-last">
+			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem]">
 				<img
 					src="moutains.webp"
 					alt="Mountains"
