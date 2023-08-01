@@ -3,7 +3,7 @@
 </script>
 
 <div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex top-0 z-50">
-	<div class="left-content inline-flex justify-center mx-[3vw] my-3">
+	<div class="left-content inline-flex justify-center mx-[3vw] my-1">
 		<a href="/" aria-label="HP">
 			<div class="left-content inline-flex justify-center">
 				<img
@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div class="right-content">
-		<div class="a-icons">
+		<div>
 			<ThemeSwitch />
 		</div>
 		<a
@@ -72,12 +72,10 @@
 	.a-icons,
 	.discord,
 	.github {
-		padding-bottom: 13px;
-		padding-top: 5px;
-		padding-left: 5px;
-		padding-right: 5px;
+		margin-top: 3px;
+		margin-left: 5px;
+		margin-right: 5px;
 		font-size: 30px;
-		height: 60px;
 	}
 
 	/* Center the icons */
