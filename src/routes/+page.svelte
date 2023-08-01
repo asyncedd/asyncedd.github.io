@@ -16,22 +16,24 @@
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 	</div>
-	<div class="py-[20vh] sm:py-[35vh] dark:bg-ctp-base bg-ctp-blue items-center content-center">
+	<div
+		class="py-[25vh] flex align-middle justify-center dark:bg-ctp-base bg-ctp-blue items-center content-center"
+	>
 		<div
 			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
 		>
-			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none mr-[3vw] my-1">
+			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1">
 				<div class="min-w-15">
-					<div class="inline-flex items-center justify-center px-4">
+					<div class="inline-flex items-center justify-center">
 						<h1
-							class="dark:text-ctp-text text-ctp-base text-center text-[5rem] p-1 px-3"
+							class="dark:text-ctp-text text-ctp-base text-center text-[7rem] p-1 px-3"
 							class:animating={$animating === true}
 							data-value="async"
 						>
 							async
 						</h1>
 					</div>
-					<div class="pt-[1rem] dark:bg-ctp-base bg-ctp-blue">
+					<div class="pt-[0.1rem] dark:bg-ctp-base bg-ctp-blue">
 						<div class="flex justify-center">
 							<div class="h1-container text-[1.0rem] text-ctp-base dark:text-ctp-text">
 								<Typewriter sentences={externalSentences} />
@@ -51,7 +53,7 @@
 				/>
 			</div>
 		</div>
-		<div class="pb-[13vh]" />
+		<div class="pb-[40vh]" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
@@ -109,11 +111,11 @@
 	}
 
 	h1:hover {
-		@apply text-ctp-green text-[6rem];
+		@apply text-ctp-green text-[7.5rem];
 	}
 
 	.h1-container {
-		height: 7rem; /* Set the desired height */
+		height: 5rem; /* Set the desired height */
 		overflow: hidden; /* Hide any overflow caused by growing text */
 	}
 
