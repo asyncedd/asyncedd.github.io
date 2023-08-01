@@ -55,7 +55,7 @@
 </script>
 
 <div>
-	<div on:click={handleSwitchDarkMode} class="text-[2rem]">
+	<div on:click={handleSwitchDarkMode} class="text-[30px]">
 		<i
 			id="toggleIcon"
 			class="fa-solid fa-{darkMode

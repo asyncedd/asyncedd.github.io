@@ -18,7 +18,9 @@
 		</a>
 	</div>
 	<div class="right-content">
-		<ThemeSwitch />
+		<div class="a-icons">
+			<ThemeSwitch />
+		</div>
 		<a
 			href="https://discord.com/users/797422750321999943"
 			class="text-center a-icons dark:text-ctp-text text-ctp-base"
