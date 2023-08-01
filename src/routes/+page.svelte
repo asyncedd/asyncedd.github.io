@@ -45,7 +45,7 @@
 				<img
 					src="moutains-200.webp"
 					alt="Mountains"
-					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3"
+					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
 					loading="eager"
 					decoding="async"
 				/>

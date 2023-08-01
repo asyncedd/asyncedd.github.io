@@ -17,13 +17,13 @@
 			</div>
 		</a>
 	</div>
-	<div class="right-content">
-		<div>
+	<div class="flex">
+		<div class="text-[30px]">
 			<ThemeSwitch />
 		</div>
 		<a
 			href="https://discord.com/users/797422750321999943"
-			class="text-center a-icons dark:text-ctp-text text-ctp-base"
+			class="text-center dark:text-ctp-text text-ctp-base"
 			aria-label="Discord"
 		>
 			<div class="icon-wrapper">
@@ -32,7 +32,7 @@
 		</a>
 		<a
 			href="https://github.com/asyncedd"
-			class="a-icons dark:text-ctp-text text-ctp-base"
+			class="dark:text-ctp-text text-ctp-base"
 			aria-label="Github"
 		>
 			<div class="icon-wrapper">
@@ -64,17 +64,11 @@
 		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 	}
 
-	/* Content on the right */
-	.right-content {
-		display: flex; /* Display the content on the right side in a flex layout */
-	}
-
-	.a-icons,
 	.discord,
 	.github {
-		margin-top: 3px;
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-top: 9px;
+		margin-left: 10px;
+		margin-right: 10px;
 		font-size: 30px;
 	}
 
