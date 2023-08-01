@@ -53,7 +53,7 @@
 				/>
 			</div>
 		</div>
-		<div class="pb-[40vh]" />
+		<div class="pb-[50vh]" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
