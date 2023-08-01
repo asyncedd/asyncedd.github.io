@@ -15,64 +15,62 @@
 <body class="dark:bg-ctp-mantle bg-ctp-text">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
-	</div>
-	<div
-		class="py-[25vh] flex align-middle justify-center dark:bg-ctp-base bg-ctp-blue items-center content-center"
-	>
 		<div
-			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
+			class="py-[25vh] flex align-middle justify-center items-center dark:text-ctp-text text-ctp-base"
 		>
-			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1">
-				<div class="min-w-15">
-					<div class="inline-flex items-center justify-center">
-						<h1
-							class="dark:text-ctp-text text-ctp-base text-center text-[7rem] p-1 px-3"
-							class:animating={$animating === true}
-							data-value="async"
-						>
-							async
-						</h1>
-					</div>
-					<div class="pt-[0.1rem] dark:bg-ctp-base bg-ctp-blue">
-						<div class="flex justify-center">
-							<div class="h1-container text-[1.0rem] text-ctp-base dark:text-ctp-text">
-								<Typewriter sentences={externalSentences} />
+			<div
+				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
+			>
+				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1">
+					<div class="min-w-15">
+						<div class="inline-flex items-center justify-center">
+							<h1
+								class="text-center text-[7rem] p-1 px-3"
+								class:animating={$animating === true}
+								data-value="async"
+							>
+								async
+							</h1>
+						</div>
+						<div class="pt-[0.1rem]">
+							<div class="flex justify-center">
+								<div class="h1-container text-[1.0rem]">
+									<Typewriter sentences={externalSentences} />
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="mx-1" />
-			<div class="items-center justify-center h-[13rem] sm:order-last px-[1rem] pb-3 pt-3">
+				<div class="mx-1" />
 				<img
 					src="moutains-200.webp"
 					alt="Mountains"
-					class="h-full rounded-[100%] aspect-square rotate"
+					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3"
 					loading="eager"
 					decoding="async"
 				/>
 			</div>
+			<div class="pb-[50vh]" />
 		</div>
-		<div class="pb-[50vh]" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
 	</div>
-	<div class="p-[30vh] text-center px-[10vw] dark:text-ctp-text text-ctp-base">
-		<i>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-			non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</i>
+	<div class="text-ctp-base dark:text-ctp-text">
+		<div class="py-[30vh] text-center px-[10vw]">
+			<i>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</i>
+		</div>
+		<Wave />
+		<footer class="dark:bg-ctp-base bg-ctp-blue">
+			<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
+		</footer>
 	</div>
-	<Wave />
-	<footer class="dark:bg-ctp-base bg-ctp-blue">
-		<h2 class="text-center text-ctp-base dark:text-ctp-text text-[1rem] p-[1rem]">
-			Made with ❤️ by asyncedd
-		</h2>
-	</footer>
 </body>
 
 <Hackerman />
