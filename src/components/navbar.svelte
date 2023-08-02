@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div class="flex">
-		<div class="text-[30px]">
+		<div class="text-[30px] a-icons icon-wrapper mx-[3px] mt-[-6px]">
 			<ThemeSwitch />
 		</div>
 		<a
@@ -26,7 +26,7 @@
 			class="text-center dark:text-ctp-text text-ctp-base"
 			aria-label="Discord"
 		>
-			<div class="icon-wrapper">
+			<div class="icon-wrapper a-icons">
 				<i class="fa-brands fa-discord discord" />
 			</div>
 		</a>
@@ -35,7 +35,7 @@
 			class="dark:text-ctp-text text-ctp-base"
 			aria-label="Github"
 		>
-			<div class="icon-wrapper">
+			<div class="icon-wrapper a-icons">
 				<i class="fa-brands fa-github github" />
 			</div>
 		</a>
@@ -73,6 +73,7 @@
 	}
 
 	/* Center the icons */
+	.a-icons,
 	.icon-wrapper {
 		display: flex;
 		justify-content: center;
