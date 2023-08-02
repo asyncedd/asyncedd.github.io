@@ -15,6 +15,7 @@
 <body class="dark:bg-ctp-mantle bg-ctp-text">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
+		<div class="py-1" />
 		<div
 			class="py-[25vh] flex align-middle justify-center items-center dark:text-ctp-text text-ctp-base"
 		>
@@ -52,6 +53,7 @@
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
+		<div class="pb-[10rem] sm:pb-0" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
