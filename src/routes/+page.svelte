@@ -15,9 +15,8 @@
 <body class="dark:bg-ctp-mantle bg-ctp-text">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
-		<div class="py-1" />
 		<div
-			class="py-[25vh] flex align-middle justify-center items-center dark:text-ctp-text text-ctp-base"
+			class="h-[100vh] py-[10vh] flex align-middle justify-center items-center dark:text-ctp-text text-ctp-base"
 		>
 			<div
 				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
@@ -53,7 +52,7 @@
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
-		<div class="pb-[10rem] sm:pb-0" />
+		<div class="pb-[15rem] sm:pb-0" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
