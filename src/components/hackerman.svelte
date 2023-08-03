@@ -1,15 +1,16 @@
 <script context="module">
 	import { writable } from 'svelte/store';
-	export let animating = writable(false);
+
+	export const animating = writable(false);
 </script>
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	// Specify the types for variables and functions
+
 	const lettersArray: string[] =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
 	const animationIntervalDuration: number = 30;
-	const animationFrameDuration: number = 30; // Interval between each animation iteration (in milliseconds)
+	const animationFrameDuration: number = 30;
 
 	function getRandomLetter(
 		targetValue: string,
@@ -26,7 +27,7 @@
 			randomValue > 0.3 &&
 			iteration !== 0 &&
 			targetChar !== ' ' &&
-			(isLastIteration || iteration == 1)
+			(isLastIteration || iteration === 1)
 		) {
 			return targetChar;
 		}
@@ -35,18 +36,13 @@
 			return targetChar;
 		}
 
-		if (iteration !== 0) {
-			if (
-				letter.toUpperCase() === targetChar ||
+		if (
+			iteration !== 0 &&
+			(letter.toUpperCase() === targetChar ||
 				letter.toLowerCase() === targetChar ||
-				targetChar === ' '
-			) {
-				if (letter === letter.toUpperCase()) {
-					return letter.toLowerCase();
-				} else {
-					return letter.toUpperCase();
-				}
-			}
+				targetChar === ' ')
+		) {
+			return letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase();
 		}
 
 		return letter;
@@ -68,12 +64,11 @@
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
-					// Always randomize during the first iteration
 					nextText += getRandomLetter(targetValue, iteration, false);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
-					nextText += targetValue[i]; // Use the character from targetValue directly
+					nextText += targetValue[i];
 				} else {
 					nextText += getRandomLetter(targetValue, iteration, iteration === targetValue.length - 1);
 				}
@@ -86,25 +81,21 @@
 				animating.set(false);
 			} else if (nextText[iteration] === targetValue[iteration]) {
 				iteration++;
-				// Schedule the next animation frame after the animationFrameDuration
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			} else {
-				// If the character hasn't reached the target yet, continue animating
 				setTimeout(() => {
 					interval = window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			}
 		}
 
-		// Delay the animation start
 		setTimeout(() => {
 			animate();
 		}, animationDuration);
 	}
 
-	// Specify the event type for the event parameter
 	function handleMouseOver(event: MouseEvent): void {
 		const target: HTMLElement = event.target as HTMLElement;
 		animateH1Element(target);
@@ -113,11 +104,11 @@
 	onMount(() => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)')) {
 			const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
-			for (const h1 of h1Elements) {
+			h1Elements.forEach((h1: HTMLHeadingElement) => {
 				h1.addEventListener('mouseover', handleMouseOver);
-				h1.dataset.animating = 'false'; // Initialize the data attribute
-				animateH1Element(h1); // Start the animation for each h1 element
-			}
+				h1.dataset.animating = 'false';
+				animateH1Element(h1);
+			});
 		}
 	});
 </script>
