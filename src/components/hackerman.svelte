@@ -17,6 +17,18 @@
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
+		if (randomIndex >= 0.3 && randomIndex < 0.35) {
+			return targetChar;
+		}
+
+		if (letter.toUpperCase() == targetChar || letter.toLowerCase() == targetChar) {
+			if (letter.toUpperCase() == targetChar) {
+				return letter.toUpperCase();
+			} else {
+				return letter.toLowerCase();
+			}
+		}
+
 		if (targetChar === ' ') {
 			return targetChar;
 		}
