@@ -1,3 +1,16 @@
+@document.meta
+title: notes
+description: some notes and some random ideas for my site
+authors: [
+  asynccedd
+]
+categories: [
+  work
+  todo
+  misc
+]
+@end
+
 * Some notes
 
 ** TODO
