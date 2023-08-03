@@ -80,19 +80,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <!-- Preload the font resources -->
-<link
-	rel="preload"
-	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-	as="style"
-	onload="this.onload=null;this.rel='stylesheet'"
-	onerror="this.onload=null;this.rel='stylesheet'"
-/>
-<noscript>
-	<link
-		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-		rel="stylesheet"
-	/>
-</noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
 
 <style>
 	@tailwind base;
@@ -100,7 +90,7 @@
 	@tailwind utilities;
 
 	* {
-		font-family: JetBrains Mono;
+		font-family: 'Fira Code', monopsace;
 		overflow: none visible;
 	}
 
