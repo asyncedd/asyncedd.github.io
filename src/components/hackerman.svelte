@@ -12,37 +12,13 @@
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 30;
 
-	function getRandomLetter(
-		targetValue: string,
-		iteration: number,
-		isLastIteration: boolean
-	): string {
-		const randomValue: number = Math.random();
+	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
 		let letter: string = lettersArray[randomIndex];
 		const targetChar: string = targetValue[iteration];
 
-		if (
-			randomValue < 0.5 &&
-			randomValue > 0.3 &&
-			iteration !== 0 &&
-			targetChar !== ' ' &&
-			(isLastIteration || iteration === 1)
-		) {
-			return targetChar;
-		}
-
 		if (targetChar === ' ') {
 			return targetChar;
-		}
-
-		if (
-			iteration !== 0 &&
-			(letter.toUpperCase() === targetChar ||
-				letter.toLowerCase() === targetChar ||
-				targetChar === ' ')
-		) {
-			return letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase();
 		}
 
 		return letter;
@@ -64,13 +40,13 @@
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
-					nextText += getRandomLetter(targetValue, iteration, false);
+					nextText += getRandomLetter(targetValue, iteration);
 				} else if (i < iteration) {
 					nextText += targetValue[i];
 				} else if (i === iteration && currentText[i] === targetValue[i]) {
 					nextText += targetValue[i];
 				} else {
-					nextText += getRandomLetter(targetValue, iteration, iteration === targetValue.length - 1);
+					nextText += getRandomLetter(targetValue, iteration);
 				}
 			}
 
