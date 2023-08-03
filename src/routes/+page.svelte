@@ -21,24 +21,18 @@
 			<div
 				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
 			>
-				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1">
-					<div class="min-w-15">
-						<div class="inline-flex items-center justify-center">
-							<h1
-								class="text-center text-[7rem] p-1 px-3"
-								class:animating={$animating === true}
-								data-value="async"
-							>
-								async
-							</h1>
-						</div>
-						<div class="pt-[0.1rem]">
-							<div class="flex justify-center">
-								<div class="h1-container text-[1.0rem]">
-									<Typewriter sentences={externalSentences} />
-								</div>
-							</div>
-						</div>
+				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
+					<div class="inline-flex items-center justify-center">
+						<h1
+							class="text-center text-[7rem] p-1 px-3"
+							class:animating={$animating === true}
+							data-value="async"
+						>
+							async
+						</h1>
+					</div>
+					<div class="pt-[0.1rem] flex justify-center h1-container text-[1.0rem]">
+						<Typewriter sentences={externalSentences} />
 					</div>
 				</div>
 				<div class="mx-1" />
