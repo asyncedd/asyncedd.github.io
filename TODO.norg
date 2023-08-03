@@ -39,12 +39,12 @@ categories: [
       DESCRIPTION:
       The website is relatively responsive
       - (!) Improve performance
-****** ( ) Text
+****** (x) Text
        PRIORITY: LOW
        DESCRIPTION:
        The text takes a few miliseconds or - nanoseconds to "load" on the build version w/ Firefox
-       - ( ) Play around with text compression like gzip
-       - ( ) Fix the text-loading on Firefox
+       - (x) Play around with text compression like gzip
+       - (x) Fix the text-loading on Firefox
 ****** ( ) img
        PRIORITY: HIGH
        DESCRIPTION:
