@@ -46,7 +46,7 @@
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
-		<div class="pb-[15rem] sm:pb-0" />
+		<div class="pb-[5rem] sm:pb-0" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
