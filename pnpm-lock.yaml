@@ -17,6 +17,9 @@ devDependencies:
   '@sveltejs/kit':
     specifier: ^1.22.4
     version: 1.22.4(svelte@4.1.2)(vite@4.4.8)
+  '@tailwindcss/oxide':
+    specifier: 0.0.0-insiders.8fb9ae8f
+    version: 0.0.0-insiders.8fb9ae8f
   '@tsconfig/svelte':
     specifier: ^5.0.0
     version: 5.0.0
@@ -44,9 +47,6 @@ devDependencies:
   svelte-preprocess:
     specifier: ^5.0.4
     version: 5.0.4(postcss@8.4.27)(svelte@4.1.2)(typescript@5.1.6)
-  tailwindcss:
-    specifier: ^3.3.3
-    version: 3.3.3
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
@@ -415,6 +415,122 @@ packages:
       vitefu: 0.2.4(vite@4.4.8)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@tailwindcss/oxide-darwin-arm64@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-czEV/6SfmhYPElvSO1MtjMFUwhtkjH7pSCHI/OaNVinP98SVOn6Z3NCEaYF+9XTI5EuZelkLSH8YXgT4dVpu0g==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-darwin-x64@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-bYeXvhWZVzT4rqG2dDnRGctAMO1Rhml1O/38ymtNKt6CvQCV3eEPUTv2lOgnQgFDAYO9rpBfzoHgEEoU/tUHfQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-freebsd-x64@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-Y7LMpVXUepFa29i8FbgC5hFGUdJUMop+pOSOvNXYG8fm71zRrBXZzwNK/8xbpdbY4+ILVgyfueRZYF5zkJLf4A==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-linux-arm-gnueabihf@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-d+67cow9B6E4zXDiwlDzH8VtWb2u1iWDiINjCkR+o3AfKjIyfUwpiZzdv9eUuWHYCb3BMsIFgJpy75KWoWn7ww==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-linux-arm64-gnu@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-vuvLH0bXh8n8RtNuJZVJ/qoHHaJYDZLoaFponW/j9bMVje/LFMVJaNkM3jrNztZbbdVvPof8v/XkrtbXiMULXQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-linux-arm64-musl@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-nqr/iP0sw5rsh3al2SC++y3fgrximIvjbO7PldEVkBxM9sqoXUeVuPHoX23URouFl+ezmhKyot74I9J/Dsfn7Q==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-linux-x64-gnu@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-680ke0wc0CWkP7PfmeklHUju6xZnTX94/Hx/MpG7QSpln2EJ5WBacmQRajU4zJ0tLnZ4ZJQcG8yafJE3HoReOQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-linux-x64-musl@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-5c1KjJsN7vayrqPCD/FX0aKLRMqdHNI8SBQylv6tmZBevohXFuZPFwPu+vYC3vEpKiiCreWom94Oe98ZqqVJCw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-win32-arm64-msvc@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-li3dj1loR4iFLLFN/80Hsv1h1O5modaa49wt3HmSd4Ik14d38Xc+yntqIkyofo18J+8KPRDBg6VdR/ajRsnFyg==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-win32-ia32-msvc@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-5dSMUIBI1yU9abakA8wJFncOYqZZvtJWZaCBn9ujiFcbfOrMDQL+Uv2SaZ7xE3P0/omNKN9qR+OSlt3dmIvNHw==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide-win32-x64-msvc@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-RaVqED70D5jwjjryMZJ5/Mt4VCymESw+p+yIOvhyvcyYttqrvzYBsqvqeGhtYvSgV05Cooy0CD4jqM0HCgDlMw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@tailwindcss/oxide@0.0.0-insiders.8fb9ae8f:
+    resolution: {integrity: sha512-qy6Rws8RkRQCFRTSc3TiKuWgowD4gvv87Wsea8lQg17xLPJHTGOLerOmkFF7sxtXht+BtCPhNtfoRmwvbHRJMQ==}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@tailwindcss/oxide-darwin-arm64': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-darwin-x64': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-freebsd-x64': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-linux-arm-gnueabihf': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-linux-arm64-gnu': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-linux-arm64-musl': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-linux-x64-gnu': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-linux-x64-musl': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-win32-arm64-msvc': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-win32-ia32-msvc': 0.0.0-insiders.8fb9ae8f
+      '@tailwindcss/oxide-win32-x64-msvc': 0.0.0-insiders.8fb9ae8f
     dev: true
 
   /@tsconfig/svelte@5.0.0:
