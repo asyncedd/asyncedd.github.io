@@ -38,7 +38,7 @@
 				<div class="mx-1" />
 				<picture>
 					<img
-						src="clouds.webp"
+						src="https://ik.imagekit.io/dfijmneb9/clouds.webp?updatedAt=1691272771794"
 						alt="Mountains"
 						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
 						loading="eager"
