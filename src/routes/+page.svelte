@@ -19,7 +19,7 @@
 			class="h-[100vh] py-[10vh] flex align-middle justify-center items-center dark:text-ctp-text text-ctp-base"
 		>
 			<div
-				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start"
+				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start rounded-[3rem]"
 			>
 				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
 					<div class="inline-flex items-center justify-center">
@@ -37,7 +37,7 @@
 				</div>
 				<div class="mx-1" />
 				<img
-					src="moutains-200.webp"
+					src="moutain.webp"
 					alt="Mountains"
 					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
 					loading="eager"
