@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 
 	let darkMode = true;
+	let loaded = false;
 	let isGoingDown = false;
 	let delay = 500; // Adjust this delay (in milliseconds) as needed
 
@@ -51,6 +52,7 @@
 			document.documentElement.classList.remove('dark');
 			darkMode = false;
 		}
+		loaded = true;
 	}
 </script>
 
@@ -61,6 +63,7 @@
 			class="fa-solid fa-{darkMode
 				? 'sun'
 				: 'moon'} hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
+			style="opacity: {loaded ? 1 : 0.0}"
 		/>
 	</div>
 </div>
