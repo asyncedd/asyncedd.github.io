@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow: /cinnamon-roll-recipe/
+
+User-agent: *
+Allow: /
