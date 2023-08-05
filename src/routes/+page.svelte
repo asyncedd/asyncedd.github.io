@@ -36,13 +36,15 @@
 					</div>
 				</div>
 				<div class="mx-1" />
-				<img
-					src="clouds.webp"
-					alt="Mountains"
-					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
-					loading="eager"
-					decoding="async"
-				/>
+				<picture>
+					<img
+						src="clouds.webp"
+						alt="Mountains"
+						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
+						loading="eager"
+						decoding="async"
+					/>
+				</picture>
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
