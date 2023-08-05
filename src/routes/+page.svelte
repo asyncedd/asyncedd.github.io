@@ -91,10 +91,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
 
 <style>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-
 	* {
 		font-family: 'Fira Code', monopsace;
 		overflow: none visible;
