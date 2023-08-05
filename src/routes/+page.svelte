@@ -120,10 +120,10 @@
 
 	.rotate {
 		transition: transform 1s ease;
-		transform: scale(1) rotate(360deg);
+		transform: scale(1);
 	}
 
 	.rotate:hover {
-		transform: scale(1.1) rotate(720deg);
+		transform: scale(1.1);
 	}
 </style>
