@@ -14,7 +14,7 @@
 		</a>
 	</div>
 	<div class="flex">
-		<div class="text-[30px] a-icons icon-wrapper mx-[3px]">
+		<div class="text-[30px] a-icons icon-wrapper mx-[3px] my-[3px]">
 			<ThemeSwitch />
 		</div>
 		<a
@@ -60,6 +60,7 @@
 		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 	}
 
+	.icons,
 	.discord,
 	.github {
 		margin-top: 9px;
