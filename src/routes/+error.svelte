@@ -57,6 +57,10 @@
 </body>
 
 <style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
 	div {
 		font-family: JetBrains Mono, monospace;
 	}
