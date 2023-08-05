@@ -2,7 +2,6 @@
 	import { browser } from '$app/environment';
 
 	let darkMode = true;
-	let loaded = false;
 	let isGoingDown = false;
 	let delay = 500; // Adjust this delay (in milliseconds) as needed
 
@@ -17,9 +16,7 @@
 			darkMode = !darkMode;
 			localStorage.setItem('theme', darkMode ? 'dark' : 'light');
 
-			darkMode
-				? document.documentElement.classList.add('dark')
-				: document.documentElement.classList.remove('dark');
+			document.documentElement.classList.toggle('dark');
 
 			// Logic to decrease opacity here
 			isGoingDown = true;
@@ -52,7 +49,6 @@
 			document.documentElement.classList.remove('dark');
 			darkMode = false;
 		}
-		loaded = true;
 	}
 </script>
 
