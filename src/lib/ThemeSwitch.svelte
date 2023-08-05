@@ -60,10 +60,11 @@
 	<div on:click={handleSwitchDarkMode}>
 		<i
 			id="toggleIcon"
-			class="fa-solid fa-{darkMode
-				? 'sun'
-				: 'moon'} hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
-			style="opacity: {loaded ? 1 : 0.0}"
+			class="fa-solid fa-{loaded
+				? darkMode
+					? 'sun'
+					: 'moon'
+				: 'circle'} hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
 		/>
 	</div>
 </div>
