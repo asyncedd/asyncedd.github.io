@@ -30,8 +30,5 @@
 		"typescript-svelte-plugin": "^0.3.29",
 		"vite": "^4.4.8"
 	},
-	"type": "module",
-	"dependencies": {
-		"@unpic/svelte": "^0.0.30"
-	}
+	"type": "module"
 }

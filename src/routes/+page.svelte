@@ -1,6 +1,4 @@
 <script lang="ts" async>
-	import { Image } from '@unpic/svelte';
-
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Navbar from '../components/navbar.svelte';
@@ -38,8 +36,8 @@
 					</div>
 				</div>
 				<div class="mx-1" />
-				<Image
-					src="https://raw.githubusercontent.com/asyncedd/asyncedd.github.io/master/static/moutain.webp"
+				<img
+					src="moutain.webp"
 					alt="Mountains"
 					class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
 					loading="eager"
