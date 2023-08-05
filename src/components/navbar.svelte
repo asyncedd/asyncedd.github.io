@@ -7,7 +7,7 @@
 		<a href="/" aria-label="HP">
 			<div class="left-content inline-flex justify-center">
 				<img
-					src="https://ik.imagekit.io/dfijmneb9/clouds.webp?updatedAt=1691272771794"
+					src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"
 					alt=""
 					class="w-10 h-10 rounded-[100%] aspect-square rotate"
 				/>
