@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Image } from '@unpic/svelte';
 	import ThemeSwitch from '../lib/ThemeSwitch.svelte';
 </script>
 
@@ -6,7 +7,11 @@
 	<div class="left-content inline-flex justify-center mx-[3vw] my-1">
 		<a href="/" aria-label="HP">
 			<div class="left-content inline-flex justify-center">
-				<img src="moutain.webp" alt="" class="w-10 h-10 rounded-[100%] aspect-square rotate" />
+				<Image
+					src="https://raw.githubusercontent.com/asyncedd/asyncedd.github.io/master/static/moutain.webp"
+					alt=""
+					class="w-10 h-10 rounded-[100%] aspect-square rotate"
+				/>
 				<div class="head-parent px-1 items-center">
 					<a class="text-[1.5rem] async" href="/">async</a>
 				</div>
