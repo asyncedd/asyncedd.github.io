@@ -43,6 +43,15 @@
 						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last px-[1rem] py-3 overflow-hidden"
 						loading="eager"
 						decoding="async"
+						srcset="
+            https://ik.imagekit.io/dfijmneb9/tr:w-16/clouds.webp?updatedAt=1691272771794 16w
+            https://ik.imagekit.io/dfijmneb9/tr:w-32/clouds.webp?updatedAt=1691272771794 32w
+            https://ik.imagekit.io/dfijmneb9/tr:w-64/clouds.webp?updatedAt=1691272771794 64w
+            https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w
+            https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w
+            https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w
+            https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w
+            "
 					/>
 				</picture>
 			</div>
