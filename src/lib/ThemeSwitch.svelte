@@ -60,11 +60,7 @@
 	<div on:click={handleSwitchDarkMode}>
 		<i
 			id="toggleIcon"
-			class="fa-solid fa-{loaded
-				? darkMode
-					? 'sun'
-					: 'moon'
-				: 'circle'} hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
+			class="fa-solid hover:dark:text-ctp-yellow hover:text-ctp-lavender dark:text-ctp-text text-ctp-base"
 		/>
 	</div>
 </div>
@@ -76,5 +72,13 @@
 
 	i:hover {
 		transform: scale(1.2);
+	}
+
+	:global(.dark) i::before {
+		content: '\f185';
+	}
+
+	i::before {
+		content: '\f186';
 	}
 </style>
