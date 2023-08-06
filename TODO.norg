@@ -32,6 +32,13 @@ categories: [
       - ( ) Add a **hobbys** section
       - ( ) Add a **tools** section
 
+**** Gen
+***** Typewriter
+      PRIORITY: LOW
+      DESCRIPTION:
+      Use Svelte's builtin stuff for the animation
+      - ( ) Use the Svelte/animation library for the typewrtier animations
+
 **** PERF
      - ( ) Imporve perf
 ***** ( ) Website
@@ -49,10 +56,10 @@ categories: [
        PRIORITY: HIGH
        DESCRIPTION:
        It's low res and slow on the dev version
-       - ( ) Improve the resolution
-       - ( ) Properly size images
+       - (x) Improve the resolution
+       - (x) Properly size images
        - ( ) Increase the cache duration
-       - ( ) Use a CDN
+       - (x) Use a CDN
 
 **** UnoCSS
 ***** ( ) Use UnoCSS
@@ -72,5 +79,5 @@ categories: [
       PRIORITY: LOW
       DESCRIPTION:
       The performance is pretty good
-      - (x) Optimize the randomizer
+      - ( ) Optimize the randomizer
       - (x) Refactor more
