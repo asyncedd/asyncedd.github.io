@@ -44,7 +44,7 @@
 	});
 </script>
 
-<p class="pt-[3rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
+<p class="pt-[2rem] {isTyping ? 'typing-cursor' : ''}" id="typewriter">
 	{#each currentText as letter, index}
 		<span style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span>
 	{/each}
