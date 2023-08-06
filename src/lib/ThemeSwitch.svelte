@@ -31,7 +31,7 @@
 	on:click={handleSwitchDarkMode}
 	role="button"
 	tabindex="0"
-	class="flex hover:fill-ctp-yellow fill-ctp-text hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
+	class="flex hover:fill-ctp-yellow hover:dark:fill-ctp-yellow dark:fill-ctp-text fill-ctp-base hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
 >
 	<div>
 		<div class="relative">
