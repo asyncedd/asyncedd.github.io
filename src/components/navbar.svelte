@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div class="flex">
-		<div class="text-[30px] a-icons icon-wrapper mx-[30px] mt-[20px]">
+		<div class="text-[30px] a-icons icon-wrapper mx-[30px] mt-[10px]">
 			<ThemeSwitch />
 		</div>
 		<a
