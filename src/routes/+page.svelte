@@ -92,7 +92,7 @@
 		<footer class="dark:bg-ctp-base bg-ctp-blue text-center">
 			<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
 			<p class="text-center text-[0.9rem] p-[0.3rem]">
-				Photo by <a
+				The main image is shot by <a
 					class="text-ctp-blue hover:text-ctp-sky transition-colors duration-150"
 					href="https://unsplash.com/@romello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 					>Romello Williams</a
