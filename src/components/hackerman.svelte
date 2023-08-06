@@ -90,13 +90,15 @@
 	}
 
 	onMount(() => {
-		if (window.matchMedia('(prefers-reduced-motion: no-preference)')) {
-			const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
-			h1Elements.forEach((h1: HTMLHeadingElement) => {
-				h1.addEventListener('mouseover', handleMouseOver);
-				h1.dataset.animating = 'false';
-				animateH1Element(h1);
-			});
-		}
+		setTimeout(() => {
+			if (window.matchMedia('(prefers-reduced-motion: no-preference)')) {
+				const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
+				h1Elements.forEach((h1: HTMLHeadingElement) => {
+					h1.addEventListener('mouseover', handleMouseOver);
+					h1.dataset.animating = 'false';
+					animateH1Element(h1);
+				});
+			}
+		});
 	});
 </script>
