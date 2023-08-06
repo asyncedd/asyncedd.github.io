@@ -1,6 +1,4 @@
 <script lang="ts" async>
-	import { onMount } from 'svelte';
-
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Navbar from '../components/navbar.svelte';
@@ -12,10 +10,6 @@
 		'Svelte fan',
 		'Welcome to my website!'
 	];
-
-	onMount(() => {
-		anime = true;
-	});
 </script>
 
 <body class="dark:bg-ctp-mantle bg-ctp-text" style="font-display: swap;">
