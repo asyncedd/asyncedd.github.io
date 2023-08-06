@@ -102,7 +102,7 @@
 	@tailwind utilities;
 
 	* {
-		font-family: 'Fira Code', monopsace;
+		font-family: 'Fira Code', monospace;
 		overflow: none visible;
 	}
 
