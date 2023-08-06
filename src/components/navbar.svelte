@@ -18,9 +18,7 @@
 		</a>
 	</div>
 	<div class="flex">
-		<div
-			class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px] hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out"
-		>
+		<div class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px]">
 			<ThemeSwitch />
 		</div>
 		<a
