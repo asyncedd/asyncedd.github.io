@@ -18,7 +18,9 @@
 		</a>
 	</div>
 	<div class="flex">
-		<div class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px]">
+		<div
+			class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px] hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out"
+		>
 			<ThemeSwitch />
 		</div>
 		<a
@@ -72,13 +74,13 @@
 		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 	}
 
-	.icons,
 	.discord,
 	.github {
 		margin-top: 9px;
 		margin-left: 10px;
 		margin-right: 10px;
 		font-size: 30px;
+		transform-origin: center; /* Set the transform origin to center */
 		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out;
 	}
 
@@ -87,13 +89,6 @@
 	.icon-wrapper {
 		display: flex;
 		justify-content: center;
-	}
-
-	/* Icons settings */
-	i {
-		font-size: 25px;
-		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-		transform-origin: center; /* Set the transform origin to center */
 	}
 
 	/* Hover effect for icons and images */
