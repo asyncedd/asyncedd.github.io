@@ -2,31 +2,12 @@
 	import { browser } from '$app/environment';
 
 	let darkMode = true;
-	let isGoingDown = false;
-	let delay = 500; // Adjust this delay (in milliseconds) as needed
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
 		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
 
 		document.documentElement.classList.toggle('dark');
-
-		// Logic to decrease opacity here
-		isGoingDown = true;
-		const icon = document.getElementById('toggleIcon');
-		icon.style.opacity = 0.0; /* Set the desired opacity value */
-		icon.style.transform = 'translateY(20px)'; /* Set the desired downward transition distance */
-
-		setTimeout(() => {
-			icon.style.transform = 'translateY(-20px)'; /* Set the desired downward transition distance */
-
-			setTimeout(() => {
-				// After the delay, set isGoingDown to false to allow another click
-				isGoingDown = false;
-				icon.style.transform = 'translateY(0)';
-				icon.style.opacity = 1;
-			}, delay / 1.1);
-		}, delay);
 	}
 
 	if (browser) {
