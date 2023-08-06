@@ -12,7 +12,7 @@
 	];
 </script>
 
-<body class="dark:bg-ctp-mantle bg-ctp-text">
+<body class="dark:bg-ctp-mantle bg-ctp-text" style="font-display: swap;">
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 		<div
