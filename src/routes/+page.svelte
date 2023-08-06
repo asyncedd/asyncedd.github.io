@@ -32,6 +32,9 @@
 							async
 						</h1>
 					</div>
+					<div class="flex justify-center overflow-x-hidden text-[1.0rem] h-[2rem]">
+						<Typewriter sentences={externalSentences} />
+					</div>
 					<div class="flex">
 						<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 							<a
@@ -65,9 +68,6 @@
 								</div>
 							</a>
 						</div>
-					</div>
-					<div class="flex justify-center overflow-x-hidden text-[1.0rem]">
-						<Typewriter sentences={externalSentences} />
 					</div>
 				</div>
 				<div class="mx-1" />
