@@ -1,8 +1,5 @@
 <script lang="ts" async>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
-	import { backOut } from 'svelte/easing';
-	let anime = false;
 
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
@@ -32,23 +29,13 @@
 			>
 				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
 					<div class="inline-flex items-center justify-center">
-						{#if anime}
-							<h1
-								in:fly={{
-									y: 100,
-									delay: 300,
-									easing: backOut
-								}}
-								class="text-center text-[7rem] p-1 px-3"
-								class:animating={$animating === true}
-								data-value="async"
-							>
-								async
-							</h1>
-						{/if}
-						{#if !anime}
-							<h1 class="text-center text-[7rem] p-1 px-3 opacity-0" data-value="async">async</h1>
-						{/if}
+						<h1
+							class="text-center text-[7rem] p-1 px-3"
+							class:animating={$animating === true}
+							data-value="async"
+						>
+							async
+						</h1>
 					</div>
 					<div class="pt-[0.1rem] flex justify-center h1-container text-[1.0rem]">
 						<Typewriter sentences={externalSentences} />
