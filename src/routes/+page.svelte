@@ -36,7 +36,7 @@
 							<h1
 								in:fly={{
 									y: 100,
-									delay: 300 * 1,
+									delay: 300,
 									easing: backOut
 								}}
 								class="text-center text-[7rem] p-1 px-3"
