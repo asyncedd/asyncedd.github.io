@@ -177,7 +177,7 @@
 
 	/* Animation for the hamburger menu */
 	.menu-open .bar:nth-child(1) {
-		transform: translateY(7px) rotate(45deg);
+		transform: translateY(10px) rotate(45deg);
 	}
 
 	.menu-open .bar:nth-child(2) {
@@ -185,7 +185,7 @@
 	}
 
 	.menu-open .bar:nth-child(3) {
-		transform: translateY(-7px) rotate(-45deg);
+		transform: translateY(-10px) rotate(-45deg);
 	}
 
 	.menu-overlay {
