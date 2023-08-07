@@ -12,7 +12,7 @@
 					class="w-10 h-10 rounded-[100%] aspect-square rotate"
 				/>
 				<div class="head-parent px-1 items-center">
-					<a class="text-[1.5rem] async" href="/">async</a>
+					<a class="text-[1.7rem] async" href="/">async</a>
 				</div>
 			</div>
 		</a>
