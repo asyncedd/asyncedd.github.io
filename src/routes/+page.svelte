@@ -138,11 +138,6 @@
 		@apply text-ctp-green text-[7.5rem];
 	}
 
-	.h1-container {
-		height: 5rem; /* Set the desired height */
-		overflow: hidden; /* Hide any overflow caused by growing text */
-	}
-
 	.animating {
 		@apply text-ctp-green bg-ctp-mantle;
 	}
@@ -175,17 +170,8 @@
 
 	/* Hover effect for icons and images */
 	.discord:hover,
-	.github:hover,
-	.left-content img:hover {
+	.github:hover {
 		/* Apply the effect to the image when it's hovered */
 		transform: scale(1.2); /* Increase the scale on hover */
-	}
-
-	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-	@media screen and (max-width: 500px) {
-		.navbar a {
-			float: none;
-			display: block;
-		}
 	}
 </style>
