@@ -1,5 +1,11 @@
 <script lang="ts">
 	import ThemeSwitch from '../lib/ThemeSwitch.svelte';
+
+	let isMenuOpen = false;
+
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
 </script>
 
 <div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex top-0 z-50">
@@ -17,18 +23,46 @@
 			</div>
 		</a>
 	</div>
-	<div class="flex">
-		<div class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px]">
-			<ThemeSwitch />
+	<div class="flex gap-[20px]">
+		<div class="flex">
+			<div class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px]">
+				<ThemeSwitch />
+			</div>
+		</div>
+		<div
+			class="flex flex-col cursor-pointer mt-[7px]"
+			class:menu-open={isMenuOpen}
+			on:click={toggleMenu}
+		>
+			<span class="bar bar1 dark:bg-ctp-text bg-ctp-base" />
+			<span class="bar bar2 dark:bg-ctp-text bg-ctp-base" />
+			<span class="bar bar3 dark:bg-ctp-text bg-ctp-base" />
+		</div>
+		<div class="mr-[4vw]" />
+	</div>
+</div>
+<div class="flex">
+	<div class="menu-overlay" class:visible={isMenuOpen}>
+		<div
+			class="menu dark:bg-ctp-base bg-ctp-blue dark:text-ctp-text text-ctp-base text-[2rem] {isMenuOpen
+				? 'w-[100%]'
+				: 'w-0'}"
+		>
+			<ul>
+				<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
+					<li class=""><a href="/">Home</a></li>
+					<li><a href="/">About</a></li>
+					<li><a href="/">Services</a></li>
+					<li><a href="/">Portfolio</a></li>
+					<li><a href="/">Contact</a></li>
+				</div>
+			</ul>
 		</div>
 	</div>
-	<div class="mr-[2vw]" />
 </div>
 
 <style>
 	.navbar {
-		@apply bg-opacity-80;
-		backdrop-filter: blur(20px);
 		display: inline-flex;
 		overflow: hidden;
 		position: fixed;
@@ -131,5 +165,56 @@
 		@apply bg-ctp-mantle;
 		--_p: 100%;
 		transform: scale(1.1);
+	}
+
+	.bar {
+		width: 30px;
+		height: 3px;
+		margin: 4px 0;
+		box-shadow: 0 2px 4px transparent;
+		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	}
+
+	/* Animation for the hamburger menu */
+	.menu-open .bar:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.menu-open .bar:nth-child(2) {
+		transform: translateX(100px);
+	}
+
+	.menu-open .bar.bar1 {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.menu-open .bar.bar2 {
+		transform: translateX(10vw);
+	}
+
+	.menu-open .bar.bar3 {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	.menu-overlay {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 49; /* Make sure it's below the navbar (z-index: 50) */
+		visibility: hidden;
+		opacity: 0.5;
+		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out; /* Delay visibility change after opacity */
+	}
+
+	.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	/* Adjust the menu position and size as needed */
+	.menu {
+		height: 100%;
+		transition: width 0.5s ease-in-out;
 	}
 </style>
