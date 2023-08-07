@@ -10,7 +10,7 @@
 	const lettersArray: string[] =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
 	const animationIntervalDuration: number = 30;
-	const animationFrameDuration: number = 30;
+	const animationFrameDuration: number = 15;
 
 	function getRandomLetter(targetValue: string, iteration: number): string {
 		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
