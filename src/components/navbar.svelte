@@ -46,16 +46,6 @@
 		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
 	}
 
-	.discord,
-	.github {
-		margin-top: 9px;
-		margin-left: 10px;
-		margin-right: 10px;
-		font-size: 30px;
-		transform-origin: center; /* Set the transform origin to center */
-		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-	}
-
 	/* Center the icons */
 	.a-icons,
 	.icon-wrapper {
@@ -64,8 +54,6 @@
 	}
 
 	/* Hover effect for icons and images */
-	.discord:hover,
-	.github:hover,
 	.left-content img:hover {
 		/* Apply the effect to the image when it's hovered */
 		transform: scale(1.2); /* Increase the scale on hover */
