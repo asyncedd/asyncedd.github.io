@@ -114,6 +114,7 @@
 
 <Hackerman />
 
+<link rel="dns-preconnect" href="https://cdnjs.cloudflare.com" />
 <link
 	rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css"
