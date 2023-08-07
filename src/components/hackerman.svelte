@@ -12,32 +12,28 @@
 	const animationIntervalDuration: number = 30;
 	const animationFrameDuration: number = 15;
 
-	function getRandomLetter(targetValue: string, iteration: number): string {
+	function getRandomLetter(targetChar: string): string {
 		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
-		let letter: string = lettersArray[randomIndex];
-		const targetChar: string = targetValue[iteration];
+		const randomChar: string = lettersArray[randomIndex];
 
 		if (randomIndex >= 0.3 && randomIndex < 0.35) {
 			return targetChar;
 		}
 
-		if (letter.toUpperCase() == targetChar || letter.toLowerCase() == targetChar) {
-			if (letter.toUpperCase() == targetChar) {
-				return letter.toUpperCase();
-			} else {
-				return letter.toLowerCase();
-			}
+		if (randomChar.toUpperCase() === targetChar || randomChar.toLowerCase() === targetChar) {
+			return targetChar === targetChar.toUpperCase()
+				? randomChar.toUpperCase()
+				: randomChar.toLowerCase();
 		}
 
 		if (targetChar === ' ') {
 			return targetChar;
 		}
 
-		return letter;
+		return randomChar;
 	}
 
-	function animateH1Element(target: HTMLElement) {
-		const targetValue: string = target.dataset.value as string;
+	function animateH1Element(target: HTMLElement, targetValue: string) {
 		const animationDuration: number = animationIntervalDuration * targetValue.length;
 
 		animating.set(true);
@@ -52,13 +48,11 @@
 
 			for (let i = 0; i < currentText.length; i++) {
 				if (iteration === 0) {
-					nextText += getRandomLetter(targetValue, iteration);
-				} else if (i < iteration) {
-					nextText += targetValue[i];
-				} else if (i === iteration && currentText[i] === targetValue[i]) {
+					nextText += getRandomLetter(targetValue[i]);
+				} else if (i < iteration || (i === iteration && currentText[i] === targetValue[i])) {
 					nextText += targetValue[i];
 				} else {
-					nextText += getRandomLetter(targetValue, iteration);
+					nextText += getRandomLetter(targetValue[i]);
 				}
 			}
 
@@ -86,17 +80,18 @@
 
 	function handleMouseOver(event: MouseEvent): void {
 		const target: HTMLElement = event.target as HTMLElement;
-		animateH1Element(target);
+		const targetValue: string = target.dataset.value || '';
+		animateH1Element(target, targetValue);
 	}
 
 	onMount(() => {
 		setTimeout(() => {
-			if (window.matchMedia('(prefers-reduced-motion: no-preference)')) {
+			if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
 				const h1Elements: NodeListOf<HTMLHeadingElement> = document.querySelectorAll('h1');
 				h1Elements.forEach((h1: HTMLHeadingElement) => {
 					h1.addEventListener('mouseover', handleMouseOver);
 					h1.dataset.animating = 'false';
-					animateH1Element(h1);
+					animateH1Element(h1, h1.dataset.value || '');
 				});
 			}
 		});
