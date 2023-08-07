@@ -32,7 +32,7 @@
 							async
 						</h1>
 					</div>
-					<div class="flex justify-center overflow-x-hidden text-[1.0rem] h-[2rem]">
+					<div class="flex justify-center overflow-x-hidden text-[1.0rem] min-h-[2rem] my-[1rem]">
 						<Typewriter sentences={externalSentences} />
 					</div>
 					<div class="flex">
