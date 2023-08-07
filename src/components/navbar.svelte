@@ -132,6 +132,7 @@
 	}
 
 	:global(.dark) .async {
+		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				hsl(170, 57%, 73%) 10%,
@@ -142,6 +143,13 @@
 				hsl(189, 71%, 73%) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: 0.5s;
+		cursor: pointer;
+		padding-left: 2px;
+		padding-right: 2px;
 	}
 
 	.async:hover {
