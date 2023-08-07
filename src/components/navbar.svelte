@@ -46,7 +46,7 @@
 		<div
 			class="menu dark:bg-ctp-base bg-ctp-blue dark:text-ctp-text text-ctp-base text-[2rem] {isMenuOpen
 				? 'w-[100%]'
-				: 'w-0'}"
+				: 'w-[50%]'}"
 		>
 			<ul>
 				<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
@@ -194,8 +194,8 @@
 		height: 100%;
 		z-index: 49; /* Make sure it's below the navbar (z-index: 50) */
 		visibility: hidden;
-		opacity: 1;
-		transition: visibility 0s 0.3s ease-in-out; /* Delay visibility change after opacity */
+		opacity: 0;
+		transition: visibility 0s 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Delay visibility change after opacity */
 	}
 
 	.visible {
