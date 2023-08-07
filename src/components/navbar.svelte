@@ -34,9 +34,9 @@
 			class:menu-open={isMenuOpen}
 			on:click={toggleMenu}
 		>
-			<span class="bar bar1 dark:bg-ctp-text bg-ctp-base" />
-			<span class="bar bar2 dark:bg-ctp-text bg-ctp-base" />
-			<span class="bar bar3 dark:bg-ctp-text bg-ctp-base" />
+			<span class="bar dark:bg-ctp-text bg-ctp-base" />
+			<span class="bar dark:bg-ctp-text bg-ctp-base" />
+			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 		</div>
 		<div class="mr-[4vw]" />
 	</div>
@@ -103,7 +103,7 @@
 
 	.rotate {
 		transition: transform 5s ease;
-		transform: scale(1) rotate(360deg);
+		transform: rotate(360deg);
 	}
 
 	.rotate:hover {
@@ -132,7 +132,6 @@
 	}
 
 	:global(.dark) .async {
-		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				hsl(170, 57%, 73%) 10%,
@@ -143,13 +142,6 @@
 				hsl(189, 71%, 73%) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: 0.5s;
-		cursor: pointer;
-		padding-left: 2px;
-		padding-right: 2px;
 	}
 
 	.async:hover {
@@ -181,18 +173,10 @@
 	}
 
 	.menu-open .bar:nth-child(2) {
-		transform: translateX(100px);
-	}
-
-	.menu-open .bar.bar1 {
-		transform: translateY(7px) rotate(45deg);
-	}
-
-	.menu-open .bar.bar2 {
 		transform: translateX(10vw);
 	}
 
-	.menu-open .bar.bar3 {
+	.menu-open .bar:nth-child(3) {
 		transform: translateY(-7px) rotate(-45deg);
 	}
 
@@ -202,14 +186,13 @@
 		height: 100%;
 		z-index: 49; /* Make sure it's below the navbar (z-index: 50) */
 		visibility: hidden;
-		opacity: 0.5;
-		transition: opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out; /* Delay visibility change after opacity */
+		opacity: 1;
+		transition: visibility 0s 0.3s ease-in-out; /* Delay visibility change after opacity */
 	}
 
 	.visible {
 		visibility: visible;
 		opacity: 1;
-		transition: opacity 0.3s ease-in-out;
 	}
 
 	/* Adjust the menu position and size as needed */
