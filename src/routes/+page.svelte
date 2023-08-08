@@ -162,6 +162,7 @@
 	.icon-wrapper {
 		display: flex;
 		justify-content: center;
+		transition: transform 0.5s ease-in-out;
 	}
 
 	/* Hover effect for icons and images */
