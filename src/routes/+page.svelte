@@ -24,8 +24,10 @@
 			>
 				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
 					<h1
-						class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem]"
-						class:animating={$animating === true}
+						class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {animating
+							? 'text-ctp-green bg-ctp-mantle'
+							: ''} rounded-[1rem]"
+						style="transition: font-size 0.7s ease-in-out;"
 						data-value="async"
 					>
 						async
@@ -36,7 +38,8 @@
 					<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 						<a
 							href="https://discord.com/users/797422750321999943"
-							class="text-center icon-wrapper a-icons discord hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff]"
+							class="text-center flex justify-center mt-[9px] mx-[10px] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] scale-[1.2]"
+							style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
 							aria-label="Discord"
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"
@@ -47,7 +50,8 @@
 						</a>
 						<a
 							href="https://github.com/asyncedd"
-							class="icon-wrapper a-icons github dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494]"
+							class="flex justify-center mt-[9px] mx-[10px] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] scale-[1.2]"
+							style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
 							aria-label="Github"
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"
@@ -63,7 +67,8 @@
 					<img
 						src="https://ik.imagekit.io/dfijmneb9/clouds.webp?updatedAt=1691272771794"
 						alt="Mountains"
-						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last mx-[1rem] my-3 overflow-hidden"
+						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last mx-[1rem] my-3 overflow-hidden scale-[1] rotate-0 hover:scale-[1.1] hover:rotate-[720deg]"
+						style="transition: transform 1s ease;"
 						loading="eager"
 						decoding="async"
 						srcset="
@@ -128,47 +133,5 @@
 	* {
 		font-family: 'Fira Code', monospace;
 		overflow: none visible;
-	}
-
-	h1 {
-		border-radius: 1rem;
-		transition: font-size 0.7s ease-in-out;
-	}
-
-	.animating {
-		@apply text-ctp-green bg-ctp-mantle;
-	}
-
-	.rotate {
-		transition: transform 1s ease;
-		transform: scale(1) rotate(0deg);
-	}
-
-	.rotate:hover {
-		transform: scale(1.1) rotate(720deg);
-	}
-
-	.discord,
-	.github {
-		margin-top: 9px;
-		margin-left: 10px;
-		margin-right: 10px;
-		font-size: 30px;
-		transform-origin: center; /* Set the transform origin to center */
-	}
-
-	/* Center the icons */
-	.a-icons,
-	.icon-wrapper {
-		display: flex;
-		justify-content: center;
-		transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;
-	}
-
-	/* Hover effect for icons and images */
-	.discord:hover,
-	.github:hover {
-		/* Apply the effect to the image when it's hovered */
-		transform: scale(1.2); /* Increase the scale on hover */
 	}
 </style>
