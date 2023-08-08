@@ -36,7 +36,7 @@
 					<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 						<a
 							href="https://discord.com/users/797422750321999943"
-							class="text-center dark:text-ctp-text text-ctp-base icon-wrapper a-icons discord hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff]"
+							class="text-center icon-wrapper a-icons discord hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff]"
 							aria-label="Discord"
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"
@@ -47,7 +47,7 @@
 						</a>
 						<a
 							href="https://github.com/asyncedd"
-							class="dark:text-ctp-text text-ctp-base icon-wrapper a-icons github dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494]"
+							class="icon-wrapper a-icons github dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494]"
 							aria-label="Github"
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"
@@ -162,7 +162,7 @@
 	.icon-wrapper {
 		display: flex;
 		justify-content: center;
-		transition: transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;
 	}
 
 	/* Hover effect for icons and images */
