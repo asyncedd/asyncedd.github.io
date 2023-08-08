@@ -24,7 +24,7 @@
 			>
 				<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
 					<h1
-						class="text-center text-[7rem] p-1 px-3 inline-flex items-center justify-center"
+						class="text-center text-[7rem] p-1 px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem]"
 						class:animating={$animating === true}
 						data-value="async"
 					>
@@ -133,10 +133,6 @@
 	h1 {
 		border-radius: 1rem;
 		transition: font-size 0.7s ease-in-out;
-	}
-
-	h1:hover {
-		@apply text-ctp-green text-[7.5rem];
 	}
 
 	.animating {
