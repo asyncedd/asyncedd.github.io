@@ -18,7 +18,10 @@
 					class="w-10 h-10 rounded-[100%] aspect-square rotate"
 				/>
 				<div class="head-parent px-1 items-center">
-					<a class="text-[1.7rem] async tracking-widest" href="/">async</a>
+					<a
+						class="text-[1.7rem] async tracking-widest cursor-pointer px-[2px] transition duration-[0.5s]"
+						href="/">async</a
+					>
 				</div>
 			</div>
 		</a>
@@ -146,10 +149,6 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		transition: 0.5s;
-		cursor: pointer;
-		padding-left: 2px;
-		padding-right: 2px;
 	}
 
 	:global(.dark) .async {
@@ -167,10 +166,6 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		transition: 0.5s;
-		cursor: pointer;
-		padding-left: 2px;
-		padding-right: 2px;
 	}
 
 	.async:hover {
