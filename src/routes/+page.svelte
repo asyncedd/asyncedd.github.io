@@ -7,8 +7,8 @@
 	let externalSentences = [
 		'GNU/Linux enjoyer',
 		'Coding enthusiast',
-		'Svelte fan',
-		'Welcome to my website!'
+		'Welcome to my website!',
+		'WIP - as always'
 	];
 </script>
 
@@ -97,13 +97,13 @@
 			<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
 			<p class="text-center text-[0.9rem] p-[0.3rem]">
 				The main image is shot by <a
-					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky transition-colors duration-150"
+					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
 					href="https://unsplash.com/@romello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 					>Romello Williams</a
 				>
 				on
 				<a
-					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky transition-colors duration-150"
+					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
 					href="https://unsplash.com/photos/P8VMwYFY-Es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 					>Unsplash</a
 				>
@@ -132,7 +132,7 @@
 
 	h1 {
 		border-radius: 1rem;
-		transition: font-size 0.7s ease-in-out, color 1s ease-in-out, background 1s ease-in-out;
+		transition: font-size 0.7s ease-in-out;
 	}
 
 	h1:hover {
@@ -159,7 +159,6 @@
 		margin-right: 10px;
 		font-size: 30px;
 		transform-origin: center; /* Set the transform origin to center */
-		transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, fill 0.3s ease-in-out;
 	}
 
 	/* Center the icons */
