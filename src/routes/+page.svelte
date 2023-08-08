@@ -132,6 +132,5 @@
 
 	* {
 		font-family: 'Fira Code', monospace;
-		overflow: none visible;
 	}
 </style>

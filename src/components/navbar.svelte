@@ -25,7 +25,7 @@
 	</div>
 	<div class="flex gap-[20px]">
 		<div class="flex">
-			<div class="text-[30px] icon-wrapper mx-[40px] mt-[10px]">
+			<div class="text-[30px] flex justify-center mx-[40px] mt-[10px]">
 				<ThemeSwitch />
 			</div>
 		</div>
@@ -106,12 +106,6 @@
 	.left-content img {
 		margin-right: 10px; /* Add some space between the image and the right content */
 		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-	}
-
-	/* Center the icons */
-	.icon-wrapper {
-		display: flex;
-		justify-content: center;
 	}
 
 	/* Hover effect for icons and images */
