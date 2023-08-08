@@ -25,7 +25,7 @@
 	</div>
 	<div class="flex gap-[20px]">
 		<div class="flex">
-			<div class="text-[30px] a-icons icon-wrapper mx-[40px] mt-[10px]">
+			<div class="text-[30px] icon-wrapper mx-[40px] mt-[10px]">
 				<ThemeSwitch />
 			</div>
 		</div>
@@ -109,7 +109,6 @@
 	}
 
 	/* Center the icons */
-	.a-icons,
 	.icon-wrapper {
 		display: flex;
 		justify-content: center;
