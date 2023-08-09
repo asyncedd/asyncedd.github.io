@@ -43,7 +43,10 @@
 
 <p class={isTyping ? 'typing-cursor' : ''} id="typewriter">
 	{#each currentText as letter, index}
-		<span style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span>
+		<span
+			class="transition-colors ease-in-out duration-[0.5s]"
+			style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span
+		>
 	{/each}
 </p>
 
