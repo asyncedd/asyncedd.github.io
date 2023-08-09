@@ -97,12 +97,4 @@
 		height: 7rem; /* Set the desired height */
 		overflow: hidden; /* Hide any overflow caused by growing text */
 	}
-
-	.home-sweet-home {
-		transition: color 0.5s ease-in-out;
-	}
-
-	.home-sweet-home:hover {
-		@apply text-ctp-green;
-	}
 </style>
