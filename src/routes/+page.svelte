@@ -18,7 +18,9 @@
 >
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
-		<div class="h-[100vh] flex justify-center py-[35vh] dark:text-ctp-text text-ctp-base">
+		<div
+			class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base"
+		>
 			<div
 				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start rounded-[3rem]"
 			>
