@@ -15,7 +15,7 @@
 			{#each data.posts as post}
 				<li class="post">
 					<a
-						href="blogs/{post.slug}"
+						href="blog/{post.slug}"
 						class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue"
 						>{post.title}</a
 					>
