@@ -7,7 +7,6 @@
 
 <body
 	class="dark:bg-ctp-mantle bg-ctp-text overflow-x-hidden overflow-y-visible text-ctp-base dark:text-ctp-text"
-	style="font-display: swap;"
 >
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
@@ -124,6 +123,7 @@
 			url('../../static/FiraCode-Regular.woff') format('woff');
 		font-weight: 400;
 		font-style: normal;
+		font-display: swap;
 	}
 
 	* {
