@@ -38,7 +38,7 @@
 					<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 						<a
 							href="https://discord.com/users/797422750321999943"
-							class="text-center flex justify-center mt-[9px] mx-[10px] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] scale-[1.2]"
+							class="text-center flex justify-center mt-[9px] mx-[10px] text-[2rem] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] hover:scale-[1.2]"
 							style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
 							aria-label="Discord"
 						>
@@ -50,7 +50,7 @@
 						</a>
 						<a
 							href="https://github.com/asyncedd"
-							class="flex justify-center mt-[9px] mx-[10px] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] scale-[1.2]"
+							class="flex justify-center mt-[9px] mx-[10px] text-[2rem] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] hover:scale-[1.2]"
 							style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
 							aria-label="Github"
 						>
