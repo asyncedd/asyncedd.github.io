@@ -18,13 +18,6 @@
 	];
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-	rel="stylesheet"
-/>
-
 <Hackerman />
 
 <body class="dark:bg-ctp-base bg-ctp-blue">
@@ -61,8 +54,18 @@
 	@tailwind components;
 	@tailwind utilities;
 
-	div {
-		font-family: JetBrains Mono, monospace;
+	@font-face {
+		font-family: 'Fira Code';
+		src: url('/FiraCode-Regular.woff2') format('woff2'),
+			url('/FiraCode-Regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	* {
+		font-family: 'Fira Code', monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+			Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
 	h1 {
