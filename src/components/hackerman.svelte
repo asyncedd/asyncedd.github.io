@@ -40,7 +40,6 @@
 		target.dataset.animating = 'true';
 
 		let iteration: number = 0;
-		let interval: number | undefined = undefined;
 
 		function animate() {
 			const currentText: string = target.textContent!;
@@ -64,11 +63,11 @@
 			} else if (nextText[iteration] === targetValue[iteration]) {
 				iteration++;
 				setTimeout(() => {
-					interval = window.requestAnimationFrame(animate);
+					window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			} else {
 				setTimeout(() => {
-					interval = window.requestAnimationFrame(animate);
+					window.requestAnimationFrame(animate);
 				}, animationFrameDuration);
 			}
 		}
