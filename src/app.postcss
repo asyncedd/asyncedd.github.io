@@ -1,7 +1,29 @@
-/* Write your global styles here, in PostCSS syntax */
-@tailwind base;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind components;
-@tailwind utilities;
+
+.prose :is(h2, h3, h4, h5, h6) {
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+
+.prose p:not(:is(h2, h3, h4, h5, h6) + p) {
+	margin-top: 0.7rem;
+}
+
+.prose :is(ul, ol) {
+	list-style-type: '🔥';
+	padding-left: 0.5rem;
+}
+
+.prose :is(ul, ol) li {
+	margin-block: 0.2rem;
+	padding-inline-start: 0.2rem;
+}
+
+.prose pre {
+	max-inline-size: 100%;
+	padding: 1rem;
+	border-radius: 8px;
+	tab-size: 2;
+}
