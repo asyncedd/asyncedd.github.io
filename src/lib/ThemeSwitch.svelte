@@ -29,6 +29,7 @@
 
 <div
 	on:click={handleSwitchDarkMode}
+	on:keydown={handleSwitchDarkMode}
 	role="button"
 	aria-label="Toggle dark mode"
 	tabindex="0"

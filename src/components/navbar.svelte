@@ -34,8 +34,11 @@
 		</div>
 		<div
 			class="flex flex-col cursor-pointer mt-[7px]"
+			role="button"
+			tabindex="0"
 			class:menu-open={isMenuOpen}
 			on:click={toggleMenu}
+			on:keydown={toggleMenu}
 		>
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
