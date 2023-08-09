@@ -74,11 +74,10 @@
 						loading="eager"
 						decoding="async"
 						srcset="
-            https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w
-            https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w
-            https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w
-            https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w
-            "
+        https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w,
+        https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w,
+        https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w,
+        https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w"
 					/>
 				</picture>
 			</div>
