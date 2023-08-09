@@ -6,13 +6,13 @@
 </script>
 
 <body
-	class="dark:bg-ctp-mantle bg-ctp-text overflow-x-hidden overflow-y-visible"
+	class="dark:bg-ctp-mantle bg-ctp-text overflow-x-hidden overflow-y-visible text-ctp-base dark:text-ctp-text"
 	style="font-display: swap;"
 >
 	<div class="dark:bg-ctp-base bg-ctp-blue">
 		<Navbar />
 		<div
-			class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base"
+			class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base pb-[5rem] sm:pb-0"
 		>
 			<div
 				class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start rounded-[3rem]"
@@ -64,8 +64,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="mx-1" />
-				<picture>
+				<picture class="mx-1">
 					<img
 						src="https://ik.imagekit.io/dfijmneb9/clouds.webp?updatedAt=1691272771794"
 						alt="Mountains"
@@ -73,49 +72,43 @@
 						style="transition: transform 1s ease;"
 						loading="eager"
 						decoding="async"
-						srcset="
-        https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w,
-        https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w,
-        https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w,
-        https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w"
+						srcset="https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w,
+                    https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w,
+                    https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w,
+                    https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w"
 					/>
 				</picture>
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
-		<div class="pb-[5rem] sm:pb-0" />
 	</div>
 	<div style="transform: rotate(-180deg);">
 		<Wave />
 	</div>
-	<div class="text-ctp-base dark:text-ctp-text">
-		<div class="py-[30vh] text-center px-[10vw]">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-		<Wave />
-		<footer class="dark:bg-ctp-base bg-ctp-blue text-center">
-			<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
-			<p class="text-center text-[0.9rem] p-[0.3rem]">
-				The main image is shot by <a
-					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
-					href="https://unsplash.com/@romello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Romello Williams</a
-				>
-				on
-				<a
-					class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
-					href="https://unsplash.com/photos/P8VMwYFY-Es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Unsplash</a
-				>
-			</p>
-		</footer>
-	</div>
+	<p class="py-[30vh] text-center px-[10vw]">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+		voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<Wave />
+	<footer class="dark:bg-ctp-base bg-ctp-blue text-center">
+		<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
+		<p class="text-center text-[0.9rem] p-[0.3rem]">
+			The main image is shot by <a
+				class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
+				href="https://unsplash.com/@romello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Romello Williams</a
+			>
+			on
+			<a
+				class="dark:text-ctp-blue text-ctp-yellow hover:text-ctp-sky hover:dark:text-ctp-sky"
+				href="https://unsplash.com/photos/P8VMwYFY-Es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Unsplash</a
+			>
+		</p>
+	</footer>
 </body>
 
 <Hackerman />
