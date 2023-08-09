@@ -195,6 +195,7 @@
 	}
 
 	/* Animation for the hamburger menu */
+
 	.menu-open .bar:nth-child(1) {
 		transform: translateY(10px) rotate(45deg);
 	}
@@ -205,6 +206,18 @@
 
 	.menu-open .bar:nth-child(3) {
 		transform: translateY(-10px) rotate(-45deg);
+	}
+
+	button:hover:not(.menu-open) .bar:nth-child(1) {
+		transform: translateY(5px) rotate(22.5deg);
+	}
+
+	button:hover:not(.menu-open) .bar:nth-child(2) {
+		transform: translateX(0);
+	}
+
+	button:hover:not(.menu-open) .bar:nth-child(3) {
+		transform: translateY(-5px) rotate(-22.5deg);
 	}
 
 	.menu-overlay {
