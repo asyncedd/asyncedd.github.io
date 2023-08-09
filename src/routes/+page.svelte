@@ -63,20 +63,6 @@
 						</a>
 					</div>
 				</div>
-				<picture class="mx-1">
-					<img
-						src="https://ik.imagekit.io/dfijmneb9/clouds.webp?updatedAt=1691272771794"
-						alt="Mountains"
-						class="h-[13rem] rounded-[100%] aspect-square rotate items-center justify-center sm:order-last mx-[1rem] my-3 overflow-hidden scale-[1] rotate-0 hover:scale-[1.1] hover:rotate-[720deg]"
-						style="transition: transform 1s ease;"
-						loading="eager"
-						decoding="async"
-						srcset="https://ik.imagekit.io/dfijmneb9/tr:w-128/clouds.webp?updatedAt=1691272771794 128w,
-                    https://ik.imagekit.io/dfijmneb9/tr:w-256/clouds.webp?updatedAt=1691272771794 256w,
-                    https://ik.imagekit.io/dfijmneb9/tr:w-512/clouds.webp?updatedAt=1691272771794 512w,
-                    https://ik.imagekit.io/dfijmneb9/tr:w-1024/clouds.webp?updatedAt=1691272771794 1024w"
-					/>
-				</picture>
 			</div>
 			<div class="pb-[50vh]" />
 		</div>
