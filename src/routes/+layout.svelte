@@ -5,12 +5,8 @@
 	import '../app.postcss';
 </script>
 
-<body
-	class="dark:bg-ctp-mantle bg-ctp-text overflow-x-hidden overflow-y-visible text-ctp-base dark:text-ctp-text h-[100vh]"
->
-	<div class="overflow-hidden">
-		<Navbar />
-	</div>
+<body class="dark:bg-ctp-mantle bg-ctp-text text-ctp-base dark:text-ctp-text h-[100vh]">
+	<Navbar />
 	<main>
 		<slot />
 	</main>
