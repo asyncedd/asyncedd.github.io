@@ -26,7 +26,7 @@
 			</div>
 		</a>
 	</div>
-	<div class="flex gap-[20px]">
+	<div class="flex gap-[3px]">
 		<div class="flex">
 			<div class="text-[30px] flex justify-center mx-[40px] mt-[10px]">
 				<ThemeSwitch />
@@ -44,7 +44,7 @@
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 		</button>
-		<div class="mr-[4vw]" />
+		<div class="mr-[3vw]" />
 	</div>
 </div>
 <div class="flex">
