@@ -113,16 +113,18 @@
 
 <Hackerman />
 
-<link rel="dns-preconnect" href="https://cdnjs.cloudflare.com" />
-<link
-	rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css"
-/>
-
 <style>
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+
+	@font-face {
+		font-family: 'Fira Code';
+		src: url('../../static/FiraCode-Regular.woff2') format('woff2'),
+			url('../../static/FiraCode-Regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
 
 	* {
 		font-family: 'Fira Code', monospace;
