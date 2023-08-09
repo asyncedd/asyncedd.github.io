@@ -3,13 +3,6 @@
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Navbar from '../components/navbar.svelte';
 	import Wave from '../components/wave.svelte';
-
-	let externalSentences = [
-		'GNU/Linux enjoyer',
-		'Coding enthusiast',
-		'Welcome to my website!',
-		'WIP - as always'
-	];
 </script>
 
 <body
@@ -35,7 +28,14 @@
 						async
 					</h1>
 					<div class="flex justify-center overflow-x-hidden text-[1.0rem] min-h-[2rem] my-[1rem]">
-						<Typewriter sentences={externalSentences} />
+						<Typewriter
+							sentences={[
+								'GNU/Linux enjoyer',
+								'Coding enthusiast',
+								'Welcome to my website!',
+								'WIP - as always'
+							]}
+						/>
 					</div>
 					<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 						<a
