@@ -11,7 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="mb-[30rem]">
+<div>
 	<div class="flex justify-center h-[100vh] mt-[10vh] my-[10rem]">
 		<article>
 			<!-- Title -->
@@ -36,6 +36,7 @@
 		</article>
 	</div>
 </div>
+<div class="my-[50rem]" />
 
 <style>
 	article {

@@ -24,8 +24,8 @@ export default {
 						'--tw-prose-code': variants.mocha.overlay0.hex,
 						'--tw-prose-pre-code': theme('colors.pink[100]'),
 						'--tw-prose-pre-bg': theme('colors.pink[900]'),
-						'--tw-prose-th-borders': theme('colors.pink[300]'),
-						'--tw-prose-td-borders': theme('colors.pink[200]')
+						'--tw-prose-th-borders': variants.mocha.surface0.hex,
+						'--tw-prose-td-borders': variants.mocha.surface1.hex
 					}
 				},
 				'ctp-light': {
@@ -44,8 +44,8 @@ export default {
 						'--tw-prose-code': variants.mocha.surface1.hex,
 						'--tw-prose-pre-code': theme('colors.pink[100]'),
 						'--tw-prose-pre-bg': theme('colors.pink[900]'),
-						'--tw-prose-th-borders': theme('colors.pink[300]'),
-						'--tw-prose-td-borders': theme('colors.pink[200]')
+						'--tw-prose-th-borders': variants.latte.surface2.hex,
+						'--tw-prose-td-borders': variants.latte.surface1.hex
 					}
 				}
 			})

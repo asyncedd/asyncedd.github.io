@@ -1,5 +1,5 @@
 ---
-title: Hello 👋.
+title: Hello 👋
 description: My first post.
 date: '2023-8-9'
 categories:
@@ -25,14 +25,14 @@ On the meantime, I just force myself to organize things, usually failing :(
 
 ## My dev env.
 
-As I stated before, I use Linux - EndeavourOS to be exact. I use Neovim as my text editor of choice, and I have 4k+ lines of Lua in my [Neovim configuration](https://github.com/asyncedd/dots.nvim) (quick plug lol) - I've put wayyy to much time than I should've but for now I think it's pretty solid thus, I'm gradually decreasing the time I `cd` into `~/.config/nvim` (essentially not tweaking stop more often!!)
+As I stated before, I use Linux — EndeavourOS to be exact. I use Neovim as my text editor of choice, and I have 4k+ lines of Lua in my [Neovim configuration](https://github.com/asyncedd/dots.nvim) (quick plug lol) - I've put wayyy to much time than I should've but for now I think it's pretty solid thus, I'm gradually decreasing the time I `cd` into `~/.config/nvim` (essentially not tweaking stop more often!!)
 
 That should sum it up I think :D
 
 ## My tech stack
 
-I am a front-end dev, since I don't go to the back but the front 😎  
-Ok, sorry for my **awful** joke. Let's try it again.
+I am a front-end dev, since I don't go to the back, but the front 😎  
+Ok, sorry for my **awful** jokes. Let's try it again.
 
 As I said before, I live in the front. I'm planning to look into the back. But, now I'm living in the front :P  
 Anyhow, my current front-end tech stack is:
@@ -41,3 +41,15 @@ Anyhow, my current front-end tech stack is:
 - Sveltekit
 - TailwindCSS
 - Typescript
+- GitHub pages
+
+---
+
+## My experiences
+
+| Year      | What                                                                             |
+| --------- | -------------------------------------------------------------------------------- |
+| 2017-2020 | Scratch.mit.edu                                                                  |
+| 2022      | Writing a Discord bot with a Node.js library that interacts with the Discord API |
+| 2023      | Rust, Pycord, Lua, HTML, CSS, Javascript, Typescript                             |
+| ...       | I don't know!                                                                    |

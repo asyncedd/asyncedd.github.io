@@ -14,7 +14,11 @@
 		<ul class="posts">
 			{#each data.posts as post}
 				<li class="post">
-					<a href="blogs/{post.slug}" class="title">{post.title}</a>
+					<a
+						href="blogs/{post.slug}"
+						class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue"
+						>{post.title}</a
+					>
 					<p class="dark:text-ctp-text text-ctp-base">{formatDate(post.date)}</p>
 					<p class="description">{post.description}</p>
 				</li>
