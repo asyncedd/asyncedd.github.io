@@ -119,8 +119,8 @@
 
 	@font-face {
 		font-family: 'Fira Code';
-		src: url('../../static/FiraCode-Regular.woff2') format('woff2'),
-			url('../../static/FiraCode-Regular.woff') format('woff');
+		src: url('/FiraCode-Regular.woff2') format('woff2'),
+			url('/FiraCode-Regular.woff') format('woff');
 		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
