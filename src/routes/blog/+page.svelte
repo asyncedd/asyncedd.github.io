@@ -16,7 +16,7 @@
 				<li class="post">
 					<a
 						href="blog/{post.slug}"
-						class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue"
+						class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue transition-colors duration-[0.5s] ease-in-out"
 						>{post.title}</a
 					>
 					<div class="tags my-[3px]">
