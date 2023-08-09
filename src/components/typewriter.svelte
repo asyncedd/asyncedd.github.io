@@ -1,45 +1,42 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from 'svelte';
+	import { onMount } from 'svelte';
 
-	export let sentences = [];
+	export let sentences: string[] = [];
 	let speed = 50;
 	let currentText = '';
 	let currentSentenceIndex = 0;
 	let isTyping = false;
 
-	const dispatch = createEventDispatcher();
-
-	function typeWriter() {
-		isTyping = true;
-		const sentenceLength = sentences[currentSentenceIndex].length;
-		let i = 0;
-		const interval = setInterval(() => {
-			if (i < sentenceLength) {
-				currentText += sentences[currentSentenceIndex].charAt(i);
-				i++;
-			} else {
-				clearInterval(interval);
-				isTyping = true;
-				setTimeout(() => {
-					isTyping = false;
-					backspace();
-				}, 3000);
-			}
-		}, speed);
-	}
-
-	function backspace() {
-		const backspaceInterval = setInterval(() => {
-			currentText = currentText.slice(0, -1);
-			if (currentText === '') {
-				clearInterval(backspaceInterval);
-				currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
-				typeWriter(); // Start typing the next sentence
-			}
-		}, speed / 2);
-	}
-
 	onMount(() => {
+		function typeWriter() {
+			isTyping = true;
+			const sentenceLength = sentences[currentSentenceIndex].length;
+			let i = 0;
+			const interval = setInterval(() => {
+				if (i < sentenceLength) {
+					currentText += sentences[currentSentenceIndex].charAt(i);
+					i++;
+				} else {
+					clearInterval(interval);
+					isTyping = true;
+					setTimeout(() => {
+						isTyping = false;
+						backspace();
+					}, 3000);
+				}
+			}, speed);
+		}
+
+		function backspace() {
+			const backspaceInterval = setInterval(() => {
+				currentText = currentText.slice(0, -1);
+				if (currentText === '') {
+					clearInterval(backspaceInterval);
+					currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+					typeWriter(); // Start typing the next sentence
+				}
+			}, speed / 2);
+		}
 		typeWriter();
 	});
 </script>
