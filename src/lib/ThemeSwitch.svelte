@@ -27,10 +27,8 @@
 	}
 </script>
 
-<div
+<button
 	on:click={handleSwitchDarkMode}
-	on:keydown={handleSwitchDarkMode}
-	role="button"
 	aria-label="Toggle dark mode"
 	tabindex="0"
 	class="flex hover:fill-ctp-yellow hover:dark:fill-ctp-yellow dark:fill-ctp-text fill-ctp-base hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
@@ -69,7 +67,7 @@
 			{/key}
 		</div>
 	</div>
-</div>
+</button>
 
 <style>
 	i {

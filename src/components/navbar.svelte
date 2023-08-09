@@ -37,7 +37,6 @@
 			aria-label="Toggle hamburger menu"
 			class:menu-open={isMenuOpen}
 			on:click={toggleMenu}
-			on:keydown={toggleMenu}
 		>
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
