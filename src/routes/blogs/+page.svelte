@@ -19,6 +19,13 @@
 						class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue"
 						>{post.title}</a
 					>
+					<div class="tags my-[3px]">
+						{#each post.categories as category}
+							<span class="bg-ctp-red text-ctp-base p-[5px] rounded-[0.5rem] gap-[5px]"
+								>&num;{category}</span
+							>
+						{/each}
+					</div>
 					<p class="dark:text-ctp-text text-ctp-base">{formatDate(post.date)}</p>
 					<p class="description">{post.description}</p>
 				</li>

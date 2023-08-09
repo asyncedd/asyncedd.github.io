@@ -8,7 +8,9 @@
 <body
 	class="dark:bg-ctp-mantle bg-ctp-text overflow-x-hidden overflow-y-visible text-ctp-base dark:text-ctp-text h-[100vh]"
 >
-	<Navbar />
+	<div class="overflow-hidden">
+		<Navbar />
+	</div>
 	<main>
 		<slot />
 	</main>
