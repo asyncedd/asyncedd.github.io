@@ -32,10 +32,10 @@
 				<ThemeSwitch />
 			</div>
 		</div>
-		<div
+		<button
 			class="flex flex-col cursor-pointer mt-[7px]"
-			role="button"
 			tabindex="0"
+			aria-label="Toggle hamburger menu"
 			class:menu-open={isMenuOpen}
 			on:click={toggleMenu}
 			on:keydown={toggleMenu}
@@ -43,7 +43,7 @@
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
 			<span class="bar dark:bg-ctp-text bg-ctp-base" />
-		</div>
+		</button>
 		<div class="mr-[4vw]" />
 	</div>
 </div>
