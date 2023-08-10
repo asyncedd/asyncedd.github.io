@@ -2,7 +2,6 @@
 	import Typewriter from '../components/typewriter.svelte';
 	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Wave from '../components/wave.svelte';
-	import Footer from '../components/footer.svelte';
 </script>
 
 <div class="dark:bg-ctp-base bg-ctp-blue">

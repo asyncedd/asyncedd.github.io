@@ -43,8 +43,6 @@ Anyhow, my current front-end tech stack is:
 - Typescript
 - GitHub pages
 
----
-
 ## My experiences
 
 | Year      | What                                                                             |
