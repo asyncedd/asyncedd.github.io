@@ -37,11 +37,11 @@ Ok, sorry for my **awful** jokes. Let's try it again.
 As I said before, I live in the front. I'm planning to look into the back. But, now I'm living in the front :P  
 Anyhow, my current front-end tech stack is:
 
-- Svelte
-- Sveltekit
-- TailwindCSS
-- Typescript
-- GitHub pages
+    - Svelte
+    - Sveltekit
+    - TailwindCSS
+    - Typescript
+    - GitHub pages
 
 ## My experiences
 
