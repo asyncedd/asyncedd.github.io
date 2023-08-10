@@ -5,76 +5,41 @@
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	const lettersArray: string[] =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
-	const animationIntervalDuration: number = 30;
-	const animationFrameDuration: number = 15;
 
-	function getRandomLetter(targetChar: string): string {
-		const randomIndex: number = Math.floor(Math.random() * lettersArray.length);
-		const randomChar: string = lettersArray[randomIndex];
-
-		if (randomIndex >= 0.3 && randomIndex < 0.35) {
-			return targetChar;
-		}
-
-		if (randomChar.toUpperCase() === targetChar || randomChar.toLowerCase() === targetChar) {
-			return targetChar === targetChar.toUpperCase()
-				? randomChar.toUpperCase()
-				: randomChar.toLowerCase();
-		}
-
-		if (targetChar === ' ') {
-			return targetChar;
-		}
-
-		return randomChar;
-	}
+	let interval: undefined | any = null;
 
 	function animateH1Element(target: HTMLElement, targetValue: string) {
-		const animationDuration: number = animationIntervalDuration * targetValue.length;
+		let iteration = 0;
 
-		animating.set(true);
-		target.dataset.animating = 'true';
+		if (target.dataset.animating != 'true') {
+			clearInterval(interval);
 
-		let iteration: number = 0;
+			target.dataset.animating = 'true';
+			animating.set(true);
 
-		function animate() {
-			const currentText: string = target.textContent!;
-			let nextText: string = '';
+			interval = setInterval(() => {
+				target.innerText = target.innerText
+					.split('')
+					.map((_, index) => {
+						if (index < iteration) {
+							return targetValue[index];
+						}
 
-			for (let i = 0; i < currentText.length; i++) {
-				if (iteration === 0) {
-					nextText += getRandomLetter(targetValue[i]);
-				} else if (i < iteration || (i === iteration && currentText[i] === targetValue[i])) {
-					nextText += targetValue[i];
-				} else {
-					nextText += getRandomLetter(targetValue[i]);
+						return lettersArray[Math.floor(Math.random() * 26)];
+					})
+					.join('');
+
+				if (iteration >= targetValue.length) {
+					clearInterval(interval);
+					animating.set(false);
+					target.dataset.animating = 'false';
 				}
-			}
 
-			target.textContent = nextText;
-
-			if (iteration >= targetValue.length) {
-				target.dataset.animating = 'false';
-				animating.set(false);
-			} else if (nextText[iteration] === targetValue[iteration]) {
-				iteration++;
-				setTimeout(() => {
-					window.requestAnimationFrame(animate);
-				}, animationFrameDuration);
-			} else {
-				setTimeout(() => {
-					window.requestAnimationFrame(animate);
-				}, animationFrameDuration);
-			}
+				iteration += 1 / 5;
+			}, 30);
 		}
-
-		setTimeout(() => {
-			animate();
-		}, animationDuration);
 	}
 
 	function handleMouseOver(event: MouseEvent): void {
