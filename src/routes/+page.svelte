@@ -15,7 +15,7 @@
 				<h1
 					class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {$animating
 						? 'text-ctp-green bg-ctp-mantle'
-						: ''} rounded-[1rem]"
+						: ''} rounded-[1rem] font-mono"
 					style="transition: font-size 0.7s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;"
 					data-value="async"
 				>

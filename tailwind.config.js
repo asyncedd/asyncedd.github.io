@@ -1,4 +1,5 @@
 import { variants } from '@catppuccin/palette';
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -48,7 +49,10 @@ export default {
 						'--tw-prose-td-borders': variants.latte.surface1.hex
 					}
 				}
-			})
+			}),
+			fontFamily: {
+				mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
+			}
 		}
 	},
 	plugins: [

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/jetbrains-mono':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource/manrope':
     specifier: ^5.0.8
     version: 5.0.8
@@ -294,6 +297,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/jetbrains-mono@5.0.8:
+    resolution: {integrity: sha512-ck4x0rKG9atF1Kvsb8t8c7IXr9UNSQ3BGMWVv0kw/OxF3ldfg11Sg3AxJnOkl/xeXXFwgR+Y9yuMmnK+skTElQ==}
+    dev: false
 
   /@fontsource/manrope@5.0.8:
     resolution: {integrity: sha512-trqxGSH4YSekXDmto97FaWED4mf9xFL/iWfZe1ksHuE0pJB0C7OUKb2w2ckoAE4S1ys5fRNCNLNA1sATAjyVCQ==}
