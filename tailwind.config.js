@@ -35,7 +35,7 @@ export default {
 						'--tw-prose-headings': variants.mocha.mantle.hex,
 						'--tw-prose-lead': theme('colors.pink[700]'),
 						'--tw-prose-links': variants.latte.blue.hex,
-						'--tw-prose-bold': variants.mocha.red.hex,
+						'--tw-prose-bold': variants.latte.red.hex,
 						'--tw-prose-counters': theme('colors.pink[600]'),
 						'--tw-prose-bullets': theme('colors.pink[400]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
