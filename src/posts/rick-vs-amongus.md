@@ -1,7 +1,7 @@
 ---
-title: Who is superior, Rick or the imposter.
+title: Rick for the W
 description: This is my serious evidence where Rick is superior to the imposter
-date: '2023-8-10'
+date: '2023-8-11'
 categories:
   - meme
   - joke
@@ -12,14 +12,9 @@ published: true
 
 Hello, I'm here to **PROVE** that Rick is superior to the imposter. It is obvious evidence where Rick is superior to the Imposter.
 
-## Who is older.
-
-Kids are older than babies. They also know more than babies. Kids are cooler than babies. Kids are bigger than babies.
-Rick Astley is born in 1966. Amongus with the imposter is 2018.
-
 ## Space 🌌
 
-13.8 years ago. Rick Asltey wrote the big bang and pushed to GitHub "init big bang", and the big bang initialized. Add CI tests are working... It was approved and committed by a group of early red pandas (red pandas can abbreviate to "firefoxes" :D)
+13.8 years ago. Rick Asltey wrote the big bang and pushed to GitHub "init big bang", and the big bang initialized. Add CI tests are working... It was approved and committed by a group of early red pandas (red pandas can abbreviate to "firefoxes" :3)
 After that, Rick Astley compiled the source code with his PC made with Lego blocks.  
 And then he ran this in the terminal
 
@@ -29,6 +24,23 @@ And then he ran this in the terminal
 
 That's right. The big bang was Rick Astley's **BIG BANG**er  
 The **REASON** why the universe exists, why galaxies exists, why our milk way exists, why our solar system exists, why Newton's law of pyshics exists, why Earth exists, and why that stupid spacecraft w/ people murdering each other exists. — Rick Astley's **BIG BANG**, which is the big bang.
+
+Noone is stronger than the one who initialized the **BIG BANG** - it's scientically impossible.  
+THUS making Rick more powerful than the imposter.
+
+## Why would this matter
+
+Because it does .\_.
+
+## But...
+
+The imposter has a knife. Rick doesn't. The imposter has a fleet of Imperial II-class Star Destroyer. (I was a Star Wars Nerd btw)  
+THe imposters has a **DRIP** anthem!! - But you've forgotten the most important thing >:D  
+Rick is a **HUMAN**!!! - Homo sapiens to be exact.  
+The **POPE** is a Homo sapiens and he got the **DRIP**!  
+John Cena w/ his beautiful _chef kiss_ love of ice cream - GOT THE **DRIP**!
+
+Remember, that Rick existed 13.8 billion years ago 😎
 
 ## LIAR!
 
