@@ -15,7 +15,7 @@ export default {
 						'--tw-prose-headings': variants.mocha.text.hex,
 						'--tw-prose-lead': theme('colors.pink[700]'),
 						'--tw-prose-links': variants.mocha.blue.hex,
-						'--tw-prose-bold': variants.mocha.red.hex,
+						'--tw-prose-bold': variants.latte.surface0.hex,
 						'--tw-prose-counters': theme('colors.pink[600]'),
 						'--tw-prose-bullets': theme('colors.pink[400]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
@@ -24,7 +24,7 @@ export default {
 						'--tw-prose-captions': theme('colors.pink[700]'),
 						'--tw-prose-code': variants.mocha.subtext1.hex,
 						'--tw-prose-pre-code': theme('colors.pink[100]'),
-						'--tw-prose-pre-bg': theme('colors.pink[900]'),
+						'--tw-prose-pre-bg': variants.mocha.surface2.hex,
 						'--tw-prose-th-borders': variants.mocha.surface0.hex,
 						'--tw-prose-td-borders': variants.mocha.surface1.hex
 					}
@@ -35,7 +35,7 @@ export default {
 						'--tw-prose-headings': variants.mocha.mantle.hex,
 						'--tw-prose-lead': theme('colors.pink[700]'),
 						'--tw-prose-links': variants.latte.blue.hex,
-						'--tw-prose-bold': variants.latte.red.hex,
+						'--tw-prose-bold': variants.mocha.crust.hex,
 						'--tw-prose-counters': theme('colors.pink[600]'),
 						'--tw-prose-bullets': theme('colors.pink[400]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
@@ -44,7 +44,7 @@ export default {
 						'--tw-prose-captions': theme('colors.pink[700]'),
 						'--tw-prose-code': variants.mocha.surface1.hex,
 						'--tw-prose-pre-code': theme('colors.pink[100]'),
-						'--tw-prose-pre-bg': theme('colors.pink[900]'),
+						'--tw-prose-pre-bg': variants.mocha.surface0.hex,
 						'--tw-prose-th-borders': variants.latte.surface2.hex,
 						'--tw-prose-td-borders': variants.latte.surface1.hex
 					}
