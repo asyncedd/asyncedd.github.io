@@ -1,5 +1,4 @@
 import { variants } from '@catppuccin/palette';
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
