@@ -89,7 +89,7 @@
 					</li>
 					<li>
 						<a
-							href="https://asyncedd.github.io/blog"
+							href="/blog"
 							class="flex gap-3 dark:fill-ctp-text fill-ctp-base hover:fill-ctp-green hover:dark:fill-ctp-green hover:text-ctp-green hover:dark:text-ctp-green transition-colors duration-[0.5s]"
 							><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
 								><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
