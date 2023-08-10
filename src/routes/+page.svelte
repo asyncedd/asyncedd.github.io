@@ -1,7 +1,20 @@
 <script lang="ts" async>
+	import { onMount } from 'svelte';
 	import Typewriter from '../components/typewriter.svelte';
-	import Hackerman, { animating } from '../components/hackerman.svelte';
 	import Wave from '../components/wave.svelte';
+	let hanime = false;
+	let anime = false;
+	let Hackerman: any;
+
+	onMount(() => {
+		hanime = true;
+		import('../components/hackerman.svelte').then((mod) => {
+			Hackerman = mod.default;
+			mod.animating.subscribe((v: any) => {
+				anime = v;
+			});
+		});
+	});
 </script>
 
 <div class="dark:bg-ctp-base bg-ctp-blue">
@@ -13,7 +26,7 @@
 		>
 			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
 				<h1
-					class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {$animating
+					class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {anime
 						? 'text-ctp-green bg-ctp-mantle'
 						: ''} rounded-[1rem] font-mono"
 					style="transition: font-size 0.7s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;"
@@ -73,4 +86,6 @@
 	in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<Hackerman />
+{#if hanime}
+	<svelte:component this={Hackerman} />
+{/if}
