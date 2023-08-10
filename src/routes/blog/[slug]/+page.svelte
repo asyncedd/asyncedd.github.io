@@ -18,7 +18,9 @@
 			<h1 class="capitalize font-bold text-[5rem] dark:text-ctp-text text-ctp-base">
 				{data.meta.title}
 			</h1>
-			<p class="text-ctp-surface0">Published at {formatDate(data.meta.date)}</p>
+			<p class="text-ctp-surface1 dark:text-ctp-subtext0">
+				Published at {formatDate(data.meta.date)}
+			</p>
 		</hgroup>
 
 		<!-- Tags -->
