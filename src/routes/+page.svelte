@@ -7,13 +7,15 @@
 	let Hackerman: any;
 
 	onMount(() => {
-		hanime = true;
-		import('../components/hackerman.svelte').then((mod) => {
-			Hackerman = mod.default;
-			mod.animating.subscribe((v: any) => {
-				anime = v;
+		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+			hanime = true;
+			import('../components/hackerman.svelte').then((mod) => {
+				Hackerman = mod.default;
+				mod.animating.subscribe((v: any) => {
+					anime = v;
+				});
 			});
-		});
+		}
 	});
 </script>
 
