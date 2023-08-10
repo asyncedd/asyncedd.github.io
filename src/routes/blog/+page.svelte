@@ -22,7 +22,7 @@
 						>
 						<div class="tags my-[3px]">
 							{#each post.categories as category}
-								<span class="bg-ctp-red text-ctp-base p-[5px] rounded-[0.5rem] gap-[5px]"
+								<span class="bg-ctp-red text-ctp-base p-[5px] rounded-[0.5rem] gap-[10px] mx-[5px]"
 									>&num;{category}</span
 								>
 							{/each}
