@@ -49,10 +49,7 @@ export default {
 						'--tw-prose-td-borders': variants.latte.surface1.hex
 					}
 				}
-			}),
-			fontFamily: {
-				mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
-			}
+			})
 		}
 	},
 	plugins: [
