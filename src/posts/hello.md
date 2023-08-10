@@ -9,7 +9,7 @@ published: true
 
 ## What?
 
-Hey! I'm [asyncedd](https://github.com/asyncedd), and I'm a professional wasabi eater and [cinnamon roll cooker](https://asyncedd.github.io/cinnamon-roll-recipe) from Japan... I guess.
+Hey! I'm [asyncedd](https://github.com/asyncedd), and I'm a professional [cinnamon roll cooker](https://asyncedd.github.io/cinnamon-roll-recipe) from Japan... I guess.
 
 ## Who are you?
 
@@ -18,7 +18,7 @@ I tell people I have no hobbies - I'd like to think so but- I don't know what ar
 
 I really like making cool stuff - Linux rices being one of them (they're harmfully addicting!).  
 And on the other hand, I usually don't get myself to do the cool stuffs, unless I push myself - doing so.
-Also, I'm **REALLY BAD** at muti-tasking - well, atleast multi-tasking consciously. 😅
+Also, I'm **REALLY BAD** at muti-tasking - well, atleast multi-tasking consciously.
 
 As you might tell from the structure of the "sentences", I'm really bad at sorting things and being organized. I don't think I'll ever be.  
 On the meantime, I just force myself to organize things, usually failing :(
