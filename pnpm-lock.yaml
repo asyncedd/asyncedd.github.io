@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/manrope':
+    specifier: ^5.0.8
+    version: 5.0.8
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -291,6 +294,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/manrope@5.0.8:
+    resolution: {integrity: sha512-trqxGSH4YSekXDmto97FaWED4mf9xFL/iWfZe1ksHuE0pJB0C7OUKb2w2ckoAE4S1ys5fRNCNLNA1sATAjyVCQ==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
