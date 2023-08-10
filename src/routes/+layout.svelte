@@ -1,14 +1,18 @@
 <script lang="ts">
 	import Navbar from '../components/navbar.svelte';
 	import Footer from '../components/footer.svelte';
+	import PageTransition from './transition.svelte';
 
+	export let data;
 	import '../app.postcss';
 </script>
 
 <body class="dark:bg-ctp-mantle bg-ctp-text text-ctp-base dark:text-ctp-text h-[100vh]">
 	<Navbar />
 	<main>
-		<slot />
+		<PageTransition url={data.url}>
+			<slot />
+		</PageTransition>
 	</main>
 
 	<Footer />
