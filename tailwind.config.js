@@ -22,7 +22,7 @@ export default {
 						'--tw-prose-quotes': theme('colors.pink[900]'),
 						'--tw-prose-quote-borders': theme('colors.pink[300]'),
 						'--tw-prose-captions': theme('colors.pink[700]'),
-						'--tw-prose-code': variants.mocha.overlay0.hex,
+						'--tw-prose-code': variants.mocha.subtext1.hex,
 						'--tw-prose-pre-code': theme('colors.pink[100]'),
 						'--tw-prose-pre-bg': theme('colors.pink[900]'),
 						'--tw-prose-th-borders': variants.mocha.surface0.hex,
@@ -31,11 +31,11 @@ export default {
 				},
 				'ctp-light': {
 					css: {
-						'--tw-prose-body': variants.mocha.surface2.hex,
-						'--tw-prose-headings': variants.mocha.base.hex,
+						'--tw-prose-body': variants.mocha.base.hex,
+						'--tw-prose-headings': variants.mocha.mantle.hex,
 						'--tw-prose-lead': theme('colors.pink[700]'),
 						'--tw-prose-links': variants.latte.blue.hex,
-						'--tw-prose-bold': variants.latte.red.hex,
+						'--tw-prose-bold': variants.mocha.red.hex,
 						'--tw-prose-counters': theme('colors.pink[600]'),
 						'--tw-prose-bullets': theme('colors.pink[400]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
