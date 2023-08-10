@@ -9,7 +9,7 @@
 </svelte:head>
 
 <!-- Posts -->
-<section class="h-[80vh] flex justify-center align-middle items-center">
+<section class="h-[100vh] flex justify-center align-middle items-center">
 	<div class="flex align-middle items-center justify-center">
 		<ul class="posts">
 			{#each data.posts as post}

@@ -11,7 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="flex flex-col justify-center h-[100%]">
+<div class="flex justify-center h-[100%] my-[10vh]">
 	<article>
 		<!-- Title -->
 		<hgroup>
