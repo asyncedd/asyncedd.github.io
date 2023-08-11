@@ -10,7 +10,7 @@
 
 <div class="w-[100%] dark:bg-ctp-base bg-ctp-blue overflow-auto navbar flex top-0 z-50">
 	<div class="left-content inline-flex justify-center mx-[3vw] my-1">
-		<a href="/" aria-label="HP">
+		<a href="/" aria-label="async">
 			<div class="left-content inline-flex justify-center">
 				<img
 					src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"

@@ -11,7 +11,7 @@
 <!-- Posts -->
 <section class="h-[100vh] flex justify-center align-middle items-center">
 	<div class="flex align-middle items-center justify-center">
-		<ul class="posts">
+		<div class="posts">
 			<h1
 				class="text-[5rem] border-b-ctp-base dark:border-b-ctp-text border-b-[1px] border-b-solid"
 			>
@@ -19,7 +19,7 @@
 			</h1>
 			{#each data.posts as post}
 				{#if !post.unlist}
-					<li class="post">
+					<div class="post">
 						<a
 							href="blog/{post.slug}"
 							class="title dark:text-ctp-text text-ctp-base hover:text-ctp-blue hover:dark:text-ctp-blue transition-colors duration-[0.5s] ease-in-out"
@@ -34,10 +34,10 @@
 						</div>
 						<p class="dark:text-ctp-text text-ctp-base">{formatDate(post.date)}</p>
 						<p class="description">{post.description}</p>
-					</li>
+					</div>
 				{/if}
 			{/each}
-		</ul>
+		</div>
 	</div>
 </section>
 
