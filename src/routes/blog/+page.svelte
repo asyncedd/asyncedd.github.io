@@ -12,6 +12,11 @@
 <section class="h-[100vh] flex justify-center align-middle items-center">
 	<div class="flex align-middle items-center justify-center">
 		<ul class="posts">
+			<h1
+				class="text-[5rem] border-b-ctp-base dark:border-b-ctp-text border-b-[1px] border-b-solid"
+			>
+				BLOGS
+			</h1>
 			{#each data.posts as post}
 				{#if !post.unlist}
 					<li class="post">
