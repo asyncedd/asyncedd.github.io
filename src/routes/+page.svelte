@@ -30,8 +30,7 @@
 				<h1
 					class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {anime
 						? 'text-ctp-green bg-ctp-mantle'
-						: ''} rounded-[1rem] font-mono"
-					style="transition: font-size 0.7s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;"
+						: ''} rounded-[1rem] font-mono transition-[font-size, background, color] motion-safe:duration-[0.5s] ease-in-out"
 					data-value="async"
 				>
 					async
@@ -49,8 +48,7 @@
 				<div class="inline-flex justify-center items-center align-middle mx-[35%]">
 					<a
 						href="https://discord.com/users/797422750321999943"
-						class="text-center flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] hover:scale-[1.2]"
-						style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
+						class="text-center flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] hover:scale-[1.2] transition-[transform, fill] motion-safe:duration-[0.5s] ease-in-out"
 						aria-label="Discord"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"
@@ -61,8 +59,7 @@
 					</a>
 					<a
 						href="https://github.com/asyncedd"
-						class="flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] hover:scale-[1.2]"
-						style="transition: transform 0.5s ease-in-out, fill 0.5s ease-in-out;"
+						class="flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] hover:scale-[1.2] transition-[transform, fill] motion-safe:duration-[0.5s] ease-in-out"
 						aria-label="Github"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"
