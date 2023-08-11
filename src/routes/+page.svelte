@@ -19,7 +19,7 @@
 	});
 </script>
 
-<div class="dark:bg-ctp-base bg-ctp-blue">
+<div class="dark:bg-ctp-base bg-ctp-blue ease-in-out">
 	<div
 		class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base pb-[5rem] sm:pb-0"
 	>
@@ -28,7 +28,7 @@
 				<h1
 					class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:scale-[1.2] {anime
 						? 'text-ctp-green bg-ctp-mantle'
-						: ''} rounded-[1rem] font-mono transition-[transform, background, color] motion-safe:duration-[0.5s] ease-in-out"
+						: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s]"
 					data-value="async"
 				>
 					async
@@ -46,7 +46,7 @@
 				<div class="flex justify-center items-center align-middle">
 					<a
 						href="https://discord.com/users/797422750321999943"
-						class="text-center flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] hover:scale-[1.2] transition-[transform, fill] motion-safe:duration-[0.5s] ease-in-out"
+						class="icon hover:fill-[#6666ff] hover:dark:fill-[#6666ff]"
 						aria-label="Discord"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"
@@ -57,7 +57,7 @@
 					</a>
 					<a
 						href="https://github.com/asyncedd"
-						class="flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center dark:fill-ctp-text hover:fill-[#fafafa] fill-ctp-base hover:dark:fill-[#6e5494] hover:scale-[1.2] transition-[transform, fill] motion-safe:duration-[0.5s] ease-in-out"
+						class="icon hover:fill-[#fafafa] hover:dark:fill-[#6e5494]"
 						aria-label="Github"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"
@@ -86,3 +86,9 @@
 {#if hanime}
 	<svelte:component this={Hackerman} />
 {/if}
+
+<style lang="postcss">
+	.icon {
+		@apply flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] dark:fill-ctp-text fill-ctp-base;
+	}
+</style>
