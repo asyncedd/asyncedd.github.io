@@ -44,11 +44,11 @@
 	</div>
 </div>
 <div class="flex">
-	<div class="menu-overlay" class:visible={isMenuOpen}>
+	<div class="menu-overlay z-[29]" class:visible={isMenuOpen} on:click={toggleMenu}>
 		<div
-			class="menu dark:bg-ctp-base bg-ctp-blue dark:text-ctp-text text-ctp-base text-[2rem] {isMenuOpen
-				? 'w-[100%]'
-				: 'w-[50%]'}"
+			class="menu dark:bg-ctp-base bg-ctp-blue dark:text-ctp-text text-ctp-base text-[2rem] z-[50] {isMenuOpen
+				? 'w-[50%]'
+				: 'w-[0%]'}"
 		>
 			<ul>
 				<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
@@ -234,6 +234,7 @@
 		z-index: 49; /* Make sure it's below the navbar (z-index: 50) */
 		visibility: hidden;
 		opacity: 0;
+		@apply bg-ctp-crust/50;
 		transition: visibility 0s 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Delay visibility change after opacity */
 	}
 
