@@ -26,10 +26,8 @@
 		</a>
 	</div>
 	<div class="flex gap-[3px]">
-		<div class="flex">
-			<div class="text-[30px] flex justify-center mx-[40px] mt-[10px]">
-				<ThemeSwitch />
-			</div>
+		<div class="text-[30px] flex justify-center mx-[40px] mt-[10px]">
+			<ThemeSwitch />
 		</div>
 		<button
 			class="flex flex-col cursor-pointer mt-[7px]"
