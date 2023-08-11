@@ -8,57 +8,48 @@ export default {
 	theme: {
 		extend: {
 			typography: ({ theme }) => ({
-				'ctp-dark': {
+				dark: {
 					css: {
-						'--tw-prose-body': variants.mocha.overlay2.hex,
-						'--tw-prose-headings': variants.mocha.text.hex,
+						'--tw-prose-body': theme('colors.zinc[400]'),
+						'--tw-prose-headings': theme('colors.zinc[50]'),
 						'--tw-prose-lead': theme('colors.pink[700]'),
-						'--tw-prose-links': variants.mocha.blue.hex,
-						'--tw-prose-bold': variants.latte.surface0.hex,
+						'--tw-prose-links': theme('colors.blue[300]'),
+						'--tw-prose-bold': theme('colors.zinc[300]'),
 						'--tw-prose-counters': theme('colors.pink[600]'),
-						'--tw-prose-bullets': variants.mocha.overlay0.hex,
+						'--tw-prose-bullets': theme('colors.zinc[500]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
 						'--tw-prose-quotes': theme('colors.pink[900]'),
 						'--tw-prose-quote-borders': theme('colors.pink[300]'),
 						'--tw-prose-captions': theme('colors.pink[700]'),
-						'--tw-prose-code': variants.mocha.subtext1.hex,
-						'--tw-prose-pre-code': theme('colors.pink[100]'),
-						'--tw-prose-pre-bg': variants.mocha.surface2.hex,
-						'--tw-prose-th-borders': variants.mocha.surface0.hex,
-						'--tw-prose-td-borders': variants.mocha.surface1.hex
+						'--tw-prose-code': theme('colors.zinc[100]'),
+						'--tw-prose-pre-code': theme('colors.zinc[100]'),
+						'--tw-prose-pre-bg': theme('colors.zinc[700]'),
+						'--tw-prose-th-borders': theme('colors.zinc[500]'),
+						'--tw-prose-td-borders': theme('colors.zinc[400]')
 					}
 				},
-				'ctp-light': {
+				light: {
 					css: {
-						'--tw-prose-body': variants.mocha.base.hex,
-						'--tw-prose-headings': variants.mocha.mantle.hex,
+						'--tw-prose-body': theme('colors.zinc[700]'),
+						'--tw-prose-headings': theme('colors.zinc[950]'),
 						'--tw-prose-lead': theme('colors.pink[700]'),
-						'--tw-prose-links': variants.latte.blue.hex,
-						'--tw-prose-bold': variants.mocha.crust.hex,
+						'--tw-prose-links': theme('colors.blue[500]'),
+						'--tw-prose-bold': theme('colors.zinc[800]'),
 						'--tw-prose-counters': theme('colors.pink[600]'),
-						'--tw-prose-bullets': variants.latte.overlay0.hex,
+						'--tw-prose-bullets': theme('colors.zinc[500]'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
 						'--tw-prose-quotes': theme('colors.pink[900]'),
 						'--tw-prose-quote-borders': theme('colors.pink[300]'),
 						'--tw-prose-captions': theme('colors.pink[700]'),
-						'--tw-prose-code': variants.mocha.surface1.hex,
-						'--tw-prose-pre-code': theme('colors.pink[100]'),
-						'--tw-prose-pre-bg': variants.mocha.surface0.hex,
-						'--tw-prose-th-borders': variants.latte.surface2.hex,
-						'--tw-prose-td-borders': variants.latte.surface1.hex
+						'--tw-prose-code': theme('colors.zinc[800]'),
+						'--tw-prose-pre-code': theme('colors.zinc[100]'),
+						'--tw-prose-pre-bg': theme('colors.zinc[500]'),
+						'--tw-prose-th-borders': theme('colors.zinc[600]'),
+						'--tw-prose-td-borders': theme('colors.zinc[500]')
 					}
 				}
 			})
 		}
 	},
-	plugins: [
-		require('@catppuccin/tailwindcss')({
-			// prefix to use, e.g. `text-pink` becomes `text-ctp-pink`.
-			// default is `false`, which means no prefix
-			prefix: 'ctp',
-			// which flavour of colours to use by default, in the `:root`
-			defaultFlavour: 'mocha'
-		}),
-		require('@tailwindcss/typography')
-	]
+	plugins: [require('@tailwindcss/typography')]
 };

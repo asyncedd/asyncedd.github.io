@@ -22,7 +22,7 @@
 	on:click={handleSwitchDarkMode}
 	aria-label="Toggle dark mode"
 	tabindex="0"
-	class="flex hover:fill-ctp-yellow hover:dark:fill-ctp-yellow dark:fill-ctp-text fill-ctp-base hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
+	class="flex hover:fill-yellow-200 hover:dark:fill-yellow-200 dark:fill-zinc-50 fill-zinc-900 hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
 >
 	<div>
 		<div class="relative">

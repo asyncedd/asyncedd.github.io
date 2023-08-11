@@ -10,12 +10,6 @@ dependencies:
     version: 3.3.3
 
 devDependencies:
-  '@catppuccin/palette':
-    specifier: ^0.2.0
-    version: 0.2.0
-  '@catppuccin/tailwindcss':
-    specifier: ^0.1.6
-    version: 0.1.6(tailwindcss@3.3.3)
   '@sveltejs/adapter-auto':
     specifier: ^2.1.0
     version: 2.1.0(@sveltejs/kit@1.22.4)
@@ -83,18 +77,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
-    dev: true
-
-  /@catppuccin/palette@0.2.0:
-    resolution: {integrity: sha512-PoAMQMEbL8fBEO80eusB+XQg+1i2kxQHw6COwBRC4bVWxWuRroZjm3K6bOdqPHNHKikDIV7wLi9hSG4NoD1FEQ==}
-    dev: true
-
-  /@catppuccin/tailwindcss@0.1.6(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-V+Y0AwZ5SSyvOVAcDl7Ng30xy+m82OKnEJ+9+kcZZ7lRyXuZrAb2GScdq9XR3v+ggt8qiZ/G4TvaC9cJ88AAXA==}
-    peerDependencies:
-      tailwindcss: '>=3.0.0'
-    dependencies:
-      tailwindcss: 3.3.3
     dev: true
 
   /@esbuild/android-arm64@0.18.17:

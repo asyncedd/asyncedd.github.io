@@ -20,13 +20,13 @@
 </script>
 
 <div
-	class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base pb-[5rem] sm:pb-0 dark:bg-ctp-base bg-ctp-blue ease-in-out"
+	class="h-[100vh] flex justify-center items-center align-middle dark:text-zinc-50 text-zinc-900 pb-[5rem] sm:pb-0 dark:bg-zinc-900 bg-zinc-200 ease-in-out"
 >
 	<div class="flex flex-col justify-center items-center rounded-[3rem]">
 		<div class="h-[20vh] w-auto overflow-none my-1 min-w-15">
 			<h1
-				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:scale-[1.2] {anime
-					? 'text-ctp-green bg-ctp-mantle'
+				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] {anime
+					? 'text-green-300 bg-zinc-950'
 					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s]"
 				data-value="async"
 			>
@@ -56,7 +56,7 @@
 				</a>
 				<a
 					href="https://github.com/asyncedd"
-					class="icon hover:fill-[#fafafa] hover:dark:fill-[#6e5494]"
+					class="icon hover:fill-[#6e5494] hover:dark:fill-[#6e5494]"
 					aria-label="Github"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"
@@ -87,6 +87,6 @@
 
 <style lang="postcss">
 	.icon {
-		@apply flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] dark:fill-ctp-text fill-ctp-base;
+		@apply flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] dark:fill-zinc-50 fill-zinc-900;
 	}
 </style>

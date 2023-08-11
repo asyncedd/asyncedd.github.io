@@ -24,20 +24,20 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	:root {
-		--wave-color-1: rgba(137, 180, 250, 0.7);
-		--wave-color-2: rgba(137, 180, 250, 0.5);
-		--wave-color-3: rgba(137, 180, 250, 0.3);
-		--wave-color-4: rgb(137, 180, 250);
+		--wave-color-1: theme(colors.zinc.200/0.7);
+		--wave-color-2: theme(colors.zinc.200/0.7);
+		--wave-color-3: theme(colors.zinc.200/0.3);
+		--wave-color-4: theme(colors.zinc.200);
 	}
 
 	/* Override the CSS variables for dark mode when body has "dark" class */
 	:root.dark {
-		--wave-color-1: rgba(30, 30, 46, 0.7);
-		--wave-color-2: rgba(30, 30, 46, 0.5);
-		--wave-color-3: rgba(30, 30, 46, 0.3);
-		--wave-color-4: rgb(30, 30, 46);
+		--wave-color-1: theme(colors.zinc.900/0.7);
+		--wave-color-2: theme(colors.zinc.900/0.5);
+		--wave-color-3: theme(colors.zinc.900/0.3);
+		--wave-color-4: theme(colors.zinc.900);
 	}
 
 	.header {

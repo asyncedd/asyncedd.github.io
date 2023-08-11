@@ -15,10 +15,10 @@
 	<article>
 		<!-- Title -->
 		<hgroup>
-			<h1 class="capitalize font-bold text-[5rem] dark:text-ctp-text text-ctp-base">
+			<h1 class="capitalize font-bold text-[5rem] dark:text-zinc-50 text-zinc-900">
 				{data.meta.title}
 			</h1>
-			<p class="text-ctp-surface1 dark:text-ctp-subtext0">
+			<p class="text-zinc-500 dark:text-zinc-50">
 				Published at {formatDate(data.meta.date)}
 			</p>
 		</hgroup>
@@ -26,12 +26,12 @@
 		<!-- Tags -->
 		<div class="tags mt-[3rem]">
 			{#each data.meta.categories as category}
-				<span class="bg-ctp-red text-ctp-base p-[5px] rounded-[0.5rem]">&num;{category}</span>
+				<span class="bg-red-200 text-zinc-900 p-[5px] rounded-[0.5rem]">&num;{category}</span>
 			{/each}
 		</div>
 
 		<!-- Post -->
-		<div class="prose dark:prose-ctp-dark prose-ctp-light">
+		<div class="prose dark:prose-dark prose-light">
 			<svelte:component this={data.content} />
 		</div>
 	</article>
