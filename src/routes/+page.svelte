@@ -23,14 +23,12 @@
 	<div
 		class="h-[100vh] flex justify-center items-center align-middle dark:text-ctp-text text-ctp-base pb-[5rem] sm:pb-0"
 	>
-		<div
-			class="flex flex-col sm:flex-row dark:bg-ctp-base bg-ctp-blue justify-center items-center sm:items-start rounded-[3rem]"
-		>
-			<div class="order-last sm:order-first h-[20vh] w-auto overflow-none my-1 min-w-15">
+		<div class="flex flex-col justify-center items-center rounded-[3rem]">
+			<div class="h-[20vh] w-auto overflow-none my-1 min-w-15">
 				<h1
-					class="text-center text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:text-[7.5rem] {anime
+					class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-ctp-green hover:scale-[1.2] {anime
 						? 'text-ctp-green bg-ctp-mantle'
-						: ''} rounded-[1rem] font-mono transition-[font-size, background, color] motion-safe:duration-[0.5s] ease-in-out"
+						: ''} rounded-[1rem] font-mono transition-[transform, background, color] motion-safe:duration-[0.5s] ease-in-out"
 					data-value="async"
 				>
 					async
@@ -45,7 +43,7 @@
 						]}
 					/>
 				</div>
-				<div class="inline-flex justify-center items-center align-middle mx-[35%]">
+				<div class="flex justify-center items-center align-middle">
 					<a
 						href="https://discord.com/users/797422750321999943"
 						class="text-center flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:fill-[#6666ff] dark:fill-ctp-text fill-ctp-base hover:dark:fill-[#6666ff] hover:scale-[1.2] transition-[transform, fill] motion-safe:duration-[0.5s] ease-in-out"
