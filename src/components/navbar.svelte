@@ -44,7 +44,7 @@
 	</div>
 </div>
 <div class="flex">
-	<div class="menu-overlay z-[29]" class:visible={isMenuOpen} on:click={toggleMenu}>
+	<button class="menu-overlay z-[29]" class:visible={isMenuOpen} on:click={toggleMenu}>
 		<div
 			class="menu dark:bg-ctp-base bg-ctp-blue dark:text-ctp-text text-ctp-base text-[2rem] z-[50] {isMenuOpen
 				? 'w-[50%]'
@@ -99,7 +99,7 @@
 				</div>
 			</ul>
 		</div>
-	</div>
+	</button>
 </div>
 
 <style>
