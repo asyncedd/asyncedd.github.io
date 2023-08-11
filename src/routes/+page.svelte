@@ -6,10 +6,10 @@
 	let anime = false;
 	let Hackerman: any;
 
-	onMount(() => {
+	onMount(async () => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
 			hanime = true;
-			import('../components/hackerman.svelte').then((mod) => {
+			await import('../components/hackerman.svelte').then((mod) => {
 				Hackerman = mod.default;
 				mod.animating.subscribe((v: any) => {
 					anime = v;
