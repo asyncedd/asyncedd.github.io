@@ -26,7 +26,7 @@
 		<!-- Tags -->
 		<div class="tags mt-[3rem]">
 			{#each data.meta.categories as category}
-				<span class="bg-red-200 text-zinc-900 p-[5px] rounded-[0.5rem]">&num;{category}</span>
+				<span class="bg-red-300 text-zinc-900 p-[5px] rounded-[0.5rem]">&num;{category}</span>
 			{/each}
 		</div>
 
