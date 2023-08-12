@@ -31,7 +31,7 @@
 
 		window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
 			const newTheme = e.matches ? 'dark' : 'light';
-			if (currentTheme !== newTheme) {
+			if (currentTheme !== newTheme && !localStorage.theme) {
 				doc.classList.remove(currentTheme);
 				doc.classList.add(newTheme);
 				currentTheme = newTheme;
