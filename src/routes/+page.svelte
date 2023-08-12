@@ -87,6 +87,6 @@
 
 <style lang="postcss">
 	.icon {
-		@apply flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] dark:fill-zinc-50 fill-zinc-900;
+		@apply flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] fill-content;
 	}
 </style>
