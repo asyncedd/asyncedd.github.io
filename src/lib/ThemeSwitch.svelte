@@ -3,7 +3,7 @@
 	import { backOut } from 'svelte/easing';
 	import { browser } from '$app/environment';
 
-	const themes = ['dark', 'mocha', 'light'];
+	const themes = ['dark', 'light', 'mocha'];
 	let currentTheme = 'light';
 
 	function adjustTheme() {
@@ -114,11 +114,11 @@
 		opacity: 100;
 	}
 
-	:global(.light:not(.dark):not(.mocha)) .light {
+	:global(.light:not(.dark):not(.mocha)) .mocha {
 		opacity: 100;
 	}
 
-	:global(.mocha) .mocha {
+	:global(.mocha) .light {
 		opacity: 100;
 	}
 </style>
