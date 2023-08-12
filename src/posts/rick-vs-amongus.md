@@ -14,7 +14,7 @@ Hello, I'm here to **PROVE** that Rick is superior to the imposter. It is obviou
 
 ## Space 🌌
 
-13.8 years ago. Rick Asltey wrote the big bang and pushed to GitHub "init big bang", and the big bang initialized. Add CI tests are working... It was approved and committed by a group of early red pandas (red pandas can abbreviate to "firefoxes" :3)
+13.8 years ago. Rick Asltey wrote the big bang and pushed to GitHub "init big bang", and the big bang initialized. Add CI tests are working... It was approved and committed by a group of early red pandas (red pandas can abbreviate to "firefoxes")
 After that, Rick Astley compiled the source code with on PC made with Lego blocks.  
 And then he ran this in the terminal
 
