@@ -26,7 +26,7 @@
 		</a>
 	</div>
 	<div class="flex gap-[3px]">
-		<div class="text-[30px] flex justify-center mx-[40px] mt-[10px]">
+		<div class="text-[30px] flex justify-center mx-[40px] mt-[7px]">
 			<ThemeSwitch />
 		</div>
 		<button
