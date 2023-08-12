@@ -17,3 +17,23 @@
 
 	<Footer />
 </body>
+
+<style>
+	@font-face {
+		font-family: 'Manrope';
+		src: url('/fonts/manrope/subset-Manrope-Regular.woff2') format('woff2'),
+			url('/fonts/manrope/subset-Manrope-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Manrope';
+		src: url('/fonts/manrope/subset-Manrope-Bold.woff2') format('woff2'),
+			url('/fonts/manrope/subset-Manrope-Bold.woff') format('woff');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>

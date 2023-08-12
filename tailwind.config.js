@@ -1,5 +1,5 @@
 import { variants } from '@catppuccin/palette';
-import plugin from 'tailwindcss/plugin';
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -40,14 +40,11 @@ export default {
 						'--tw-prose-td-borders': theme('colors.content')
 					}
 				}
-			})
+			}),
+			fontFamily: {
+				sans: ['Manrope', defaultTheme.fontFamily.sans]
+			}
 		}
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-		plugin(({ addVariant }) => {
-			addVariant('dark', '&.dark');
-			addVariant('mocha', '&.mocha');
-		})
-	]
+	plugins: [require('@tailwindcss/typography')]
 };
