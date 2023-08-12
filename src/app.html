@@ -7,10 +7,10 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<script>
-			const preferredTheme =
-				('theme' in localStorage && localStorage.theme) ||
-				(window.matchMedia('(prefers-color-scheme: dark)').matches && 'dark');
-			preferredTheme && document.documentElement.classList.add(preferredTheme);
+			document.documentElement.classList.add(
+				localStorage.theme ||
+					(window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light')
+			);
 		</script>
 		%sveltekit.head%
 	</head>

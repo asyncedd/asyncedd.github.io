@@ -1,51 +1,62 @@
 <script lang="ts">
 	import { scale, fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
-
 	import { browser } from '$app/environment';
 
-	const strings = ['dark', 'mocha', 'light'];
-	let mode: string = 'light';
+	const themes = ['dark', 'mocha', 'light'];
+	let currentTheme = 'light';
 
-	function cycleStringsAutomatically() {
-		let currentIndex = strings.indexOf(mode); // Start at 'light' by default
+	function adjustTheme() {
+		currentTheme = (() => {
+			let i = themes.indexOf(currentTheme);
+			i = (i + 1) % themes.length;
+			return themes[i];
+		})();
 
-		currentIndex = (currentIndex + 1) % strings.length;
-		return strings[currentIndex];
-	}
-
-	function handleSwitchDarkMode() {
-		mode = cycleStringsAutomatically();
-		localStorage.setItem('theme', mode);
-
-		document.documentElement.classList.toggle('dark', mode === 'dark');
-		document.documentElement.classList.toggle('mocha', mode === 'mocha');
-		if (mode == 'light') {
-			document.documentElement.classList.remove('dark');
-			document.documentElement.classList.remove('mocha');
-		}
+		localStorage.theme = currentTheme;
+		const doc = document.documentElement;
+		doc.classList.toggle('dark', currentTheme === 'dark');
+		doc.classList.toggle('mocha', currentTheme === 'mocha');
+		doc.classList.toggle('light', currentTheme === 'light');
+		if (currentTheme === 'light') doc.classList.remove('dark', 'mocha');
+		else doc.classList.remove('light');
 	}
 
 	if (browser) {
-		if (document.documentElement.classList.contains('dark')) {
-			mode = 'dark';
-		} else if (document.documentElement.classList.contains('mocha')) {
-			mode = 'mocha';
-		} else {
-			mode = 'light';
-		}
+		currentTheme =
+			localStorage.theme ||
+			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		const doc = document.documentElement;
+		doc.classList.add(currentTheme);
+
+		window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+			const newTheme = e.matches ? 'dark' : 'light';
+			if (currentTheme !== newTheme) {
+				doc.classList.remove(currentTheme);
+				doc.classList.add(newTheme);
+				currentTheme = newTheme;
+			}
+		});
+
+		window.addEventListener('storage', (e) => {
+			if (e.key === 'theme' && e.newValue !== currentTheme) {
+				doc.classList.remove(currentTheme);
+				doc.classList.add(e.newValue);
+				currentTheme = e.newValue;
+			}
+		});
 	}
 </script>
 
 <button
-	on:click={handleSwitchDarkMode}
+	on:click={adjustTheme}
 	aria-label="Toggle dark mode"
 	tabindex="0"
 	class="flex hover:fill-yellow-200 fill-content hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
 >
 	<div>
 		<div class="relative">
-			{#key mode}
+			{#key currentTheme}
 				<i
 					class="absolute dark opacity-0"
 					out:scale
@@ -104,7 +115,7 @@
 	}
 
 	:global(.light:not(.dark):not(.mocha)) .light {
-		opacity: 1;
+		opacity: 100;
 	}
 
 	:global(.mocha) .mocha {
