@@ -7,7 +7,7 @@
 	import '../app.postcss';
 </script>
 
-<body class="dark:bg-zinc-950 bg-zinc-50 text-zinc-900 dark:text-zinc-50 h-[100vh]">
+<body class="bg-primary_dark text-content min-h-[100vh]">
 	<Navbar />
 	<main>
 		<PageTransition url={data.url}>

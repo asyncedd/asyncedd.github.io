@@ -26,18 +26,10 @@
 
 <style lang="postcss">
 	:root {
-		--wave-color-1: theme(colors.zinc.200/0.7);
-		--wave-color-2: theme(colors.zinc.200/0.7);
-		--wave-color-3: theme(colors.zinc.200/0.3);
-		--wave-color-4: theme(colors.zinc.200);
-	}
-
-	/* Override the CSS variables for dark mode when body has "dark" class */
-	:root.dark {
-		--wave-color-1: theme(colors.zinc.900/0.7);
-		--wave-color-2: theme(colors.zinc.900/0.5);
-		--wave-color-3: theme(colors.zinc.900/0.3);
-		--wave-color-4: theme(colors.zinc.900);
+		--wave-color-1: theme('colors.primary/0.7');
+		--wave-color-2: theme('colors.primary/0.7');
+		--wave-color-3: theme('colors.primary/0.3');
+		--wave-color-4: theme('colors.primary');
 	}
 
 	.header {

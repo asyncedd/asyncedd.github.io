@@ -15,10 +15,10 @@
 	<article>
 		<!-- Title -->
 		<hgroup>
-			<h1 class="capitalize font-bold text-[5rem] dark:text-zinc-50 text-zinc-900">
+			<h1 class="capitalize font-bold text-[5rem] text-content">
 				{data.meta.title}
 			</h1>
-			<p class="text-zinc-500 dark:text-zinc-50">
+			<p class="text-content_dark">
 				Published at {formatDate(data.meta.date)}
 			</p>
 		</hgroup>
@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- Post -->
-		<div class="prose dark:prose-dark prose-light">
+		<div class="prose prose-as">
 			<svelte:component this={data.content} />
 		</div>
 	</article>

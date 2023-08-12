@@ -20,7 +20,7 @@
 </script>
 
 <div
-	class="h-[100vh] flex justify-center items-center align-middle dark:text-zinc-50 text-zinc-900 pb-[5rem] sm:pb-0 dark:bg-zinc-900 bg-zinc-200 ease-in-out"
+	class="h-[100vh] flex justify-center items-center align-middle text-content pb-[5rem] sm:pb-0 bg-primary ease-in-out"
 >
 	<div class="flex flex-col justify-center items-center rounded-[3rem]">
 		<div class="h-[20vh] w-auto overflow-none my-1 min-w-15">

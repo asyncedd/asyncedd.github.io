@@ -4,17 +4,36 @@
 
 	import { browser } from '$app/environment';
 
-	let darkMode = true;
+	const strings = ['dark', 'mocha', 'light'];
+	let mode: string = 'light';
+
+	function cycleStringsAutomatically() {
+		let currentIndex = strings.indexOf(mode); // Start at 'light' by default
+
+		currentIndex = (currentIndex + 1) % strings.length;
+		return strings[currentIndex];
+	}
 
 	function handleSwitchDarkMode() {
-		darkMode = !darkMode;
-		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+		mode = cycleStringsAutomatically();
+		localStorage.setItem('theme', mode);
 
-		document.documentElement.classList.toggle('dark');
+		document.documentElement.classList.toggle('dark', mode === 'dark');
+		document.documentElement.classList.toggle('mocha', mode === 'mocha');
+		if (mode == 'light') {
+			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove('mocha');
+		}
 	}
 
 	if (browser) {
-		darkMode = document.documentElement.classList.contains('dark');
+		if (document.documentElement.classList.contains('dark')) {
+			mode = 'dark';
+		} else if (document.documentElement.classList.contains('mocha')) {
+			mode = 'mocha';
+		} else {
+			mode = 'light';
+		}
 	}
 </script>
 
@@ -22,13 +41,13 @@
 	on:click={handleSwitchDarkMode}
 	aria-label="Toggle dark mode"
 	tabindex="0"
-	class="flex hover:fill-yellow-200 hover:dark:fill-yellow-200 dark:fill-zinc-50 fill-zinc-900 hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
+	class="flex hover:fill-yellow-200 fill-content hover:cursor-pointer hover:scale-[1.2] transition duration-[200ms] origin-center ease-in-out justify-center"
 >
 	<div>
 		<div class="relative">
-			{#key darkMode}
+			{#key mode}
 				<i
-					class="absolute dark:opacity-100 opacity-0"
+					class="absolute dark opacity-0"
 					out:scale
 					in:fly={{
 						y: 100,
@@ -42,7 +61,7 @@
 					></i
 				>
 				<i
-					class="absolute dark:opacity-0 opacity-100"
+					class="absolute light opacity-0"
 					out:scale
 					in:fly={{
 						y: 100,
@@ -55,6 +74,20 @@
 						/></svg
 					></i
 				>
+				<i
+					class="absolute mocha opacity-0"
+					out:scale
+					in:fly={{
+						y: 100,
+						delay: 300,
+						easing: backOut
+					}}
+					><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
+						><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+							d="M88 0C74.7 0 64 10.7 64 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C120.5 112.3 128 119.9 128 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C119.5 47.7 112 40.1 112 24c0-13.3-10.7-24-24-24zM32 192c-17.7 0-32 14.3-32 32V416c0 53 43 96 96 96H288c53 0 96-43 96-96h16c61.9 0 112-50.1 112-112s-50.1-112-112-112H352 32zm352 64h16c26.5 0 48 21.5 48 48s-21.5 48-48 48H384V256zM224 24c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C232.5 112.3 240 119.9 240 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C231.5 47.7 224 40.1 224 24z"
+						/></svg
+					></i
+				>
 			{/key}
 		</div>
 	</div>
@@ -64,5 +97,17 @@
 	i {
 		transition: color 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
 			fill 0.5s ease-in-out;
+	}
+
+	:global(.dark) .dark {
+		opacity: 100;
+	}
+
+	:global(.light:not(.dark):not(.mocha)) .light {
+		opacity: 1;
+	}
+
+	:global(.mocha) .mocha {
+		opacity: 100;
 	}
 </style>
