@@ -42,7 +42,8 @@ export default {
 				}
 			}),
 			fontFamily: {
-				sans: ['Manrope', defaultTheme.fontFamily.sans]
+				sans: ['Manrope', defaultTheme.fontFamily.sans],
+				mono: ['Fira Code', defaultTheme.fontFamily.mono]
 			}
 		}
 	},
