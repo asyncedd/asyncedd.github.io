@@ -1,11 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import rehypeSlug from 'rehype-slug';
 
 import { mdsvex } from 'mdsvex';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md']
+	extensions: ['.md'],
+	rehypePlugins: [rehypeSlug]
 };
 
 const dev = process.argv.includes('dev');

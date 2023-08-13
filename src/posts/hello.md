@@ -7,6 +7,17 @@ categories:
 published: true
 ---
 
+## Table of contents
+
+<!--toc:start-->
+
+- [What?](#what)
+- [Who are you?](#who-are-you)
+- [My dev env.](#my-dev-env)
+- [My tech stack](#my-tech-stack)
+- [My experiences](#my-experiences)
+<!--toc:end-->
+
 ## What?
 
 Hey! I'm [asyncedd](https://github.com/asyncedd), and I'm a professional [cinnamon roll cooker](https://asyncedd.github.io/cinnamon-roll-recipe) from Japan... I guess.
