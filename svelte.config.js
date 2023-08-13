@@ -2,13 +2,14 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
+import sectionize from 'remark-sectionize';
 
 import { mdsvex } from 'mdsvex';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
-	remarkPlugins: [[remarkToc, { tight: true }]],
+	remarkPlugins: [[remarkToc, { tight: true }], sectionize],
 	rehypePlugins: [rehypeSlug]
 };
 
