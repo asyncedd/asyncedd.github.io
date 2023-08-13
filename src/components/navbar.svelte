@@ -120,14 +120,6 @@
 		transform: scale(1.2); /* Increase the scale on hover */
 	}
 
-	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-	@media screen and (max-width: 500px) {
-		.navbar a {
-			float: none;
-			display: block;
-		}
-	}
-
 	.rotate {
 		transition: transform 5s ease;
 		transform: rotate(360deg);
