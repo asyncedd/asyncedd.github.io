@@ -8,16 +8,12 @@
 	}
 </script>
 
-<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50">
-	<a
-		href="/"
-		aria-label="async"
-		class="left-content left-content inline-flex justify-center mx-[3vw] my-1"
-	>
+<div class="w-[100%] bg-primary overflow-hidden navbar top-0 z-50 inline-flex">
+	<a href="/" aria-label="async" class="mr-auto inline-flex justify-center mx-[3vw] my-1">
 		<img
 			src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"
 			alt=""
-			class="w-10 h-10 rounded-[100%] aspect-square rotate"
+			class="w-10 h-10 rounded-[100%] aspect-square transition-transform rotate-[360deg] hover:rotate-[720deg] mr-[10px] duration-[0.3s] ease-in-out hover:scale-[1.2]"
 		/>
 		<div class="head-parent px-1 items-center flex">
 			<p class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem] fonts-mono">
@@ -36,9 +32,9 @@
 			class:menu-open={isMenuOpen}
 			on:click={toggleMenu}
 		>
-			<span class="bar bg-content" />
-			<span class="bar bg-content" />
-			<span class="bar bg-content" />
+			<span class="bar bg-content translate-y-[10px] rotate-[45deg]" />
+			<span class="bar bg-content translate-x-[10vw]" />
+			<span class="bar bg-content translate-y-[-10px] rotate-[-45deg]" />
 		</button>
 		<div class="mr-[3vw]" />
 	</div>
@@ -95,47 +91,6 @@
 </button>
 
 <style lang="postcss">
-	.navbar {
-		display: inline-flex;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		z-index: 50; /* Add a z-index to ensure the navbar stays on top of other elements */
-	}
-
-	/* Content on the left */
-	.left-content {
-		margin-right: auto; /* Pushes the content to the left side */
-	}
-
-	.left-content img {
-		margin-right: 10px; /* Add some space between the image and the right content */
-		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-	}
-
-	/* Hover effect for icons and images */
-	.left-content img:hover {
-		/* Apply the effect to the image when it's hovered */
-		transform: scale(1.2); /* Increase the scale on hover */
-	}
-
-	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-	@media screen and (max-width: 500px) {
-		.navbar a {
-			float: none;
-			display: block;
-		}
-	}
-
-	.rotate {
-		transition: transform 5s ease;
-		transform: rotate(360deg);
-	}
-
-	.rotate:hover {
-		transform: scale(1.1) rotate(720deg);
-	}
-
 	.async {
 		--s: 0.1em;
 		background: linear-gradient(
@@ -208,20 +163,6 @@
 		margin: 4px 0;
 		box-shadow: 0 2px 4px transparent;
 		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-	}
-
-	/* Animation for the hamburger menu */
-
-	.menu-open .bar:nth-child(1) {
-		transform: translateY(10px) rotate(45deg);
-	}
-
-	.menu-open .bar:nth-child(2) {
-		transform: translateX(10vw);
-	}
-
-	.menu-open .bar:nth-child(3) {
-		transform: translateY(-10px) rotate(-45deg);
 	}
 
 	button:hover:not(.menu-open) .bar:nth-child(1) {
