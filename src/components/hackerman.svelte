@@ -44,8 +44,10 @@
 
 	const h1Elements = document.querySelectorAll('h1');
 	h1Elements.forEach((h1) => {
-		h1.addEventListener('mouseover', handleMouseOver);
-		h1.dataset.animating = 'false';
-		animateH1Element(h1, h1.dataset.value || '');
+		if (h1.dataset.value !== '') {
+			h1.addEventListener('mouseover', handleMouseOver);
+			h1.dataset.animating = 'false';
+			animateH1Element(h1, h1.dataset.value || '');
+		}
 	});
 </script>
