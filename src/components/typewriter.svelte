@@ -50,7 +50,7 @@
 	{/each}
 </p>
 
-<style>
+<style lang="postcss">
 	#typewriter {
 		display: flex;
 		align-items: flex-end;
@@ -75,17 +75,7 @@
 	#typewriter.typing-cursor::after {
 		content: '';
 		height: 1rem;
-		border-left: 1px solid #1e1e2e;
-		position: relative;
-		margin-left: 3px;
-		top: -3px; /* Adjust the vertical position as per your preference */
-		animation: blink-caret 0.75s step-end infinite; /* Blinking animation */
-	}
-
-	:global(.dark) #typewriter.typing-cursor::after {
-		content: '';
-		height: 1rem;
-		border-left: 1px solid #cdd6f4;
+		border-left: 1px solid theme(colors.content);
 		position: relative;
 		margin-left: 3px;
 		top: -3px; /* Adjust the vertical position as per your preference */
