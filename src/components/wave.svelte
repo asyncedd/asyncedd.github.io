@@ -1,4 +1,4 @@
-<div class="header" style="margin: 0;">
+<div class="relative" style="margin: 0;">
 	<div>
 		<svg
 			class="waves"
@@ -15,10 +15,34 @@
 				/>
 			</defs>
 			<g class="parallax">
-				<use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave-color-1)" />
-				<use xlink:href="#gentle-wave" x="48" y="3" fill="var(--wave-color-2)" />
-				<use xlink:href="#gentle-wave" x="48" y="5" fill="var(--wave-color-3)" />
-				<use xlink:href="#gentle-wave" x="48" y="7" fill="var(--wave-color-4)" />
+				<use
+					xlink:href="#gentle-wave"
+					x="48"
+					y="0"
+					fill="var(--wave-color-1)"
+					style="animation-delay: -2s;"
+				/>
+				<use
+					xlink:href="#gentle-wave"
+					x="48"
+					y="3"
+					fill="var(--wave-color-2)"
+					style="animation-delay: -3s;"
+				/>
+				<use
+					xlink:href="#gentle-wave"
+					x="48"
+					y="5"
+					fill="var(--wave-color-3)"
+					style="animation-delay: -4s;"
+				/>
+				<use
+					xlink:href="#gentle-wave"
+					x="48"
+					y="7"
+					fill="var(--wave-color-4)"
+					style="animation-delay: -5s;"
+				/>
 			</g>
 		</svg>
 	</div>
@@ -32,10 +56,6 @@
 		--wave-color-4: theme('colors.primary');
 	}
 
-	.header {
-		position: relative;
-	}
-
 	.waves {
 		position: relative;
 		width: 100%;
@@ -46,26 +66,10 @@
 	}
 
 	/* Animation */
-
 	.parallax > use {
 		animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 	}
-	.parallax > use:nth-child(1) {
-		animation-delay: -2s;
-		animation-duration: 7s;
-	}
-	.parallax > use:nth-child(2) {
-		animation-delay: -3s;
-		animation-duration: 10s;
-	}
-	.parallax > use:nth-child(3) {
-		animation-delay: -4s;
-		animation-duration: 13s;
-	}
-	.parallax > use:nth-child(4) {
-		animation-delay: -5s;
-		animation-duration: 20s;
-	}
+
 	@keyframes move-forever {
 		0% {
 			transform: translate3d(-90px, 0, 0);
