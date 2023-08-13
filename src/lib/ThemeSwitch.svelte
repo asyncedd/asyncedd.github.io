@@ -6,46 +6,29 @@
 	const themes = ['dark', 'light', 'mocha'];
 	let currentTheme = 'light';
 
-	function adjustTheme() {
-		currentTheme = (() => {
-			let i = themes.indexOf(currentTheme);
-			i = (i + 1) % themes.length;
-			return themes[i];
+	const adjustTheme = () => {
+		(currentTheme = themes[(themes.indexOf(currentTheme) + 1) % themes.length]),
+			(localStorage.theme = currentTheme);
+		const t = document.documentElement;
+		(t.className = themes.map((t) => (t === currentTheme ? t : '')).join(' ')),
+			currentTheme !== 'light' && t.classList.add(currentTheme);
+	};
+
+	browser &&
+		(() => {
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
+			const doc = document.documentElement;
+			doc.className = currentTheme;
+			const setTheme = (newTheme) =>
+				currentTheme !== newTheme && !localStorage.theme
+					? (doc.className = currentTheme = newTheme)
+					: null;
+			window
+				.matchMedia('(prefers-color-scheme: dark)')
+				.addListener((e) => setTheme(e.matches ? 'dark' : 'light'));
+			window.addEventListener('storage', (e) => e.key === 'theme' && setTheme(e.newValue));
 		})();
-
-		localStorage.theme = currentTheme;
-		const doc = document.documentElement;
-		doc.classList.toggle('dark', currentTheme === 'dark');
-		doc.classList.toggle('mocha', currentTheme === 'mocha');
-		doc.classList.toggle('light', currentTheme === 'light');
-		if (currentTheme === 'light') doc.classList.remove('dark', 'mocha');
-		else doc.classList.remove('light');
-	}
-
-	if (browser) {
-		currentTheme =
-			localStorage.theme ||
-			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-		const doc = document.documentElement;
-		doc.classList.add(currentTheme);
-
-		window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
-			const newTheme = e.matches ? 'dark' : 'light';
-			if (currentTheme !== newTheme && !localStorage.theme) {
-				doc.classList.remove(currentTheme);
-				doc.classList.add(newTheme);
-				currentTheme = newTheme;
-			}
-		});
-
-		window.addEventListener('storage', (e) => {
-			if (e.key === 'theme' && e.newValue !== currentTheme) {
-				doc.classList.remove(currentTheme);
-				doc.classList.add(e.newValue);
-				currentTheme = e.newValue;
-			}
-		});
-	}
 </script>
 
 <button
