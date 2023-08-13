@@ -8,7 +8,7 @@
 	}
 </script>
 
-<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50">
+<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80">
 	<a
 		href="/"
 		aria-label="async"
@@ -101,6 +101,7 @@
 		position: fixed;
 		top: 0;
 		z-index: 50; /* Add a z-index to ensure the navbar stays on top of other elements */
+		backdrop-filter: saturate(180%) blur(20px);
 	}
 
 	/* Content on the left */
