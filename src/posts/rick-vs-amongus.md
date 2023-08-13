@@ -8,18 +8,6 @@ categories:
 published: true
 ---
 
-## Table of contents
-
-<!--toc:start-->
-
-- [What.](#what)
-- [Space 🌌](#space-🌌)
-- [Why would this matter](#why-would-this-matter)
-- [But...](#but)
-- [LIAR!](#liar)
-- [bye](#bye)
-<!--toc:end-->
-
 ## What.
 
 Hello, I'm here to **PROVE** that Rick is superior to the imposter. It is obvious evidence where Rick is superior to the Imposter.
