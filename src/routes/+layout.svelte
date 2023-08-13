@@ -39,15 +39,6 @@
 
 	@font-face {
 		font-family: 'Fira Code';
-		src: url('/fonts/FiraCode/subset-FiraCode-Bold.woff2') format('woff2'),
-			url('/fonts/FiraCode/subset-FiraCode-Bold.woff') format('woff');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: 'Fira Code';
 		src: url('/fonts/FiraCode/subset-FiraCode-Regular.woff2') format('woff2'),
 			url('/fonts/FiraCode/subset-FiraCode-Regular.woff') format('woff');
 		font-weight: normal;
