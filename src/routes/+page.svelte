@@ -27,7 +27,7 @@
 			<h1
 				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] {anime
 					? 'text-green-300 bg-zinc-950'
-					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s]"
+					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents"
 				data-value="async"
 			>
 				async
