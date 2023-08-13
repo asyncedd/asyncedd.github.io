@@ -7,6 +7,8 @@ categories:
 published: true
 ---
 
+## Table of contents
+
 ## What?
 
 Hey! I'm [asyncedd](https://github.com/asyncedd), and I'm a professional [cinnamon roll cooker](https://asyncedd.github.io/cinnamon-roll-recipe) from Japan... I guess.

@@ -8,6 +8,8 @@ categories:
 published: true
 ---
 
+## Table of contents
+
 ## What.
 
 Hello, I'm here to **PROVE** that Rick is superior to the imposter. It is obvious evidence where Rick is superior to the Imposter.
