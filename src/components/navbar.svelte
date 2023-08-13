@@ -18,7 +18,9 @@
 					class="w-10 h-10 rounded-[100%] aspect-square rotate"
 				/>
 				<div class="head-parent px-1 items-center flex">
-					<p class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem]">
+					<p
+						class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem] fonts-mono"
+					>
 						async
 					</p>
 				</div>
