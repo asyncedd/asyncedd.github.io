@@ -12,7 +12,7 @@
 <section class="h-[100vh] flex justify-center items-center">
 	<div class="flex items-center justify-center">
 		<div class="posts">
-			<h1 class="text-5xl border-b-[1px] border-b-solid">BLOGS</h1>
+			<h1 class="text-5xl border-b-[1px] border-b-content_dark">BLOGS</h1>
 			{#each data.posts as post}
 				{#if !post.unlist}
 					<div class="post">
