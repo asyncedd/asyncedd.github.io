@@ -1,7 +1,11 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { writable } from 'svelte/store';
 
 	export const animating = writable(false);
+	let anime: boolean;
+	animating.subscribe((v) => {
+		anime = v;
+	});
 </script>
 
 <script lang="ts">
@@ -11,10 +15,8 @@
 	let animationId: number | null = null;
 
 	function animateH1Element(target: HTMLElement, targetValue: string) {
-		if (target.dataset.animating === 'true') return;
-
+		if (anime) return;
 		cancelAnimationFrame(animationId as number);
-		target.dataset.animating = 'true';
 		animating.set(true);
 
 		let updateInterval = 45;
@@ -41,7 +43,6 @@
 
 				if (iteration >= targetValue.length) {
 					animating.set(false);
-					target.dataset.animating = 'false';
 					return;
 				}
 
@@ -67,7 +68,6 @@
 		const targetValue = h1.dataset.value || '';
 		if (targetValue) {
 			h1.addEventListener('mouseover', handleMouseOver);
-			h1.dataset.animating = 'false';
 			animateH1Element(h1, targetValue);
 		}
 	});
