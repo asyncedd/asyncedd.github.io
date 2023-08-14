@@ -4,7 +4,6 @@
 	export let data;
 </script>
 
-<!-- SEO -->
 <svelte:head>
 	<title>{data.meta.title}</title>
 	<meta property="og:type" content="article" />
@@ -12,8 +11,7 @@
 </svelte:head>
 
 <div class="flex justify-center h-[100%] my-[10vh]">
-	<article>
-		<!-- Title -->
+	<article style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
 			<h1 class="capitalize font-bold text-[5rem] text-content">
 				{data.meta.title}
@@ -23,28 +21,14 @@
 			</p>
 		</hgroup>
 
-		<!-- Tags -->
-		<div class="tags mt-[3rem]">
+		<div class="flex gap-[20px] mt-[3rem]">
 			{#each data.meta.categories as category}
 				<span class="bg-red-300 text-zinc-900 p-[5px] rounded-[0.5rem]">&num;{category}</span>
 			{/each}
 		</div>
 
-		<!-- Post -->
 		<div class="prose prose-as">
 			<svelte:component this={data.content} />
 		</div>
 	</article>
 </div>
-
-<style>
-	article {
-		max-inline-size: 100%;
-		margin-inline: auto;
-	}
-
-	.tags {
-		display: flex;
-		gap: 20px;
-	}
-</style>
