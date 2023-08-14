@@ -17,7 +17,7 @@
 		target.dataset.animating = 'true';
 		animating.set(true);
 
-		const updateInterval = 30;
+		let updateInterval = 45;
 		const iterationStep = 0.2;
 		let iteration = 0;
 		let lastUpdateTime = performance.now();
@@ -46,6 +46,7 @@
 				}
 
 				iteration += iterationStep;
+				updateInterval -= iterationStep;
 				lastUpdateTime = currentTime - (deltaTime - updateInterval);
 			}
 
