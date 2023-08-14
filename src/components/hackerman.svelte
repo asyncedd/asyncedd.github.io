@@ -68,6 +68,7 @@
 		const targetValue = h1.dataset.value || '';
 		if (targetValue) {
 			h1.addEventListener('mouseover', handleMouseOver);
+			animateH1Element(h1, targetValue);
 		}
 	});
 </script>
