@@ -41,26 +41,17 @@
 	});
 </script>
 
-<p class={isTyping ? 'typing-cursor' : ''} id="typewriter">
+<p class="{isTyping ? 'typing-cursor' : ''} flex flex-end" id="typewriter">
 	{#each currentText as letter, index}
 		<span
 			class="transition-colors ease-in-out duration-[0.5s]"
-			style="animation-delay: {index * 25}ms;">{letter === ' ' ? '\u00A0' : letter}</span
+			style="animation-delay: {index * 25}ms; animation: cat-jump 0.1s forwards;"
+			>{letter === ' ' ? '\u00A0' : letter}</span
 		>
 	{/each}
 </p>
 
 <style lang="postcss">
-	#typewriter {
-		display: flex;
-		align-items: flex-end;
-	}
-
-	#typewriter.typing-cursor span {
-		opacity: 0.3;
-		animation: cat-jump 0.1s forwards;
-	}
-
 	@keyframes cat-jump {
 		from {
 			transform: translateY(-5px);
@@ -78,7 +69,7 @@
 		border-left: 1px solid theme(colors.content);
 		position: relative;
 		margin-left: 3px;
-		top: -3px; /* Adjust the vertical position as per your preference */
+		margin-top: 5px;
 		animation: blink-caret 0.75s step-end infinite; /* Blinking animation */
 	}
 
