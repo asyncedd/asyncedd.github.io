@@ -21,7 +21,11 @@
 			interval = setInterval(() => {
 				target.innerText = [...targetValue]
 					.map((_, index) =>
-						index < iteration ? targetValue[index] : lettersArray[Math.floor(Math.random() * 26)]
+						index < iteration
+							? targetValue[index]
+							: targetValue !== ' '
+							? lettersArray[Math.floor(Math.random() * lettersArray.length)]
+							: ' '
 					)
 					.join('');
 
