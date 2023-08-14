@@ -8,36 +8,51 @@
 	const lettersArray =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
 
-	let interval: undefined | any = null;
+	let animationId: number | null = null;
 
 	function animateH1Element(target: HTMLElement, targetValue: string) {
+		if (target.dataset.animating === 'true') return;
+
+		cancelAnimationFrame(animationId as number);
+		target.dataset.animating = 'true';
+		animating.set(true);
+
+		const updateInterval = 30;
+		const iterationStep = 0.2;
 		let iteration = 0;
+		let lastUpdateTime = performance.now();
 
-		if (target.dataset.animating !== 'true') {
-			clearInterval(interval);
-			target.dataset.animating = 'true';
-			animating.set(true);
+		function animate(currentTime: number) {
+			const deltaTime = currentTime - lastUpdateTime;
 
-			interval = setInterval(() => {
-				target.innerText = [...targetValue]
-					.map((_, index) =>
+			if (deltaTime >= updateInterval) {
+				const newText = targetValue
+					.split('')
+					.map((char, index) =>
 						index < iteration
-							? targetValue[index]
+							? char
 							: targetValue !== ' '
 							? lettersArray[Math.floor(Math.random() * lettersArray.length)]
 							: ' '
 					)
 					.join('');
 
+				target.innerText = newText;
+
 				if (iteration >= targetValue.length) {
-					clearInterval(interval);
 					animating.set(false);
 					target.dataset.animating = 'false';
+					return;
 				}
 
-				iteration += 1 / 5;
-			}, 30);
+				iteration += iterationStep;
+				lastUpdateTime = currentTime - (deltaTime - updateInterval);
+			}
+
+			animationId = requestAnimationFrame(animate);
 		}
+
+		animate(performance.now());
 	}
 
 	function handleMouseOver(event: MouseEvent): void {
@@ -48,10 +63,11 @@
 
 	const h1Elements = document.querySelectorAll('h1');
 	h1Elements.forEach((h1) => {
-		if (h1.dataset.value !== '') {
+		const targetValue = h1.dataset.value || '';
+		if (targetValue) {
 			h1.addEventListener('mouseover', handleMouseOver);
 			h1.dataset.animating = 'false';
-			animateH1Element(h1, h1.dataset.value || '');
+			animateH1Element(h1, targetValue);
 		}
 	});
 </script>
