@@ -11,13 +11,13 @@
 <!-- Posts -->
 <section class="h-[100vh] flex justify-center items-center">
 	<div class="flex items-center justify-center">
-		<div class="posts">
-			<h1 class="text-5xl border-b-[1px] border-b-content_dark">BLOGS</h1>
+		<div class="grid gap-[1rem]">
+			<h1 class="text-5xl">BLOGS</h1>
 			{#each data.posts as post}
-				<div class="post">
+				<div class="border-t-content border-t-[1px] pt-5px">
 					<a
 						href={`blog/${post.slug}`}
-						class="title text-content hover:text-sky-300 hover:dark:text-sky-200 transition-colors duration-[0.5s] ease-in-out"
+						class="text-[3rem] capitalize text-content hover:text-sky-300 hover:dark:text-sky-200 transition-colors duration-[0.5s] ease-in-out"
 					>
 						{post.title}
 					</a>
@@ -35,23 +35,3 @@
 		</div>
 	</div>
 </section>
-
-<style class="postcss">
-	:root {
-		--content-col: theme(colors.content);
-	}
-	.posts {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.post:not(:last-child) {
-		border-bottom: 1px solid var(--content-col);
-		padding-bottom: 5px;
-	}
-
-	.title {
-		font-size: 3rem;
-		text-transform: capitalize;
-	}
-</style>
