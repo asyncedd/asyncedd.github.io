@@ -20,14 +20,17 @@
 			currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
 			const doc = document.documentElement;
 			doc.className = currentTheme;
-			const setTheme = (newTheme) =>
+			const setTheme = (newTheme: string) =>
 				currentTheme !== newTheme && !localStorage.theme
 					? (doc.className = currentTheme = newTheme)
 					: null;
 			window
 				.matchMedia('(prefers-color-scheme: dark)')
-				.addListener((e) => setTheme(e.matches ? 'dark' : 'light'));
-			window.addEventListener('storage', (e) => e.key === 'theme' && setTheme(e.newValue));
+				.addEventListener('change', (e) => setTheme(e.matches ? 'dark' : 'light'));
+			window.addEventListener(
+				'storage',
+				(e) => e.key === 'theme' && setTheme(e.newValue as string)
+			);
 		})();
 </script>
 
