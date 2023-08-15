@@ -10,6 +10,7 @@ export default {
 		extend: {
 			colors: {
 				primary: 'rgb(var(--color-primary) / <alpha-value>)',
+				primary_light: 'rgb(var(--color-primary_light) / <alpha-value>)',
 				primary_dark: 'rgb(var(--color-primary_dark) / <alpha-value>)',
 				content: 'rgb(var(--color-content) / <alpha-value>)',
 				content_dark: 'rgb(var(--color-content_dark) / <alpha-value>)',
