@@ -81,16 +81,15 @@
 		})();
 </script>
 
-<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80">
-	<a
-		href="/"
-		aria-label="async"
-		class="left-content left-content inline-flex justify-center mx-[3vw] my-1"
-	>
+<div
+	class="w-[100%] bg-primary inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
+	style="backdrop-filter: saturate(180%) blur(20px);"
+>
+	<a href="/" aria-label="async" class="mr-auto inline-flex justify-center mx-[3vw] my-1">
 		<img
 			src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"
 			alt=""
-			class="w-10 h-10 rounded-[100%] aspect-square rotate"
+			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:scale-[1.1] hover:rotate-[720deeg]"
 		/>
 		<div class="head-parent px-1 flex">
 			<p
@@ -178,8 +177,7 @@
 	</div>
 </div>
 <button
-	class="flex menu-overlay z-[29]"
-	class:visible={isMenuOpen}
+	class="flex menu-overlay z-[29] {isMenuOpen ? 'visible opacity-1' : ''}"
 	on:click={() => {
 		isMenuOpen = !isMenuOpen;
 	}}
@@ -235,40 +233,6 @@
 </button>
 
 <style lang="postcss">
-	.navbar {
-		display: inline-flex;
-		overflow: visible; /* Change this line */
-		position: fixed;
-		top: 0;
-		z-index: 50;
-		backdrop-filter: saturate(180%) blur(20px);
-	}
-
-	/* Content on the left */
-	.left-content {
-		margin-right: auto; /* Pushes the content to the left side */
-	}
-
-	.left-content img {
-		margin-right: 10px; /* Add some space between the image and the right content */
-		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-	}
-
-	/* Hover effect for icons and images */
-	.left-content img:hover {
-		/* Apply the effect to the image when it's hovered */
-		transform: scale(1.2); /* Increase the scale on hover */
-	}
-
-	.rotate {
-		transition: transform 5s ease;
-		transform: rotate(360deg);
-	}
-
-	.rotate:hover {
-		transform: scale(1.1) rotate(720deg);
-	}
-
 	.async {
 		background: linear-gradient(
 				90deg,
@@ -366,11 +330,6 @@
 		opacity: 0;
 		@apply bg-zinc-950/50;
 		transition: visibility 0s 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Delay visibility change after opacity */
-	}
-
-	.visible {
-		visibility: visible;
-		opacity: 1;
 	}
 
 	/* Adjust the menu position and size as needed */
