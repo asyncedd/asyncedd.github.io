@@ -102,7 +102,7 @@
 		</div>
 	</a>
 	<div class="flex">
-		<div class="flex justify-center mx-[2vw] my-[5px]">
+		<div class="flex justify-center mx-[1vw] my-[5px]">
 			<button
 				aria-label="Toggle dark mode"
 				id="dropdown-button"
