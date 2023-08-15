@@ -130,7 +130,6 @@
 	}
 
 	.async {
-		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				theme(colors.teal.300) 10%,
@@ -147,7 +146,6 @@
 	}
 
 	:global(.dark) .async {
-		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				theme(colors.teal.300) 10%,
@@ -164,7 +162,6 @@
 	}
 
 	:global(.mocha) .async {
-		--s: 0.1em;
 		background: linear-gradient(
 				90deg,
 				theme(colors.teal.300) 10%,
