@@ -81,20 +81,16 @@
 		})();
 </script>
 
-<div
-	class="w-[100%] bg-primary navbar bg-opacity-80 inline-flex overflow-visible fixed top-0 z-50"
-	style="backdrop-filter: saturate(180%) blur(20px);
-"
->
+<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80">
 	<a
 		href="/"
 		aria-label="async"
-		class="left-content mr-auto inline-flex justify-center mx-[3vw] my-1"
+		class="left-content left-content inline-flex justify-center mx-[3vw] my-1"
 	>
 		<img
 			src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"
 			alt=""
-			class="w-10 h-10 rounded-[100%] aspect-square transition-transform duration-[5s] ease-in-out rotate-[0deg] hover:scale-[1.1] hover:rotate-[720deg] mr-[10px]"
+			class="w-10 h-10 rounded-[100%] aspect-square rotate"
 		/>
 		<div class="head-parent px-1 flex">
 			<p
@@ -122,42 +118,44 @@
 						>
 					</button>
 					{#if isDropdownOpen}
-						<div
-							class="mt-[50px] w-[130px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute flex justify-center"
-							out:fly={{
-								y: -10,
-								delay: 300,
-								easing: backOut
-							}}
-							in:fly={{
-								y: 100,
-								delay: 300,
-								easing: backOut
-							}}
-						>
-							{#each options as option}
-								<button
-									class="flex flex-col w-full text-left px-4 py-2 hover:bg-primary_light text-content {currentTheme ===
-									option.id
-										? 'bg-primary_light'
-										: ''} rounded-md"
-									on:click={() => selectOption(option.id)}
-								>
-									<div class="flex items-center justify-between">
-										<span>{option.label}</span>
-										{#if currentTheme === option.id}
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												height="1em"
-												viewBox="0 0 32 32"
-												class="fill-indigo-300"
-											>
-												<path d="m13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" />
-											</svg>
-										{/if}
-									</div>
-								</button>
-							{/each}
+						<div class="flex justify-center">
+							<div
+								class="mt-[50px] w-[130px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute"
+								out:fly={{
+									y: -10,
+									delay: 300,
+									easing: backOut
+								}}
+								in:fly={{
+									y: 100,
+									delay: 300,
+									easing: backOut
+								}}
+							>
+								{#each options as option}
+									<button
+										class="flex flex-col w-full text-left px-4 py-2 hover:bg-primary_light text-content {currentTheme ===
+										option.id
+											? 'bg-primary_light'
+											: ''} rounded-md"
+										on:click={() => selectOption(option.id)}
+									>
+										<div class="flex items-center justify-between">
+											<span>{option.label}</span>
+											{#if currentTheme === option.id}
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													height="1em"
+													viewBox="0 0 32 32"
+													class="fill-indigo-300"
+												>
+													<path d="m13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" />
+												</svg>
+											{/if}
+										</div>
+									</button>
+								{/each}
+							</div>
 						</div>
 					{/if}
 				</div>
@@ -237,6 +235,40 @@
 </button>
 
 <style lang="postcss">
+	.navbar {
+		display: inline-flex;
+		overflow: visible; /* Change this line */
+		position: fixed;
+		top: 0;
+		z-index: 50;
+		backdrop-filter: saturate(180%) blur(20px);
+	}
+
+	/* Content on the left */
+	.left-content {
+		margin-right: auto; /* Pushes the content to the left side */
+	}
+
+	.left-content img {
+		margin-right: 10px; /* Add some space between the image and the right content */
+		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+	}
+
+	/* Hover effect for icons and images */
+	.left-content img:hover {
+		/* Apply the effect to the image when it's hovered */
+		transform: scale(1.2); /* Increase the scale on hover */
+	}
+
+	.rotate {
+		transition: transform 5s ease;
+		transform: rotate(360deg);
+	}
+
+	.rotate:hover {
+		transform: scale(1.1) rotate(720deg);
+	}
+
 	.async {
 		background: linear-gradient(
 				90deg,
