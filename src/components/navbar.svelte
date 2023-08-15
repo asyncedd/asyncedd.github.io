@@ -20,7 +20,10 @@
 			class="w-10 h-10 rounded-[100%] aspect-square rotate"
 		/>
 		<div class="head-parent px-1 items-center flex">
-			<p class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem] fonts-mono">
+			<p
+				class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem] fonts-mono"
+				style="-webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
+			>
 				async
 			</p>
 		</div>
@@ -140,9 +143,6 @@
 				theme(colors.zinc.900) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 
 	:global(.dark) .async {
@@ -156,9 +156,6 @@
 				theme(colors.sky.300) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 
 	:global(.mocha) .async {
@@ -172,9 +169,6 @@
 				theme(colors.sky.300) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 
 	.async:hover {
