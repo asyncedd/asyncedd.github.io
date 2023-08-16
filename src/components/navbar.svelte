@@ -203,7 +203,7 @@
 <div class="flex menu-overlay z-29" class:visible={isMenuOpen}>
 	<ul
 		class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen
-			? 'w-[50%]'
+			? 'w-[75%]'
 			: 'w-[0%]'} menu-button"
 	>
 		<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
