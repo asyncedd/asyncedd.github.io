@@ -73,14 +73,34 @@
 				}
 			};
 
+			const handleMenuGlobalClick = (event) => {
+				const menuButtons = document.querySelectorAll('#menu-button');
+				let hide = true;
+
+				menuButtons.forEach((menuButton) => {
+					if (menuButton.contains(event.target)) {
+						hide = false;
+					}
+				});
+
+				if (hide) {
+					isMenuOpen = false;
+				}
+			};
+
 			document.addEventListener('click', handleGlobalClick);
+			document.addEventListener('click', handleMenuGlobalClick);
 			return () => {
 				document.removeEventListener('click', handleGlobalClick);
+				document.removeEventListener('click', handleMenuGlobalClick);
 			};
 		})();
 </script>
 
-<div class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80">
+<div
+	class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80"
+	id="menu-button"
+>
 	<a
 		href="/"
 		aria-label="async"
@@ -103,13 +123,13 @@
 	<div class="flex">
 		<div class="flex justify-center mx-[1vw] my-[5px]">
 			<button
-				aria-label="Selec theme"
+				aria-label="Select theme"
 				id="dropdown-button"
 				tabindex="0"
 				class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem]"
 			>
 				<div class="flex relative">
-					<button class="fill-content" on:click={toggleDropdown} aria-label="Selec theme">
+					<button class="fill-content" on:click={toggleDropdown} aria-label="Select theme">
 						<svg xmlns="http://www.w3.org/2000/svg" height="2.5em" viewBox="0 0 24 24"
 							><path
 								d="M19.9 12.66a1 1 0 0 1 0-1.32l1.28-1.44a1 1 0 0 0 .12-1.17l-2-3.46a1 1 0 0 0-1.07-.48l-1.88.38a1 1 0 0 1-1.15-.66l-.61-1.83a1 1 0 0 0-.95-.68h-4a1 1 0 0 0-1 .68l-.56 1.83a1 1 0 0 1-1.15.66L5 4.79a1 1 0 0 0-1 .48L2 8.73a1 1 0 0 0 .1 1.17l1.27 1.44a1 1 0 0 1 0 1.32L2.1 14.1a1 1 0 0 0-.1 1.17l2 3.46a1 1 0 0 0 1.07.48l1.88-.38a1 1 0 0 1 1.15.66l.61 1.83a1 1 0 0 0 1 .68h4a1 1 0 0 0 .95-.68l.61-1.83a1 1 0 0 1 1.15-.66l1.88.38a1 1 0 0 0 1.07-.48l2-3.46a1 1 0 0 0-.12-1.17ZM18.41 14l.8.9l-1.28 2.22l-1.18-.24a3 3 0 0 0-3.45 2L12.92 20h-2.56L10 18.86a3 3 0 0 0-3.45-2l-1.18.24l-1.3-2.21l.8-.9a3 3 0 0 0 0-4l-.8-.9l1.28-2.2l1.18.24a3 3 0 0 0 3.45-2L10.36 4h2.56l.38 1.14a3 3 0 0 0 3.45 2l1.18-.24l1.28 2.22l-.8.9a3 3 0 0 0 0 3.98Zm-6.77-6a4 4 0 1 0 4 4a4 4 0 0 0-4-4Zm0 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"
@@ -165,6 +185,7 @@
 			tabindex="0"
 			aria-label="Toggle hamburger menu"
 			class:menu-open={isMenuOpen}
+			id="menu-button"
 			on:click={() => {
 				isMenuOpen = !isMenuOpen;
 			}}
@@ -176,19 +197,16 @@
 		<div class="mr-[3vw]" />
 	</div>
 </div>
-<button
-	class="flex menu-overlay z-[29]"
-	class:visible={isMenuOpen}
-	on:click={() => {
-		isMenuOpen = !isMenuOpen;
-	}}
->
-	<ul class="menu bg-primary text-content text-[2rem] z-[50] {isMenuOpen ? 'w-[50%]' : 'w-[0%]'}">
+<div class="flex menu-overlay z-29" class:visible={isMenuOpen}>
+	<ul
+		class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen ? 'w-[50%]' : 'w-[0%]'}"
+		id="menu-button"
+	>
 		<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
 			<li>
 				<a
 					href="/"
-					class="flex gap-3 text-content fill-content hover:text-sky-500 transition-colors duration-[0.5s]"
+					class="flex gap-3 text-content fill-content hover:text-sky-500 hover:fill-sky-500 transition-colors duration-[0.5s]"
 					><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"
 						><path
 							d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
@@ -231,7 +249,7 @@
 			</li>
 		</div>
 	</ul>
-</button>
+</div>
 
 <style lang="postcss">
 	.navbar {
