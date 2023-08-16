@@ -14,6 +14,7 @@ export default {
 				primary_dark: 'rgb(var(--color-primary_dark) / <alpha-value>)',
 				content: 'rgb(var(--color-content) / <alpha-value>)',
 				content_dark: 'rgb(var(--color-content_dark) / <alpha-value>)',
+				accent: 'rgb(var(--color-accent) / <alpha-value>)',
 				as_teal: 'var(--color-teal / <alpha-value>)',
 				as_sky: 'var(--color-sky) / <alpha-value>',
 				as_blue: 'var(--color-blue) / <alpha-value>',
