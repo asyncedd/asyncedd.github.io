@@ -73,12 +73,17 @@
 				}
 			};
 
+			/**
+			 * Handle clicks that occurs outside the menu
+			 *
+			 * @param {MouseEvent} event
+			 */
 			const handleMenuGlobalClick = (event) => {
-				const menuButtons = document.querySelectorAll('#menu-button');
+				const menuButtons = document.querySelectorAll('.menu-button');
 				let hide = true;
 
 				menuButtons.forEach((menuButton) => {
-					if (menuButton.contains(event.target)) {
+					if (event.target instanceof Node && menuButton.contains(event.target)) {
 						hide = false;
 					}
 				});
@@ -181,11 +186,10 @@
 			</button>
 		</div>
 		<button
-			class="flex flex-col cursor-pointer mt-[7px]"
+			class="flex flex-col cursor-pointer mt-[7px] menu-button"
 			tabindex="0"
 			aria-label="Toggle hamburger menu"
 			class:menu-open={isMenuOpen}
-			id="menu-button"
 			on:click={() => {
 				isMenuOpen = !isMenuOpen;
 			}}
@@ -199,8 +203,9 @@
 </div>
 <div class="flex menu-overlay z-29" class:visible={isMenuOpen}>
 	<ul
-		class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen ? 'w-[50%]' : 'w-[0%]'}"
-		id="menu-button"
+		class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen
+			? 'w-[50%]'
+			: 'w-[0%]'} menu-button"
 	>
 		<div class="h-[50vh] flex flex-col items-center justify-center py-[50vh]">
 			<li>
