@@ -132,7 +132,7 @@
 							>
 								{#each options as option}
 									<button
-										class="flex flex-col w-full text-left px-4 py-2 hover:bg-primary_light text-content {currentTheme ===
+										class="flex flex-col w-full text-left px-4 py-2 hover:bg-primary_light/75 text-content {currentTheme ===
 										option.id
 											? 'bg-primary_light'
 											: ''} rounded-md"
