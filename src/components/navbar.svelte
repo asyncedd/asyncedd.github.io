@@ -8,7 +8,8 @@
 	const options = [
 		{ id: 'light', label: '☀️  Light' },
 		{ id: 'dark', label: '🌑 Dark' },
-		{ id: 'mocha', label: '☕ Mocha' }
+		{ id: 'mocha', label: '☕ Mocha' },
+		{ id: 'carbon', label: '⚫ Carbon' }
 	];
 
 	let isDropdownOpen = false;
@@ -307,6 +308,19 @@
 	}
 
 	:global(.mocha) .async {
+		background: linear-gradient(
+				90deg,
+				theme(colors.teal.300) 10%,
+				theme(colors.sky.300) 20%,
+				theme(colors.blue.300) 30%,
+				theme(colors.indigo.300) 40%,
+				theme(colors.violet.300) 50%,
+				theme(colors.sky.300) 0%
+			)
+			calc(100% - var(--_p, 0%)) / 200% 100%;
+	}
+
+	:global(.carbon) .async {
 		background: linear-gradient(
 				90deg,
 				theme(colors.teal.300) 10%,
