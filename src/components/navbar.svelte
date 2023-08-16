@@ -88,7 +88,7 @@
 		<img
 			src="https://ik.imagekit.io/dfijmneb9/tr:w-100/clouds.webp?updatedAt=1691272771794"
 			alt=""
-			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:scale-[1.1] hover:rotate-[720deeg]"
+			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deeg]"
 		/>
 		<div class="head-parent px-1 flex">
 			<p
