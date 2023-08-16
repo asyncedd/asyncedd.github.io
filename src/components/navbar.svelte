@@ -158,25 +158,23 @@
 							>
 								{#each options as option}
 									<button
-										class="flex flex-col w-full text-left px-4 py-2 hover:bg-primary_light/75 text-content {currentTheme ===
+										class="flex w-full text-left px-4 py-2 hover:bg-primary_light/75 text-content {currentTheme ===
 										option.id
 											? 'bg-primary_light'
-											: ''} rounded-md"
+											: ''} rounded-md items-center justify-between"
 										on:click={() => selectOption(option.id)}
 									>
-										<div class="flex items-center justify-between">
-											<span>{option.label}</span>
-											{#if currentTheme === option.id}
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													height="1em"
-													viewBox="0 0 32 32"
-													class="fill-accent"
-												>
-													<path d="m13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" />
-												</svg>
-											{/if}
-										</div>
+										<span>{option.label}</span>
+										{#if currentTheme === option.id}
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												height="1em"
+												viewBox="0 0 32 32"
+												class="fill-accent"
+											>
+												<path d="m13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" />
+											</svg>
+										{/if}
 									</button>
 								{/each}
 							</div>
