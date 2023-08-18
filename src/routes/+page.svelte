@@ -93,7 +93,7 @@
 			class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
 			data-show="true"
 		>
-			<a href="#introduction">
+			<a href="#introduction" aria-label="introduction">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					height="1em"
@@ -129,7 +129,7 @@
 					class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
 					data-show="true"
 				>
-					<a href="#underdev"
+					<a href="#underdev" aria-label="underdev"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
 							height="1em"
