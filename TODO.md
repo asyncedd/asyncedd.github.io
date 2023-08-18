@@ -13,7 +13,8 @@
 PRIORITY: LOW
 DESCRIPTION: The navbar is relatively responsive
 
-- [!] Maybe hide buttons when x width?
+- [_] Maybe hide buttons when x width?
+  NOTES: We don't need it since we have only two buttons tbh
 
 ### FEATURES
 
@@ -54,14 +55,15 @@ DESCRIPTION: The text takes a few milliseconds or nanoseconds to "load" on the b
 - [x] Play around with text compression like gzip
 - [x] Fix the text-loading on Firefox
 
-##### [ ] img
+##### [x] img
 
 PRIORITY: HIGH
 DESCRIPTION: It's low res and slow on the dev version
 
 - [x] Improve the resolution
 - [x] Properly size images
-- [ ] Increase the cache duration
+- [_] Increase the cache duration
+  Looks to be impossible since GitHub pages sucks.
 - [x] Use a CDN
 
 ### UnoCSS
@@ -89,5 +91,6 @@ DESCRIPTION: This is relatively stable at this point
 PRIORITY: LOW
 DESCRIPTION: The performance is pretty good
 
-- [ ] Optimize the randomizer
+- [_] Optimize the randomizer
+  Not needed since random-ness doesn't matter here.
 - [x] Refactor more
