@@ -18,7 +18,6 @@
 		}
 
 		const observer = new IntersectionObserver((entries) => {
-			console.log(entries);
 			entries.forEach((entry) => {
 				entry.target.setAttribute('data-show', String(entry.isIntersecting));
 			});
