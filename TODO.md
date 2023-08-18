@@ -47,6 +47,13 @@ DESCRIPTION: The website is relatively responsive
 
 - [!] Improve performance
 
+#### [ ] Navbar
+
+PRIORITY: HIGH
+DESCRIPTION: The navbar has a hell ton of elements
+
+- [!] Remove unneeded elements
+
 ##### (x) Text
 
 PRIORITY: LOW
