@@ -65,7 +65,8 @@
 
 	const h1Elements = document.querySelectorAll('h1');
 	h1Elements.forEach((h1) => {
-		const targetValue = h1.dataset.value || '';
+		let targetValue = h1.dataset.value;
+		if (h1.dataset.value == undefined) return false;
 		if (targetValue) {
 			h1.addEventListener('mouseover', handleMouseOver);
 			animateH1Element(h1, targetValue);

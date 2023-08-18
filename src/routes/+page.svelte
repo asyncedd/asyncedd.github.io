@@ -16,6 +16,16 @@
 				});
 			});
 		}
+
+		const observer = new IntersectionObserver((entries) => {
+			console.log(entries);
+			entries.forEach((entry) => {
+				entry.target.setAttribute('data-show', String(entry.isIntersecting));
+			});
+		});
+
+		const hiddenElements = document.querySelectorAll('.scroll-animation');
+		hiddenElements.forEach((el) => observer.observe(el));
 	});
 </script>
 
@@ -27,7 +37,8 @@
 			<h1
 				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] {anime
 					? 'text-green-300 bg-zinc-950'
-					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents"
+					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
+				style="font-size: clamp(5rem, 0.5rem + 10vh, 7rem)"
 				data-value="async"
 			>
 				async
@@ -74,12 +85,74 @@
 	<Wave />
 </div>
 <div class="flex justify-center">
-	<p class="py-[30vh] text-left w-[50vw] indent-5">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-		voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-	</p>
+	<div
+		class="py-[30vh] mx-[20vw]"
+		style="transition-property: blur, opacity, transform, filter; transition-timing-function: ease-in-out;"
+	>
+		<div
+			class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1.5s]"
+			data-show="true"
+		>
+			<a href="#introduction">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="1em"
+					viewBox="0 0 640 512"
+					class="fill-content_dark flex"
+					><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+						d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
+					/></svg
+				>
+			</a>
+			<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="introduction">Introduction</h1>
+		</div>
+		<p
+			class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[1s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
+			data-show="true"
+		>
+			Hey there! I'm
+			<a href="https://github.com/asyncedd" class="after:content-['_↗'] text-accent hover:underline"
+				>async</a
+			>, a programming hobbiest (in general) and
+			<a
+				href="https://asyncedd.github.io/cinnamon-roll-recipe"
+				class="after:content-['_↗'] text-accent hover:underline"
+				>a professional cinnamon roll baker</a
+			>. I've been learning to program since 2017 to create fun stuff but, here I am here creating
+			pretty stuffs (I guess it is pretty fun :P). And of course, I'm on a mission to tell people
+			how great Rick Astley is compared to the impostor from Among us or someone because it's quite
+			obvious that he started the big bang w/ his 1B+ BANGER.
+		</p>
+		<div>
+			<div class="justify-center flex">
+				<div
+					class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1.5s]"
+					data-show="true"
+				>
+					<a href="#underdev"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="1em"
+							viewBox="0 0 640 512"
+							class="fill-content_dark flex"
+							><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+								d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
+							/></svg
+						>
+					</a>
+				</div>
+				<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">
+					Under development 🚧
+				</h1>
+			</div>
+			<p
+				class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[1s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
+				data-show="true"
+			>
+				This is under development! I'm working hard, ok? Please come back later
+			</p>
+		</div>
+	</div>
 </div>
 
 {#if hanime}
