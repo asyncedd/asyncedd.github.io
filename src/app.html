@@ -14,17 +14,6 @@
 		<meta http-equiv="If-None-Match" content="*" />
 		<meta name="referrer" content="strict-origin-when-cross-origin" />
 		<script>
-			(function () {
-				var meta = document.createElement('meta');
-				meta.httpEquiv = 'X-Content-Type-Options';
-				meta.content = 'nosniff';
-				document.getElementsByTagName('head')[0].appendChild(meta);
-			})();
-
-			if (top !== self) {
-				top.location.replace(self.location.href);
-			}
-
 			document.documentElement.classList.add(
 				localStorage.theme ||
 					(window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light')
