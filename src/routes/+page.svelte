@@ -140,10 +140,10 @@
 							/></svg
 						>
 					</a>
+					<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">
+						Under development 🚧
+					</h1>
 				</div>
-				<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">
-					Under development 🚧
-				</h1>
 			</div>
 			<p
 				class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[1s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
