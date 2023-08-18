@@ -3,7 +3,6 @@
 	import Typewriter from '../components/typewriter.svelte';
 	import Wave from '../components/wave.svelte';
 	let hanime = false;
-	let anime = false;
 	let Hackerman: any;
 
 	onMount(async () => {
@@ -11,9 +10,6 @@
 			hanime = true;
 			await import('../components/hackerman.svelte').then((mod) => {
 				Hackerman = mod.default;
-				mod.animating.subscribe((v: any) => {
-					anime = v;
-				});
 			});
 		}
 
@@ -34,9 +30,7 @@
 	<div class="flex flex-col justify-center items-center rounded-[3rem]">
 		<div class="h-[20vh] w-auto overflow-none my-1 min-w-15">
 			<h1
-				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] {anime
-					? 'text-green-300 bg-zinc-950'
-					: ''} rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
+				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
 				style="font-size: clamp(5rem, 0.5rem + 10vh, 7rem)"
 				data-value="async"
 			>

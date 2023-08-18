@@ -1,13 +1,3 @@
-<script context="module" lang="ts">
-	import { writable } from 'svelte/store';
-
-	export const animating = writable(false);
-	let anime: boolean;
-	animating.subscribe((v) => {
-		anime = v;
-	});
-</script>
-
 <script lang="ts">
 	const lettersArray =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
@@ -15,9 +5,9 @@
 	let animationId: number | null = null;
 
 	function animateH1Element(target: HTMLElement, targetValue: string) {
-		if (anime) return;
+		if (target.dataset.animating === 'true') return;
 		cancelAnimationFrame(animationId as number);
-		animating.set(true);
+		target.setAttribute('data-animating', 'true');
 
 		let updateInterval = 45;
 		const iterationStep = 0.2;
@@ -42,7 +32,7 @@
 				target.innerText = newText;
 
 				if (iteration >= targetValue.length) {
-					animating.set(false);
+					target.setAttribute('data-animating', 'false');
 					return;
 				}
 
