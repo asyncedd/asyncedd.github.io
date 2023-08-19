@@ -10,8 +10,8 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="flex justify-center h-[100%] my-[10vh]">
-	<article style="max-inline-size: 100%; margin-inline: auto;">
+<div class="flex justify-center h-[100%]">
+	<article class="py-[10vh]" style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
 			<h1 class="capitalize font-bold text-[5rem] text-content">
 				{data.meta.title}
