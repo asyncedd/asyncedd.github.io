@@ -1,14 +1,14 @@
 <script lang="ts" async>
 	import { onMount } from 'svelte';
-	import Typewriter from '../components/typewriter.svelte';
-	import Wave from '../components/wave.svelte';
+	import Typewriter from '$lib/components/typewriter.svelte';
+	import Wave from '$lib/components/wave.svelte';
 	let hanime = false;
 	let Hackerman: any;
 
 	onMount(async () => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
 			hanime = true;
-			await import('../components/hackerman.svelte').then((mod) => {
+			await import('$lib/components/hackerman.svelte').then((mod) => {
 				Hackerman = mod.default;
 			});
 		}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Wave from '../components/wave.svelte';
+	import Wave from '$lib/components/wave.svelte';
 </script>
 
 <footer>
