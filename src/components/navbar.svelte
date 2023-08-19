@@ -103,7 +103,7 @@
 		})();
 </script>
 
-<div
+<nav
 	class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80"
 	id="menu-button"
 >
@@ -199,7 +199,7 @@
 		</button>
 		<div class="mr-[3vw]" />
 	</div>
-</div>
+</nav>
 <div class="flex menu-overlay z-29" class:visible={isMenuOpen}>
 	<ul
 		class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen
