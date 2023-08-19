@@ -28,7 +28,7 @@
 	class="h-[100vh] flex justify-center items-center align-middle text-content pb-[5rem] sm:pb-0 bg-primary ease-in-out"
 >
 	<div class="flex flex-col justify-center items-center rounded-[3rem]">
-		<div class="h-[30vh] w-auto overflow-none my-1 min-w-15">
+		<div class="flex items-center flex-col w-auto overflow-none my-1 min-w-15">
 			<div class="inline-flex items-center justify-center">
 				<h1
 					class="text-center px-3 hover:text-green-300 hover:scale-[1.2] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
