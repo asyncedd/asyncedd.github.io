@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
@@ -20,7 +20,11 @@ const config = {
 	kit: {
 		adapter: adapter({
 			strict: false,
-			precompress: true
+			precompress: true,
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
