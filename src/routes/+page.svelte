@@ -107,9 +107,7 @@
 			<a href="https://github.com/asyncedd" class="after:content-['_↗'] text-accent hover:underline"
 				>async</a
 			>, a programming hobbiest (in general) and
-			<a
-				href="https://asyncedd.github.io/cinnamon-roll-recipe"
-				class="after:content-['_↗'] text-accent hover:underline"
+			<a href="/cinnamon-roll-recipe" class="after:content-['_↗'] text-accent hover:underline"
 				>a professional cinnamon roll baker</a
 			>. I've been learning to program since 2017 to create fun stuff but, here I am here creating
 			pretty stuffs (I guess it is pretty fun :P). And of course, I'm on a mission to tell people
