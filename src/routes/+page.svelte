@@ -133,9 +133,7 @@
 							/></svg
 						>
 					</a>
-					<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">
-						Under development 🚧
-					</h1>
+					<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">Under dev 🚧</h1>
 				</div>
 			</div>
 			<p
