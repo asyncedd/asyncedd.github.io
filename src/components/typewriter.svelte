@@ -8,36 +8,28 @@
 	let isTyping = false;
 
 	onMount(() => {
-		function typeWriter() {
-			isTyping = true;
-			const sentenceLength = sentences[currentSentenceIndex].length;
-			let i = 0;
+		const t = () => {
+			isTyping = !0;
+			let i = 0,
+				s = sentences[currentSentenceIndex];
 			const interval = setInterval(() => {
-				if (i < sentenceLength) {
-					currentText += sentences[currentSentenceIndex].charAt(i);
-					i++;
-				} else {
-					clearInterval(interval);
-					isTyping = true;
-					setTimeout(() => {
-						isTyping = false;
-						backspace();
-					}, 3000);
-				}
+				i < s.length
+					? (currentText += s[i++])
+					: (clearInterval(interval),
+					  (isTyping = !0),
+					  setTimeout(() => {
+							isTyping = !1;
+							const back = setInterval(() => {
+								currentText = currentText.slice(0, -1);
+								currentText ||
+									(clearInterval(back),
+									(currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length),
+									t());
+							}, speed / 2);
+					  }, 3e3));
 			}, speed);
-		}
-
-		function backspace() {
-			const backspaceInterval = setInterval(() => {
-				currentText = currentText.slice(0, -1);
-				if (currentText === '') {
-					clearInterval(backspaceInterval);
-					currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
-					typeWriter(); // Start typing the next sentence
-				}
-			}, speed / 2);
-		}
-		typeWriter();
+		};
+		t();
 	});
 </script>
 
