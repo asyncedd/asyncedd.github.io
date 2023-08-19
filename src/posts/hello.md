@@ -50,6 +50,6 @@ Anyhow, my current front-end tech stack is:
 | Year      | What                                                                             |
 | --------- | -------------------------------------------------------------------------------- |
 | 2017-2020 | Scratch.mit.edu                                                                  |
-| 2022      | Writing a Discord bot with a Node.js library that interacts with the Discord API |
+| 2021/2022 | Writing a Discord bot with a Node.js library that interacts with the Discord API |
 | 2023      | Rust, Pycord, Lua, HTML, CSS, Javascript, Typescript                             |
 | ...       | I don't know!                                                                    |
