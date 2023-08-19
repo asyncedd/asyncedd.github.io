@@ -28,15 +28,17 @@
 	class="h-[100vh] flex justify-center items-center align-middle text-content pb-[5rem] sm:pb-0 bg-primary ease-in-out"
 >
 	<div class="flex flex-col justify-center items-center rounded-[3rem]">
-		<div class="h-[20vh] w-auto overflow-none my-1 min-w-15">
-			<h1
-				class="text-center text-[5rem] sm:text-[7rem] px-3 inline-flex items-center justify-center hover:text-green-300 hover:scale-[1.2] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
-				style="font-size: clamp(5rem, 0.5rem + 10vh, 7rem)"
-				data-value="async"
-			>
-				async
-			</h1>
-			<div class="flex justify-center overflow-x-hidden text-[1.0rem] min-h-[2rem] my-[1rem]">
+		<div class="h-[30vh] w-auto overflow-none my-1 min-w-15">
+			<div class="inline-flex items-center justify-center">
+				<h1
+					class="text-center px-3 hover:text-green-300 hover:scale-[1.2] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] will-change-contents tracking-tighter"
+					style="font-size: clamp(5rem, 3rem + 10vh, 15rem)"
+					data-value="async"
+				>
+					async
+				</h1>
+			</div>
+			<div class="flex justify-center overflow-x-hidden text-[1.0rem] min-h-[2rem] my-[2rem]">
 				<Typewriter
 					sentences={[
 						'GNU/Linux enjoyer',
