@@ -2,7 +2,16 @@
 	let isMenuOpen = false;
 
 	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+	let previousPage = page; // Initialize with the initial value
 	import Themeswitch from './themeswitch.svelte';
+
+	page.subscribe((newPage) => {
+		if (newPage !== previousPage) {
+			isMenuOpen = false; // Close the menu when page changes
+			previousPage = newPage; // Update the previousPage value
+		}
+	});
 
 	browser &&
 		(() => {
