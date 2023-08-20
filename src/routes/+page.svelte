@@ -85,7 +85,7 @@
 		style="transition-property: blur, opacity, transform, filter; transition-timing-function: ease-in-out;"
 	>
 		<div
-			class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
+			class="flex px-3 justify-center scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
 			data-show="true"
 		>
 			<a href="#introduction" aria-label="introduction">
@@ -102,7 +102,7 @@
 			<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="introduction">Introduction</h1>
 		</div>
 		<p
-			class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
+			class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
 			data-show="true"
 		>
 			Hey there! I'm
@@ -119,7 +119,7 @@
 		<div>
 			<div class="justify-center flex">
 				<div
-					class="flex px-3 justify-center scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
+					class="flex px-3 justify-center scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
 					data-show="true"
 				>
 					<a href="#underdev" aria-label="underdev"
@@ -137,7 +137,7 @@
 				</div>
 			</div>
 			<p
-				class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-100%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
+				class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
 				data-show="true"
 			>
 				This is under development! I'm working hard on this (i think), ok? Please come back later
