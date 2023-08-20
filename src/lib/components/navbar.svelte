@@ -194,7 +194,7 @@
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 	}
 
-	:global(.carbon) .async {
+	:global(.oled) .async {
 		background: linear-gradient(
 				90deg,
 				theme(colors.teal.300) 10%,
