@@ -57,15 +57,23 @@
 			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deeg]"
 		>
 			<source
-				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-512,cp-false,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				media="(max-width: 2.5rem)"
 				type="image/avif"
+				width="100"
+				height="100"
 			/>
 			<source
-				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-512,cp-false,lo-true,f-webp,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-webp,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				width="100"
+				height="100"
+				media="(max-width: 2.5rem)"
 				type="image/webp"
 			/>
 			<img
-				src="https://ik.imagekit.io/7qhojskvo/tr:w-512,cp-false,lo-true,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				src="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+				width="100"
+				height="100"
 				alt=""
 			/>
 		</picture>
