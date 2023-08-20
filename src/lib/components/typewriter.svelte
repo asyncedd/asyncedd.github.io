@@ -1,7 +1,11 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 
-	export let sentences: string[] = [];
+	/**
+	 * A list of sentences to typewrite
+	 * @type {string[]}
+	 */
+	export let sentences = [];
 	let speed = 50;
 	let currentText = '';
 	let currentSentenceIndex = 0;
