@@ -57,15 +57,15 @@
 			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deeg]"
 		>
 			<source
-				srcset="https://ik.imagekit.io/dfijmneb9/tr:w-100,cp-false,lo-true,f-avif,r-256/clouds.webp?updatedAt=1691272771794"
+				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-avif,r-256/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
 				type="image/avif"
 			/>
 			<source
-				srcset="https://ik.imagekit.io/dfijmneb9/tr:w-100,cp-false,lo-true,f-webp,r-256/clouds.webp?updatedAt=1691272771794"
+				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-webp,r-256/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
 				type="image/webp"
 			/>
 			<img
-				src="https://ik.imagekit.io/dfijmneb9/tr:w-100,f-auto,cp-false,lo-true,f-jpg,r-256/clouds.webp?updatedAt=1691272771794"
+				src="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,r-256/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
 				alt=""
 			/>
 		</picture>
