@@ -3,7 +3,7 @@
 
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	let previousPage = page; // Initialize with the initial value
+	let previousPage = $page; // Initialize with the initial value
 	import Themeswitch from './themeswitch.svelte';
 
 	page.subscribe((newPage) => {
