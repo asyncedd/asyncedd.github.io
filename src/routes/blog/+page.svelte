@@ -17,7 +17,7 @@
 				<div class="border-t-content border-t-[1px] pt-5px">
 					<a
 						href={`blog/${post.slug}`}
-						class="text-[3rem] capitalize text-content hover:text-sky-300 hover:dark:text-sky-200 transition-colors duration-[0.5s] ease-in-out"
+						class="text-[3rem] capitalize text-content hover:text-accent transition-colors duration-[0.5s] ease-in-out"
 					>
 						{post.title}
 					</a>
