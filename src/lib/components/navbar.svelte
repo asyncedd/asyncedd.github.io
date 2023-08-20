@@ -137,7 +137,6 @@
 		top: 0;
 		z-index: 50;
 		backdrop-filter: saturate(180%) blur(20px);
-		-webkit-backdrop-filter: saturate(180%) blur(20px);
 	}
 
 	/* Content on the left */
