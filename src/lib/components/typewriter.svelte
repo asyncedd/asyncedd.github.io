@@ -74,9 +74,11 @@
 		from,
 		to {
 			opacity: 1;
+			transform: scaleY(1);
 		}
 		50% {
 			opacity: 0;
+			transform: scaleY(0);
 		}
 	}
 </style>
