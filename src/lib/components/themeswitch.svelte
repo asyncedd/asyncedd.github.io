@@ -8,7 +8,6 @@
 		{ id: 'light', label: '☀️  Light' },
 		{ id: 'dark', label: '🌑 Dark' },
 		{ id: 'mocha', label: '☕ Mocha' },
-		{ id: 'carbon', label: '⚫ Carbon' },
 		{ id: 'oled', label: '⚫ OLED' }
 	];
 
