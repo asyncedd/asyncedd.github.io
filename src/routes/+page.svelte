@@ -37,7 +37,7 @@
 		>
 			async
 		</h1>
-		<div class="flex justify-center overflow-x-hidden text-[1.0rem] min-h-[2rem] my-[2rem]">
+		<div class="flex justify-center overflow-x-hidden text-[1.3rem] min-h-[2rem] my-[2rem]">
 			<Typewriter
 				sentences={[
 					'GNU/Linux enjoyer',

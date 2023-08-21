@@ -44,11 +44,11 @@
 <style lang="postcss">
 	.typing-cursor::after {
 		content: '';
-		height: 1rem;
+		height: 1.3rem;
 		border-left: 1px solid theme(colors.content);
 		position: relative;
 		margin-left: 3px;
-		top: -3px;
+		top: -5px;
 		animation: blink-caret 1s ease-in-out infinite;
 		transition: opacity 1s ease-in-out;
 	}
