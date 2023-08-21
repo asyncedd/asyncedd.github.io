@@ -182,7 +182,7 @@
 				theme(colors.accent) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		transition: background 0.3s ease-in-out;
+		transition: background 1s ease-in-out;
 	}
 
 	.async:hover {
