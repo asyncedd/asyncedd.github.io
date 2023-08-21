@@ -37,12 +37,12 @@
 	});
 </script>
 
-<p class="{isTyping ? 'typing-cursor' : ''} flex" style="align-items: flex-end;" id="typewriter">
+<p class="{isTyping ? 'typing-cursor' : ''} flex" style="align-items: flex-end;">
 	{currentText}
 </p>
 
 <style lang="postcss">
-	#typewriter.typing-cursor::after {
+	.typing-cursor::after {
 		content: '';
 		height: 1rem;
 		border-left: 1px solid theme(colors.content);
