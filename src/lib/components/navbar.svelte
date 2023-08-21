@@ -45,16 +45,13 @@
 </script>
 
 <nav
-	class="w-[100%] bg-primary overflow-auto navbar flex top-0 z-50 bg-opacity-80"
+	class="w-[100%] bg-primary inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
+	style="backdrop-filter: saturate(180%) blur(20px);"
 	id="menu-button"
 >
-	<a
-		href="/"
-		aria-label="async"
-		class="left-content left-content inline-flex justify-center mx-[3vw] my-1"
-	>
+	<a href="/" aria-label="async" class="mr-auto inline-flex justify-center mx-[3vw] my-1">
 		<picture
-			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[0.3s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deeg]"
+			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[1s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deg]"
 		>
 			<source
 				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
@@ -174,31 +171,6 @@
 {/if}
 
 <style lang="postcss">
-	.navbar {
-		display: inline-flex;
-		overflow: visible; /* Change this line */
-		position: fixed;
-		top: 0;
-		z-index: 50;
-		backdrop-filter: saturate(180%) blur(20px);
-	}
-
-	/* Content on the left */
-	.left-content {
-		margin-right: auto; /* Pushes the content to the left side */
-	}
-
-	.left-content img {
-		margin-right: 10px; /* Add some space between the image and the right content */
-		transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-	}
-
-	/* Hover effect for icons and images */
-	.left-content img:hover {
-		/* Apply the effect to the image when it's hovered */
-		transform: scale(1.2); /* Increase the scale on hover */
-	}
-
 	.async {
 		background: linear-gradient(
 				90deg,
