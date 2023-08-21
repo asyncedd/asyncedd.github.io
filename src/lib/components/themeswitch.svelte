@@ -40,7 +40,7 @@
 	browser &&
 		(() => {
 			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			let currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
+			currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
 			const doc = document.documentElement;
 			doc.className = currentTheme;
 
