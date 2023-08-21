@@ -179,46 +179,7 @@
 				theme(colors.blue.300) 30%,
 				theme(colors.indigo.300) 40%,
 				theme(colors.violet.300) 50%,
-				theme(colors.zinc.900) 0%
-			)
-			calc(100% - var(--_p, 0%)) / 200% 100%;
-	}
-
-	:global(.dark) .async {
-		background: linear-gradient(
-				90deg,
-				theme(colors.teal.300) 10%,
-				theme(colors.sky.300) 20%,
-				theme(colors.blue.300) 30%,
-				theme(colors.indigo.300) 40%,
-				theme(colors.violet.300) 50%,
-				theme(colors.sky.300) 0%
-			)
-			calc(100% - var(--_p, 0%)) / 200% 100%;
-	}
-
-	:global(.mocha) .async {
-		background: linear-gradient(
-				90deg,
-				theme(colors.teal.300) 10%,
-				theme(colors.sky.300) 20%,
-				theme(colors.blue.300) 30%,
-				theme(colors.indigo.300) 40%,
-				theme(colors.violet.300) 50%,
-				theme(colors.sky.300) 0%
-			)
-			calc(100% - var(--_p, 0%)) / 200% 100%;
-	}
-
-	:global(.oled) .async {
-		background: linear-gradient(
-				90deg,
-				theme(colors.teal.300) 10%,
-				theme(colors.sky.300) 20%,
-				theme(colors.blue.300) 30%,
-				theme(colors.indigo.300) 40%,
-				theme(colors.violet.300) 50%,
-				theme(colors.sky.300) 0%
+				theme(colors.accent) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 	}

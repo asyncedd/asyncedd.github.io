@@ -1,4 +1,3 @@
-import { variants } from '@catppuccin/palette';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
@@ -15,6 +14,7 @@ export default {
 				content: 'rgb(var(--color-content) / <alpha-value>)',
 				content_dark: 'rgb(var(--color-content_dark) / <alpha-value>)',
 				accent: 'rgb(var(--color-accent) / <alpha-value>)',
+				accent_thing: 'rgb(var(--color-accent_ting) / <alpha-value>)',
 				as_teal: 'var(--color-teal / <alpha-value>)',
 				as_sky: 'var(--color-sky) / <alpha-value>',
 				as_blue: 'var(--color-blue) / <alpha-value>',
