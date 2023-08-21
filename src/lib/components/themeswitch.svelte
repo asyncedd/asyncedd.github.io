@@ -27,7 +27,7 @@
 		adjustTheme();
 	}
 
-	const themes = ['dark', 'light', 'mocha'];
+	const themes = ['dark', 'light', 'mocha', 'oled'];
 	let currentTheme = 'light';
 
 	const adjustTheme = () => {
