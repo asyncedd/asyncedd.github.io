@@ -38,29 +38,12 @@
 </script>
 
 <p class="{isTyping ? 'typing-cursor' : ''} flex" style="align-items: flex-end;" id="typewriter">
-	{#each currentText as letter, index}
-		<span
-			class="transition-[opacity,transform] ease-in-out duration-[0.5s]"
-			style="animation-delay: {index * 30}ms;">{letter === ' ' ? '\u00A0' : letter}</span
-		>
-	{/each}
+	{currentText}
 </p>
 
 <style lang="postcss">
 	#typewriter.typing-cursor span {
 		opacity: 0.3;
-		animation: jump 0.1s forwards;
-	}
-
-	@keyframes jump {
-		from {
-			transform: translateY(-5px);
-			opacity: 0.3;
-		}
-		to {
-			transform: translateY(0);
-			opacity: 1;
-		}
 	}
 
 	#typewriter.typing-cursor::after {
