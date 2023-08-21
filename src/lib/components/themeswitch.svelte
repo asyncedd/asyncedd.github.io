@@ -63,16 +63,18 @@
 			 * @param {MouseEvent} event
 			 */
 			const handleGlobalClick = (event) => {
-				const dropdownButtons = document.querySelectorAll('.dropdown-button');
-				let shouldHide = true;
+				if (isDropdownOpen === true) {
+					const dropdownButtons = document.querySelectorAll('.dropdown-button');
+					let shouldHide = true;
 
-				dropdownButtons.forEach((button) => {
-					if (event.target instanceof Node && button.contains(event.target)) {
-						shouldHide = false;
-					}
-				});
+					dropdownButtons.forEach((button) => {
+						if (event.target instanceof Node && button.contains(event.target)) {
+							shouldHide = false;
+						}
+					});
 
-				isDropdownOpen = !shouldHide;
+					isDropdownOpen = !shouldHide;
+				}
 			};
 
 			document.addEventListener('click', handleGlobalClick);
