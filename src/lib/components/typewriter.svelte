@@ -42,10 +42,6 @@
 </p>
 
 <style lang="postcss">
-	#typewriter.typing-cursor span {
-		opacity: 0.3;
-	}
-
 	#typewriter.typing-cursor::after {
 		content: '';
 		height: 1rem;
