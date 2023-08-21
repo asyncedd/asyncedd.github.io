@@ -40,22 +40,30 @@
 	browser &&
 		(() => {
 			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
+			let currentTheme = localStorage.theme || (prefersDark ? 'dark' : 'light');
 			const doc = document.documentElement;
 			doc.className = currentTheme;
+
 			/**
-			 * Set a theme
+			 * A helper utility to set the theme
 			 *
-			 * @param {string} newTheme - the theme to change
+			 * @param {string} newTheme
 			 */
-			const setTheme = (newTheme) =>
-				currentTheme !== newTheme && !localStorage.theme
-					? (doc.className = currentTheme = newTheme)
-					: null;
+			const setTheme = (newTheme) => {
+				if (currentTheme !== newTheme && !localStorage.theme) {
+					doc.className = currentTheme = newTheme;
+				}
+			};
+
 			window
 				.matchMedia('(prefers-color-scheme: dark)')
 				.addEventListener('change', (e) => setTheme(e.matches ? 'dark' : 'light'));
-			window.addEventListener('storage', (e) => e.key === 'theme' && setTheme(e.newValue || ''));
+
+			window.addEventListener('storage', (e) => {
+				if (e.key === 'theme') {
+					setTheme(e.newValue || '');
+				}
+			});
 
 			/**
 			 * Handle clicks that occurs outside the menu
@@ -63,7 +71,7 @@
 			 * @param {MouseEvent} event
 			 */
 			const handleGlobalClick = (event) => {
-				if (isDropdownOpen === true) {
+				if (isDropdownOpen) {
 					const dropdownButtons = document.querySelectorAll('.dropdown-button');
 					let shouldHide = true;
 
@@ -78,6 +86,7 @@
 			};
 
 			document.addEventListener('click', handleGlobalClick);
+
 			return () => {
 				document.removeEventListener('click', handleGlobalClick);
 			};
