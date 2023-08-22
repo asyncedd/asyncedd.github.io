@@ -50,9 +50,9 @@
 
 <style lang="postcss" async>
 	:root {
-		--wave-color-1: theme('colors.primary/0.7');
-		--wave-color-2: theme('colors.primary/0.5');
-		--wave-color-3: theme('colors.primary/0.3');
+		--wave-color-1: theme('colors.accent/0.3');
+		--wave-color-2: theme('colors.accent/0.5');
+		--wave-color-3: theme('colors.primary/0.7');
 		--wave-color-4: theme('colors.primary');
 	}
 
