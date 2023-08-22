@@ -170,7 +170,7 @@
 	</div>
 {/if}
 
-<style lang="postcss">
+<style lang="postcss" async>
 	.async {
 		background: linear-gradient(
 				90deg,

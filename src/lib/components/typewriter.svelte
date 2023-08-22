@@ -41,7 +41,7 @@
 	{currentText}
 </p>
 
-<style lang="postcss">
+<style lang="postcss" async>
 	.typing-cursor::after {
 		content: '';
 		height: 1.3rem;

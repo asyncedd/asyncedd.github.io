@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-<style lang="postcss">
+<style lang="postcss" async>
 	:root {
 		--wave-color-1: theme('colors.primary/0.7');
 		--wave-color-2: theme('colors.primary/0.5');
