@@ -25,14 +25,14 @@
 </script>
 
 <div
-	class="h-[100vh] flex justify-center items-center align-middle text-content pb-[5rem] sm:pb-0 bg-primary ease-in-out"
+	class="h-[100vh] flex justify-center items-center align-middle text-content bg-primary ease-in-out"
 >
 	<div
 		class="justify-center rounded-[3rem] flex items-center flex-col w-auto overflow-none my-1 min-w-15"
 	>
 		<h1
-			class="text-center px-3 hover:text-green-300 hover:scale-[1.2] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] tracking-tighter inline-flex items-center justify-center"
-			style="font-size: clamp(5rem, 3rem + 10vh, 15rem)"
+			class="text-center px-3 hover:text-green-300 hover:scale-[1.1] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] tracking-tighter inline-flex items-center justify-center"
+			style="font-size: clamp(3.5rem, 2.5rem + 10vh, 15rem)"
 			data-value="async"
 		>
 			async
