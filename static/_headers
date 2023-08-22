@@ -1,0 +1,9 @@
+/*
+  Cache-Control: public, max-age=31536000, must-revalidate
+  Access-Control-Allow-Origin: *, https://imagekit.io
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera 'none'; geolocation 'none'; microphone 'none'
