@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import Toc from './toc.svelte';
 
 	export let data;
 </script>
@@ -10,6 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
+<Toc />
 <div class="flex justify-center h-[100%]">
 	<article class="py-[10vh]" style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
