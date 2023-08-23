@@ -39,7 +39,7 @@
 
 <p
 	class={isTyping
-		? 'after:content-[""] after:border-l-[1px] after:border-l-content after:relative after:ml-[3px] after:animate-[blink-caret_1s_ease-in-out_infinite] after:transition-[opacity] after:duration-[1s] after:ease-in-out'
+		? 'after:content-[""] after:border-l-[1px] after:border-l-content after:ml-[3px] after:animate-[blink-caret_1s_ease-in-out_infinite] after:transition-[opacity] after:duration-[1s] after:ease-in-out'
 		: ''}
 	style="align-items: flex-end;
   "

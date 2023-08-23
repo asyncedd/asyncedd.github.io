@@ -74,9 +74,9 @@
 				alt=""
 			/>
 		</picture>
-		<div class="head-parent px-1 flex">
+		<div class="head-parent px-1 flex transition-[transform] duration-[1s] ease-in-out">
 			<p
-				class="async cursor-pointer px-[2px] transition duration-[0.5s] text-[1.7rem] fonts-mono"
+				class="async ease-in-out cursor-pointer px-[2px] transition-[background] duration-[1s] text-[1.7rem] fonts-mono"
 				style="-webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
 			>
 				async
@@ -86,7 +86,7 @@
 	<div class="flex">
 		<Themeswitch />
 		<button
-			class="flex flex-col cursor-pointer mt-[7px] menu-button"
+			class="flex flex-col cursor-pointer mt-[7px] menu-button group"
 			tabindex="0"
 			aria-label="Toggle hamburger menu"
 			class:menu-open={isMenuOpen}
@@ -94,16 +94,28 @@
 				isMenuOpen = !isMenuOpen;
 			}}
 		>
-			<span class="bar bg-content" />
-			<span class="bar bg-content" />
-			<span class="bar bg-content" />
+			<span
+				class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isMenuOpen
+					? 'translate-y-[10px] rotate-[45deg]'
+					: 'group-hover:translate-y-[5px] group-hover:rotate-[22.5deg]'} bg-content"
+			/>
+			<span
+				class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isMenuOpen
+					? 'translate-x-[10vw]'
+					: ''} bg-content"
+			/>
+			<span
+				class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isMenuOpen
+					? 'translate-y-[-10px] rotate-[-45deg]'
+					: 'group-hover:translate-y-[-5px] group-hover:rotate-[-22.5deg]'} bg-content"
+			/>
 		</button>
 		<div class="mr-[3vw]" />
 	</div>
 </nav>
 {#if isMenuOpen}
 	<div
-		class="flex menu-overlay z-29"
+		class="flex fixed w-[100%] h-[100%] z-49 opacity-1 bg-zinc-950/50"
 		out:fly={{
 			x: -300,
 			delay: 300,
@@ -116,7 +128,7 @@
 		}}
 	>
 		<ul
-			class="menu bg-primary text-content text-[2rem] z-50 {isMenuOpen
+			class="h-[100%] bg-primary text-content text-[2rem] z-50 {isMenuOpen
 				? 'w-[75%]'
 				: 'w-[0%]'} menu-button"
 		>
@@ -182,16 +194,10 @@
 				theme(colors.accent) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
-		transition: background 1s ease-in-out;
 	}
 
 	.async:hover {
 		--_p: 100%;
-	}
-
-	.head-parent {
-		transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-		@apply rounded-[0.7rem];
 	}
 
 	.head-parent:hover:not(:active) {
@@ -202,53 +208,5 @@
 	.head-parent:active {
 		--_p: 100%;
 		transform: scale(0.9);
-	}
-
-	.bar {
-		width: 30px;
-		height: 3px;
-		margin: 4px 0;
-		box-shadow: 0 2px 4px transparent;
-		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-	}
-
-	/* Animation for the hamburger menu */
-
-	.menu-open .bar:nth-child(1) {
-		transform: translateY(10px) rotate(45deg);
-	}
-
-	.menu-open .bar:nth-child(2) {
-		transform: translateX(10vw);
-	}
-
-	.menu-open .bar:nth-child(3) {
-		transform: translateY(-10px) rotate(-45deg);
-	}
-
-	button:hover:not(.menu-open) .bar:nth-child(1) {
-		transform: translateY(5px) rotate(22.5deg);
-	}
-
-	button:hover:not(.menu-open) .bar:nth-child(2) {
-		transform: translateX(0);
-	}
-
-	button:hover:not(.menu-open) .bar:nth-child(3) {
-		transform: translateY(-5px) rotate(-22.5deg);
-	}
-
-	.menu-overlay {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		z-index: 49; /* Make sure it's below the navbar (z-index: 50) */
-		opacity: 1;
-		@apply bg-zinc-950/50;
-	}
-
-	/* Adjust the menu position and size as needed */
-	.menu {
-		height: 100%;
 	}
 </style>
