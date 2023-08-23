@@ -115,7 +115,8 @@
 </nav>
 {#if isMenuOpen}
 	<div
-		class="flex fixed w-[100%] h-[100%] z-49 opacity-1 bg-zinc-950/50"
+		class="flex fixed w-[100%] h-[100%] z-29 opacity-100 bg-zinc-950/50"
+		style="z-index: 49;"
 		out:fly={{
 			x: -300,
 			delay: 300,
