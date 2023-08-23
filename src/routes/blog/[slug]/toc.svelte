@@ -95,7 +95,7 @@
 	</section>
 </aside>
 
-<style>
+<style lang="postcss">
 	:global(.table-of-contents ul) {
 		max-height: 400px;
 		overflow-y: scroll;
@@ -112,8 +112,15 @@
 
 	:global(.table-of-contents a) {
 		display: inline-block;
-		color: var(--clr-menu-text);
+		color: theme(colors.accent);
+		text-decoration-color: transparent;
+		text-decoration-line: underline;
 		font-weight: 400;
+		transition: text-decoration-color 0.5s ease-in-out;
+	}
+
+	:global(.table-of-contents a):hover {
+		text-decoration-color: theme(colors.accent);
 	}
 
 	:global(.table-of-contents a::before) {
