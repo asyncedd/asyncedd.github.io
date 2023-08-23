@@ -29,7 +29,7 @@
 			{/each}
 		</div>
 
-		<div class="prose prose-as">
+		<div class="prose prose-as pb-[25rem]">
 			<svelte:component this={data.content} />
 		</div>
 	</article>
