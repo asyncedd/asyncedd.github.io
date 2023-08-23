@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" defer>
 	const lettersArray =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()|'.split('');
 
