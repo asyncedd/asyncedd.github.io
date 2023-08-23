@@ -195,13 +195,11 @@
 	}
 
 	.head-parent:hover:not(:active) {
-		@apply bg-zinc-950;
 		--_p: 100%;
 		transform: scale(1.1);
 	}
 
 	.head-parent:active {
-		@apply bg-zinc-950;
 		--_p: 100%;
 		transform: scale(0.9);
 	}
