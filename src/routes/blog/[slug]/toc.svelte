@@ -9,13 +9,54 @@
 		const postTableOfContentsEl = document.querySelector(
 			'#table-of-contents + ul'
 		) as HTMLUListElement;
+
+		const closestH2 = findClosestH2ToViewportMiddle();
+
+		const activeLinks = postTableOfContentsEl.querySelectorAll('a.active');
+		activeLinks.forEach((link) => {
+			link.classList.remove('active');
+		});
+
+		// Adding a CSS class to the <a> of the current section
+		if (closestH2) {
+			const activeSectionLink = postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
+			if (activeSectionLink) {
+				activeSectionLink.classList.add('active'); // This should be the class to indicate the active <a> element
+			}
+		}
+
 		tableOfContents = postTableOfContentsEl.outerHTML;
+	}
+
+	function findClosestH2ToViewportMiddle() {
+		const viewportHeight = window.innerHeight;
+		const middleOfViewport = viewportHeight / 2;
+		const elements = document.getElementsByTagName('h2');
+
+		let closestH2 = null;
+		let minDistance = Number.MAX_VALUE;
+
+		for (const h2 of elements) {
+			if (h2.id) {
+				// Check if the h2 element has an id
+				const boundingBox = h2.getBoundingClientRect();
+				const h2Center = boundingBox.top + boundingBox.height / 2;
+				const distanceToCenter = Math.abs(h2Center - middleOfViewport);
+
+				if (distanceToCenter < minDistance) {
+					minDistance = distanceToCenter;
+					closestH2 = h2;
+				}
+			}
+		}
+
+		return closestH2;
 	}
 
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
 		const observer = new IntersectionObserver(([entry]) => {
-			entry.boundingClientRect.bottom < 0 ? (showSidebar = true) : (showSidebar = false);
+			entry.boundingClientRect.top < 0 ? (showSidebar = true) : (showSidebar = false);
 		});
 		observer.observe(targetEl);
 
@@ -25,6 +66,10 @@
 	}
 
 	onMount(() => {
+		window.onscroll = function () {
+			getTableOfContents();
+		};
+
 		getTableOfContents();
 
 		const isLargeScreen = window.innerWidth >= 1440;
@@ -116,7 +161,7 @@
 		text-decoration-color: transparent;
 		text-decoration-line: underline;
 		font-weight: 400;
-		transition: text-decoration-color 0.5s ease-in-out;
+		transition: color 0.5s ease-in-out, text-decoration-color 0.5s ease-in-out;
 	}
 
 	:global(.table-of-contents a):hover {
@@ -127,5 +172,9 @@
 		all: unset;
 		counter-increment: section;
 		content: counter(section) '. ';
+	}
+
+	:global(.table-of-contents .active) {
+		color: theme(colors.teal.300);
 	}
 </style>
