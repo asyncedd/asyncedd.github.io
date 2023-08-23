@@ -37,22 +37,17 @@
 	});
 </script>
 
-<p class="{isTyping ? 'typing-cursor' : ''} flex" style="align-items: flex-end;">
+<p
+	class={isTyping
+		? 'after:content-[""] after:border-l-[1px] after:border-l-content after:relative after:ml-[3px] after:animate-[blink-caret_1s_ease-in-out_infinite] after:transition-[opacity] after:duration-[1s] after:ease-in-out'
+		: ''}
+	style="align-items: flex-end;
+  "
+>
 	{currentText}
 </p>
 
-<style lang="postcss" async>
-	.typing-cursor::after {
-		content: '';
-		height: 1.3rem;
-		border-left: 1px solid theme(colors.content);
-		position: relative;
-		margin-left: 3px;
-		top: -5px;
-		animation: blink-caret 1s ease-in-out infinite;
-		transition: opacity 1s ease-in-out;
-	}
-
+<style>
 	@keyframes blink-caret {
 		from,
 		to {

@@ -1,7 +1,7 @@
 <div class="relative" style="margin: 0;">
 	<div>
 		<svg
-			class="waves"
+			class="relative w-[100%] h-[15vh] mb-[-7px] min-h-[100px] max-h-[150px]"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
 			viewBox="0 24 150 28"
@@ -54,15 +54,6 @@
 		--wave-color-2: theme('colors.accent/0.5');
 		--wave-color-3: theme('colors.primary/0.7');
 		--wave-color-4: theme('colors.primary');
-	}
-
-	.waves {
-		position: relative;
-		width: 100%;
-		height: 15vh;
-		margin-bottom: -7px; /*Fix for safari gap*/
-		min-height: 100px;
-		max-height: 150px;
 	}
 
 	/* Animation */
