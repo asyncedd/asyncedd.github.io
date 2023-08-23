@@ -7,4 +7,4 @@
   X-XSS-Protection: 1; mode=block
   Content-Security-Policy: default-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline' data: https://ik.imagekit.io;
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera 'none'; geolocation 'none'; microphone 'none'
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), sync-xhr=(), usb=(), vr=()
