@@ -42,22 +42,13 @@
 			window.addEventListener('storage', (e) => e.key === 'theme' && setTheme(e.newValue || ''));
 
 			/**
-			 * Handle clicks that occurs outside the menu
-			 *
-			 * @param {MouseEvent} event
+			 * Handles global click events at ludicrous speed using a sneaky assignment trick.
+			 * @param {MouseEvent} event - The click event object.
 			 */
-			const handleGlobalClick = (event) => {
-				if (isDropdownOpen) {
-					const dropdownButtons = document.querySelectorAll('.dropdown-button');
-					let shouldHide = true;
-					dropdownButtons.forEach((button) => {
-						if (event.target instanceof Node && button.contains(event.target)) {
-							shouldHide = false;
-						}
-					});
-					isDropdownOpen = !shouldHide;
-				}
-			};
+			const handleGlobalClick = (event) =>
+				(isDropdownOpen =
+					isDropdownOpen &&
+					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button')));
 
 			document.addEventListener('click', handleGlobalClick);
 

@@ -26,14 +26,13 @@
 	}
 
 	function findClosestH2ToViewportMiddle() {
-		const viewportHeight = window.innerHeight;
-		const middleOfViewport = viewportHeight / 2;
-		const elements = document.getElementsByTagName('h2');
+		const middleOfViewport = window.innerHeight / 2;
+		const h2Elements = document.querySelectorAll('h2');
 
 		let closestH2 = null;
 		let minDistance = Number.MAX_VALUE;
 
-		for (const h2 of elements) {
+		h2Elements.forEach((h2) => {
 			if (h2.id) {
 				const { top, height } = h2.getBoundingClientRect();
 				const h2Center = top + height / 2;
@@ -44,7 +43,7 @@
 					closestH2 = h2;
 				}
 			}
-		}
+		});
 
 		return closestH2;
 	}
