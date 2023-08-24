@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
-import sectionize from 'remark-sectionize';
+import sectionize from './src/plugins/sectionize.js';
 
 import { mdsvex } from 'mdsvex';
 

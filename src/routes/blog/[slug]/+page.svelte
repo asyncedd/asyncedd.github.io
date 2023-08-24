@@ -12,7 +12,7 @@
 </svelte:head>
 
 <Toc />
-<div class="flex justify-center h-[100%] mx-[5rem]">
+<div class="flex justify-center h-[100%] mx-[1.5rem]">
 	<article class="py-[10vh]" style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
 			<h1 class="capitalize font-bold text-[5rem] text-content">

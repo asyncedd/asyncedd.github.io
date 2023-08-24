@@ -1,79 +1,68 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
+	/** @type {HTMLUListElement | string | null} */
 	let tableOfContents = null;
+	/** @type {HTMLUListElement | null} */
 	let postTableOfContentsEl = null;
 	let showSidebar = false;
 	let opened = false;
 
 	function getTableOfContents() {
-		const closestH2 = findClosestH2ToViewportMiddle();
-		const activeSectionLink =
-			postTableOfContentsEl &&
-			closestH2 &&
-			postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
-
-		postTableOfContentsEl.querySelectorAll('a.active').forEach((link) => {
-			link.classList.remove('active');
-		});
-
-		if (activeSectionLink) {
-			activeSectionLink.classList.add('active');
+		if (postTableOfContentsEl) {
+			tableOfContents = postTableOfContentsEl.outerHTML;
 		}
-
-		tableOfContents = postTableOfContentsEl.outerHTML;
-	}
-
-	function findClosestH2ToViewportMiddle() {
-		const middleOfViewport = window.innerHeight / 2;
-		const h2Elements = document.querySelectorAll('h2');
-
-		let closestH2 = null;
-		let minDistance = Number.MAX_VALUE;
-
-		h2Elements.forEach((h2) => {
-			if (h2.id) {
-				const { top, height } = h2.getBoundingClientRect();
-				const h2Center = top + height / 2;
-				const distanceToCenter = Math.abs(h2Center - middleOfViewport);
-
-				if (distanceToCenter < minDistance) {
-					minDistance = distanceToCenter;
-					closestH2 = h2;
-				}
-			}
-		});
-
-		return closestH2;
 	}
 
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
 
-		const observer = new IntersectionObserver(([entry]) => {
-			showSidebar = !opened ? entry.boundingClientRect.top < 250 : false;
-		});
+		if (!targetEl) return () => {};
 
+		const observer = new IntersectionObserver(([entry]) => {
+			showSidebar = !opened && entry.boundingClientRect.top < 200;
+		});
 		observer.observe(targetEl);
 
-		return () => {
-			observer.unobserve(targetEl);
-		};
+		// return () => observer.disconnect();
 	}
 
 	onMount(() => {
 		function handleScroll() {
-			getTableOfContents();
 			if (!opened && window.innerWidth >= 1440) {
 				openSidebar();
+				window.onscroll = null;
 			}
 		}
 
-		postTableOfContentsEl = document.querySelector('#table-of-contents + ul') as HTMLUListElement;
+		postTableOfContentsEl = /** @type {HTMLUListElement} */ (
+			document.querySelector('#table-of-contents + ul')
+		);
 
 		window.onscroll = handleScroll;
-		handleScroll(); // Initial call
+
+		getTableOfContents();
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const id = entry.target.getAttribute('id');
+				const navLink = document.querySelector(`ul li a[href="#${id}"]`);
+
+				if (navLink && id != 'table-of-contents') {
+					if (entry.intersectionRatio > 0) {
+						navLink.classList.add('active');
+					} else {
+						navLink.classList.remove('active');
+					}
+				}
+			});
+		});
+
+		// Track all sections that have an `id` applied
+		document.querySelectorAll('section[id]').forEach((section) => {
+			observer.observe(section);
+		});
 	});
 
 	function toggleSidebar() {
@@ -82,7 +71,7 @@
 	}
 </script>
 
-<aside class="max-w-[280px] fixed top-[40%] right-[8px] z-10">
+<aside class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[100svh]">
 	<section>
 		{#if !showSidebar}
 			<button
@@ -109,7 +98,7 @@
 		{/if}
 
 		{#if showSidebar}
-			<div
+			<nav
 				class="bg-primary_light p-[1.5rem] rounded-[1rem] table-of-contents"
 				transition:fly={{ x: '100%', duration: 300 }}
 			>
@@ -132,8 +121,10 @@
 				</button>
 
 				<h2 class="font-mono capitalize">Table of contents</h2>
-				{@html tableOfContents}
-			</div>
+				<ol>
+					{@html tableOfContents}
+				</ol>
+			</nav>
 		{/if}
 	</section>
 </aside>
