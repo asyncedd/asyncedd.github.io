@@ -9,7 +9,10 @@
 
 	function getTableOfContents() {
 		const closestH2 = findClosestH2ToViewportMiddle();
-		const activeSectionLink = postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
+		const activeSectionLink =
+			postTableOfContentsEl &&
+			closestH2 &&
+			postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
 
 		postTableOfContentsEl.querySelectorAll('a.active').forEach((link) => {
 			link.classList.remove('active');
