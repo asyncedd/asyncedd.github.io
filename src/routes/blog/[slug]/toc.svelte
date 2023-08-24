@@ -3,27 +3,20 @@
 	import { fly } from 'svelte/transition';
 
 	let tableOfContents = null;
+	let postTableOfContentsEl = null;
 	let showSidebar = false;
 	let opened = false;
 
 	function getTableOfContents() {
-		const postTableOfContentsEl = document.querySelector(
-			'#table-of-contents + ul'
-		) as HTMLUListElement;
-
 		const closestH2 = findClosestH2ToViewportMiddle();
+		const activeSectionLink = postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
 
-		const activeLinks = postTableOfContentsEl.querySelectorAll('a.active');
-		activeLinks.forEach((link) => {
+		postTableOfContentsEl.querySelectorAll('a.active').forEach((link) => {
 			link.classList.remove('active');
 		});
 
-		// Adding a CSS class to the <a> of the current section
-		if (closestH2) {
-			const activeSectionLink = postTableOfContentsEl.querySelector(`a[href="#${closestH2.id}"]`);
-			if (activeSectionLink) {
-				activeSectionLink.classList.add('active'); // This should be the class to indicate the active <a> element
-			}
+		if (activeSectionLink) {
+			activeSectionLink.classList.add('active');
 		}
 
 		tableOfContents = postTableOfContentsEl.outerHTML;
@@ -39,8 +32,8 @@
 
 		for (const h2 of elements) {
 			if (h2.id) {
-				const boundingBox = h2.getBoundingClientRect();
-				const h2Center = boundingBox.top + boundingBox.height / 2;
+				const { top, height } = h2.getBoundingClientRect();
+				const h2Center = top + height / 2;
 				const distanceToCenter = Math.abs(h2Center - middleOfViewport);
 
 				if (distanceToCenter < minDistance) {
@@ -55,11 +48,11 @@
 
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
+
 		const observer = new IntersectionObserver(([entry]) => {
-			entry.boundingClientRect.top < 0
-				? (showSidebar = !opened ? true : false)
-				: (showSidebar = false);
+			showSidebar = !opened ? entry.boundingClientRect.top < 0 : false;
 		});
+
 		observer.observe(targetEl);
 
 		return () => {
@@ -68,18 +61,17 @@
 	}
 
 	onMount(() => {
-		window.onscroll = function () {
+		function handleScroll() {
 			getTableOfContents();
-			if (!opened) {
-				const isLargeScreen = window.innerWidth >= 1440;
-
-				if (isLargeScreen) {
-					return openSidebar();
-				}
+			if (!opened && window.innerWidth >= 1440) {
+				openSidebar();
 			}
-		};
+		}
 
-		getTableOfContents();
+		postTableOfContentsEl = document.querySelector('#table-of-contents + ul') as HTMLUListElement;
+
+		window.onscroll = handleScroll;
+		handleScroll(); // Initial call
 	});
 
 	function toggleSidebar() {
