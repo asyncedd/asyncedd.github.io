@@ -7,7 +7,8 @@
 		{ id: 'light', label: '☀️  Light' },
 		{ id: 'dark', label: '🌑 Dark' },
 		{ id: 'mocha', label: '☕ Mocha' },
-		{ id: 'oled', label: '⚫ OLED' }
+		{ id: 'oled', label: '⚫ OLED' },
+		{ id: 'rose-pine', label: '🌹 Rosé Pine' }
 	];
 
 	let isDropdownOpen = false;
