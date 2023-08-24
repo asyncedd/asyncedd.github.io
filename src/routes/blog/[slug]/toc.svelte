@@ -4,6 +4,7 @@
 
 	let tableOfContents = null;
 	let showSidebar = false;
+	let opened = false;
 
 	function getTableOfContents() {
 		const postTableOfContentsEl = document.querySelector(
@@ -38,7 +39,6 @@
 
 		for (const h2 of elements) {
 			if (h2.id) {
-				// Check if the h2 element has an id
 				const boundingBox = h2.getBoundingClientRect();
 				const h2Center = boundingBox.top + boundingBox.height / 2;
 				const distanceToCenter = Math.abs(h2Center - middleOfViewport);
@@ -56,7 +56,9 @@
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
 		const observer = new IntersectionObserver(([entry]) => {
-			entry.boundingClientRect.top < 0 ? (showSidebar = true) : (showSidebar = false);
+			entry.boundingClientRect.top < 0
+				? (showSidebar = !opened ? true : false)
+				: (showSidebar = false);
 		});
 		observer.observe(targetEl);
 
@@ -68,19 +70,21 @@
 	onMount(() => {
 		window.onscroll = function () {
 			getTableOfContents();
+			if (!opened) {
+				const isLargeScreen = window.innerWidth >= 1440;
+
+				if (isLargeScreen) {
+					return openSidebar();
+				}
+			}
 		};
 
 		getTableOfContents();
-
-		const isLargeScreen = window.innerWidth >= 1440;
-
-		if (isLargeScreen) {
-			return openSidebar();
-		}
 	});
 
 	function toggleSidebar() {
 		showSidebar = !showSidebar;
+		opened = true;
 	}
 </script>
 
@@ -157,7 +161,7 @@
 
 	:global(.table-of-contents a) {
 		display: inline-block;
-		color: theme(colors.accent);
+		color: theme(colors.content);
 		text-decoration-color: transparent;
 		text-decoration-line: underline;
 		font-weight: 400;
@@ -165,7 +169,7 @@
 	}
 
 	:global(.table-of-contents a):hover {
-		text-decoration-color: theme(colors.accent);
+		text-decoration-color: theme(colors.content);
 	}
 
 	:global(.table-of-contents a::before) {
@@ -175,6 +179,10 @@
 	}
 
 	:global(.table-of-contents .active) {
-		color: theme(colors.teal.300);
+		color: theme(colors.accent);
+	}
+
+	:global(.table-of-contents .active):hover {
+		text-decoration-color: theme(colors.accent);
 	}
 </style>
