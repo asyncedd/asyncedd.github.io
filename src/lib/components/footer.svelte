@@ -4,7 +4,5 @@
 
 <footer>
 	<Wave />
-	<div class="bg-primary text-center">
-		<h2 class="text-center text-[1rem] p-[1rem]">Made with ❤️ by asyncedd</h2>
-	</div>
+	<h2 class="text-[1rem] p-[1rem] bg-primary text-center">Made with ❤️ by asyncedd</h2>
 </footer>
