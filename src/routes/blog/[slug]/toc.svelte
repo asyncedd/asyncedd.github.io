@@ -50,7 +50,7 @@
 		const targetEl = document.querySelector('#table-of-contents');
 
 		const observer = new IntersectionObserver(([entry]) => {
-			showSidebar = !opened ? entry.boundingClientRect.top < 0 : false;
+			showSidebar = !opened ? entry.boundingClientRect.bottom > 0 : false;
 		});
 
 		observer.observe(targetEl);
