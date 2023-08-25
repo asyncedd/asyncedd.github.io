@@ -1,36 +1,31 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
-	let isMenuOpen = false;
-
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	let previousPage = $page; // Initialize with the initial value
 	import Themeswitch from './themeswitch.svelte';
+
+	let isMenuOpen = false;
+	/** @type {any} */
+	let previousPage = null;
 
 	page.subscribe((newPage) => {
 		if (newPage !== previousPage) {
-			isMenuOpen = false; // Close the menu when page changes
-			previousPage = newPage; // Update the previousPage value
+			isMenuOpen = false;
+			previousPage = newPage;
 		}
 	});
 
 	browser &&
 		(() => {
 			/**
-			 * Handle clicks that occurs outside the menu
-			 *
 			 * @param {MouseEvent} event
 			 */
 			const handleMenuGlobalClick = (event) => {
 				const menuButtons = document.querySelectorAll('.menu-button');
-				let hide = true;
-
-				menuButtons.forEach((menuButton) => {
-					if (event.target instanceof Node && menuButton.contains(event.target)) {
-						hide = false;
-					}
-				});
+				const hide = !Array.from(menuButtons).some((menuButton) =>
+					menuButton.contains(/** @type {Node} */ (event.target))
+				);
 
 				if (hide) {
 					isMenuOpen = false;
@@ -38,10 +33,12 @@
 			};
 
 			document.addEventListener('click', handleMenuGlobalClick);
+
+			// Cleanup event listener when component is destroyed
 			return () => {
 				document.removeEventListener('click', handleMenuGlobalClick);
 			};
-		})();
+		});
 </script>
 
 <nav
