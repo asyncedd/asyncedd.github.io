@@ -81,7 +81,7 @@
 	</button>
 	{#if isDropdownOpen}
 		<div
-			class="mt-[50px] w-[150px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute flex-col justify-center"
+			class="mt-[50px] w-[130px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute flex-col justify-center"
 			out:fly={{
 				y: -10,
 				easing: backOut
