@@ -56,7 +56,7 @@
 	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button-menu flex my-[5px] relative"
 >
 	<button
-		class="flex flex-col cursor-pointer pt-[3px] menu-button group"
+		class="flex flex-col cursor-pointer menu-button group"
 		on:click={() => {
 			isDropdownOpen = !isDropdownOpen;
 		}}

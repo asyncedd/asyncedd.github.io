@@ -81,7 +81,7 @@
 			</p>
 		</div>
 	</a>
-	<div class="flex">
+	<div class="flex items-center">
 		<Themeswitch />
 		<Menu />
 		<div class="mr-[3vw]" />
