@@ -12,7 +12,13 @@
 }
 
 .prose p {
-	@apply text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased;
+	text-align: left;
+	line-height: 1.5;
+	letter-spacing: 0.025em;
+	font-size: 1.05rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 }
 
 .prose :is(ul, ol) li {
@@ -32,66 +38,65 @@
 }
 
 html {
-	@apply font-sans scroll-smooth;
+	scroll-behavior: smooth;
+	font-family: theme(fontFamily.sans);
 }
 
-@layer base {
-	:root {
-		--color-primary: 250 250 250;
-		--color-primary_light: 212 212 216;
-		--color-primary_dark: 228 228 231;
-		--color-content: 24 24 27;
-		--color-content_dark: 9 9 11;
-		--color-accent: 67 56 202;
-		--color-teal: theme(colors.teal.300);
-		--color-sky: theme(colors.sky.300);
-		--color-blue: theme(colors.blue.300);
-		--color-indigo: theme(colors.indigo.300);
-		--color-violet: theme(colors.violet.300);
-		--color-zinc: theme(colors.zinc.900);
-	}
-	:root.dark {
-		--color-primary: 24 24 27;
-		--color-primary_light: 63 63 70;
-		--color-primary_dark: 9 9 11;
-		--color-content: 250 250 250;
-		--color-content_dark: 244 244 245;
-		--color-accent: 99 102 241;
-		--color-teal: theme(colors.teal.300);
-		--color-sky: theme(colors.sky.300);
-		--color-blue: theme(colors.blue.300);
-		--color-indigo: theme(colors.indigo.300);
-		--color-violet: theme(colors.violet.300);
-		--color-zinc: theme(colors.zinc.900);
-	}
-	:root.mocha {
-		--color-primary: 24 24 37;
-		--color-primary_light: 30 30 46;
-		--color-primary_dark: 17 17 27;
-		--color-content: 205 214 244;
-		--color-content_dark: 186 194 200;
-		--color-accent: 150 170 254;
-		--color-teal: 148 226 213;
-		--color-sky: 137 220 235;
-		--color-blue: 116 199 236;
-		--color-indigo: 137 180 254;
-		--color-violet: 180 190 254;
-		--color-zinc: 30 30 46;
-	}
-	:root.oled {
-		--color-primary: 15 15 15;
-		--color-primary_light: 30 30 30;
-		--color-primary_dark: 0 0 0;
-		--color-content: 255 255 255;
-		--color-content_dark: 244 244 244;
-		--color-accent: 50 80 255;
-		--color-teal: theme(colors.teal.300);
-		--color-sky: theme(colors.sky.300);
-		--color-blue: theme(colors.blue.300);
-		--color-indigo: theme(colors.indigo.300);
-		--color-violet: theme(colors.violet.300);
-		--color-zinc: theme(colors.zinc.900);
-	}
+:root {
+	--color-primary: 250 250 250;
+	--color-primary_light: 212 212 216;
+	--color-primary_dark: 228 228 231;
+	--color-content: 24 24 27;
+	--color-content_dark: 9 9 11;
+	--color-accent: 67 56 202;
+	--color-teal: theme(colors.teal.300);
+	--color-sky: theme(colors.sky.300);
+	--color-blue: theme(colors.blue.300);
+	--color-indigo: theme(colors.indigo.300);
+	--color-violet: theme(colors.violet.300);
+	--color-zinc: theme(colors.zinc.900);
+}
+:root.dark {
+	--color-primary: 24 24 27;
+	--color-primary_light: 63 63 70;
+	--color-primary_dark: 9 9 11;
+	--color-content: 250 250 250;
+	--color-content_dark: 244 244 245;
+	--color-accent: 99 102 241;
+	--color-teal: theme(colors.teal.300);
+	--color-sky: theme(colors.sky.300);
+	--color-blue: theme(colors.blue.300);
+	--color-indigo: theme(colors.indigo.300);
+	--color-violet: theme(colors.violet.300);
+	--color-zinc: theme(colors.zinc.900);
+}
+:root.mocha {
+	--color-primary: 24 24 37;
+	--color-primary_light: 30 30 46;
+	--color-primary_dark: 17 17 27;
+	--color-content: 205 214 244;
+	--color-content_dark: 186 194 200;
+	--color-accent: 150 170 254;
+	--color-teal: 148 226 213;
+	--color-sky: 137 220 235;
+	--color-blue: 116 199 236;
+	--color-indigo: 137 180 254;
+	--color-violet: 180 190 254;
+	--color-zinc: 30 30 46;
+}
+:root.oled {
+	--color-primary: 15 15 15;
+	--color-primary_light: 30 30 30;
+	--color-primary_dark: 0 0 0;
+	--color-content: 255 255 255;
+	--color-content_dark: 244 244 244;
+	--color-accent: 50 80 255;
+	--color-teal: theme(colors.teal.300);
+	--color-sky: theme(colors.sky.300);
+	--color-blue: theme(colors.blue.300);
+	--color-indigo: theme(colors.indigo.300);
+	--color-violet: theme(colors.violet.300);
+	--color-zinc: theme(colors.zinc.900);
 }
 
 @font-face {
