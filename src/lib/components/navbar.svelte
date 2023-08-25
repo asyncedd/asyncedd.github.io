@@ -1,45 +1,6 @@
 <script>
-	import { fly } from 'svelte/transition';
-	import { backOut } from 'svelte/easing';
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import Themeswitch from './themeswitch.svelte';
-	import Menu from './menu.svelte';
-
-	let isMenuOpen = false;
-	/** @type {any} */
-	let previousPage = null;
-
-	page.subscribe((newPage) => {
-		if (newPage !== previousPage) {
-			isMenuOpen = false;
-			previousPage = newPage;
-		}
-	});
-
-	browser &&
-		(() => {
-			/**
-			 * @param {MouseEvent} event
-			 */
-			const handleMenuGlobalClick = (event) => {
-				const menuButtons = document.querySelectorAll('.menu-button');
-				const hide = !Array.from(menuButtons).some((menuButton) =>
-					menuButton.contains(/** @type {Node} */ (event.target))
-				);
-
-				if (hide) {
-					isMenuOpen = false;
-				}
-			};
-
-			document.addEventListener('click', handleMenuGlobalClick);
-
-			// Cleanup event listener when component is destroyed
-			return () => {
-				document.removeEventListener('click', handleMenuGlobalClick);
-			};
-		});
+	import Themeswitch from './navbar/themeswitch.svelte';
+	import Menu from './navbar/menu.svelte';
 </script>
 
 <nav
