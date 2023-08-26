@@ -1,10 +1,4 @@
 <script>
-	let hanime = false;
-	/**
-	 * variable for the hackerman component
-	 * @type {any}
-	 */
-	let Hackerman;
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import Wave from '$lib/components/wave.svelte';
@@ -12,10 +6,8 @@
 
 	onMount(async () => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-			hanime = true;
-			await import('$lib/components/hackerman.svelte').then((mod) => {
-				Hackerman = mod.default;
-			});
+			const Hackerman = await import('$lib/components/hackerman');
+			Hackerman.default();
 		}
 
 		const observer = new IntersectionObserver((entries) => {
@@ -68,7 +60,3 @@
 <div class="rotate-[-180deg]">
 	<Wave />
 </div>
-
-{#if hanime}
-	<svelte:component this={Hackerman} />
-{/if}

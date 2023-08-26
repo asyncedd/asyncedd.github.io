@@ -2,15 +2,11 @@
 	import { onMount } from 'svelte';
 	import Typewriter from '$lib/components/typewriter.svelte';
 	import Wave from '$lib/components/wave.svelte';
-	let hanime = false;
-	let Hackerman: any;
 
 	onMount(async () => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-			hanime = true;
-			await import('$lib/components/hackerman.svelte').then((mod) => {
-				Hackerman = mod.default;
-			});
+			const Hackerman = await import('$lib/components/hackerman');
+			Hackerman.default();
 		}
 
 		const observer = new IntersectionObserver((entries) => {
@@ -143,7 +139,3 @@
 		</div>
 	</div>
 </div>
-
-{#if hanime}
-	<svelte:component this={Hackerman} />
-{/if}
