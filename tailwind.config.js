@@ -8,13 +8,13 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: 'rgb(var(--color-primary) / <alpha-value>)',
-				primary_light: 'rgb(var(--color-primary_light) / <alpha-value>)',
-				primary_dark: 'rgb(var(--color-primary_dark) / <alpha-value>)',
-				content: 'rgb(var(--color-content) / <alpha-value>)',
-				content_dark: 'rgb(var(--color-content_dark) / <alpha-value>)',
+				background: 'rgb(var(--color-background) / <alpha-value>)',
+				background_light: 'rgb(var(--color-background_light) / <alpha-value>)',
+				background_dark: 'rgb(var(--color-background_dark) / <alpha-value>)',
+				foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
+				foreground_dark: 'rgb(var(--color-foreground_dark) / <alpha-value>)',
 				accent: 'rgb(var(--color-accent) / <alpha-value>)',
-				accent_thing: 'rgb(var(--color-accent_ting) / <alpha-value>)',
+				links: 'rgb(var(--color-links) / <alpha-value>)',
 				as_teal: 'var(--color-teal / <alpha-value>)',
 				as_sky: 'var(--color-sky) / <alpha-value>',
 				as_blue: 'var(--color-blue) / <alpha-value>',
@@ -24,22 +24,22 @@ export default {
 			typography: ({ theme }) => ({
 				as: {
 					css: {
-						'--tw-prose-body': theme('colors.content_dark'),
-						'--tw-prose-headings': theme('colors.content'),
+						'--tw-prose-body': theme('colors.background_dark'),
+						'--tw-prose-headings': theme('colors.foreground'),
 						'--tw-prose-lead': theme('colors.pink[700]'),
 						'--tw-prose-links': theme('colors.blue[500]'),
-						'--tw-prose-bold': theme('colors.content_dark'),
+						'--tw-prose-bold': theme('colors.background_dark'),
 						'--tw-prose-counters': theme('colors.pink[600]'),
-						'--tw-prose-bullets': theme('colors.content_dark'),
+						'--tw-prose-bullets': theme('colors.background_dark'),
 						'--tw-prose-hr': theme('colors.pink[300]'),
 						'--tw-prose-quotes': theme('colors.pink[900]'),
 						'--tw-prose-quote-borders': theme('colors.pink[300]'),
 						'--tw-prose-captions': theme('colors.pink[700]'),
-						'--tw-prose-code': theme('colors.content_dark'),
+						'--tw-prose-code': theme('colors.background_dark'),
 						'--tw-prose-pre-code': theme('colors.zinc[100]'),
 						'--tw-prose-pre-bg': theme('colors.zinc[700]'),
-						'--tw-prose-th-borders': theme('colors.content_dark'),
-						'--tw-prose-td-borders': theme('colors.content')
+						'--tw-prose-th-borders': theme('colors.background_dark'),
+						'--tw-prose-td-borders': theme('colors.foreground')
 					}
 				}
 			}),

@@ -14,10 +14,10 @@
 		<div class="grid gap-[1rem]">
 			<h1 class="text-5xl">BLOGS</h1>
 			{#each data.posts as post}
-				<div class="border-t-content border-t-[1px] pt-5px">
+				<div class="border-t-foreground border-t-[1px] pt-5px">
 					<a
 						href={`blog/${post.slug}`}
-						class="text-[3rem] capitalize text-content hover:text-accent transition-colors duration-[0.5s] ease-in-out"
+						class="text-[3rem] capitalize text-foreground hover:text-accent transition-colors duration-[0.5s] ease-in-out"
 					>
 						{post.title}
 					</a>
@@ -28,8 +28,8 @@
 							</span>
 						{/each}
 					</div>
-					<p class="text-content_dark">{formatDate(post.date)}</p>
-					<p class="description text-content">{post.description}</p>
+					<p class="text-foreground_dark">{formatDate(post.date)}</p>
+					<p class="description text-foreground">{post.description}</p>
 				</div>
 			{/each}
 		</div>

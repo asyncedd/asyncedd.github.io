@@ -6,8 +6,7 @@
 	const options = [
 		{ id: 'light', label: '☀️  Light' },
 		{ id: 'dark', label: '🌑 Dark' },
-		{ id: 'mocha', label: '☕ Mocha' },
-		{ id: 'oled', label: '⚫ OLED' }
+		{ id: 'mocha', label: '☕ Mocha' }
 	];
 
 	let isDropdownOpen = false;
@@ -63,7 +62,7 @@
 	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button flex mx-[1vw] my-[5px] relative"
 >
 	<button
-		class="fill-content hover:rotate-[180deg] transition-transform duration-[1s] ease-in-out"
+		class="fill-foreground hover:rotate-[180deg] transition-transform duration-[1s] ease-in-out"
 		on:click={() => {
 			isDropdownOpen = !isDropdownOpen;
 		}}
@@ -82,7 +81,7 @@
 	</button>
 	{#if isDropdownOpen}
 		<div
-			class="mt-[50px] w-[130px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute flex-col justify-center"
+			class="mt-[50px] w-[130px] mr-[50px] bg-background border border-background_light shadow-md rounded-md absolute flex-col justify-center"
 			out:fly={{
 				y: -10,
 				easing: backOut
@@ -94,10 +93,10 @@
 		>
 			{#each options as option}
 				<button
-					class="flex w-full text-left px-4 py-2 hover:bg-primary_light/75 text-content {currentTheme ===
+					class="flex w-full text-left px-4 py-2 hover:bg-background_light/75 text-foreground {currentTheme ===
 					option.id
-						? 'bg-primary_light'
-						: ''} rounded-md items-center justify-between"
+						? 'bg-background_light'
+						: ''} rounded-md items-center justify-between border-b-background_light border-b-[1px]"
 					on:click={() => {
 						currentTheme = localStorage.theme = document.documentElement.className = option.id;
 					}}
@@ -109,7 +108,7 @@
 							height="1em"
 							viewBox="0 0 32 32"
 							aria-label="The current theme"
-							class="fill-accent"
+							class="fill-foreground"
 						>
 							<path d="m13 24l-9-9l1.414-1.414L13 21.171L26.586 7.586L28 9L13 24z" />
 						</svg>

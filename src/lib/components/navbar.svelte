@@ -4,7 +4,7 @@
 </script>
 
 <nav
-	class="w-[100%] bg-primary inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
+	class="w-[100%] bg-background inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
 	style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);"
 	id="menu-button"
 >
@@ -14,16 +14,10 @@
 		>
 			<source
 				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
-				media="(max-width: 2.5rem)"
 				type="image/avif"
-				width="100"
-				height="100"
 			/>
 			<source
 				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-webp,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
-				width="100"
-				height="100"
-				media="(max-width: 2.5rem)"
 				type="image/webp"
 			/>
 			<img
@@ -58,7 +52,7 @@
 				theme(colors.blue.300) 30%,
 				theme(colors.indigo.300) 40%,
 				theme(colors.violet.300) 50%,
-				theme(colors.accent) 0%
+				theme(colors.foreground) 0%
 			)
 			calc(100% - var(--_p, 0%)) / 200% 100%;
 	}

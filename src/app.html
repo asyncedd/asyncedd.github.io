@@ -15,14 +15,14 @@
 					(window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light')
 			);
 		</script>
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/FiraCode/subset-FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin />
 		%sveltekit.head%
 	</head>
-	<!-- prettier-ignore -->
-	<link rel="preload" href="/fonts/manrope/subset-Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin />
-	<!-- prettier-ignore -->
-	<link rel="preload" href="/fonts/manrope/subset-Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin />
-	<!-- prettier-ignore -->
-	<link rel="preload" href="/fonts/FiraCode/subset-FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin />
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>

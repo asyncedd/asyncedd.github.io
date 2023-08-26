@@ -66,22 +66,22 @@
 		<span
 			class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isDropdownOpen
 				? 'translate-y-[10px] rotate-[45deg]'
-				: 'group-hover:translate-y-[5px] group-hover:rotate-[22.5deg]'} bg-content"
+				: 'group-hover:translate-y-[5px] group-hover:rotate-[22.5deg]'} bg-foreground"
 		/>
 		<span
 			class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isDropdownOpen
 				? 'translate-x-[10vw]'
-				: ''} bg-content"
+				: ''} bg-foreground"
 		/>
 		<span
 			class="w-[30px] h-[3px] my-[4px] mx-0 shadow-[0_2px_4px_transparent] transition-[transform] duration-[0.3s] ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] {isDropdownOpen
 				? 'translate-y-[-10px] rotate-[-45deg]'
-				: 'group-hover:translate-y-[-5px] group-hover:rotate-[-22.5deg]'} bg-content"
+				: 'group-hover:translate-y-[-5px] group-hover:rotate-[-22.5deg]'} bg-foreground"
 		/>
 	</button>
 	{#if isDropdownOpen}
 		<div
-			class="mt-[50px] w-[130px] mr-[50px] bg-primary border border-primary_dark shadow-md rounded-md absolute flex-col justify-center"
+			class="mt-[50px] w-[130px] mr-[50px] bg-background border border-background_light shadow-md rounded-md absolute flex-col justify-center"
 			out:fly={{
 				y: -10,
 				easing: backOut
@@ -93,18 +93,18 @@
 		>
 			<ul>
 				{#each options as option}
-					<li>
+					<li class="group">
 						<button
-							class="flex w-full text-left px-4 py-2 hover:bg-primary_light/75 text-content rounded-md items-center justify-between"
+							class="flex w-full text-left px-4 py-2 group-hover:bg-background_light/75 text-foreground rounded-md items-center justify-evenly border-b-background_light border-b-[1px] focus:border-accent focus:border-[3px]"
 						>
 							<a
 								href={option.href}
-								class="flex gap-3 text-content fill-content hover:fill-{option.hover_color} hover:text-{option.hover_color} transition-colors duration-[0.5s] w-full"
+								class="flex gap-3 text-foreground transition-colors duration-[0.5s] w-full"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									height="1em"
 									viewBox="0 0 512 512"
-									class="w-[1.5rem] flex justify-center items-center mt-[5%]"
+									class="w-[1.5rem] flex justify-center items-center mt-[5%] fill-foreground"
 									><path d={option.svg} /></svg
 								>{option.label}</a
 							>

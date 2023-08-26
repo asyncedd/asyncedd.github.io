@@ -77,7 +77,7 @@
 			<button
 				on:click={toggleSidebar}
 				in:fly={{ x: '100%', duration: 300, delay: 300 }}
-				class="sidebar-toggle p-[1.5rem] bg-primary_light rounded-[1rem]"
+				class="sidebar-toggle p-[1.5rem] bg-background_light rounded-[1rem]"
 				aria-label="Show table of contents"
 			>
 				<svg
@@ -85,7 +85,7 @@
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
-					class="stroke-content"
+					class="stroke-foreground"
 					><path
 						fill="none"
 						stroke-linecap="round"
@@ -99,7 +99,7 @@
 
 		{#if showSidebar}
 			<nav
-				class="bg-primary_light p-[1.5rem] rounded-[1rem] table-of-contents"
+				class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-foregrounds"
 				transition:fly={{ x: '100%', duration: 300 }}
 			>
 				<button on:click={toggleSidebar} aria-label="Hide table of contents">
@@ -108,7 +108,7 @@
 						width="24"
 						height="24"
 						viewBox="0 0 24 24"
-						class="stroke-content"
+						class="stroke-foreground"
 						><path
 							fill="none"
 							stroke="currentColor"
@@ -130,44 +130,44 @@
 </aside>
 
 <style lang="postcss">
-	:global(.table-of-contents ul) {
+	:global(.table-of-foregrounds ul) {
 		max-height: 400px;
 		overflow-y: scroll;
 	}
 
-	.table-of-contents {
+	.table-of-foregrounds {
 		counter-reset: section;
 	}
 
-	:global(.table-of-contents li) {
+	:global(.table-of-foregrounds li) {
 		margin-top: 16px;
 		font-weight: 400;
 	}
 
-	:global(.table-of-contents a) {
+	:global(.table-of-foregrounds a) {
 		display: inline-block;
-		color: theme(colors.content);
+		color: theme(colors.foreground);
 		text-decoration-color: transparent;
 		text-decoration-line: underline;
 		font-weight: 400;
 		transition: color 0.5s ease-in-out, text-decoration-color 0.5s ease-in-out;
 	}
 
-	:global(.table-of-contents a):hover {
-		text-decoration-color: theme(colors.content);
+	:global(.table-of-foregrounds a):hover {
+		text-decoration-color: theme(colors.foreground);
 	}
 
-	:global(.table-of-contents a::before) {
+	:global(.table-of-foregrounds a::before) {
 		all: unset;
 		counter-increment: section;
 		content: counter(section) '. ';
 	}
 
-	:global(.table-of-contents .active) {
-		color: theme(colors.accent);
+	:global(.table-of-foregrounds .active) {
+		color: theme(colors.links);
 	}
 
-	:global(.table-of-contents .active):hover {
-		text-decoration-color: theme(colors.accent);
+	:global(.table-of-foregrounds .active):hover {
+		text-decoration-color: theme(colors.links);
 	}
 </style>

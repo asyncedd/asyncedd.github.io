@@ -15,10 +15,10 @@
 <div class="flex justify-center h-[100%] mx-[1.5rem]">
 	<article class="py-[10vh]" style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
-			<h1 class="capitalize font-bold text-[5rem] text-content">
+			<h1 class="capitalize font-bold text-[5rem] text-foreground">
 				{data.meta.title}
 			</h1>
-			<p class="text-content_dark">
+			<p class="text-foreground_dark">
 				Published at {formatDate(data.meta.date)}
 			</p>
 		</hgroup>

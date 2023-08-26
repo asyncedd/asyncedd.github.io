@@ -14,7 +14,7 @@
 					d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
 				/>
 			</defs>
-			<use xlink:href="#gentle-wave" x="48" y="0" class="fill-accent/30">
+			<use xlink:href="#gentle-wave" x="48" y="0" class="fill-foreground/30">
 				<animateTransform
 					attributeName="transform"
 					type="translate"
@@ -26,7 +26,7 @@
 					calcMode="linear"
 				/>
 			</use>
-			<use xlink:href="#gentle-wave" x="48" y="3" class="fill-accent/50">
+			<use xlink:href="#gentle-wave" x="48" y="3" class="fill-foreground/50">
 				<animateTransform
 					attributeName="transform"
 					type="translate"
@@ -38,7 +38,7 @@
 					calcMode="linear"
 				/>
 			</use>
-			<use xlink:href="#gentle-wave" x="48" y="5" class="fill-primary/70">
+			<use xlink:href="#gentle-wave" x="48" y="5" class="fill-background/70">
 				<animateTransform
 					attributeName="transform"
 					type="translate"
@@ -50,7 +50,7 @@
 					calcMode="linear"
 				/>
 			</use>
-			<use xlink:href="#gentle-wave" x="48" y="7" class="fill-primary">
+			<use xlink:href="#gentle-wave" x="48" y="7" class="fill-background">
 				<animateTransform
 					attributeName="transform"
 					type="translate"
