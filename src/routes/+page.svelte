@@ -1,7 +1,6 @@
 <script lang="ts" async>
 	import { onMount } from 'svelte';
 	import Typewriter from '$lib/components/typewriter.svelte';
-	import Wave from '$lib/components/wave.svelte';
 
 	onMount(async () => {
 		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
@@ -21,7 +20,7 @@
 </script>
 
 <div
-	class="h-[100vh] flex justify-center items-center align-middle text-foreground bg-background ease-in-out"
+	class="h-[100vh] flex justify-center items-center align-middle text-foreground bg-background_dark ease-in-out"
 >
 	<div
 		class="justify-center rounded-[3rem] flex items-center flex-col w-auto overflow-none my-1 min-w-15"
@@ -69,9 +68,6 @@
 		</div>
 	</div>
 	<div class="pb-[50vh]" />
-</div>
-<div style="transform: rotate(-180deg);">
-	<Wave />
 </div>
 <div class="flex justify-center">
 	<div

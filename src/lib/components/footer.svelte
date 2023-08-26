@@ -1,5 +1,5 @@
 <div class="flex justify-center w-[100%] py-[3vh]">
-	<footer class="w-[75%] rounded-[1rem] bg-background_light p-[10px]">
+	<footer class="w-[90%] rounded-[1rem] bg-background p-[10px]">
 		<div class="flex-row inline-flex justify-center my-1 w-full">
 			<div class="mx-[5px] inline-flex justify-between w-[calc(100%-70px)]">
 				<a href="/" aria-label="async" class="inline-flex">

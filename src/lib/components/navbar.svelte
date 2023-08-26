@@ -3,43 +3,45 @@
 	import Menu from './navbar/menu.svelte';
 </script>
 
-<nav
-	class="w-[100%] bg-background inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
-	style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);"
-	id="menu-button"
->
-	<a href="/" aria-label="async" class="mr-auto inline-flex justify-center mx-[3vw] my-1">
-		<picture
-			class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[1s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deg]"
-		>
-			<source
-				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
-				type="image/avif"
-			/>
-			<source
-				srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-webp,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
-				type="image/webp"
-			/>
-			<img
-				src="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
-				width="100"
-				height="100"
-				alt=""
-			/>
-		</picture>
-		<div class="head-parent px-1 flex transition-[transform] duration-[1s] ease-in-out">
-			<p
-				class="async ease-in-out cursor-pointer px-[2px] transition-[background] duration-[1s] text-[1.7rem] fonts-mono"
-				style="-webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
+<nav class="w-[100%] flex justify-center">
+	<div
+		class="w-[90%] bg-background rounded-[1rem] inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80 mt-[1rem] items-center"
+		style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);"
+		id="menu-button"
+	>
+		<a href="/" aria-label="async" class="mr-auto inline-flex justify-start mx-[1vw] my-1">
+			<picture
+				class="w-10 h-10 rounded-[100%] aspect-square mr-[10px] transition-transform duration-[1s] ease-in-out hover:scale-[1.2] rotate-[0deg] hover:rotate-[720deg]"
 			>
-				async
-			</p>
+				<source
+					srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,lo-true,f-avif,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+					type="image/avif"
+				/>
+				<source
+					srcset="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,f-webp,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+					type="image/webp"
+				/>
+				<img
+					src="https://ik.imagekit.io/7qhojskvo/tr:w-100,cp-false,lo-true,r-256,q-85/clouds_tiny_2k_tiny.jpg?updatedAt=1692574417004"
+					width="100"
+					height="100"
+					alt=""
+				/>
+			</picture>
+			<div class="head-parent px-1 transition-[transform] duration-[1s] ease-in-out flex w-full">
+				<p
+					class="async ease-in-out cursor-pointer px-[2px] transition-[background] duration-[1s] text-[1.7rem] fonts-mono"
+					style="-webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
+				>
+					async
+				</p>
+			</div>
+		</a>
+		<div class="flex items-center justify-end">
+			<Themeswitch />
+			<Menu />
+			<div class="mr-[1vw]" />
 		</div>
-	</a>
-	<div class="flex items-center">
-		<Themeswitch />
-		<Menu />
-		<div class="mr-[3vw]" />
 	</div>
 </nav>
 

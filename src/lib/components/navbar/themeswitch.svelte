@@ -47,7 +47,7 @@
 			const handleGlobalClick = (event) =>
 				(isDropdownOpen =
 					isDropdownOpen &&
-					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button')));
+					!!(/** @type {HTxLElement} */ (event.target).closest('.dropdown-button')));
 
 			document.addEventListener('click', handleGlobalClick);
 
@@ -59,7 +59,7 @@
 
 <div
 	aria-label="Select theme"
-	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button flex mx-[1vw] my-[5px] relative"
+	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button flex mx-[0.5vw] relative"
 >
 	<button
 		class="fill-foreground hover:rotate-[180deg] transition-transform duration-[1s] ease-in-out"

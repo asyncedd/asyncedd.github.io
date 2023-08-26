@@ -53,7 +53,7 @@
 
 <div
 	aria-label="Select theme"
-	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button-menu flex my-[5px] relative"
+	class="transition duration-[200ms] origin-center ease-in-out justify-center text-[1rem] dropdown-button-menu mx-[0.5vw] flex my-[5px] relative"
 >
 	<button
 		class="flex flex-col cursor-pointer menu-button group"
