@@ -5,7 +5,7 @@
 
 <nav
 	class="w-[100%] bg-primary inline-flex overflow-visible fixed top-0 z-50 bg-opacity-80"
-	style="backdrop-filter: saturate(180%) blur(20px);"
+	style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);"
 	id="menu-button"
 >
 	<a href="/" aria-label="async" class="mr-auto inline-flex justify-center mx-[3vw] my-1">
