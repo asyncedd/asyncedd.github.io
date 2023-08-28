@@ -1,7 +1,3 @@
-<script>
-	import { page } from '$app/stores';
-</script>
-
 <div
 	class="flex items-center justify-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)]"
 >
@@ -12,9 +8,9 @@
 			<b>
 				<span
 					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
-					>{$page.status}</span
+					>404</span
 				>
-				| {$page.error?.message}
+				| Not found
 			</b>
 		</h1>
 		<a href="/" class="inline-flex items-center gap-3 group">

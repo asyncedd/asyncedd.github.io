@@ -3,12 +3,20 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
 import sectionize from './src/plugins/sectionize.js';
+import shiki from 'shiki';
 
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const highlighter = await shiki.getHighlighter({ theme: 'poimandres' });
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
+			return `{@html \`${html}\` }`;
+		}
+	},
 	remarkPlugins: [[remarkToc, { tight: true }], sectionize],
 	rehypePlugins: [rehypeSlug]
 };

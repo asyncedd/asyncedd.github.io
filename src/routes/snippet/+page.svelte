@@ -13,14 +13,14 @@
 </script>
 
 <svelte:head>
-	<title>async's blog</title>
+	<title>Snippets</title>
 </svelte:head>
 
 <!-- Posts -->
 <main class="h-[100vh] flex justify-center">
 	<div class="gap-[1rem]">
 		<h1 class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75">
-			<b> Blogs </b>
+			<b> Snippets </b>
 		</h1>
 		<div class="relative w-full mb-4">
 			<input
@@ -62,7 +62,7 @@
 					>
 						<hr class="border-[1px] border-foreground" />
 						<a
-							href={`blog/${post.slug}`}
+							href={`snippet/${post.slug}`}
 							class="text-[3rem] capitalize text-foreground_dark/75 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
 						>
 							<b>

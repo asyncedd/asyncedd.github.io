@@ -10,16 +10,12 @@ export default {
 			colors: {
 				background: 'rgb(var(--color-background) / <alpha-value>)',
 				background_light: 'rgb(var(--color-background_light) / <alpha-value>)',
+				background_lighter: 'rgb(var(--color-background_lighter) / <alpha-value>)',
 				background_dark: 'rgb(var(--color-background_dark) / <alpha-value>)',
 				foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
 				foreground_dark: 'rgb(var(--color-foreground_dark) / <alpha-value>)',
 				accent: 'rgb(var(--color-accent) / <alpha-value>)',
-				links: 'rgb(var(--color-links) / <alpha-value>)',
-				as_teal: 'var(--color-teal / <alpha-value>)',
-				as_sky: 'var(--color-sky) / <alpha-value>',
-				as_blue: 'var(--color-blue) / <alpha-value>',
-				as_violet: 'var(--color-violet) / <alpha-value>',
-				as_zinc: 'var(--color-zinc) / <alpha-value>'
+				links: 'rgb(var(--color-links) / <alpha-value>)'
 			},
 			typography: ({ theme }) => ({
 				as: {
@@ -44,7 +40,7 @@ export default {
 				}
 			}),
 			fontFamily: {
-				sans: ['Manrope', defaultTheme.fontFamily.sans],
+				sans: ['Montserrat', defaultTheme.fontFamily.sans],
 				mono: ['Fira Code', defaultTheme.fontFamily.mono]
 			}
 		}
