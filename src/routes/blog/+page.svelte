@@ -30,10 +30,6 @@
 				name="name"
 				placeholder="Search articles"
 				aria-label="Search articles"
-				required
-				minlength="4"
-				maxlength="8"
-				size="10"
 				bind:value
 			/><svg
 				class="absolute w-5 h-5 right-3 top-3 text-gray-400"
