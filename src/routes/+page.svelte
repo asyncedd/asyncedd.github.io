@@ -1,7 +1,7 @@
 <article
-	class="flex items-center justify-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] gap-[2rem] flex-col text-left"
+	class="flex m-auto justify-center h-[100svh] gap-[2rem] flex-col text-left -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2)]"
 >
-	<div class="gap-[2rem] flex flex-col text-left items-center justify-center h-[100%]">
+	<div class="gap-[2rem] flex flex-col text-left m-auto justify-center h-[100%]">
 		<section class="grid">
 			<p
 				class="text-[clamp(1.9rem,1.9rem+3vw,3.3rem)] tracking-widest uppercase text-foreground_dark/75"
