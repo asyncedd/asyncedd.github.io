@@ -17,7 +17,7 @@
 				A programmer and a <span
 					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
 					><b>Front end</b></span
-				> enthusiast.
+				> dev.
 			</p>
 		</section>
 		<section class="flex gap-3 w-[100%]">
