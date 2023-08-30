@@ -1,137 +1,50 @@
-<script lang="ts" async>
-	import { onMount } from 'svelte';
-	import Typewriter from '$lib/components/typewriter.svelte';
-
-	onMount(async () => {
-		if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-			const Hackerman = await import('$lib/components/hackerman');
-			Hackerman.default();
-		}
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				entry.target.setAttribute('data-show', String(entry.isIntersecting));
-			});
-		});
-
-		const hiddenElements = document.querySelectorAll('.scroll-animation');
-		hiddenElements.forEach((el) => observer.observe(el));
-	});
-</script>
-
-<div
-	class="h-[100vh] flex justify-center items-center align-middle text-foreground bg-background_dark ease-in-out"
+<article
+	class="flex items-center justify-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] gap-[2rem] flex-col text-left"
 >
-	<div
-		class="justify-center rounded-[3rem] flex items-center flex-col w-auto overflow-none my-1 min-w-15"
-	>
-		<h1
-			class="text-center px-3 hover:text-green-300 hover:scale-[1.1] data-[animating=true]:text-green-300 data-[animating=true]:bg-zinc-950 rounded-[1rem] font-mono motion-safe:duration-[0.5s] tracking-tighter inline-flex items-center justify-center"
-			style="font-size: clamp(3.5rem, 2.5rem + 10vh, 15rem)"
-			data-value="async"
-		>
-			async
-		</h1>
-		<div class="flex justify-center overflow-x-hidden text-[1.3rem] min-h-[2rem] my-[2rem]">
-			<Typewriter
-				sentences={[
-					'GNU/Linux enjoyer',
-					'Coding enthusiast',
-					'Welcome to my website!',
-					'WIP - as always'
-				]}
-			/>
-		</div>
-		<div class="flex justify-center items-center align-middle">
-			<a href="https://discord.com/users/797422750321999943" aria-label="Discord">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="1em"
-					viewBox="0 0 640 512"
-					class=" hover:fill-[#6666ff] flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] fill-foreground"
-					><path
-						d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
-					/></svg
-				>
-			</a>
-			<a href="https://github.com/asyncedd" aria-label="Github">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="1em"
-					viewBox="0 0 496 512"
-					class="flex justify-center mt-[9px] mx-[10px] text-[1.7rem] origin-center hover:scale-[1.2] motion-safe:duration-[0.5s] fill-foreground hover hover:fill-[#6e5494]"
-					><path
-						d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-					/></svg
-				>
-			</a>
-		</div>
-	</div>
-	<div class="pb-[50vh]" />
-</div>
-<div class="flex justify-center">
-	<div
-		class="py-[30vh] mx-[20vw]"
-		style="transition-property: blur, opacity, transform, filter; transition-timing-function: ease-in-out;"
-	>
-		<div
-			class="flex px-3 justify-center scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
-			data-show="true"
-		>
-			<a href="#introduction" aria-label="introduction">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="1em"
-					viewBox="0 0 640 512"
-					class="fill-foreground_dark flex"
-					><path
-						d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
-					/></svg
-				>
-			</a>
-			<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="introduction">Introduction</h1>
-		</div>
-		<p
-			class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
-			data-show="true"
-		>
-			Hey there! I'm
-			<a href="https://github.com/asyncedd" class="after:content-['_↗'] text-links hover:underline"
-				>async</a
-			>, a programming hobbiest (in general) and
-			<a href="/cinnamon-roll-recipe" class="after:content-['_↗'] text-links hover:underline"
-				>a professional cinnamon roll baker</a
-			>. I've been learning to program since 2017 to create fun stuff but, here I am here creating
-			pretty stuffs (I guess it is pretty fun :P). And of course, I'm on a mission to tell people
-			how great Rick Astley is compared to the impostor from Among us or someone because it's quite
-			obvious that he started the big bang w/ his 1B+ BANGER.
-		</p>
-		<div>
-			<div class="justify-center flex">
-				<div
-					class="flex px-3 justify-center scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=false]:duration-0 data-[show=true]:motion-safe:duration-[1s]"
-					data-show="true"
-				>
-					<a href="#underdev" aria-label="underdev"
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							height="1em"
-							viewBox="0 0 640 512"
-							class="fill-foreground_dark flex"
-							><path
-								d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
-							/></svg
-						>
-					</a>
-					<h1 style="font-size: clamp(2.5rem, 0.5rem + 10vw, 6rem);" id="underdev">Under dev 🚧</h1>
-				</div>
-			</div>
+	<div class="gap-[2rem] flex flex-col text-left items-center justify-center h-[100%]">
+		<section class="grid">
 			<p
-				class="py-[5vh] text-left leading-[1.5] tracking-wide text-[1.05rem] antialiased scroll-animation translate-x-[-10%] data-[show=true]:opacity-1 data-[show=true]:blur-0 data-[show=true]:translate-x-0 data-[show=false]:duration-0 data-[show=false]:opacity-0 data-[show=false]:blur-[7px] data-[show=true]:motion-safe:duration-[0.7s] first-letter:float-left first-letter:text-[5em] first-letter:tracking-[0.65] first-letter:mx-5 first-letter:leading-none"
-				data-show="true"
+				class="text-[clamp(1.9rem,1.9rem+3vw,3.3rem)] tracking-widest uppercase text-foreground_dark/75"
 			>
-				This is under development! I'm working hard on this (i think), ok? Please come back later
+				<b
+					>hi, i'm <span
+						class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
+						>asyncedd.</span
+					></b
+				>
 			</p>
-		</div>
+			<p class="text-[clamp(0.5rem,0.5rem+3vw,1.5rem)] tracking-widest text-foreground_dark/75">
+				A programmer and a <span
+					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
+					><b>Front end</b></span
+				> enthusiast.
+			</p>
+		</section>
+		<section class="flex gap-3 w-[100%]">
+			<a href="https://github.com/asyncedd">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					viewBox="0 0 24 24"
+					class="fill-foreground/75 hover:fill-foreground transition-[fill] duration-[0.3s] ease-in-out"
+					><path
+						d="M5.884 18.653c-.3-.2-.558-.456-.86-.816a50.59 50.59 0 0 1-.466-.579c-.463-.575-.755-.841-1.056-.95a1 1 0 1 1 .675-1.882c.752.27 1.261.735 1.947 1.588c-.094-.117.34.427.433.539c.19.227.33.365.44.438c.204.137.588.196 1.15.14c.024-.382.094-.753.202-1.096c-2.968-.725-4.648-2.64-4.648-6.396c0-1.238.37-2.355 1.058-3.291c-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.583c.081-.024.127-.034.208-.047c.803-.123 1.937.17 3.415 1.097a11.731 11.731 0 0 1 2.687-.308c.912 0 1.819.103 2.684.308c1.477-.933 2.614-1.227 3.422-1.097c.085.014.158.032.218.051a1 1 0 0 1 .616.58c.487 1.215.52 2.296.302 3.19c.691.936 1.058 2.045 1.058 3.292c0 3.758-1.674 5.666-4.642 6.393c.125.415.19.878.19 1.38c0 .664-.002 1.299-.007 2.01c0 .19-.002.394-.005.706a1 1 0 0 1-.018 1.957c-1.14.228-1.984-.532-1.984-1.524l.002-.447l.005-.705c.005-.707.008-1.338.008-1.997c0-.697-.184-1.152-.426-1.361c-.661-.57-.326-1.654.541-1.751c2.966-.334 4.336-1.483 4.336-4.66c0-.955-.312-1.745-.913-2.405a1 1 0 0 1-.189-1.044c.166-.415.236-.957.095-1.614l-.01.002c-.491.14-1.11.44-1.858.95a1 1 0 0 1-.833.135a9.626 9.626 0 0 0-2.592-.35c-.89 0-1.772.12-2.592.35a1 1 0 0 1-.829-.133c-.753-.507-1.374-.807-1.87-.947c-.143.653-.072 1.194.093 1.607a1 1 0 0 1-.189 1.044c-.597.656-.913 1.459-.913 2.404c0 3.172 1.371 4.33 4.322 4.66c.865.098 1.202 1.178.545 1.749c-.193.167-.43.732-.43 1.364v3.149c0 .986-.834 1.726-1.96 1.529a1 1 0 0 1-.04-1.963v-.99c-.91.062-1.661-.087-2.254-.484Z"
+					/></svg
+				>
+			</a>
+			<a href="https://discord.com/users/797422750321999943">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					viewBox="0 0 24 24"
+					class="stroke-foreground/75 fill-transparent hover:stroke-foreground transition-[stroke] duration-[0.3s] ease-in-out stroke-[1.7px]"
+					><path
+						d="M19.303 5.337A17.32 17.32 0 0 0 14.963 4c-.191.329-.403.775-.552 1.125a16.592 16.592 0 0 0-4.808 0C9.454 4.775 9.23 4.329 9.05 4a17.075 17.075 0 0 0-4.342 1.337C1.961 9.391 1.218 13.35 1.59 17.255a17.69 17.69 0 0 0 5.318 2.664a12.94 12.94 0 0 0 1.136-1.836c-.627-.234-1.22-.52-1.794-.86c.149-.106.297-.223.435-.34c3.46 1.582 7.207 1.582 10.624 0c.149.117.287.234.435.34c-.573.34-1.167.626-1.793.86a12.94 12.94 0 0 0 1.135 1.836a17.594 17.594 0 0 0 5.318-2.664c.457-4.52-.722-8.448-3.1-11.918ZM8.52 14.846c-1.04 0-1.889-.945-1.889-2.101c0-1.157.828-2.102 1.89-2.102c1.05 0 1.91.945 1.888 2.102c0 1.156-.838 2.1-1.889 2.1Zm6.974 0c-1.04 0-1.89-.945-1.89-2.101c0-1.157.828-2.102 1.89-2.102c1.05 0 1.91.945 1.889 2.102c0 1.156-.828 2.1-1.89 2.1Z"
+					/></svg
+				>
+			</a>
+		</section>
 	</div>
-</div>
+</article>

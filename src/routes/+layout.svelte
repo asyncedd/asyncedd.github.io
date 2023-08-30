@@ -1,21 +1,24 @@
-<script lang="ts">
-	import Navbar from '$lib/components/navbar.svelte';
+<script>
+	import '../app.postcss';
+
+	import Header from '$lib/components/header.svelte';
 	import Footer from '$lib/components/footer.svelte';
+
 	import PageTransition from './transition.svelte';
 
 	export let data;
-	import '../app.postcss';
-
-	console.log('%casyncedd', 'color: #22c55e; font-size: 10rem;');
 </script>
 
-<body class="bg-background_dark text-foreground min-h-[100vh]">
-	<Navbar />
-	<main>
-		<PageTransition url={data.url}>
-			<slot />
-		</PageTransition>
-	</main>
-
+<body class="font-sans text-[1rem] bg-background text-foreground">
+	<div class="min-h-[100svh] max-w-[100svw]">
+		<Header />
+		<div class="p-[2.5rem]">
+			<main>
+				<PageTransition url={data.url}>
+					<slot />
+				</PageTransition>
+			</main>
+		</div>
+	</div>
 	<Footer />
 </body>

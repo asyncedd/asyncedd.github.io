@@ -4,65 +4,33 @@
 
 	/** @type {HTMLUListElement | string | null} */
 	let tableOfContents = null;
-	/** @type {HTMLUListElement | null} */
-	let postTableOfContentsEl = null;
 	let showSidebar = false;
 	let opened = false;
 
 	function getTableOfContents() {
-		if (postTableOfContentsEl) {
-			tableOfContents = postTableOfContentsEl.outerHTML;
-		}
+		tableOfContents = document.querySelector('#table-of-contents + ul').outerHTML;
 	}
 
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
-
 		if (!targetEl) return () => {};
-
 		const observer = new IntersectionObserver(([entry]) => {
 			showSidebar = !opened && entry.boundingClientRect.top < 200;
 		});
 		observer.observe(targetEl);
-
-		// return () => observer.disconnect();
+		return () => observer.disconnect();
 	}
 
 	onMount(() => {
 		function handleScroll() {
 			if (!opened && window.innerWidth >= 1440) {
 				openSidebar();
-				window.onscroll = null;
 			}
 		}
-
-		postTableOfContentsEl = /** @type {HTMLUListElement} */ (
-			document.querySelector('#table-of-contents + ul')
-		);
 
 		window.onscroll = handleScroll;
 
 		getTableOfContents();
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				const id = entry.target.getAttribute('id');
-				const navLink = document.querySelector(`ul li a[href="#${id}"]`);
-
-				if (navLink && id != 'table-of-contents') {
-					if (entry.intersectionRatio > 0) {
-						navLink.classList.add('active');
-					} else {
-						navLink.classList.remove('active');
-					}
-				}
-			});
-		});
-
-		// Track all sections that have an `id` applied
-		document.querySelectorAll('section[id]').forEach((section) => {
-			observer.observe(section);
-		});
 	});
 
 	function toggleSidebar() {
@@ -71,38 +39,21 @@
 	}
 </script>
 
-<aside class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[100svh]">
+<aside
+	class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)]"
+>
 	<section>
-		{#if !showSidebar}
-			<button
-				on:click={toggleSidebar}
-				in:fly={{ x: '100%', duration: 300, delay: 300 }}
-				class="sidebar-toggle p-[1.5rem] bg-background_light rounded-[1rem]"
-				aria-label="Show table of contents"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					class="stroke-foreground"
-					><path
-						fill="none"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="m11 7l-5 5l5 5m6-10l-5 5l5 5"
-					/></svg
+		<nav
+			class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
+			in:fly={{ x: '100%', duration: 50 }}
+			out:fly={{ x: '100%', duration: 50 }}
+		>
+			{#if showSidebar}
+				<button
+					on:click={toggleSidebar}
+					aria-label="Hide table of contents"
+					in:fly={{ x: '100%', duration: 500 }}
 				>
-			</button>
-		{/if}
-
-		{#if showSidebar}
-			<nav
-				class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-foregrounds"
-				transition:fly={{ x: '100%', duration: 300 }}
-			>
-				<button on:click={toggleSidebar} aria-label="Hide table of contents">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -119,32 +70,63 @@
 						/></svg
 					>
 				</button>
+			{:else}
+				<button
+					on:click={toggleSidebar}
+					in:fly={{ x: '100%', duration: 500 }}
+					aria-label="Show table of contents"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						class="stroke-foreground"
+						><path
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="m11 7l-5 5l5 5m6-10l-5 5l5 5"
+						/></svg
+					>
+				</button>
+			{/if}
 
-				<h2 class="font-mono capitalize">Table of contents</h2>
-				<ol>
-					{@html tableOfContents}
-				</ol>
-			</nav>
-		{/if}
+			{#if showSidebar}
+				<div
+					class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
+					in:fly={{ x: '100%', duration: 50 }}
+					out:fly={{ x: '100%', duration: 50 }}
+				>
+					<h2 class="uppercase tracking-widest text-foreground_dark/75">
+						<b>Table of contents</b>
+					</h2>
+					<ol>
+						{@html tableOfContents}
+					</ol>
+				</div>
+			{/if}
+		</nav>
 	</section>
 </aside>
 
 <style lang="postcss">
-	:global(.table-of-foregrounds ul) {
+	:global(.table-of-contents ul) {
 		max-height: 400px;
 		overflow-y: scroll;
 	}
 
-	.table-of-foregrounds {
+	.table-of-contents {
 		counter-reset: section;
 	}
 
-	:global(.table-of-foregrounds li) {
+	:global(.table-of-contents li) {
 		margin-top: 16px;
 		font-weight: 400;
 	}
 
-	:global(.table-of-foregrounds a) {
+	:global(.table-of-contents a) {
 		display: inline-block;
 		color: theme(colors.foreground);
 		text-decoration-color: transparent;
@@ -153,21 +135,13 @@
 		transition: color 0.5s ease-in-out, text-decoration-color 0.5s ease-in-out;
 	}
 
-	:global(.table-of-foregrounds a):hover {
+	:global(.table-of-contents a):hover {
 		text-decoration-color: theme(colors.foreground);
 	}
 
-	:global(.table-of-foregrounds a::before) {
+	:global(.table-of-contents a::before) {
 		all: unset;
 		counter-increment: section;
 		content: counter(section) '. ';
-	}
-
-	:global(.table-of-foregrounds .active) {
-		color: theme(colors.links);
-	}
-
-	:global(.table-of-foregrounds .active):hover {
-		text-decoration-color: theme(colors.links);
 	}
 </style>
