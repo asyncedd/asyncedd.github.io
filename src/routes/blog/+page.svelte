@@ -17,7 +17,7 @@
 </svelte:head>
 
 <!-- Posts -->
-<main class="h-[100vh] flex justify-center">
+<main class="flex justify-center">
 	<div class="gap-[1rem]">
 		<h1 class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75">
 			<b> Blogs </b>
