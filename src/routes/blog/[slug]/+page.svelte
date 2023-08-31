@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import Toc from './toc.svelte';
+	import '../../../prose.postcss';
 
 	export let data;
 </script>

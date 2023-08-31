@@ -22,7 +22,7 @@
 		<h1 class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75">
 			<b> Blogs </b>
 		</h1>
-		<div class="relative w-full mb-4">
+		<div class="w-full mb-4">
 			<input
 				class="placeholder:text-foreground_dark/50 text-foreground_dark font-bold block w-full px-4 py-2 bg-foreground_dark/25 rounded-md focus:outline-none"
 				type="text"
