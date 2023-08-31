@@ -19,7 +19,7 @@ Welp, jokes aside, I'm a hobbyist.
 I tell people I have no hobbies - I'd like to think so but- I don't know what are my hobbies. So, I assume I don't have hobbies. 😅
 
 I really like making cool stuff - Linux rices being one of them (they're harmfully addicting!).  
-And on the other hand, I usually don't get myself to do the cool stuffs, unless I push myself - doing so.
+But I usually don't get myself to do the cool stuffs, unless I push myself - doing so.
 Also, I'm **REALLY BAD** at muti-tasking - well, atleast multi-tasking consciously.
 
 As you might tell from the structure of the "sentences", I'm really bad at sorting things and being organized. I don't think I'll ever be.  
@@ -29,7 +29,7 @@ On the meantime, I just force myself to organize things, usually failing :(
 
 As I stated before, I use Linux — EndeavourOS to be exact. I use Neovim as my text editor of choice, and I have 4k+ lines of Lua in my [Neovim configuration](https://github.com/asyncedd/dots.nvim) (quick plug lol) - I've put wayyy to much time than I should've but for now I think it's pretty solid thus, I'm gradually decreasing the time I `cd` into `~/.config/nvim` (essentially not tweaking stop more often!!)
 
-That should sum it up I think :D
+That should sum it up :D
 
 ## My tech stack
 

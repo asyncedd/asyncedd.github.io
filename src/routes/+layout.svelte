@@ -11,7 +11,9 @@
 
 <body class="font-sans text-[1rem] bg-background text-foreground">
 	<div class="min-h-[100svh] max-w-[100svw]">
-		<Header />
+		<div class="mb-[2.5rem]">
+			<Header />
+		</div>
 		<div class="p-[2.5rem]">
 			<main>
 				<PageTransition url={data.url}>
