@@ -21,7 +21,7 @@
 			</p>
 		</section>
 		<section class="flex gap-3 w-[100%]">
-			<a href="https://github.com/asyncedd">
+			<a href="https://github.com/asyncedd" aria-label="Github profile">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="48"
@@ -33,7 +33,7 @@
 					/></svg
 				>
 			</a>
-			<a href="https://discord.com/users/797422750321999943">
+			<a href="https://discord.com/users/797422750321999943" aria-label="Discord profile">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="48"
