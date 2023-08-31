@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
 import sectionize from './src/plugins/sectionize.js';
 import shiki from 'shiki';
@@ -17,8 +16,7 @@ const mdsvexOptions = {
 			return `{@html \`${html}\` }`;
 		}
 	},
-	remarkPlugins: [[remarkToc, { tight: true }], sectionize],
-	rehypePlugins: [rehypeSlug]
+	remarkPlugins: [[remarkToc, { tight: true }], sectionize]
 };
 
 const dev = process.argv.includes('dev');
