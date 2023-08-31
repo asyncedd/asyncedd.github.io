@@ -22,7 +22,7 @@
 		<h1 class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75">
 			<b> Snippets </b>
 		</h1>
-		<div class="relative w-full mb-4">
+		<div class="w-full mb-4">
 			<input
 				class="placeholder:text-foreground_dark/50 text-foreground_dark font-bold block w-full px-4 py-2 bg-foreground_dark/25 rounded-md focus:outline-none"
 				type="text"
@@ -31,17 +31,7 @@
 				placeholder="Search articles"
 				aria-label="Search articles"
 				bind:value
-			/><svg
-				class="absolute w-5 h-5 right-3 top-3 text-gray-400"
-				xmlns="http://www.w3.org/2000/svg"
-				width="32"
-				height="32"
-				viewBox="0 0 32 32"
-				><path
-					fill="currentColor"
-					d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z"
-				/></svg
-			>
+			/>
 		</div>
 		{#if filteredPosts.length === 0}<p
 				in:fly={{ y: 100, duration: 500 }}
