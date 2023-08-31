@@ -16,7 +16,7 @@
 
 <nav class="w-[100%] h-[3rem] flex mb-[2.5rem]">
 	<div
-		class="w-[100%] h-[3rem] inline-flex items-center bg-background_dark/50 saturate-150 backdrop-blur-3xl text-foreground justify-between p-[clamp(0.5rem,0.5rem+3vw,3rem)] px-[clamp(0.3rem,0.3rem+10vw,10%)] fixed"
+		class="w-[100%] h-[3rem] inline-flex items-center bg-background_dark/50 saturate-150 backdrop-blur-[17px] text-foreground justify-between p-[clamp(0.5rem,0.5rem+3vw,3rem)] px-[clamp(0.3rem,0.3rem+10vw,10%)] fixed"
 	>
 		<a href="/" class="inline-flex items-center gap-3 group">
 			<div
