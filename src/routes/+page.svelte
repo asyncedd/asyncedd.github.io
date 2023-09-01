@@ -1,50 +1,32 @@
 <article
-	class="flex m-auto justify-center h-[100svh] gap-[2rem] flex-col text-left -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2)]"
+	class="h-[100svh] -mt-[calc(5.5rem+clamp(0.5rem,0.5rem+3vw,3rem))] flex justify-center flex-col text-left items-center"
 >
-	<div class="gap-[2rem] flex flex-col text-left m-auto justify-center h-[100%]">
-		<section class="grid">
-			<p
-				class="text-[clamp(1.9rem,1.9rem+3vw,3.3rem)] tracking-widest uppercase text-foreground_dark/75"
+	<div class="grid">
+		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/75 break-words uppercase">
+			<b
+				>Hi, i'm <span
+					class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"
+					>asyncedd.</span
+				></b
 			>
-				<b
-					>hi, i'm <span
-						class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
-						>asyncedd.</span
-					></b
-				>
-			</p>
-			<p class="text-[clamp(0.5rem,0.5rem+3vw,1.5rem)] tracking-widest text-foreground_dark/75">
-				A programmer and a <span
-					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
-					><b>Front end</b></span
-				> dev.
-			</p>
-		</section>
-		<section class="flex gap-3 w-[100%]">
-			<a href="https://github.com/asyncedd" aria-label="Github profile">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="48"
-					height="48"
-					viewBox="0 0 24 24"
-					class="fill-foreground/75 hover:fill-foreground transition-[fill] duration-[0.3s] ease-in-out"
-					><path
-						d="M5.884 18.653c-.3-.2-.558-.456-.86-.816a50.59 50.59 0 0 1-.466-.579c-.463-.575-.755-.841-1.056-.95a1 1 0 1 1 .675-1.882c.752.27 1.261.735 1.947 1.588c-.094-.117.34.427.433.539c.19.227.33.365.44.438c.204.137.588.196 1.15.14c.024-.382.094-.753.202-1.096c-2.968-.725-4.648-2.64-4.648-6.396c0-1.238.37-2.355 1.058-3.291c-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.583c.081-.024.127-.034.208-.047c.803-.123 1.937.17 3.415 1.097a11.731 11.731 0 0 1 2.687-.308c.912 0 1.819.103 2.684.308c1.477-.933 2.614-1.227 3.422-1.097c.085.014.158.032.218.051a1 1 0 0 1 .616.58c.487 1.215.52 2.296.302 3.19c.691.936 1.058 2.045 1.058 3.292c0 3.758-1.674 5.666-4.642 6.393c.125.415.19.878.19 1.38c0 .664-.002 1.299-.007 2.01c0 .19-.002.394-.005.706a1 1 0 0 1-.018 1.957c-1.14.228-1.984-.532-1.984-1.524l.002-.447l.005-.705c.005-.707.008-1.338.008-1.997c0-.697-.184-1.152-.426-1.361c-.661-.57-.326-1.654.541-1.751c2.966-.334 4.336-1.483 4.336-4.66c0-.955-.312-1.745-.913-2.405a1 1 0 0 1-.189-1.044c.166-.415.236-.957.095-1.614l-.01.002c-.491.14-1.11.44-1.858.95a1 1 0 0 1-.833.135a9.626 9.626 0 0 0-2.592-.35c-.89 0-1.772.12-2.592.35a1 1 0 0 1-.829-.133c-.753-.507-1.374-.807-1.87-.947c-.143.653-.072 1.194.093 1.607a1 1 0 0 1-.189 1.044c-.597.656-.913 1.459-.913 2.404c0 3.172 1.371 4.33 4.322 4.66c.865.098 1.202 1.178.545 1.749c-.193.167-.43.732-.43 1.364v3.149c0 .986-.834 1.726-1.96 1.529a1 1 0 0 1-.04-1.963v-.99c-.91.062-1.661-.087-2.254-.484Z"
-					/></svg
-				>
-			</a>
-			<a href="https://discord.com/users/797422750321999943" aria-label="Discord profile">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="48"
-					height="48"
-					viewBox="0 0 24 24"
-					class="stroke-foreground/75 fill-transparent hover:stroke-foreground transition-[stroke] duration-[0.3s] ease-in-out stroke-[1.7px]"
-					><path
-						d="M19.303 5.337A17.32 17.32 0 0 0 14.963 4c-.191.329-.403.775-.552 1.125a16.592 16.592 0 0 0-4.808 0C9.454 4.775 9.23 4.329 9.05 4a17.075 17.075 0 0 0-4.342 1.337C1.961 9.391 1.218 13.35 1.59 17.255a17.69 17.69 0 0 0 5.318 2.664a12.94 12.94 0 0 0 1.136-1.836c-.627-.234-1.22-.52-1.794-.86c.149-.106.297-.223.435-.34c3.46 1.582 7.207 1.582 10.624 0c.149.117.287.234.435.34c-.573.34-1.167.626-1.793.86a12.94 12.94 0 0 0 1.135 1.836a17.594 17.594 0 0 0 5.318-2.664c.457-4.52-.722-8.448-3.1-11.918ZM8.52 14.846c-1.04 0-1.889-.945-1.889-2.101c0-1.157.828-2.102 1.89-2.102c1.05 0 1.91.945 1.888 2.102c0 1.156-.838 2.1-1.889 2.1Zm6.974 0c-1.04 0-1.89-.945-1.89-2.101c0-1.157.828-2.102 1.89-2.102c1.05 0 1.91.945 1.889 2.102c0 1.156-.828 2.1-1.89 2.1Z"
-					/></svg
-				>
-			</a>
-		</section>
+		</h2>
+		<p class="text-[clamp(1rem,1rem+1vw,1.5rem)] text-foreground_dark/75">
+			A programmer and a <span
+				class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"
+				><b>Front end</b></span
+			> dev.
+		</p>
+		<a
+			href="https://github.com/asyncedd"
+			aria-label="My GitHub profile"
+			target="_blank"
+			class="fill-foreground_dark/75 hover:fill-foreground transition-[fill] duration-[0.3s] ease-in-out"
+		>
+			<svg viewBox="0 0 24 24" width="32" height="32"
+				><path
+					d="M5.9 18.7a4 4 0 0 1-.9-.9 50.6 50.6 0 0 1-.4-.5c-.5-.6-.8-.9-1.1-1a1 1 0 1 1 .7-1.9c.7.3 1.2.8 2 1.6a60.4 60.4 0 0 0 .8 1c.2.1.6.2 1.1.1l.2-1c-3-.8-4.6-2.7-4.6-6.5 0-1.2.4-2.3 1-3.3a5 5 0 0 1 .4-3.1 1 1 0 0 1 .6-.6h.2c.8-.2 2 .1 3.4 1a11.7 11.7 0 0 1 2.7-.3c1 0 1.8.1 2.7.3 1.5-1 2.6-1.2 3.4-1h.2a1 1 0 0 1 .6.6c.5 1.2.6 2.3.3 3.1.7 1 1.1 2 1.1 3.3 0 3.8-1.7 5.7-4.6 6.4l.1 1.4v2.7a1 1 0 0 1 0 2c-1.1.2-2-.5-2-1.5v-3.2c0-.7-.1-1.1-.4-1.3a1 1 0 0 1 .6-1.8c3-.3 4.3-1.5 4.3-4.7 0-1-.3-1.7-1-2.4a1 1 0 0 1-.1-1c.2-.4.2-1 0-1.6-.4.1-1 .4-1.8 1a1 1 0 0 1-.8 0 9.6 9.6 0 0 0-2.6-.3c-.9 0-1.8.1-2.6.4a1 1 0 0 1-.8-.2l-1.9-1c-.1.7 0 1.3.1 1.7a1 1 0 0 1-.2 1c-.6.7-.9 1.5-.9 2.4 0 3.2 1.4 4.4 4.3 4.7a1 1 0 0 1 .6 1.7c-.2.2-.5.8-.5 1.4v3.2c0 1-.8 1.7-2 1.5a1 1 0 0 1 0-2v-1c-.9.1-1.6 0-2.2-.4Z"
+				/></svg
+			>
+		</a>
 	</div>
 </article>
