@@ -1,16 +1,14 @@
-<div
-	class="flex items-center justify-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)]"
+<article
+	class="h-[100svh] -mt-[calc(5.5rem+clamp(0.5rem,0.5rem+3vw,3rem))] flex justify-center flex-col text-left items-center"
 >
-	<div
-		class="h-[100%] grid place-content-center text-[clamp(1.9rem,1.9rem+3vw,3.3rem)] tracking-widest uppercase text-foreground_dark/75"
-	>
+	<div class="grid uppercase text-[clamp(1.9rem,1.9rem+3vw,3.3rem)]">
 		<h1>
 			<b>
 				<span
 					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_lighter/10"
 					>404</span
 				>
-				| Not found
+				<span class="text-foreground_dark/75"> | Not found </span>
 			</b>
 		</h1>
 		<a href="/" class="inline-flex items-center gap-3 group">
@@ -31,4 +29,4 @@
 			</p>
 		</a>
 	</div>
-</div>
+</article>
