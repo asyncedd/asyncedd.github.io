@@ -8,19 +8,19 @@
 
 	$: filteredPosts =
 		value === ''
-			? data.posts
-			: data.posts.filter((post) => post.title.toLowerCase().includes(value.toLowerCase()));
+			? data.filtered_list
+			: data.filtered_list.filter((post) => post.title.toLowerCase().includes(value.toLowerCase()));
 </script>
 
 <svelte:head>
-	<title>Snippets</title>
+	<title>{data.params.slug}</title>
 </svelte:head>
 
 <!-- Posts -->
 <main class="flex justify-center">
 	<div class="gap-[1rem]">
 		<h1 class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75">
-			<b> Snippets </b>
+			<b> {data.params.slug} </b>
 		</h1>
 		<div class="w-full mb-4">
 			<input
@@ -48,7 +48,7 @@
 					>
 						<hr class="border-[1px] border-foreground" />
 						<a
-							href={`snippet/${post.slug}`}
+							href={`/snippet/${post.slug}`}
 							class="text-[3rem] capitalize text-foreground_dark/75 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
 						>
 							<b>

@@ -3,8 +3,8 @@ title: Website Makeover
 description: Unveiling a Fresh Look for My Website
 date: August 29, 2023
 categories:
-  - General
-  - Notice
+  - general
+  - notice
 published: Yes
 ---
 

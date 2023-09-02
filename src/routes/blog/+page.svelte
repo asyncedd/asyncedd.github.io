@@ -57,9 +57,11 @@
 						</a>
 						<div class="flex gap-[20px] my-1">
 							{#each post.categories as category}
-								<span class="bg-red-400 text-zinc-900 p-[4px] rounded-[0.5rem]"
-									>&num;{category}</span
-								>
+								<a href="/blog/category/{category}">
+									<span class="bg-red-400 text-zinc-900 p-[4px] rounded-[0.5rem]"
+										>&num;{category}</span
+									>
+								</a>
 							{/each}
 						</div>
 						<p class="text-foreground_dark">{formatDate(post.date)}</p>
