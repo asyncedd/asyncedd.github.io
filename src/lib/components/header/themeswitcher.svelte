@@ -11,7 +11,7 @@
 	 * @type {string[]}
 	 */
 	export let optionList = [];
-	export let button_name = '';
+	export const button_name = '';
 
 	browser &&
 		(() => {

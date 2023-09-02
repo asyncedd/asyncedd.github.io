@@ -7,10 +7,6 @@
 	let showSidebar = false;
 	let opened = false;
 
-	function getTableOfContents() {
-		tableOfContents = document.querySelector('#table-of-contents + ul').outerHTML;
-	}
-
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
 		if (!targetEl) return () => {};
@@ -30,7 +26,7 @@
 
 		window.onscroll = handleScroll;
 
-		getTableOfContents();
+		tableOfContents = document.querySelector('#table-of-contents + ul').outerHTML;
 	});
 
 	function toggleSidebar() {

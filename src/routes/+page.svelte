@@ -1,21 +1,23 @@
-<article
-	class="h-[100svh] -mt-[calc(5.5rem+clamp(0.5rem,0.5rem+3vw,3rem))] flex justify-center flex-col text-left items-center"
->
-	<div class="grid">
-		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/75 break-words uppercase">
+<article class="h-[100svh] flex justify-center flex-col text-left items-center -mt-[3rem] m-auto">
+	<div class="relative">
+		<h2 class="text-[clamp(1.7rem,1.5rem+1vw,3rem)] text-foreground_dark/75 break-words uppercase">
 			<b
 				>Hi, i'm <span
-					class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"
+					class="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
 					>asyncedd.</span
 				></b
 			>
 		</h2>
-		<p class="text-[clamp(1rem,1rem+1vw,1.5rem)] text-foreground_dark/75">
+		<p class="text-[clamp(1.3rem,1rem+1vw,1.5rem)] text-foreground_dark/75">
 			A programmer and a <span
-				class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"
+				class="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
 				><b>Front end</b></span
-			> dev.
+			>
+			dev.
 		</p>
+		<h3 class="text-[clamp(0.9rem,0.9rem+1vw,1rem)] text-foreground_dark/75">
+			Minimalism, design & elegance
+		</h3>
 		<a
 			href="https://github.com/asyncedd"
 			aria-label="My GitHub profile"
