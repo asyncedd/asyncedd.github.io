@@ -35,16 +35,16 @@
 		</div>
 		{#if filteredPosts.length === 0}<p
 				in:fly={{ y: 100, duration: 500 }}
-				on:fly={{ y: 100, duration: 500 }}
+				out:fly={{ y: 100, duration: 50 }}
 			>
 				Sorry. No results :P
 			</p>{:else}
-			<div in:fly={{ y: 100, duration: 500 }} on:fly={{ y: 100, duration: 500 }}>
+			<div in:fly={{ y: 100, duration: 500 }} out:fly={{ y: 100, duration: 50 }}>
 				{#each filteredPosts as post}
 					<section
 						class="my-1"
 						in:fly={{ y: 100, duration: 500 }}
-						on:fly={{ y: 100, duration: 500 }}
+						out:fly={{ y: 100, duration: 50 }}
 					>
 						<hr class="border-[1px] border-foreground" />
 						<a
