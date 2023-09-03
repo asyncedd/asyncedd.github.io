@@ -13,7 +13,7 @@
 						link.href
 					)
 						? 'text-foreground'
-						: 'text-foreground/75'}">{link.name}</b
+						: 'text-foreground/50'}">{link.name}</b
 				></a
 			>
 		</li>

@@ -23,13 +23,13 @@
 		<div
 			class="h-10 w-10 {$page.url.pathname === '/'
 				? 'bg-foreground'
-				: 'bg-foreground/75'} motion-safe:group-hover:bg-foreground rounded-[10rem] transition-[background] duration-[0.25s] ease-in-out"
+				: 'bg-foreground/50'} motion-safe:group-hover:bg-foreground rounded-[10rem] transition-[background] duration-[0.25s] ease-in-out"
 		/>
 		<b
 			class="text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest motion-safe:group-hover:text-foreground transition-[color] duration-[0.25s] ease-in-out {$page
 				.url.pathname === '/'
 				? 'text-foreground'
-				: 'text-foreground/75'}">/ async</b
+				: 'text-foreground/50'}">/ async</b
 		></a
 	>
 	<Links {links} />
