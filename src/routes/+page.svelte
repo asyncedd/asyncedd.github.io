@@ -10,13 +10,7 @@
 				></b
 			>
 		</h2>
-		<p class="text-[clamp(1rem,1rem+1vw,1.3rem)] text-foreground_dark/75">
-			A programmer and a <span
-				class="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
-				><b>Front end</b></span
-			>
-			dev.
-		</p>
+		<p class="text-[clamp(1rem,1rem+1vw,1.3rem)] text-foreground_dark/75">A programmer.</p>
 		<h3 class="text-[clamp(0.7rem,0.7rem+1vw,1rem)] text-foreground_dark/75">
 			Minimalism, simplicity & elegance
 		</h3>

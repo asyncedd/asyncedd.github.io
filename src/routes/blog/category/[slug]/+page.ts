@@ -2,9 +2,9 @@ import type { Post } from '$lib/types';
 
 export async function load({ fetch, params }) {
 	const response = await fetch(`../../../api/posts`);
-	const posts: Post[] = await response.json();
+	let list_of_posts: Post[] = await response.json();
 
-	const filtered_list = posts.filter((item) => item.categories.includes(params.slug));
+	const posts = list_of_posts.filter((item) => item.categories.includes(params.slug));
 
-	return { params, filtered_list };
+	return { params, posts };
 }
