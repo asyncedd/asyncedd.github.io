@@ -28,7 +28,7 @@
 	<div class="space-y-6 my-10">
 		<section>
 			<h1
-				class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/75"
+				class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/85"
 			>
 				<b> {data.params.slug} </b>
 			</h1>
@@ -73,7 +73,7 @@
 								<hr class="border-[1px] border-foreground" />
 								<a
 									href={`${URL.replace('%s', post.slug)}`}
-									class="text-[3rem] capitalize text-foreground_dark/75 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
+									class="text-[3rem] capitalize text-foreground_dark/80 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
 								>
 									<b>
 										{post.title}
