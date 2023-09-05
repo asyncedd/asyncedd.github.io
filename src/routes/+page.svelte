@@ -10,9 +10,6 @@
 				></b
 			>
 		</h2>
-		<p class="text-[clamp(1rem,1rem+1vw,1.3rem)] text-foreground_dark/75 tracking-wider">
-			A programmer.
-		</p>
 		<h3 class="text-[clamp(0.8rem,0.8rem+1vw,1.1rem)] text-foreground_dark/75 tracking-wider">
 			Minimalism, simplicity & elegance
 		</h3>
