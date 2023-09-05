@@ -1,4 +1,6 @@
-<article class="h-[calc(100svh-5rem)] flex justify-center flex-col text-left items-center m-auto">
+<article
+	class="h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)+3rem))] flex justify-center flex-col text-left items-center m-auto"
+>
 	<div class="relative">
 		<h2 class="text-[clamp(1.5rem,1.3rem+1vw,3rem)] text-foreground_dark/75 break-words uppercase">
 			<b

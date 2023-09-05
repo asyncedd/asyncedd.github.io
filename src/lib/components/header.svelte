@@ -17,7 +17,7 @@
 </script>
 
 <div
-	class="w-[100%] h-[5rem] inline-flex items-center bg-background_dark/50 saturate-150 backdrop-blur-[17px] text-foreground justify-between px-[clamp(0.3rem,0.3rem+10vw,10%)] z-[9999] sticky top-0"
+	class="w-[100%] h-[3rem] inline-flex items-center bg-background_dark/50 saturate-150 backdrop-blur-[17px] text-foreground justify-between p-[clamp(0.5rem,0.5rem+3vw,3rem)] px-[clamp(0.3rem,0.3rem+10vw,10%)] z-[9999] sticky top-0"
 >
 	<a href="/" class="inline-flex items-center gap-3 group">
 		<div
