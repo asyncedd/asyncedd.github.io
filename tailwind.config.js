@@ -40,7 +40,7 @@ export default {
 				}
 			}),
 			fontFamily: {
-				sans: ['Montserrat', defaultTheme.fontFamily.sans],
+				sans: ['Manrope', defaultTheme.fontFamily.sans],
 				mono: ['Fira Code', defaultTheme.fontFamily.mono]
 			}
 		}
