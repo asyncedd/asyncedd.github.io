@@ -1,3 +1,7 @@
+<script>
+	import '../../app.postcss';
+</script>
+
 <article
 	class="h-[100svh] -mt-[calc(5.5rem+clamp(0.5rem,0.5rem+3vw,3rem))] flex justify-center flex-col text-left items-center"
 >
