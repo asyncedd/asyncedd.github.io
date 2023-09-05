@@ -22,13 +22,13 @@
 	<a href="/" class="inline-flex items-center gap-3 group">
 		<div
 			class="h-10 w-10 {$page.url.pathname === '/'
-				? 'bg-foreground'
+				? 'bg-foreground/[.85]'
 				: 'bg-foreground/50'} motion-safe:group-hover:bg-foreground rounded-[10rem] transition-[background] duration-[0.25s] ease-in-out"
 		/>
 		<b
 			class="text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest motion-safe:group-hover:text-foreground transition-[color] duration-[0.25s] ease-in-out {$page
 				.url.pathname === '/'
-				? 'text-foreground'
+				? 'text-foreground/[.85]'
 				: 'text-foreground/50'}">/ async</b
 		></a
 	>
