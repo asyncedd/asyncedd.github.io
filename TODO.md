@@ -34,27 +34,27 @@ DESCRIPTION: Add a skills/hobbies/tools page
 PRIORITY: LOW
 DESCRIPTION: Use Svelte's built-in stuff for the animation
 
-- [ ] Use the Svelte/animation library for the typewriter animations
+- [x] Use the Svelte/animation library for the typewriter animations
 
 ### PERF
 
-- [ ] Improve perf
+- [x] Improve perf
 
-#### [ ] Website
+#### [x] Website
 
 PRIORITY: LOW
 DESCRIPTION: The website is relatively responsive
 
-- [!] Improve performance
+- [x] Improve performance
 
-#### [ ] Navbar
+#### [x] Navbar
 
 PRIORITY: HIGH
 DESCRIPTION: The navbar has a hell ton of elements
 
-- [!] Remove unneeded elements
+- [x] Remove unneeded elements
 
-##### (x) Text
+##### [x] Text
 
 PRIORITY: LOW
 DESCRIPTION: The text takes a few milliseconds or nanoseconds to "load" on the build version w/ Firefox
@@ -62,15 +62,15 @@ DESCRIPTION: The text takes a few milliseconds or nanoseconds to "load" on the b
 - [x] Play around with text compression like gzip
 - [x] Fix the text-loading on Firefox
 
-##### [x] img
+##### [_] img
 
 PRIORITY: HIGH
 DESCRIPTION: It's low res and slow on the dev version
 
 - [x] Improve the resolution
 - [x] Properly size images
-- [_] Increase the cache duration
-  Looks to be impossible since GitHub pages sucks.
+- [x] Increase the cache duration
+      Looks to be impossible since GitHub pages sucks.
 - [x] Use a CDN
 
 ### UnoCSS
@@ -83,7 +83,7 @@ DESCRIPTION: Use UnoCSS
 
 ### LOW
 
-#### [ ] Hackerman
+#### [_] Hackerman
 
 ##### Ideas
 
