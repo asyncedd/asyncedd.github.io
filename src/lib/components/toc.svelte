@@ -36,13 +36,13 @@
 </script>
 
 <aside
-	class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[100svh] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)]"
+	class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[calc(100svh+clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*4)]"
 >
 	<section>
 		<nav
 			class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
-			in:fly={{ x: '100%', duration: 50 }}
-			out:fly={{ x: '100%', duration: 50 }}
+			in:fly={{ x: '100%', duration: 500, delay: 500 }}
+			out:fly={{ x: '100%', duration: 500 }}
 		>
 			{#if showSidebar}
 				<button
@@ -91,9 +91,9 @@
 
 			{#if showSidebar}
 				<div
-					class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
-					in:fly={{ x: '100%', duration: 50 }}
-					out:fly={{ x: '100%', duration: 50 }}
+					class="p-[1.5rem] rounded-[1rem] table-of-contents"
+					in:fly={{ x: '100%', duration: 30, delay: 30 }}
+					out:fly={{ x: '100%', duration: 30 }}
 				>
 					<h2 class="uppercase tracking-widest text-foreground_dark/75">
 						<b>Table of contents</b>

@@ -5,7 +5,7 @@
 		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/85 break-words uppercase">
 			<b
 				>Hi, i'm <span
-					class="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+					class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
 					>asyncedd.</span
 				></b
 			>
@@ -18,7 +18,7 @@
 				href="https://github.com/asyncedd"
 				aria-label="My GitHub profile"
 				target="_blank"
-				class="fill-foreground_dark/50 hover:fill-foreground transition-[fill] duration-[0.3s] ease-in-out"
+				class="fill-foreground_dark/50 dark:hover:fill-[#f5f5f5] hover:fill-[#6e5494] transition-[fill] duration-[0.3s] ease-in-out"
 			>
 				<svg viewBox="0 0 24 24" class=" w-[32px] h-[32px]"
 					><path
