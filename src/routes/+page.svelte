@@ -2,7 +2,7 @@
 	class="h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)+3rem))] flex justify-center flex-col text-left items-center m-auto"
 >
 	<div class="relative">
-		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/75 break-words uppercase">
+		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/85 break-words uppercase">
 			<b
 				>Hi, i'm <span
 					class="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
@@ -10,7 +10,7 @@
 				></b
 			>
 		</h2>
-		<h3 class="text-[clamp(0.8rem,0.8rem+1vw,1.1rem)] text-foreground_dark/75 tracking-wider">
+		<h3 class="text-[clamp(0.8rem,0.8rem+1vw,1.1rem)] text-foreground_dark/80 tracking-wider">
 			Minimalism, simplicity & elegance
 		</h3>
 		<div class="flex w-full">
