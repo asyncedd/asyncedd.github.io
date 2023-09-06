@@ -95,7 +95,7 @@
 					in:fly={{ x: '100%', duration: 30, delay: 30 }}
 					out:fly={{ x: '100%', duration: 30 }}
 				>
-					<h2 class="uppercase tracking-widest text-foreground_dark/75">
+					<h2 class="uppercase tracking-wider text-foreground_dark/75">
 						<b>Table of contents</b>
 					</h2>
 					<ol>
