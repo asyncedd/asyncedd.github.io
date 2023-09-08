@@ -24,12 +24,10 @@ The previous version of the website had three glaring issues:
 - Performance
 - Accessibility
 
-Aesthetically, the old design fell short, with its pastel colors that didn't quite fit a website. But fear not!
+Aesthetically, the old design fell short due to its pastel colors, which didn't quite complement the website. But fear not! I've created two themes to rectify this issue.
 
-I've adopted a [Shadcn-like theme](https://shadcn.com), resulting in the following themes:
-
-- AMOLED Dark
-- Carbon Light (no, this isn't inspired by Shadcn's site, yet.)
+- Shadow
+- Snow
 
 Additionally, I've redesigned the logo into a simple SVG circle. Using this as my favicon significantly reduces load times, and I no longer need to worry about AVIF and WebP formats!
 
