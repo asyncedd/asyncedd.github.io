@@ -3,7 +3,7 @@
 >
 	<a href="/">
 		<b
-			class="text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest motion-safe:hover:text-foreground text-foreground/50 transition-[color] duration-[0.25s] ease-in-out cursor-pointer"
+			class="text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest motion-safe:hover:text-foreground text-foreground/70 transition-[color] duration-[0.25s] ease-in-out cursor-pointer"
 			>async 🄯 {new Date().getFullYear()}</b
 		>
 	</a>
