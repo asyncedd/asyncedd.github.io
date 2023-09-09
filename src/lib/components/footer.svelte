@@ -1,5 +1,5 @@
 <footer
-	class="h-[3rem] flex items-center bg-background_dark/50 saturate-150 backdrop-blur-3xl text-foreground p-[clamp(0.5rem,0.5rem+3vw,3rem)] px-[clamp(0.3rem,0.3rem+10vw,10%)]"
+	class="h-[3rem] flex items-center bg-background_dark/50 saturate-150 backdrop-blur-3xl text-foreground p-[clamp(0.5rem,0.5rem+3vw,3rem)] px-[3rem]"
 >
 	<a href="/">
 		<b
