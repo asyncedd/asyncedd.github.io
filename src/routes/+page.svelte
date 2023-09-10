@@ -18,7 +18,7 @@
 				href="https://github.com/asyncedd"
 				aria-label="My GitHub profile"
 				target="_blank"
-				class="fill-foreground_dark/70 dark:hover:fill-[#f5f5f5] hover:fill-[#6e5494] transition-[fill] duration-[0.3s] ease-in-out"
+				class="fill-foreground_dark opacity-[0.7] hover:opacity-[1] transition-[opacity] duration-[0.3s] ease-in-out"
 			>
 				<svg viewBox="0 0 24 24" class=" w-[32px] h-[32px]"
 					><path
