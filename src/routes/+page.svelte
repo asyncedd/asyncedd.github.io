@@ -1,8 +1,8 @@
 <article
-	class="h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)*2))] flex justify-center flex-col text-left items-center m-auto"
+	class="min-h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)*2+3rem))] flex justify-center flex-col text-left items-center m-auto"
 >
 	<div class="relative">
-		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/85 break-words uppercase">
+		<h2 class="text-[clamp(1.8rem,1.8rem+1vw,3.3rem)] text-foreground_dark/85 break-words uppercase">
 			<b
 				>Hi, i'm <span
 					class="bg-gradient-to-r dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 from-teal-500 via-blue-500 to-purple-500 bg-clip-text text-transparent"
@@ -10,7 +10,7 @@
 				></b
 			>
 		</h2>
-		<h3 class="text-[clamp(0.8rem,0.8rem+1vw,1.1rem)] text-foreground_dark/80 tracking-wider">
+		<h3 class="text-[clamp(1.3rem,1.3rem+1vw,1.6rem)] text-foreground_dark/80 tracking-wider">
 			Minimalism, simplicity & elegance
 		</h3>
 		<div class="flex w-full">
