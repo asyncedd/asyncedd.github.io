@@ -1,16 +1,34 @@
-<script lang="ts">
+<script>
 	import { formatDate } from '$lib/utils';
 	import { fly } from 'svelte/transition';
 
 	export let data;
-	export let title: string = '';
-	export let placeholder: string = '';
-	export let URL: string = '';
-	export let Cat_URL: string = '';
-	export let options = {
-		type: 'lister'
-	};
-
+	/**
+	 * A string for the title.
+	 * @type {string}
+	 */
+	export let title = '';
+	/**
+	 * A placeholder for the search box
+	 * @type {string}
+	 */
+	export let placeholder = '';
+	/**
+	 * A URL expression thing for the URL
+	 * ex. /blog/%s
+	 * @type {string}
+	 */
+	export let URL = '';
+	/**
+	 * A URL expression thing for the category
+	 * ex. /blog/category/%s
+	 * @type {string}
+	 */
+	export let Cat_URL = '';
+	/**
+	 * @type {"lister" | "category"}
+	 */
+	export let list_type = 'lister';
 	let value = '';
 
 	$: filteredPosts =
@@ -24,17 +42,17 @@
 </svelte:head>
 
 <!-- Posts -->
-<main class="max-w-4xl w-full mx-auto flex flex-col">
-	<div class="space-y-6 my-10">
+<main class="mx-auto flex w-full max-w-4xl flex-col">
+	<div class="my-10 space-y-6">
 		<section>
 			<h1
-				class="text-[clamp(3rem,3rem+3vw,5rem)] tracking-widest uppercase text-foreground_dark/85"
+				class="text-foreground_dark/85 text-[clamp(3rem,3rem+3vw,5rem)] uppercase tracking-widest"
 			>
 				<b> {data.params.slug} </b>
 			</h1>
-			<div class="w-full mb-4 relative">
+			<div class="relative mb-4 w-full">
 				<input
-					class="placeholder:text-foreground_dark/50 text-foreground_dark font-bold block w-full px-4 py-2 bg-foreground_dark/25 rounded-md focus:outline-none"
+					class="block w-full rounded-md bg-foreground_dark/25 px-4 py-2 font-bold text-foreground_dark placeholder:text-foreground_dark/50 focus:outline-none"
 					type="text"
 					id="name"
 					name="name"
@@ -47,7 +65,7 @@
 					width="32"
 					height="32"
 					viewBox="0 0 32 32"
-					class="absolute w-5 h-5 right-3 top-2.5 text-gray-400"
+					class="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
 					><path
 						fill="currentColor"
 						d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z"
@@ -64,7 +82,7 @@
 				</p>{:else}
 				<div in:fly={{ y: 100, duration: 500 }} out:fly={{ y: 100, duration: 50 }}>
 					{#each filteredPosts as post}
-						{#if options.type === 'lister'}
+						{#if list_type === 'lister'}
 							<section
 								class="my-1"
 								in:fly={{ y: 100, duration: 500 }}
@@ -73,29 +91,29 @@
 								<hr class="border-[1px] border-foreground" />
 								<a
 									href={`${URL.replace('%s', post.slug)}`}
-									class="text-[3rem] capitalize text-foreground_dark/80 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
+									class="text-[3rem] capitalize tracking-wider text-foreground_dark/80 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
 								>
 									<b>
 										{post.title}
 									</b>
 								</a>
-								<div class="flex gap-[20px] my-1">
+								<div class="my-1 flex gap-[20px]">
 									{#each post.categories as category}
 										<a href={Cat_URL.replace('%s', category)}>
-											<span class="bg-red-400 text-zinc-900 p-[4px] rounded-[0.5rem]"
+											<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900"
 												>&num;{category}</span
 											>
 										</a>
 									{/each}
 								</div>
 								<p class="text-foreground_dark">{formatDate(post.date)}</p>
-								<p class="description text-foreground my-1">{post.description}</p>
+								<p class="description my-1 text-foreground">{post.description}</p>
 							</section>
-						{:else if options.type === 'category'}
+						{:else if list_type === 'category'}
 							<hr class="border-[1px] border-foreground" />
 							<a
 								href="category/{post}"
-								class="text-[3rem] capitalize text-foreground_dark/75 hover:text-foreground_dark transition-colors duration-[0.25s] ease-in-out hover:decoration-foreground_dark decoration-transparent underline tracking-wider"
+								class="text-[3rem] capitalize tracking-wider text-foreground_dark/75 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
 								><b>{post}</b></a
 							>
 						{/if}

@@ -10,7 +10,5 @@
 	placeholder={'Start typing'}
 	URL={'/blog/category/%s'}
 	Cat_URL={'/blog/category/%s'}
-	options={{
-		type: 'category'
-	}}
+	list_type={'category'}
 />

@@ -1,13 +1,20 @@
-<script lang="ts">
+<script>
 	import { formatDate } from '$lib/utils';
 	import Toc from '$lib/components/toc.svelte';
 	import '$lib/styles/prose.postcss';
 
 	export let data;
+	/**
+	 * A URL expression thing for the category
+	 * ex. /blog/category/%s
+	 * @type {string}
+	 */
 	export let Cat_URL = '/blog/category/%s';
-	export let options = {
-		TOC: false
-	};
+	/**
+	 * Whetever or not to show the TOC
+	 * @type {boolean}
+	 */
+	export let TOC = false;
 </script>
 
 <svelte:head>
@@ -16,13 +23,13 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-{#if options.TOC}
+{#if TOC}
 	<Toc />
 {/if}
-<div class="flex justify-center h-[100%] px-[1.5rem]">
+<div class="flex h-[100%] justify-center px-[1.5rem]">
 	<article style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
-			<h1 class="capitalize text-[5rem] tracking-widest text-foreground">
+			<h1 class="text-[5rem] capitalize tracking-widest text-foreground">
 				<b>
 					{data.meta.title}
 				</b>
@@ -32,10 +39,10 @@
 			</p>
 		</hgroup>
 
-		<div class="flex gap-[20px] my-[1.5rem]">
+		<div class="my-[1.5rem] flex gap-[20px]">
 			{#each data.meta.categories as category}
 				<a href={Cat_URL.replace('%s', category)}>
-					<span class="bg-red-400 text-zinc-900 p-[4px] rounded-[0.5rem]">&num;{category}</span>
+					<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900">&num;{category}</span>
 				</a>
 			{/each}
 		</div>
