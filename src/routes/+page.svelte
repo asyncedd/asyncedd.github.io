@@ -1,5 +1,5 @@
 <article
-	class="h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)+3rem))] flex justify-center flex-col text-left items-center m-auto"
+	class="h-[calc(100svh-(clamp(0.5rem,0.5rem+3vw,3rem)*2))] flex justify-center flex-col text-left items-center m-auto"
 >
 	<div class="relative">
 		<h2 class="text-[clamp(1.5rem,1.5rem+1vw,3rem)] text-foreground_dark/85 break-words uppercase">

@@ -3,6 +3,7 @@
 
 	import Themeswitch from './header/themeswitcher.svelte';
 	import Links from './header/links.svelte';
+	import Menu from './header/menu.svelte';
 
 	let links = [
 		{
@@ -33,5 +34,9 @@
 		></a
 	>
 	<Links {links} />
-	<Themeswitch button_name="Theme" optionList={['dark', 'light']} />
+
+	<section class="inline-flex items-center">
+		<Menu optionList={links} />
+		<Themeswitch button_name="Theme" optionList={['dark', 'light']} />
+	</section>
 </div>
