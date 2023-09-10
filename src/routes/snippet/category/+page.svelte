@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import Lister from '$lib/pages/lister.svelte';
 
 	export let data;

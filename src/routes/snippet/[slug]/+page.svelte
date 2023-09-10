@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import Page from '$lib/pages/page.svelte';
 
 	export let data;

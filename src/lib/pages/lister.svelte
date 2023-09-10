@@ -2,6 +2,26 @@
 	import { formatDate } from '$lib/utils';
 	import { fly } from 'svelte/transition';
 
+	/**
+	 * Represents a data structure containing parameters and an array of blog posts.
+	 *
+	 * @typedef {Object} BlogData
+	 * @property {Object} params - Parameters for the blog data.
+	 * @property {string} params.slug - The slug associated with the blog data.
+	 * @property {Array<Object>} posts - An array of blog post objects.
+	 * @property {string} posts.title - The title of the blog post.
+	 * @property {string} posts.description - A brief description of the blog post.
+	 * @property {string} posts.date - The publication date of the blog post.
+	 * @property {Array<string>} posts.categories - An array of categories associated with the blog post.
+	 * @property {string|boolean} posts.published - The publication status of the blog post.
+	 * @property {string} posts.slug - The slug associated with the blog post.
+	 */
+
+	/**
+	 * The data representing a blog, including parameters and an array of blog posts.
+	 *
+	 * @type {BlogData}
+	 */
 	export let data;
 	/**
 	 * A string for the title.
@@ -65,7 +85,7 @@
 					width="32"
 					height="32"
 					viewBox="0 0 32 32"
-					class="absolute right-3 top-2.5 h-5 w-5 dark:fill-gray-300 fill-gray-900"
+					class="absolute right-3 top-2.5 h-5 w-5 fill-gray-900 dark:fill-gray-300"
 					><path
 						d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z"
 					/></svg
