@@ -14,8 +14,6 @@ export default {
 				background_dark: 'rgb(var(--color-background_dark) / <alpha-value>)',
 				foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
 				foreground_dark: 'rgb(var(--color-foreground_dark) / <alpha-value>)',
-				accent: 'rgb(var(--color-accent) / <alpha-value>)',
-				links: 'rgb(var(--color-links) / <alpha-value>)'
 			},
 			typography: ({ theme }) => ({
 				as: {
