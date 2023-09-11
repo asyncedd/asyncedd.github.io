@@ -24,7 +24,7 @@
 			const handleGlobalClick = (event) =>
 				(dropdownOpened =
 					dropdownOpened &&
-					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button-menu')));
+					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button-menu-menu')));
 
 			document.addEventListener('click', handleGlobalClick);
 
@@ -34,9 +34,9 @@
 		})();
 </script>
 
-<div class="group md:hidden inline-flex">
+<div class="group inline-flex md:hidden">
 	<button
-		class="dropdown-button-menu hover:bg-background_lighter p-[12px] rounded-[0.5rem] active:ring focus:ring ring-foreground"
+		class="dropdown-button-menu-menu rounded-[0.5rem] p-[12px] ring-foreground hover:bg-background_lighter focus:ring active:ring"
 		aria-label="theme switcher"
 		on:click={() => {
 			dropdownOpened = !dropdownOpened;
@@ -61,23 +61,23 @@
 				out:fly={{
 					y: -15
 				}}
-				class="bg-background_dark absolute w-[7rem] flex-col border-background_lighter border-[1px] rounded-[0.5rem] -ml-[3rem]"
+				class="absolute -ml-[3rem] w-[7rem] flex-col rounded-[0.5rem] border-[1px] border-background_lighter bg-background_dark"
 				id="theme-select"
 			>
-				<li class="flex border-b-background_lighter border-b-[1px] last:border-b-0 p-[2px]">
+				<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
 					<a
 						aria-label="Go to /"
-						class="rounded-[0.3rem] hover:bg-background_lighter w-[100%] tracking-wide text-[1.1rem] transition-[background] duration-[0.25s] ease-in-out inline-flex justify-between px-3 items-center text-left"
+						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
 						href="/"
 					>
 						"/"
 					</a>
 				</li>
 				{#each optionList as option}
-					<li class="flex border-b-background_lighter border-b-[1px] last:border-b-0 p-[2px]">
+					<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
 						<a
 							aria-label="Go to {option.name}"
-							class="rounded-[0.3rem] hover:bg-background_lighter w-[100%] tracking-wide text-[1.1rem] transition-[background] duration-[0.25s] ease-in-out inline-flex justify-between px-3 items-center text-left"
+							class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
 							href={option.href}
 						>
 							{option.name}
