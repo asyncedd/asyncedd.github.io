@@ -1,16 +1,11 @@
-<script lang="ts">
+<script>
 	import { page } from '$app/stores';
 
 	import Themeswitch from './header/themeswitcher.svelte';
 	import Links from './header/links.svelte';
 	import Menu from './header/menu.svelte';
 
-	type LinkData = {
-		name: string;
-		href: string;
-	};
-
-	let links: LinkData[] = [
+	let links = [
 		{
 			name: '/blog',
 			href: '/blog'
@@ -42,6 +37,6 @@
 
 	<section class="inline-flex items-center gap-2">
 		<Menu optionList={links} />
-		<Themeswitch optionList={['dark', 'light']} />
+		<Themeswitch button_name="Theme" optionList={['dark', 'light']} />
 	</section>
 </div>
