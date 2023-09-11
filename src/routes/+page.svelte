@@ -1,6 +1,6 @@
 <article
 	class="flex justify-center flex-col text-left items-center m-auto"
-	style="min-height: calc(100svh - clamp(3rem,3rem + 3vw, 5.5rem));"
+	style="min-height: calc(100svh - clamp(3rem,3rem + 3vw, 5.5rem) * 2);"
 >
 	<div class="relative">
 		<h2
@@ -13,9 +13,9 @@
 				></b
 			>
 		</h2>
-		<h3 class="text-[clamp(1.3rem,1.3rem+1vw,1.6rem)] text-foreground_dark/80 tracking-wider">
+		<p class="text-[clamp(1.3rem,1.3rem+1vw,1.6rem)] text-foreground_dark/80 tracking-wider">
 			Minimalism, simplicity & elegance
-		</h3>
+		</p>
 		<div class="flex w-full">
 			<a
 				href="https://github.com/asyncedd"
