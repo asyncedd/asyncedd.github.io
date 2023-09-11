@@ -1,20 +1,12 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 
-	/**
-	 * Represents an array of navigation links.
-	 *
-	 * @typedef {Object} NavigationLink
-	 * @property {string} name - The name or label of the navigation link.
-	 * @property {string} href - The URL or path associated with the navigation link.
-	 */
+	type NavigationLink = {
+		name: string;
+		href: string;
+	};
 
-	/**
-	 * An array of navigation links.
-	 *
-	 * @type {Array<NavigationLink>}
-	 */
-	export let links = [];
+	export let links: NavigationLink[] = [];
 </script>
 
 <ul class="hidden items-center gap-[clamp(0.5rem,0.5rem+1vw,3rem)] md:inline-flex">

@@ -1,32 +1,22 @@
-<script>
-	let dropdownOpened = false;
+<script lang="ts">
+	let dropdownOpened: boolean = false;
 	import { browser } from '$app/environment';
 
 	import Item from '../dropdown/item.svelte';
 	import Menu from '../dropdown/menu.svelte';
 
-	/**
-	 * @typedef {Object} Link
-	 * @property {string} name - The name of the link.
-	 * @property {string} href - The URL or href associated with the link.
-	 */
+	type LinkData = {
+		name: String;
+		href: string;
+	};
 
-	/**
-	 * Array of links.
-	 * @type {Array<Link>}
-	 */
-	export let optionList = [];
+	export let optionList: LinkData[] = [];
 
 	browser &&
 		(() => {
-			/**
-			 * Handles global click events at ludicrous speed using a sneaky assignment trick.
-			 * @param {MouseEvent} event - The click event object.
-			 */
-			const handleGlobalClick = (event) =>
+			const handleGlobalClick = (event: MouseEvent) =>
 				(dropdownOpened =
-					dropdownOpened &&
-					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button-menu-menu')));
+					dropdownOpened && !!(event.target as HTMLElement).closest('.dropdown-button-menu-menu'));
 
 			document.addEventListener('click', handleGlobalClick);
 

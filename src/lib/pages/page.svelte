@@ -1,9 +1,15 @@
-<script>
+<script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import Toc from '$lib/components/toc.svelte';
 	import '$lib/styles/prose.postcss';
+	import type { Post } from '$lib/types';
 
-	export let data;
+	type BlogData = {
+		content: any;
+		meta: Post;
+	};
+
+	export let data: BlogData;
 	/**
 	 * A URL expression thing for the category
 	 * ex. /blog/category/%s

@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
-	/** @type {HTMLUListElement | string | null} */
-	let tableOfContents = null;
-	let showSidebar = false;
-	let opened = false;
+	let tableOfContents: HTMLUListElement | string | undefined;
+	let showSidebar: boolean = false;
+	let opened: boolean = false;
 
 	function openSidebar() {
 		const targetEl = document.querySelector('#table-of-contents');
@@ -26,7 +25,8 @@
 
 		window.onscroll = handleScroll;
 
-		tableOfContents = document.querySelector('#table-of-contents + ul').outerHTML;
+		tableOfContents = (document.querySelector('#table-of-contents + ul') as HTMLUListElement)
+			.outerHTML;
 	});
 
 	function toggleSidebar() {
@@ -36,11 +36,11 @@
 </script>
 
 <aside
-	class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[calc(100svh+clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*4)]"
+	class="fixed right-[8px] z-10 -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*4)] flex h-[calc(100svh+clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] max-w-[280px] items-center"
 >
 	<section>
 		<nav
-			class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
+			class="table-of-contents rounded-[1rem] bg-background_light p-[1.5rem]"
 			in:fly={{ x: '100%', duration: 500, delay: 500 }}
 			out:fly={{ x: '100%', duration: 500 }}
 		>
@@ -91,7 +91,7 @@
 
 			{#if showSidebar}
 				<div
-					class="p-[1.5rem] rounded-[1rem] table-of-contents"
+					class="table-of-contents rounded-[1rem] p-[1.5rem]"
 					in:fly={{ x: '100%', duration: 30, delay: 30 }}
 					out:fly={{ x: '100%', duration: 30 }}
 				>
