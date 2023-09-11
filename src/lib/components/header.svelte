@@ -35,7 +35,7 @@
 	>
 	<Links {links} />
 
-	<section class="inline-flex items-center">
+	<section class="inline-flex items-center gap-2">
 		<Menu optionList={links} />
 		<Themeswitch button_name="Theme" optionList={['dark', 'light']} />
 	</section>

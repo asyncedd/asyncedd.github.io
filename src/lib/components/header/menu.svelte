@@ -1,7 +1,9 @@
 <script>
 	let dropdownOpened = false;
-	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
+
+	import Item from '../dropdown/item.svelte';
+	import Menu from '../dropdown/menu.svelte';
 
 	/**
 	 * @typedef {Object} Link
@@ -54,16 +56,7 @@
 			/></svg
 		>
 		{#if dropdownOpened}
-			<ul
-				in:fly={{
-					y: -15
-				}}
-				out:fly={{
-					y: -15
-				}}
-				class="absolute -ml-[3rem] mt-[0.5rem] w-[7rem] flex-col rounded-[0.5rem] border-[1px] border-background_lighter bg-background_dark"
-				id="theme-select"
-			>
+			<Menu>
 				<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
 					<a
 						aria-label="Go to /"
@@ -74,7 +67,7 @@
 					</a>
 				</li>
 				{#each optionList as option}
-					<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
+					<Item>
 						<a
 							aria-label="Go to {option.name}"
 							class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
@@ -82,9 +75,9 @@
 						>
 							{option.name}
 						</a>
-					</li>
+					</Item>
 				{/each}
-			</ul>
+			</Menu>
 		{/if}
 	</button>
 </div>

@@ -1,7 +1,9 @@
 <script>
 	let dropdownOpened = false;
-	import { fly } from 'svelte/transition';
 	import { browser } from '$app/environment';
+
+	import Item from '../dropdown/item.svelte';
+	import Menu from '../dropdown/menu.svelte';
 
 	/**
 	 * @type {string | null}
@@ -82,18 +84,9 @@
 		></button
 	>
 	{#if dropdownOpened}
-		<ul
-			in:fly={{
-				y: -15
-			}}
-			out:fly={{
-				y: -15
-			}}
-			class="absolute -ml-[3rem] mt-[0.5rem] w-[7rem] flex-col rounded-[0.5rem] border-[1px] border-background_lighter bg-background_dark"
-			id="theme-select"
-		>
+		<Menu>
 			{#each optionList as option}
-				<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
+				<Item>
 					<button
 						aria-label="set theme to {option}"
 						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] capitalize tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
@@ -103,8 +96,8 @@
 					>
 						{option}
 					</button>
-				</li>
+				</Item>
 			{/each}
-		</ul>
+		</Menu>
 	{/if}
 </div>
