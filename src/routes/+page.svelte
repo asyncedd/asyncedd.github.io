@@ -1,6 +1,6 @@
 <article
 	class="flex justify-center flex-col text-left items-center m-auto"
-	style="min-height: calc(100svh - ((clamp(3rem,3rem + 3vw, 5.5rem)) * 2));"
+	style="min-height: calc(100svh - clamp(3rem,3rem + 3vw, 5.5rem));"
 >
 	<div class="relative">
 		<h2
