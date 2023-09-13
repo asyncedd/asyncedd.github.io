@@ -50,7 +50,7 @@
 
 <div class="group">
 	<button
-		class="dropdown-button-menu-theme rounded-[0.5rem] p-[12px] ring-foreground hover:bg-background_lighter focus:ring active:ring"
+		class="dropdown-button-menu-theme rounded-[0.5rem] p-[12px] ring-foreground hover:bg-background_light focus:ring active:ring"
 		aria-label="theme switcher"
 		on:click={() => {
 			dropdownOpened = !dropdownOpened;
@@ -89,7 +89,7 @@
 				<Item>
 					<button
 						aria-label="set theme to {option}"
-						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] capitalize tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
+						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] bg-background/30 px-3 text-left text-[1.1rem] capitalize tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_light"
 						on:click={() => {
 							localStorage.theme = document.documentElement.className = option;
 						}}

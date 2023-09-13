@@ -10,7 +10,6 @@ export default {
 			colors: {
 				background: 'rgb(var(--color-background) / <alpha-value>)',
 				background_light: 'rgb(var(--color-background_light) / <alpha-value>)',
-				background_lighter: 'rgb(var(--color-background_lighter) / <alpha-value>)',
 				background_dark: 'rgb(var(--color-background_dark) / <alpha-value>)',
 				foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
 				foreground_dark: 'rgb(var(--color-foreground_dark) / <alpha-value>)',

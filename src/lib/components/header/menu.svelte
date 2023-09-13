@@ -38,7 +38,7 @@
 
 <div class="group inline-flex md:hidden">
 	<button
-		class="dropdown-button-menu-menu rounded-[0.5rem] p-[12px] ring-foreground hover:bg-background_lighter focus:ring active:ring"
+		class="dropdown-button-menu-menu rounded-[0.5rem] p-[12px] ring-foreground hover:bg-background_light focus:ring active:ring"
 		aria-label="theme switcher"
 		on:click={() => {
 			dropdownOpened = !dropdownOpened;
@@ -57,10 +57,10 @@
 		>
 		{#if dropdownOpened}
 			<Menu>
-				<li class="flex border-b-[1px] border-b-background_lighter p-[2px] last:border-b-0">
+				<li class="flex border-b-[1px] border-b-background_light p-[2px] last:border-b-0">
 					<a
 						aria-label="Go to /"
-						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
+						class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_light"
 						href="/"
 					>
 						"/"
@@ -70,7 +70,7 @@
 					<Item>
 						<a
 							aria-label="Go to {option.name}"
-							class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_lighter"
+							class="inline-flex w-[100%] items-center justify-between rounded-[0.3rem] bg-background/30 px-3 text-left text-[1.1rem] tracking-wide transition-[background] duration-[0.25s] ease-in-out hover:bg-background_light"
 							href={option.href}
 						>
 							{option.name}
