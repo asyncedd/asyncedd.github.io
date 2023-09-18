@@ -1,60 +1,29 @@
-<script>
+<script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import { fly } from 'svelte/transition';
+	import type { Post } from '$lib/types';
 
-	/**
-	 * Represents a data structure containing parameters and an array of blog posts.
-	 *
-	 * @typedef {Object} BlogData
-	 * @property {Object} params - Parameters for the blog data.
-	 * @property {string} params.slug - The slug associated with the blog data.
-	 * @property {Array<Object>} posts - An array of blog post objects.
-	 * @property {string} posts.title - The title of the blog post.
-	 * @property {string} posts.description - A brief description of the blog post.
-	 * @property {string} posts.date - The publication date of the blog post.
-	 * @property {Array<string>} posts.categories - An array of categories associated with the blog post.
-	 * @property {string|boolean} posts.published - The publication status of the blog post.
-	 * @property {string} posts.slug - The slug associated with the blog post.
-	 */
+	type BlogData = {
+		params: {
+			slug: string;
+		};
+		posts: Post[];
+	};
 
-	/**
-	 * The data representing a blog, including parameters and an array of blog posts.
-	 *
-	 * @type {BlogData}
-	 */
-	export let data;
-	/**
-	 * A string for the title.
-	 * @type {string}
-	 */
-	export let title = '';
-	/**
-	 * A placeholder for the search box
-	 * @type {string}
-	 */
-	export let placeholder = '';
-	/**
-	 * A URL expression thing for the URL
-	 * ex. /blog/%s
-	 * @type {string}
-	 */
-	export let URL = '';
-	/**
-	 * A URL expression thing for the category
-	 * ex. /blog/category/%s
-	 * @type {string}
-	 */
-	export let Cat_URL = '';
-	/**
-	 * @type {"lister" | "category"}
-	 */
-	export let list_type = 'lister';
+	export let data: BlogData;
+	export let title: string = '';
+	export let placeholder: string = '';
+	export let URL: string = '';
+	export let Cat_URL: string = '';
+	export let list_type: 'lister' | 'category' = 'lister';
 	let value = '';
 
 	$: filteredPosts =
 		value === ''
 			? data.posts
-			: data.posts.filter((post) => post.title.toLowerCase().includes(value.toLowerCase()));
+			: data.posts.filter((post) =>
+					((post.title || post) as string).toLowerCase().includes(value.toLowerCase())
+			  );
 </script>
 
 <svelte:head>
