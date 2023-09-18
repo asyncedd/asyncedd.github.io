@@ -1,8 +1,9 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
-	let tableOfContents: HTMLUListElement | string | undefined;
+	/** @type {HTMLUListElement | string | null} */
+	let tableOfContents = null;
 	let showSidebar = false;
 	let opened = false;
 
@@ -35,11 +36,11 @@
 </script>
 
 <aside
-	class="fixed right-[8px] z-10 -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*4)] flex h-[calc(100svh+clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] max-w-[280px] items-center"
+	class="max-w-[280px] fixed right-[8px] z-10 flex items-center h-[calc(100svh+clamp(0.5rem,0.5rem+3vw,3rem)*2+2.5rem)] -mt-[calc(clamp(0.5rem,0.5rem+3vw,3rem)*4)]"
 >
 	<section>
 		<nav
-			class="table-of-contents rounded-[1rem] bg-background_light p-[1.5rem]"
+			class="bg-background_light p-[1.5rem] rounded-[1rem] table-of-contents"
 			in:fly={{ x: '100%', duration: 500, delay: 500 }}
 			out:fly={{ x: '100%', duration: 500 }}
 		>
@@ -90,7 +91,7 @@
 
 			{#if showSidebar}
 				<div
-					class="table-of-contents rounded-[1rem] p-[1.5rem]"
+					class="p-[1.5rem] rounded-[1rem] table-of-contents"
 					in:fly={{ x: '100%', duration: 30, delay: 30 }}
 					out:fly={{ x: '100%', duration: 30 }}
 				>
