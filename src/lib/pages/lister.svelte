@@ -2,8 +2,6 @@
 	import { formatDate } from '$lib/utils';
 	import { fly } from 'svelte/transition';
 
-	import Category from '$lib/components/blog/category.svelte';
-
 	type BlogData = {
 		params: {
 			slug: string;
@@ -52,7 +50,7 @@
 			</h1>
 			<div class="relative mb-4 w-full">
 				<input
-					class="block w-full rounded-[4px] bg-foreground_dark/[.15] px-4 py-2 font-bold text-foreground_dark placeholder:text-foreground_dark/50 focus:outline-none"
+					class="block w-full rounded-md bg-foreground_dark/[.15] px-4 py-2 font-bold text-foreground_dark placeholder:text-foreground_dark/50 focus:outline-none"
 					type="text"
 					id="name"
 					name="name"
@@ -95,7 +93,13 @@
 									{post.title}
 								</a>
 								<div class="my-1 flex gap-[20px]">
-									<Category categories={post.categories} {Cat_URL} />
+									{#each post.categories as category}
+										<a href={Cat_URL.replace('%s', category)}>
+											<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900"
+												>&num;{category}</span
+											>
+										</a>
+									{/each}
 								</div>
 								<p class="text-foreground_dark">{formatDate(post.date)}</p>
 								<p class="description my-1 text-foreground">{post.description}</p>
