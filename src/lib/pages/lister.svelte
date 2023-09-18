@@ -68,7 +68,7 @@
 			<h1
 				class="text-foreground_dark/85 text-[clamp(3rem,3rem+3vw,5rem)] uppercase tracking-widest"
 			>
-				<b> {data.params.slug} </b>
+				{data.params.slug}
 			</h1>
 			<div class="relative mb-4 w-full">
 				<input
@@ -112,9 +112,7 @@
 									href={`${URL.replace('%s', post.slug)}`}
 									class="text-[3rem] capitalize tracking-wider text-foreground_dark/80 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
 								>
-									<b>
-										{post.title}
-									</b>
+									{post.title}
 								</a>
 								<div class="my-1 flex gap-[20px]">
 									{#each post.categories as category}
@@ -133,7 +131,7 @@
 							<a
 								href="category/{post}"
 								class="text-[3rem] capitalize tracking-wider text-foreground_dark/75 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
-								><b>{post}</b></a
+								>{post}</a
 							>
 						{/if}
 					{/each}
