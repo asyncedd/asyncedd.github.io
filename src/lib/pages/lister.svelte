@@ -110,9 +110,11 @@
 								<hr class="border-[1px] border-foreground" />
 								<a
 									href={`${URL.replace('%s', post.slug)}`}
-									class="text-[3rem] capitalize tracking-wide text-foreground_dark/80 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
+									class="text-[3rem] capitalize tracking-wider text-foreground_dark/80 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
 								>
-									{post.title}
+									<b>
+										{post.title}
+									</b>
 								</a>
 								<div class="my-1 flex gap-[20px]">
 									{#each post.categories as category}
@@ -131,7 +133,7 @@
 							<a
 								href="category/{post}"
 								class="text-[3rem] capitalize tracking-wider text-foreground_dark/75 underline decoration-transparent transition-colors duration-[0.25s] ease-in-out hover:text-foreground_dark hover:decoration-foreground_dark"
-								>{post}</a
+								><b>{post}</b></a
 							>
 						{/if}
 					{/each}
