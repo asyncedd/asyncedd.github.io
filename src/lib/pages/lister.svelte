@@ -28,7 +28,6 @@
 	export let list_type: 'lister' | 'category' = 'lister';
 	let value: string = '';
 
-	console.log(data.posts);
 	$: filteredPosts =
 		value === ''
 			? data.posts
