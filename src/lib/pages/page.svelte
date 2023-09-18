@@ -1,21 +1,12 @@
-<script>
+<script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import Toc from '$lib/components/toc.svelte';
 	import Category from '$lib/components/blog/category.svelte';
 	import '$lib/styles/prose.postcss';
 
 	export let data;
-	/**
-	 * A URL expression thing for the category
-	 * ex. /blog/category/%s
-	 * @type {string}
-	 */
-	export let Cat_URL = '/blog/category/%s';
-	/**
-	 * Whetever or not to show the TOC
-	 * @type {boolean}
-	 */
-	export let TOC = false;
+	export let Cat_URL: string = '/blog/category/%s';
+	export let TOC: boolean = false;
 </script>
 
 <svelte:head>
@@ -27,10 +18,10 @@
 {#if TOC}
 	<Toc />
 {/if}
-<div class="flex h-[100%] justify-center px-[1.5rem]">
+<div class="mx-auto flex h-[100%] w-full max-w-4xl justify-center">
 	<article style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
-			<h1 class="text-[5rem] capitalize tracking-widest text-foreground">
+			<h1 class="text-[clamp(2.5rem,2.5rem+1vw,4.5rem)] capitalize tracking-widest text-foreground">
 				<b>
 					{data.meta.title}
 				</b>
