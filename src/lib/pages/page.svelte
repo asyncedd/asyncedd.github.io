@@ -1,6 +1,7 @@
 <script>
 	import { formatDate } from '$lib/utils';
 	import Toc from '$lib/components/toc.svelte';
+	import Category from '$lib/components/blog/category.svelte';
 	import '$lib/styles/prose.postcss';
 
 	export let data;
@@ -40,11 +41,7 @@
 		</hgroup>
 
 		<div class="my-[1.5rem] flex gap-[20px]">
-			{#each data.meta.categories as category}
-				<a href={Cat_URL.replace('%s', category)}>
-					<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900">&num;{category}</span>
-				</a>
-			{/each}
+			<Category categories={data.meta.categories} {Cat_URL} />
 		</div>
 
 		<div class="prose prose-as pb-[25rem]">
