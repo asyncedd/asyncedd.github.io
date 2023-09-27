@@ -8,6 +8,10 @@
 
 	export let data;
 </script>
+	
+<svelte:head>
+	<title>{data.url}</title>
+</svelte:head>
 
 <body class="bg-background font-sans text-[1rem] text-foreground">
 	<div class="min-h-[100svh] max-w-[100svw]">

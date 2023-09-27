@@ -11,8 +11,8 @@
 			href: '/blog'
 		},
 		{
-			name: '/snippet',
-			href: '/snippet'
+			name: '/memo',
+			href: '/memo'
 		}
 	];
 </script>

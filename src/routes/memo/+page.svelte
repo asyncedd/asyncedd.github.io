@@ -6,8 +6,8 @@
 
 <Lister
 	{data}
-	title={'Snippets'}
+	title={'memos'}
 	placeholder={'Start typing'}
-	URL={'/snippet/%s'}
-	Cat_URL={'/snippet/category/%s'}
+	URL={'/memo/%s'}
+	Cat_URL={'/memo/category/%s'}
 />

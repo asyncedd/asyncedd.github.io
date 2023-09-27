@@ -4,4 +4,4 @@
 	export let data;
 </script>
 
-<Page {data} Cat_URL={'/snippet/category/%s'} TOC={false} />
+<Page {data} Cat_URL={'/memo/category/%s'} TOC={false} />

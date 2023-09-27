@@ -12,7 +12,7 @@
 					class="bg-gradient-to-r from-teal-400 via-blue-400 to-violet-400 bg-clip-text text-background_light/10"
 					>{$page.status}</span
 				>
-				| {$page.error.message}
+				{$page.error && ` | ${$page.error.message}`}
 			</b>
 		</h1>
 		<a href="/" class="group inline-flex items-center gap-3">
