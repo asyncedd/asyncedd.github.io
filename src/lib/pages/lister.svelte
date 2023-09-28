@@ -86,7 +86,7 @@
 								<div class="my-1 flex gap-[20px]">
 									{#each post.categories as category}
 										<a href={Cat_URL.replace('%s', category)}>
-											<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900"
+											<span class="rounded-[4px] bg-red-400 p-[4px] text-zinc-900"
 												>&num;{category}</span
 											>
 										</a>

@@ -26,7 +26,7 @@
 {#if TOC}
 	<Toc />
 {/if}
-<div class="flex h-[100%] justify-center px-[1.5rem]">
+<div class="-px-[1.5rem] mx-auto flex h-[100%] w-full max-w-[75rem] flex-col justify-center">
 	<article style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
 			<h1 class="text-[5rem] capitalize tracking-widest text-foreground">
@@ -42,7 +42,7 @@
 		<div class="my-[1.5rem] flex gap-[20px]">
 			{#each data.meta.categories as category}
 				<a href={Cat_URL.replace('%s', category)}>
-					<span class="rounded-[0.5rem] bg-red-400 p-[4px] text-zinc-900">&num;{category}</span>
+					<span class="rounded-[4px] bg-red-400 p-[4px] text-zinc-900">&num;{category}</span>
 				</a>
 			{/each}
 		</div>
