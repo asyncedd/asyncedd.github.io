@@ -29,7 +29,7 @@
 <div class="-px-[1.5rem] mx-auto flex h-[100%] w-full max-w-[75rem] flex-col justify-center">
 	<article style="max-inline-size: 100%; margin-inline: auto;">
 		<hgroup>
-			<h1 class="text-[5rem] capitalize tracking-widest text-foreground font-['Montserrat']">
+			<h1 class="text-[5rem] capitalize tracking-widest text-foreground">
 				<b>
 					{data.meta.title}
 				</b>

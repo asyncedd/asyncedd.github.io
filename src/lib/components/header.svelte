@@ -24,13 +24,13 @@
 		<div
 			class="h-10 w-10 {$page.url.pathname === '/'
 				? 'bg-foreground/[.85]'
-				: 'bg-foreground/70'} rounded-[50%] transition-[background] duration-[0.25s] ease-in-out motion-safe:group-hover:bg-foreground"
+				: 'bg-foreground/70'} rounded-[10rem] transition-[background] duration-[0.25s] ease-in-out motion-safe:group-hover:bg-foreground"
 		/>
 		<b
 			class="text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest transition-[color] duration-[0.25s] ease-in-out motion-safe:group-hover:text-foreground {$page
 				.url.pathname === '/'
 				? 'text-foreground/[.85]'
-				: 'text-foreground/70'} font-['Montserrat']">/ async</b
+				: 'text-foreground/70'}">/ async</b
 		></a
 	>
 	<Links {links} />
