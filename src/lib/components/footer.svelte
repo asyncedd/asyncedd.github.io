@@ -7,7 +7,7 @@
 				class="h-10 w-10 rounded-[10rem] bg-foreground/70 transition-[background] duration-[0.25s] ease-in-out motion-safe:group-hover:bg-foreground"
 			/>
 			<b
-				class="cursor-pointer text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest text-foreground/70 transition-[color] duration-[0.25s] ease-in-out motion-safe:hover:text-foreground"
+				class="cursor-pointer font-['Montserrat'] text-[clamp(0.7rem,_1vw+0.7rem,_1.5rem)] tracking-widest text-foreground/70 transition-[color] duration-[0.25s] ease-in-out motion-safe:hover:text-foreground"
 				>async
 			</b>
 		</a>
