@@ -8,7 +8,7 @@
 </script>
 
 {#key url}
-	<div class="h-[100%]" in:fade>
+	<div class="h-full" in:fade>
 		<slot />
 	</div>
 {/key}
