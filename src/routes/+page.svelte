@@ -1,3 +1,8 @@
+<svelte:head>
+	<!-- prettier-ignore -->
+	<link rel="preload" href="/fonts/DelaGothicOne/subset-DelaGothicOne-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+</svelte:head>
+
 <article
 	class="m-auto flex flex-col items-center justify-center text-left"
 	style="min-height: calc(100svh - clamp(3rem,3rem + 3vw, 5.5rem) * 2);"
@@ -32,3 +37,16 @@
 		</div>
 	</div>
 </article>
+
+<style>
+	@font-face {
+		font-family: 'Dela Gothic One';
+		src: local('Dela Gothic One'),
+			url('/fonts/DelaGothicOne/subset-DelaGothicOne-Regular.woff2') format('woff2'),
+			url('/fonts/DelaGothicOne/subset-DelaGothicOne-Regular.woff') format('woff');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+		unicode-range: U+000-5FF;
+	}
+</style>
