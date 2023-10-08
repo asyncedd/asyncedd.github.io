@@ -1,5 +1,5 @@
 <footer
-	class="flex h-[3rem] items-center bg-background_dark/50 p-[clamp(1.5rem,1.5rem+3vw,3rem)] px-[3rem] text-foreground saturate-150 backdrop-blur-3xl"
+	class="flex h-[3rem] items-center bg-background_dark/50 p-[clamp(1.5rem,1.5rem+3vw,3rem)] px-[3rem] text-foreground saturate-150 backdrop-blur-[20px]"
 >
 	<section class="inline-flex flex-row items-center gap-[1rem]">
 		<a href="/" class="group inline-flex flex-row items-center justify-center gap-[1rem]">
