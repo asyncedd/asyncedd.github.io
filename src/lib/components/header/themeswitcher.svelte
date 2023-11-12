@@ -1,38 +1,13 @@
-<script>
+<script lang="ts">
 	let dropdownOpened = false;
 	import { browser } from '$app/environment';
 
-	import Item from '../dropdown/item.svelte';
-	import Menu from '../dropdown/menu.svelte';
-
-	/**
-	 * @type {string | null}
-	 */
-	let currentTheme = null;
-	/**
-	 * @type {string[]}
-	 */
-	export let optionList = [];
-	export const button_name = '';
-
-	function switchTheme(e) {
-		if (e.target.checked) {
-			document.documentElement.setAttribute('data-theme', 'dark');
-			localStorage.setItem('theme', 'dark'); //add this
-		} else {
-			document.documentElement.setAttribute('data-theme', 'light');
-			localStorage.setItem('theme', 'light'); //add this
-		}
-	}
+	let currentTheme: string | null = null;
+	export const button_name: string = '';
 
 	browser &&
 		(() => {
-			/**
-			 * A helper utility to set the theme
-			 *
-			 * @param {string} newTheme
-			 */
-			const setTheme = (newTheme) => {
+			const setTheme = (newTheme: string) => {
 				document.documentElement.className = currentTheme = newTheme;
 			};
 
@@ -41,14 +16,9 @@
 				.addEventListener('change', (e) => setTheme(e.matches ? 'dark' : 'light'));
 			window.addEventListener('storage', (e) => e.key === 'theme' && setTheme(e.newValue || ''));
 
-			/**
-			 * Handles global click events at ludicrous speed using a sneaky assignment trick.
-			 * @param {MouseEvent} event - The click event object.
-			 */
-			const handleGlobalClick = (event) =>
+			const handleGlobalClick = (event: MouseEvent) =>
 				(dropdownOpened =
-					dropdownOpened &&
-					!!(/** @type {HTMLElement} */ (event.target).closest('.dropdown-button-menu-theme')));
+					dropdownOpened && !!(event.target as HTMLElement).closest('.dropdown-button-menu-theme'));
 
 			document.addEventListener('click', handleGlobalClick);
 
