@@ -9,7 +9,7 @@
 >
 	<div class="relative">
 		<h2
-			class="text-foreground_dark/85 break-words font-['Dela_Gothic_One'] text-[clamp(1.8rem,1.8rem+1vw,3.3rem)] uppercase"
+			class="text-foreground_dark/85 break-words text-[clamp(1.8rem,1.8rem+1vw,3.3rem)] uppercase"
 		>
 			<b
 				>hi, i'm <span
@@ -37,16 +37,3 @@
 		</div>
 	</div>
 </article>
-
-<style>
-	@font-face {
-		font-family: 'Dela Gothic One';
-		src: local('Dela Gothic One'),
-			url('/fonts/DelaGothicOne/subset-DelaGothicOne-Regular.woff2') format('woff2'),
-			url('/fonts/DelaGothicOne/subset-DelaGothicOne-Regular.woff') format('woff');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-		unicode-range: U+000-5FF;
-	}
-</style>
